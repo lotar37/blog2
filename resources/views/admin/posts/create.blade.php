@@ -26,13 +26,13 @@
                                 <input type="text" name="title" class="form-control"
                                        placeholder="Введите заголовок" value="{{ old('title') }}">
                                 @error('title')
-                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group col-12">
                                 <textarea id="summernote" name="content" class="col-12">{{ old('content') }}</textarea>
                                 @error('content')
-                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group w-50" >

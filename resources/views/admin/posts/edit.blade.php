@@ -27,19 +27,19 @@
                                 <input type="text" name="title" class="form-control"
                                        placeholder="Введите заголовок" value="{{ $post->title }}">
                                 @error('title')
-                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group col-12">
                                 <textarea id="summernote" name="content" class="col-12">{{ $post->content }}</textarea>
                                 @error('content')
-                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group w-50" >
                                 <label for="exampleInputFile">Превью</label>
                                 <div class="">
-                                    <img src="{{ asset("storage/" . $post->preview_image) }}" alt="preview_image" class="w-25">
+                                    <img src="{{ asset("storage/" . $post->preview_image) }}" alt="preview_image" class="w-25 mb-2">
                                 </div>
                                 <div class="input-group">
                                     <div class="custom-file">
@@ -57,7 +57,7 @@
                             <div class="form-group w-50">
                                 <label for="exampleInputFile">Главное изображение</label>
                                 <div class="">
-                                    <img src="{{ asset("storage/" . $post->main_image) }}" alt="main_image" class="w-25">
+                                    <img src="{{ asset("storage/" . $post->main_image) }}" alt="main_image" class="w-25 mb-2">
                                 </div>
                                 <div class="input-group">
                                     <div class="custom-file">

@@ -9,8 +9,8 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0 mb-3 mr-1">{{ $post->title }}</h1>
-                    <a href="{{ route("admin.post.edit", $post->id) }}" class="text-success"><i class="ml-2 fa-pencil-alt fas"></i></a>
+                    <h1 class="m-0 mb-3 mr-1">{{ $user->name }}</h1>
+                    <a href="{{ route("admin.user.edit", $user->id) }}" class="text-success"><i class="ml-2 fa-pencil-alt fas"></i></a>
 
                 </div><!-- /.col -->
                 <div class="col-sm-6">
@@ -30,11 +30,11 @@
                                 <tbody>
                                 <tr>
                                     <td>ID</td>
-                                    <td>{{ $post->id }}</td>
+                                    <td>{{ $user->id }}</td>
                                 </tr>
                                 <tr>
                                     <td>Название</td>
-                                    <td>{{ $post->title }}</td>
+                                    <td>{{ $user->name }}</td>
                                 </tr>
                                 </tbody>
                             </table>
