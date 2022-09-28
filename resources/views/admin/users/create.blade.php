@@ -28,6 +28,20 @@
                             <div class="text-danger">Это поле необходимо для заполнения</div>
                             @enderror
                         </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">email</label>
+                            <input type="text" name="email"  class="form-control" placeholder="Введите email">
+                            @error('email')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Пароль</label>
+                            <input type="text" name="password"  class="form-control" placeholder="Введите пароль">
+                            @error('password')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                         <input type="submit" class="btn btn-primary" value="Добавить">
                     </form>
                 </div>

@@ -44,7 +44,7 @@
                                     <td>{{ $user->name }}</td>
                                     <td class="d-flex">
                                         <a href="{{ route("admin.user.show", $user->id) }}"><i class="fa-eye far"></i></a>
-                                        <a href="{{ route("admin.user.edit", $user->id) }} " class="text-success    "><i class="ml-2 fa-pencil-alt fas"></i></a>
+                                        <a href="{{ route("admin.user.edit", $user->id) }} " class="text-success"><i class="ml-2 fa-pencil-alt fas"></i></a>
                                         <form action="{{route('admin.user.delete', $user->id)}}" method="post" >
                                         @csrf
                                         @method('delete')

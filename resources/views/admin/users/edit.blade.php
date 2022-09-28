@@ -23,13 +23,20 @@
                         @csrf
                         @method('PATCH')
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Название</label>
+                            <label for="exampleInputEmail1">Имя</label>
                             <input type="text" name="name" value="{{ $user->name }}" class="form-control" placeholder="Введите название категории">
                             @error('name')
-                            <div class="text-danger">Это поле необходимо для заполнения</div>
+                            <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Обновить">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">email</label>
+                            <input type="text" name="email" value="{{ $user->email }}" class="form-control" placeholder="Введите email">
+                            @error('email')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                       <input type="submit" class="btn btn-primary" value="Обновить">
                     </form>
                 </div>
             </div><!-- /.row -->

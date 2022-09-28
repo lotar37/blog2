@@ -12,6 +12,6 @@ class ShowController extends Controller
     {
         // TODO: Implement __invoke() method.
         $users = User::all();
-        return view('admin.categories.show',compact("user"));
+        return view('admin.users.show',compact("user"));
     }
 }
