@@ -24,23 +24,23 @@
             <div class="collapse navbar-collapse" id="edicaMainNav">
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.html">О нас</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Новости</a>
                         <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                            <a class="dropdown-item" href="blog.html">Blog Archive</a>
+                            <a class="dropdown-item" href="blog.html">Архив новостей</a>
                             <a class="dropdown-item" href="blog-single.html">Blog Post</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link " href="{{ route("admin") }}"  aria-haspopup="true" >Admin</a>
+                        <a class="nav-link " href="{{ route("admin.main.index") }}"  aria-haspopup="true" >Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html">Контакты</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mt-2 mt-lg-0">
@@ -49,6 +49,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+                            <input type="submit" value="Выйти" class="btn btn-outline-secondary">
+                        </form>
                     </li>
                 </ul>
             </div>

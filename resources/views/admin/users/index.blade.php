@@ -13,8 +13,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard v1</li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная</a></li>
+                        <li class="breadcrumb-item active">Пользователи</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-2">
@@ -25,7 +25,7 @@
 
             </div><!-- /.row -->
             <div class="row">
-                <div class="col-6">
+                <div class="w-75">
                     <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
@@ -34,7 +34,9 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Название</th>
-                                    <th>Действия</th>
+                                    <th>email</th>
+                                    <th>Роль</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -42,6 +44,8 @@
                                 <tr>
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $roles[$user->role] }}</td>
                                     <td class="d-flex">
                                         <a href="{{ route("admin.user.show", $user->id) }}"><i class="fa-eye far"></i></a>
                                         <a href="{{ route("admin.user.edit", $user->id) }} " class="text-success"><i class="ml-2 fa-pencil-alt fas"></i></a>
