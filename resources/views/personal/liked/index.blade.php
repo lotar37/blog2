@@ -22,6 +22,50 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover text-nowrap">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Название</th>
+                                    <th>Действия</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($posts as $post)
+                                    <tr>
+                                        <td>{{ $post->id }}</td>
+                                        <td>{{ $post->title }}</td>
+                                        <td class="d-flex">
+                                            <a href="{{ route("admin.post.show", $post->id) }}"><i class="fa-eye far"></i></a>
+                                            <form action="{{route('personal.liked.delete', $post->id)}}" method="post" >
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="border-0 bg-white">
+                                                    <i class="ml-2 fa-trash fas text-danger" role="button"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
