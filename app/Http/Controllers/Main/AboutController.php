@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Main;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class AboutController extends Controller
 {
     public function __invoke()
     {
@@ -18,6 +18,6 @@ class IndexController extends Controller
             $user = auth()->user()->name;
         }
 
-        return view("main.index",compact('role', 'user'));
+        return view("main.about",compact('role', 'user'));
     }
 }

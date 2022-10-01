@@ -14,6 +14,8 @@ class IndexController extends Controller
     public function __invoke()
     {
         // TODO: Implement __invoke() method.
-        return view('personal.main.index');
+        $commentCount = auth()->user()->comments()->count();
+        $likesCount = auth()->user()->likedPosts()->count();
+        return view('personal.main.index', compact('commentCount', 'likesCount'));
     }
 }

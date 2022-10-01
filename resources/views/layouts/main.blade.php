@@ -17,17 +17,17 @@
 <header class="edica-header">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo.svg ') }}" alt="Edica"></a>
+            <a class="navbar-brand" href="{{ route("main.index") }}"><img src="{{ asset('assets/images/logo.png ') }}" alt="Edica" width="250px"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="edicaMainNav">
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{ route("main.index") }}">Главная <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">О нас</a>
+                        <a class="nav-link no-wrap" href="/about">О нас</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Новости</a>
@@ -36,26 +36,31 @@
                             <a class="dropdown-item" href="blog-single.html">Blog Post</a>
                         </div>
                     </li>
+                    @if($role == 0)
                     <li class="nav-item dropdown">
                         <a class="nav-link " href="{{ route("admin.main.index") }}"  aria-haspopup="true" >Admin</a>
                     </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Контакты</a>
                     </li>
-                </ul>
-                <ul class="navbar-nav mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="flag-icon flag-icon-squared rounded-circle flag-icon-gb"></span> Eng</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Download</a>
-                    </li>
+{{--                </ul>--}}
+{{--                <ul class="navbar-nav mt-2 mt-lg-0">--}}
+                    @if($role != 2)
+                        <li class="nav-item  text-danger">
+                            <a class="nav-link text-danger" href="{{ route("admin.main.index") }} " alt="Личный кабинет">{{ $user }}</a>
+                        </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
                             <input type="submit" value="Выйти" class="btn btn-outline-secondary">
                         </form>
                     </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">Войти </a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </nav>
@@ -81,7 +86,7 @@
         <div class="row footer-widget-area">
             <div class="col-md-3">
                 <a href="index.html" class="footer-brand-wrapper">
-                    <img src="{{ asset('assets/images/logo.svg') }}" alt="edica logo">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt=" logo">
                 </a>
                 <p class="contact-details">hello@edica.com</p>
                 <p class="contact-details">+23 3000 000 00</p>
