@@ -5,33 +5,50 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-11 mx-auto">
-                    <h1 class="edica-page-title" data-aos="fade-up">О гимназии</h1>
+                    <h1 class="edica-page-title" style="background: #c79ea7" data-aos="fade-up">О гимназии</h1>
+
                     <section class="edica-about-intro py-5">
                         <div class="row">
-                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="150">
+                            <div class="col-md-4 intro-content" data-aos="fade-left" data-aos-delay="150">
+                                <div class="widget widget-post-carousel">
 
-
-
-
-
-
+                                    <div class="post-carousel">
+                                        <div id="carouselId" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner" role="listbox">
+                                                <figure class="carousel-item active">
+                                                    <img src="{{ asset('assets/images/about3.jpg') }}" alt="First slide">
+                                                </figure>
+                                                <figure class="carousel-item">
+                                                    <img src="{{ asset('assets/images/about4.jpg') }}" alt="First slide">
+                                                </figure>
+                                                <div class="carousel-item">
+                                                    <img src="{{ asset('assets/images/about5.jpg') }}" alt="First slide">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="{{ asset('assets/images/about6.jpg') }}" alt="First slide">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-right" data-aos-delay="150">
                                 <h2 class="intro-title pb-3 pb-md-0 mb-4 mb-md-0">Православная классическая гимназия «Радонеж» <span></span></h2>
                             </div>
-                            <div class="col-md-6 intro-content" data-aos="fade-left" data-aos-delay="150">
+                            <div class="col-md-4 intro-content" data-aos="fade-left" data-aos-delay="150">
 
-                                <p><span class="first-letter">П</span>ервая православная общеобразовательная школа в постсоветской России.</p>
-                                <p><span class="first-letter">О</span> снована в 1990 году Православным братством «Радонеж» по благословению святейшего Патриарха Московского и всея Руси Алексия II.</p>
+                                <p><span class="first-letter">П</span>ервая православная общеобразовательная школа в постсоветской России. Основана в 1990 году Православным братством «Радонеж» по благословению святейшего Патриарха Московского и всея Руси Алексия II.</p>
                             </div>
                         </div>
                     </section>
                     <section class="edica-about-vision py-5">
                         <div class="row">
-                            <div class="col-md-6 pb-3 pb-md-0 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
-                                <img src="{{ asset('assets/images/about.jpg')}} " alt="vision" class="img-fluid">
-                            </div>
                             <div class="col-md-6 d-flex flex-column justify-content-center">
-                                <h5 class="vision-title" data-aos="fade-left">Наше видение</h5>
-                                <p class="vision-text" data-aos="fade-left">В своей работе и образовательной программе Гимназия «Радонеж» соединяет лучшие традиции Российского образования с высшими достижениями современной педагогики, проверенные временем образовательные методики с разумным индивидуальным подходом, ориентирована на присвоение детьми высоких образцов отечественной и мировой культуры. </p>
+                                <h5 class="vision-title" data-aos="fade-right">Наше видение</h5>
+                                <p class="vision-text" data-aos="fade-right">В своей работе и образовательной программе Гимназия «Радонеж» соединяет лучшие традиции Российского образования с высшими достижениями современной педагогики, проверенные временем образовательные методики с разумным индивидуальным подходом, ориентирована на присвоение детьми высоких образцов отечественной и мировой культуры. </p>
+                            </div>
+                            <div class="col-md-6 pb-3 pb-md-0 mb-4 mb-md-0" data-aos="fade-left" data-aos-delay="200">
+                                <img src="{{ asset('assets/images/about.jpg')}} " alt="vision" class="img-fluid">
                             </div>
                         </div>
                     </section>
@@ -56,23 +73,6 @@
 
 
 
-                                    Лингвистическая программа предусматривает изучение:
-
-                                    -  английский язык на углублённом уровне,
-
-                                    - второй иностранный с 5 класса
-
-                                    - немецкий (3часа/неделю),
-
-                                    - церковнославянский - 4 года,
-
-                                    - латинский - 4 года,
-
-                                    - древнегреческий по выбору.
-
-
-
-                                    Точные и естественнонаучные предметы преподаются на базовом уровне.
 
                                 </p>
                             </div>
@@ -80,16 +80,16 @@
                     </section>
                     <section class="edica-about-counter py-5 d-md-flex justify-content-between" id="counter" data-aos="fade-up">
                         <div class="counter-card mb-3 pb-1 pb-md-0 mb-md-0">
-                            <h3 class="counter-count"><span class="count" data-count="50">0</span>K+</h3>
-                            <p class="count-label">Daily Visitors</p>
+                            <h3 class="counter-count"><span class="count" data-count="50">1990</span></h3>
+                            <p class="count-label">Год основания</p>
                         </div>
                         <div class="counter-card mb-3 pb-1 pb-md-0 mb-md-0">
-                            <h3 class="counter-count"><span class="count" data-count="10">0</span>K+</h3>
-                            <p class="count-label">Downloads</p>
+                            <h3 class="counter-count"><span class="count" data-count="10">17</span>0</h3>
+                            <p class="count-label">Обучающихся</p>
                         </div>
                         <div class="counter-card mb-3 pb-1 pb-md-0 mb-md-0">
-                            <h3 class="counter-count">0.02%</h3>
-                            <p class="count-label">Uninstallation</p>
+                            <h3 class="counter-count">85%</h3>
+                            <p class="count-label">Поступление в ВУЗ</p>
                         </div>
                         <div class="counter-card mb-3 pb-1 pb-md-0 mb-md-0">
                             <h3 class="counter-count"><span class="count" data-count="15">0</span>K+</h3>
@@ -103,8 +103,22 @@
                     <section class="edica-about-goal py-5 mb-5">
                         <div class="row">
                             <div class="col-md-6 mb-4 mb-md-0 d-flex flex-column justify-content-center" data-aos="fade-right">
-                                <h2 class="goal-title">Our Goal</h2>
-                                <p class="goal-text">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out printed graphic or web designs. The passage is at attributed to an unknown typesetters in 1the 5th century who is thought scrambled with all parts of Cicero’s De. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out printed graphic or web designs</p>
+                                <h2 class="goal-title">Лингвистическая программа</h2>
+                                <p class="goal-text">
+
+                                    предусматривает изучение:
+                                <ul>
+                                    <li>  английский язык на углублённом уровне,</li>
+                                    <li> второй иностранный с 5 класса</li>
+                                    <li> немецкий (3часа/неделю),</li>
+                                    <li> церковнославянский - 4 года,</li>
+                                    <li> латинский - 4 года,</li>
+                                    <li> древнегреческий по выбору.</li>
+                                </ul>
+
+
+                                    Точные и естественнонаучные предметы преподаются на базовом уровне.
+                                </p>
                             </div>
                             <div class="col-md-6" data-aos="fade-left">
                                 <img src="assets/images/about-goal.png" alt="goal" class="img-fluid">
@@ -135,7 +149,7 @@
                         </div>
                     </section>
                     <section class="edica-about-faq py-5 mb-5">
-                        <h2 class="faq-title" data-aos="fade-up">Frequently Asked Queries</h2>
+                        <h2 class="faq-title" data-aos="fade-up">Часто задаваемые вопросы</h2>
                         <p class="faq-section-text" data-aos="fade-up" data-aos-delay="100">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out printed graphic or web designs. </p>
                         <div class="accordion" id="edicaAboutFaqCollapse" role="tablist" aria-multiselectable="true">
                             <div class="card" data-aos="fade-up" data-aos-delay="200">
