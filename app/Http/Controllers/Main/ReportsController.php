@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
-use App\Models\Post;
+use App\Models\Report;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class ReportsController extends Controller
 {
     public function __invoke()
     {
-        // TODO: Implement __invoke() method.
         if(is_null(auth()->user())){
             $role = 2;
             $user = "";
@@ -18,7 +18,10 @@ class IndexController extends Controller
             $role = auth()->user()->role;
             $user = auth()->user()->name;
         }
-        $posts = Post::all()->sortDesc();
-        return view("main.index",compact('role', 'user','posts'));
+        $reports = Report::all();
+        foreach($reports as $report){
+            $report->date = Carbon::parse($report->date)->format('d.m.Y');
+        }
+        return view("main.reports",compact('role', 'user','reports'));
     }
 }

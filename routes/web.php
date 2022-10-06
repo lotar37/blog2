@@ -19,8 +19,10 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::group(['namespace' => "Main"], function () {
-    Route::get("/", "IndexController")->name('main.index');;
-    Route::get("/about", "aboutController");
+    Route::get("/", "IndexController")->name('main.index');
+    Route::get("/contacts", "ContactsController")->name('main.contacts');
+    Route::get("/reports", "ReportsController")->name('main.reports');
+    Route::get("/about", "aboutController")->name('main.about');
 });
 
 
@@ -52,6 +54,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::patch("/{category}", "UpdateController")->name("admin.category.update");
         Route::delete("/{category}", "DeleteController")->name("admin.category.delete");
     });
+
     Route::group(['namespace' => 'Tag', 'prefix' => 'tags'], function(){
         Route::get("/", "IndexController")->name("admin.tag.index");
         Route::get("/create", "CreateController")->name("admin.tag.create");
@@ -60,6 +63,15 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::get("/{tag}/edit", "EditController")->name("admin.tag.edit");
         Route::patch("/{tag}", "UpdateController")->name("admin.tag.update");
         Route::delete("/{tag}", "DeleteController")->name("admin.tag.delete");
+    });
+    Route::group(['namespace' => 'Report', 'prefix' => 'reports'], function(){
+        Route::get("/", "IndexController")->name("admin.report.index");
+        Route::get("/create", "CreateController")->name("admin.report.create");
+        Route::post("/", "StoreController")->name("admin.report.store");
+        Route::get("/{report}", "ShowController")->name("admin.report.show");
+        Route::get("/{report}/edit", "EditController")->name("admin.report.edit");
+        Route::patch("/{report}", "UpdateController")->name("admin.report.update");
+        Route::delete("/{report}", "DeleteController")->name("admin.report.delete");
     });
 
     Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function(){

@@ -29,6 +29,23 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div>
+
+
+
+                                <div class="form-group w-25">
+                                    <label>Дата мероприятия:</label>
+                                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate">
+                                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
                             <div class="form-group col-12">
                                 <textarea id="summernote" name="content" class="col-12">{{ old('content') }}</textarea>
                                 @error('content')

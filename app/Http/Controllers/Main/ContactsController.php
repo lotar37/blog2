@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
-use App\Models\Post;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class ContactsController extends Controller
 {
     public function __invoke()
     {
@@ -18,7 +17,7 @@ class IndexController extends Controller
             $role = auth()->user()->role;
             $user = auth()->user()->name;
         }
-        $posts = Post::all()->sortDesc();
-        return view("main.index",compact('role', 'user','posts'));
+
+        return view("main.contact",compact('role', 'user'));
     }
 }

@@ -11,7 +11,6 @@ class UpdateController extends Controller
 {
     public function __invoke(UpdateRequest $request, Category $category)
     {
-        // TODO: Implement __invoke() method.
         $data = $request->validated();
         $category->update($data);
         return view('admin.categories.show', compact('category'));

@@ -9,23 +9,24 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 mb-3">Посты</h1>
+                    <h1 class="m-0 mb-3">Отзывы</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('main.index') }}">На сайт</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная</a></li>
-                        <li class="breadcrumb-item active">Посты</li>
+                        <li class="breadcrumb-item active">Отзывы</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-2">
-                    <a class="btn btn-block btn-primary" href="{{route("admin.post.create")}}">
+                    <a class="btn btn-block btn-primary" href="{{route("admin.report.create")}}">
                                 Добавить
                     </a>
                 </div>
 
             </div><!-- /.row -->
             <div class="row">
-                <div class="w-75">
+                <div class="col-12">
                     <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
@@ -33,19 +34,23 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Название</th>
+                                    <th>Автор</th>
+                                    <th>Дата</th>
+                                    <th>Отзыв</th>
                                     <th>Действия</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($posts as $post)
+                                @foreach($reports as $report)
                                 <tr>
-                                    <td>{{ $post->id }}</td>
-                                    <td>{{ $post->title }}</td>
+                                    <td>{{ $report->id }}</td>
+                                    <td>{{ $report->person }}</td>
+                                    <td>{{ substr($report->date,0,10) }}</td>
+                                    <td>{{ substr(strip_tags($report->content),0,89) }}...</td>
                                     <td class="d-flex">
-                                        <a href="{{ route("admin.post.show", $post->id) }}"><i class="fa-eye far"></i></a>
-                                        <a href="{{ route("admin.post.edit", $post->id) }} " class="text-success    "><i class="ml-2 fa-pencil-alt fas"></i></a>
-                                        <form action="{{route('admin.post.delete', $post->id)}}" method="post" >
+                                        <a href="{{ route("admin.report.show", $report->id) }}"><i class="fa-eye far"></i></a>
+                                        <a href="{{ route("admin.report.edit", $report->id) }} " class="text-success    "><i class="ml-2 fa-pencil-alt fas"></i></a>
+                                        <form action="{{route('admin.report.delete', $report->id)}}" method="post" >
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="border-0 bg-white">

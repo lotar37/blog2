@@ -10,8 +10,6 @@ class ShowController extends Controller
 {
     public function __invoke(Category $category)
     {
-        // TODO: Implement __invoke() method.
-        $categories = Category::all();
         return view('admin.categories.show',compact("category"));
     }
 }

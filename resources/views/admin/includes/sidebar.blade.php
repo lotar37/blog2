@@ -40,6 +40,12 @@
                     <p>Тэги</p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route("admin.report.index") }}" class="nav-link">
+                    <i class="nav-icon far fa-pencil"></i>
+                    <p>Отзывы</p>
+                </a>
+            </li>
         </ul>
     </div>
     <!-- /.sidebar -->
