@@ -11,19 +11,23 @@ class PostService
     public function store($data)
     {
         try {
+            $tagg = false;
             DB::beginTransaction();
+
             if(isset($data["tag_ids"])){
                 $tags_data = $data["tag_ids"];
+                $tagg = true;
                 unset($data["tag_ids"]);
             }
             $data['preview_image'] = Storage::disk("public")->put("/images", $data['preview_image']);
             $data['main_image'] = Storage::disk("public")->put("/images", $data['main_image']);
             $post = Post::firstOrCreate($data);
-            if(isset($data["tag_ids"])) {
+            if($tagg) {
                 $post->tags()->attach($tags_data);
             }
             DB::commit();
         } catch (\Exception $exception) {
+            dd($exception);
             DB::rollBack();
             abort(500);
         }
@@ -45,9 +49,9 @@ class PostService
                 $data['main_image'] = Storage::disk("public")->put("/images", $data['main_image']);
             }
             $post->update($data);
-            if(isset($data["tag_ids"])) {
+            if(isset($tags_data)) {
                 $post->tags()->sync($tags_data);
-            }
+            }w
             DB::commit();
         } catch (\Exception $exception) {
             DB::rollBack();

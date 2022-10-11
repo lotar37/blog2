@@ -14,6 +14,7 @@ class UpdateController extends BaseController
     {
         // TODO: Implement __invoke() method.
         $data = $request->validated();
+//        dd($data);
         $post = $this->service->update($data, $post);
         return view('admin.posts.show', compact('post'));
     }

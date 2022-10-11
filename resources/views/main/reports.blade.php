@@ -4,11 +4,11 @@
     <main class="blog">
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">Отзывы</h1>
+            <section class="blog-post-featured-img" data-aos="fade-up" data-aos-delay="300">
+                <img src="{{ asset('assets/images/report.jpg')}}" alt="featured image" class="w-100">
+            </section>
             <section class="edica-about-faq py-5 mb-5">
                 <h2 class="faq-title" data-aos="fade-up">Отзывы наших учеников и их родителей</h2>
-                <p class="faq-section-text" data-aos="fade-up" data-aos-delay="100">
-
-                </p>
                 <div class="accordion" id="reportCollapse" role="tablist" aria-multiselectable="true">
                     <div class="card" data-aos="fade-up" data-aos-delay="200">
                         @foreach($reports as $report)

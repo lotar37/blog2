@@ -27,18 +27,32 @@
                         <a class="nav-link" href="{{ route("main.index") }}">Главная <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="schoolDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Школа</a>
+                        <div class="dropdown-menu" aria-labelledby="schoolDropdown" >
+                            <a class="dropdown-item" href="{{ route("main.regim") }}">Режим работы</a>
+                            <a class="dropdown-item" href="{{ route("main.teachers") }}">Наши учителя</a>
+                            <a class="dropdown-item" href="{{ route("main.advice") }}" id="schoolDropdownDown">Гимназия рекомендует</a>
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item" href="{{ route("main.museum") }}">&nbsp;&nbsp;Музеи</a>
+                            <a class="dropdown-item" href="{{ route("main.theaters") }}">&nbsp;&nbsp;Театры</a>
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item" href="https://nouradonezh.mskobr.ru/">Раздел на сайте Департамента образования</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О нас</a>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <a class="dropdown-item" href="{{ route("main.about") }}">О гимназии</a>
                             <a class="dropdown-item" href="{{ route("main.reports") }}">Отзывы</a>
-                            <a class="dropdown-item" href="https://nouradonezh.mskobr.ru/">Раздел на сайте Департамента образования</a>
+                            <a class="dropdown-item" href="{{ route("main.patriarh") }}">Приветствие от Патриарха</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Образование</a>
                         <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                            <a class="dropdown-item" href="blog.html">Архив новостей</a>
-                            <a class="dropdown-item" href="blog-single.html">Blog Post</a>
+                            <a class="dropdown-item" href="{{ route("main.preschool") }}">Дошкольное отделение</a>
+                            <a class="dropdown-item" href="{{ route("main.extcurr") }}">Внеурочная образовательная деятельность</a>
+                            <a class="dropdown-item" href="{{ route("main.studyplan") }}">Учебный план</a>
                         </div>
                     </li>
                     @if($role == 0)
@@ -69,7 +83,9 @@
                 </ul>
             </div>
         </nav>
+        <hr class="container">
     </div>
+
 </header>
 
 @yield("content")
