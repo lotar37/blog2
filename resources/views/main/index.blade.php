@@ -3,41 +3,12 @@
 @section('content')
     <main class="blog">
         <div class="container">
-            <h1 class="edica-page-title mb-4" data-aos="fade-up">Гимназия Радонеж</h1>
+            <h1 class="edica-page-title" data-aos="fade-up">Гимназия Радонеж</h1>
+            <p class="align-content-center" data-aos="fade-up" data-aos-delay="200">основана в 1990 году</p>
             <section class="blog-post-featured-img mb-4" data-aos="fade-up" data-aos-delay="300">
                 <img src="{{ asset('assets/images/main.jpg')}}" alt="featured image" class="w-100">
             </section>
-{{--            <section class="featured-posts-section">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-md-4 fetured-post blog-post" data-aos="fade-right">--}}
-{{--                        <div class="blog-post-thumbnail-wrapper">--}}
-{{--                            <img src="{{ asset('assets/images/blog_1.jpg') }}" alt="blog post">--}}
-{{--                        </div>--}}
-{{--                        <p class="blog-post-category">Blog post</p>--}}
-{{--                        <a href="#!" class="blog-post-permalink">--}}
-{{--                            <h6 class="blog-post-title">Front becomes an official Instagram Marketing Partner</h6>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-md-4 fetured-post blog-post" data-aos="fade-up">--}}
-{{--                        <div class="blog-post-thumbnail-wrapper">--}}
-{{--                            <img src="{{ asset('assets/images/blog_2.jpg') }}" alt="blog post">--}}
-{{--                        </div>--}}
-{{--                        <p class="blog-post-category">Blog post</p>--}}
-{{--                        <a href="#" class="blog-post-permalink">--}}
-{{--                            <h6 class="blog-post-title">Front becomes an official Instagram Marketing Partner</h6>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-md-4 fetured-post blog-post" data-aos="fade-left">--}}
-{{--                        <div class="blog-post-thumbnail-wrapper">--}}
-{{--                            <img src="{{ asset('assets/images/blog_3.jpg') }}" alt="blog post">--}}
-{{--                        </div>--}}
-{{--                        <p class="blog-post-category">Blog post</p>--}}
-{{--                        <a href="#" class="blog-post-permalink">--}}
-{{--                            <h6 class="blog-post-title">Front becomes an official Instagram Marketing Partner</h6>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </section>--}}
+
 
             <div class="row">
                 <div class="col-md-3 sidebar" >
@@ -64,28 +35,6 @@
                                 </a>
                             </div>
                         </div>
-{{--                        <div class="row blog-post-row">--}}
-{{--                            <div class="col-md-12 blog-post" data-aos="fade-up">--}}
-{{--                                <div class="blog-post-thumbnail-wrapper">--}}
-{{--                                    <img src="{{ asset('assets/images/blog_9.jpg') }}" alt="blog post">--}}
-{{--                                </div>--}}
-{{--                                <p class="blog-post-category">Blog post</p>--}}
-{{--                                <a href="#!" class="blog-post-permalink">--}}
-{{--                                    <h6 class="blog-post-title">Front becomes an official Instagram Marketing Partner</h6>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="row blog-post-row">--}}
-{{--                            <div class="col-md-12 blog-post" data-aos="fade-up">--}}
-{{--                                <div class="blog-post-thumbnail-wrapper">--}}
-{{--                                    <img src="{{ asset('assets/images/blog_11.jpg') }}" alt="blog post">--}}
-{{--                                </div>--}}
-{{--                                <p class="blog-post-category">Blog post</p>--}}
-{{--                                <a href="#!" class="blog-post-permalink">--}}
-{{--                                    <h6 class="blog-post-title">Front becomes an official Instagram Marketing Partner</h6>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
                     </section>
                 </div>
 {{--                Post lists--}}
