@@ -12,6 +12,7 @@
     <script src="{{ asset("public/assets/vendors/jquery/jquery.min.js") }}"></script>
     <script src="{{ asset("public/assets/js/loader.js") }}"></script>
 </head>
+
 <body>
 <div class="edica-loader"></div>
 <header class="edica-header">
