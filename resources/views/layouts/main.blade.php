@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
-    <link rel="stylesheet" href="{{ asset("public/assets/vendors/flag-icon-css/css/flag-icon.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("public/assets/vendors/font-awesome/css/all.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("public/assets/vendors/aos/aos.css") }}">
-    <link rel="stylesheet" href="{{ asset("public/assets/css/style.css") }}">
-    <script src="{{ asset("public/assets/vendors/jquery/jquery.min.js") }}"></script>
-    <script src="{{ asset("public/assets/js/loader.js") }}"></script>
+    <link rel="stylesheet" href="{{ asset("assets/vendors/flag-icon-css/css/flag-icon.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/vendors/font-awesome/css/all.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/vendors/aos/aos.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
+    <script src="{{ asset("assets/vendors/jquery/jquery.min.js") }}"></script>
+    <script src="{{ asset("assets/js/loader.js") }}"></script>
 </head>
 <body>
 <div class="edica-loader"></div>
@@ -96,8 +96,8 @@
             <h1 class="banner-title">Запись на собеседование</h1>
             <h1 class="banner-title text-danger">8(495)423-51-22</h1>
             <div class="banner-btns-wrapper">
-{{--                <button class="btn btn-success"> <img src="{{ asset('public/assets/images/apple@1x.svg') }}" alt="ios" class="mr-2"> App Store</button>--}}
-{{--                <button class="btn btn-success"> <img src="{{ asset('public/assets/images/android@1x.svg') }}" alt="android" class="mr-2"> Google Play</button>--}}
+{{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/apple@1x.svg') }}" alt="ios" class="mr-2"> App Store</button>--}}
+{{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/android@1x.svg') }}" alt="android" class="mr-2"> Google Play</button>--}}
             </div>
             <p class="banner-text">Add some helper text here to explain the finer details of your <br> product or service.</p>
         </div>
@@ -108,7 +108,7 @@
         <div class="row footer-widget-area">
             <div class="col-md-3">
                 <a href="index.html" class="footer-brand-wrapper" >
-                    <img src="{{ asset('public/assets/images/logo.png') }}" alt=" logo">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt=" logo">
                 </a>
                 <p class="contact-details">hello@radonezh.ru</p>
                 <p class="contact-details">+7 495 423 5122</p>
@@ -151,10 +151,10 @@
         </div>
     </div>
 </footer>
-<script src="{{ asset('public/assets/vendors/popper.js/popper.min.js') }}"></script>
-<script src="{{ asset('public/assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('public/assets/vendors/aos/aos.js') }}"></script>
-<script src="{{ asset('public/assets/js/main.js') }}"></script>
+<script src="{{ asset('assets/vendors/popper.js/popper.min.js') }}"></script>
+<script src="{{ asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/vendors/aos/aos.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
 <script>
     AOS.init({
         duration: 1000
