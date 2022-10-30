@@ -44,10 +44,11 @@
                         <ul class="post-list">
                             @foreach($posts as $post)
                             <li class="post">
-                                <a href="#!" class="post-permalink media">
+                                <a href=" {{ route("main.post_show", $post->id) }}" class="post-permalink media">
+
                                     <img src="{{ asset("storage/" . $post->preview_image) }}" alt="blog post">
                                     <div class="media-body">
-                                        <h6 class="post-title">{{$post->title}}</h6>
+                                        <h6 class="post-title">{{ $post->date." ".$post->title}}</h6>
                                     </div>
                                 </a>
                             </li>

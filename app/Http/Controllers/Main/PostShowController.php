@@ -7,11 +7,11 @@ use App\Models\Post;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class PostShowController extends Controller
 {
-    public function __invoke()
+    public function __invoke(Post $post)
+
     {
-        // TODO: Implement __invoke() method.
         if(is_null(auth()->user())){
             $role = 2;
             $user = "";
@@ -19,10 +19,7 @@ class IndexController extends Controller
             $role = auth()->user()->role;
             $user = auth()->user()->name;
         }
-        $posts = Post::all()->sortDesc();
-        foreach($posts as $post){
-            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
-        }
-        return view("main.index",compact('role', 'user','posts'));
+        $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
+        return view('main.post_show',compact("post",'role', 'user'));
     }
 }

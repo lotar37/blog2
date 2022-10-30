@@ -32,6 +32,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/advice", "AdviceController")->name('main.advice');
     Route::get("/museum", "MuseumController")->name('main.museum');
     Route::get("/theaters", "TheatersController")->name('main.theaters');
+    Route::get("/post/{post}", "PostShowController")->name('main.post_show');
 });
 
 
