@@ -9,7 +9,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 mb-3">Добавление поста</h1>
+                        <h1 class="m-0 mb-3">Добавление мероприятия</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -21,32 +21,36 @@
                     <div class="col-12">
                         <form action="{{ route("admin.post.store") }}" method="post" enctype="multipart/form-data">
                             @csrf
-                            <div class="form-group w-25">
+                            <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Название</label>
                                 <input type="text" name="title" class="form-control"
-                                       placeholder="Введите заголовок" value="{{ old('title') }}">
+                                       placeholder="Введите название мероприятия" value="{{ old('title') }}">
                                 @error('title')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div>
 
+                            <div class="form-group w-50">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Дата мероприятия:</label>
+                                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                            <input type="text" name="date"  value="{{ old('date') }}" class="form-control datetimepicker-input" data-target="#reservationdate">
+                                            <div class="input-group-append"   data-target="#reservationdate" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
 
-
-                                <div class="form-group w-25">
-                                    <label>Дата мероприятия:</label>
-                                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate">
-                                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                         </div>
                                     </div>
+                                    <div class="col w-25">
+                                        <label>Время мероприятия:</label>
+                                        <input type="text" name="time" class="form-control"
+                                               placeholder="Введите время мероприятия" value="{{ old('time') }}">
+                                        </div>
                                 </div>
-
-
-
                             </div>
                             <div class="form-group col-12">
+                                <label>Краткое описание:</label>
                                 <textarea id="summernote" name="content" class="col-12">{{ old('content') }}</textarea>
                                 @error('content')
                                 <div class="text-danger">{{ $message }}</div>
@@ -106,6 +110,14 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <div class="form-group col-12">
+                                <label>Отчет о мероприятии:</label>
+                                <textarea id="summernote2" name="report" class="col-12">{{ old('report') }}</textarea>
+                                @error('content')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary" value="Добавить">
                             </div>

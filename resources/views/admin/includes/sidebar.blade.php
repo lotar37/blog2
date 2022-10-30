@@ -24,7 +24,7 @@
                 <a href="{{ route("admin.post.index") }}" class="nav-link">
                     {{--                    <i class="nav-icon fas fa-message-plus fa-solid"></i>--}}
                     <i class="nav-icon  far  fa-clipboard"></i>
-                    <p>Посты</p>
+                    <p>Мероприятия</p>
                 </a>
             </li>
 
@@ -42,7 +42,8 @@
             </li>
             <li class="nav-item">
                 <a href="{{ route("admin.report.index") }}" class="nav-link">
-                    <i class="nav-icon far fa-pencil"></i>
+
+                    <i class="nav-icon fas fa-user-plus"></i>
                     <p>Отзывы</p>
                 </a>
             </li>

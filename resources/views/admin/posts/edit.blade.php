@@ -9,7 +9,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 mb-3">Редактирование поста</h1>
+                        <h1 class="m-0 mb-3">Редактирование мероприятия</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -22,7 +22,7 @@
                         <form action="{{ route("admin.post.update", $post->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
-                            <div class="form-group w-25">
+                            <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Название</label>
                                 <input type="text" name="title" class="form-control"
                                        placeholder="Введите заголовок" value="{{ $post->title }}">
@@ -30,7 +30,29 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="form-group w-50">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Дата мероприятия:</label>
+                                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                            <input type="text" name="date"  value="{{ $post->date }}" class="form-control datetimepicker-input" data-target="#reservationdate">
+                                            <div class="input-group-append"   data-target="#reservationdate" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col w-25">
+                                        <label>Время мероприятия:</label>
+                                        <input type="text" name="time" class="form-control"
+                                               placeholder="Введите время мероприятия" value="{{ $post->time }}">
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="form-group col-12">
+                                <label>Краткое описание:</label>
+
                                 <textarea id="summernote" name="content" class="col-12">{{ $post->content }}</textarea>
                                 @error('content')
                                 <div class="text-danger">{{ $message }}</div>
@@ -95,6 +117,13 @@
                                         >{{ $tag->title }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="form-group col-12">
+                                <label>Отчет о мероприятии:</label>
+                                <textarea id="summernote2" name="report" class="col-12">{{ $post->report }}</textarea>
+                                @error('content')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary" value="Сохранить">

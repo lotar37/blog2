@@ -35,7 +35,7 @@
                             <label>Дата отзыва:</label>
                             <div class="input-group date" id="reservationdate" data-target-input="nearest">
                                 <input type="text" name='date' class="form-control datetimepicker-input w-25"
-                                       data-target="#reservationdate" value="{{ $report->date }}>
+                                       data-target="#reservationdate" value="{{ $report->date }}" autocomplete="off">
                                     <div class=" input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
 
