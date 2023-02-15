@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 Route::group(['namespace' => "Main"], function () {
     Route::get("/", "IndexController")->name('main.index');
     Route::get("/contacts", "ContactsController")->name('main.contacts');
@@ -115,5 +111,3 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
 });
 
 Auth::routes();
-//
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
