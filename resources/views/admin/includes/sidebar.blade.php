@@ -51,7 +51,7 @@
                 <a href="{{ route("admin.page.index") }}" class="nav-link">
                     <i class="nav-icon fas far fa-sitemap"></i>
 {{--                    <i class="nav-icon fas fa-user-plus"></i>--}}
-                    <p>Страницы</p>
+                    <p>Страницы2</p>
                 </a>
             </li>
         </ul>
