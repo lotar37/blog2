@@ -22,10 +22,18 @@
                         <form action="{{ route("admin.page.store") }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group w-50">
-                                <label for="exampleInputEmail1">Название</label>
+                                <label for="exampleInputEmail1">Заголовок</label>
                                 <input type="text" name="title" class="form-control"
                                        placeholder="Введите заголовок стариницы" value="{{ old('title') }}">
                                 @error('title')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50">
+                                <label for="exampleInputEmail1">Подзаголовок</label>
+                                <input type="text" name="subtitle" class="form-control"
+                                       placeholder="Введите подзаголовок(не обязательно)" value="{{ old('subtitle') }}">
+                                @error('subtitle')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
@@ -51,6 +59,15 @@
                                     </div>
                                 </div>
                                 @error('main_image')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group w-50">
+                                <label for="exampleInputEmail1">Rout name</label>
+                                <input type="text" name="route_name" class="form-control"
+                                       placeholder="route name" value="{{ old('route_name') }}">
+                                @error('route_name')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>

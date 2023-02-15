@@ -7,14 +7,16 @@ use Illuminate\Http\Request;
 
 class BaseController extends Controller
 {
+    public $role;
+    public $user;
    public function __construct()
    {
        if(is_null(auth()->user())){
-           $role = 2;
-           $user = "";
+           $this->role = 2;
+           $this->user = "";
        }else{
-           $role = auth()->user()->role;
-           $user = auth()->user()->name;
+           $this->role = auth()->user()->role;
+           $this->user = auth()->user()->name;
        }
 
    }

@@ -25,6 +25,8 @@ class StoreRequest extends FormRequest
     {
         return [
             "title" => 'required|string',
+            "subtitle" => 'string',
+            "route_name" => 'string',
             "content" => 'required|string',
             "main_image" => 'required|file',
 

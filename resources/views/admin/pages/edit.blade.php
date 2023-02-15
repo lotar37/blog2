@@ -23,10 +23,18 @@
                             @csrf
                             @method('PATCH')
                             <div class="form-group w-50">
-                                <label for="exampleInputEmail1">Название</label>
+                                <label for="exampleInputEmail1">Заголовок</label>
                                 <input type="text" name="title" class="form-control"
                                        placeholder="Введите заголовок" value="{{ $page->title }}">
                                 @error('title')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50">
+                                <label for="exampleInputEmail1">Подзаголовок</label>
+                                <input type="text" name="subtitle" class="form-control"
+                                       placeholder="Введите подзаголовок" value="{{ $page->subtitle }}">
+                                @error('subtitle')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
@@ -56,6 +64,16 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+
+                            <div class="form-group w-50">
+                                <label for="exampleInputEmail1">Route name</label>
+                                <input type="text" name="route_name" class="form-control"
+                                       placeholder="route name" value="{{ $page->route_name }}">
+                                @error('route_name')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                              <div class="form-group">
                                 <input type="submit" class="btn btn-primary" value="Сохранить">
                             </div>

@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\Main\PagesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-/*
+/*t
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -26,7 +27,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/teachers", "TeachersController")->name('main.teachers');
     Route::get("/patriarh", "PatriarhController")->name('main.patriarh');
     Route::get("/advice", "AdviceController")->name('main.advice');
-    Route::get("/museum", "MuseumController")->name('main.museum');
+    Route::get("/museum", [PagesController::class,"museum"])->name('main.museum');
     Route::get("/theaters", "TheatersController")->name('main.theaters');
     Route::get("/post/{post}", "PostShowController")->name('main.post_show');
 });
