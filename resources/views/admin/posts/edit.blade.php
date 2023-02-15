@@ -52,7 +52,6 @@
 
                             <div class="form-group col-12">
                                 <label>Краткое описание:</label>
-
                                 <textarea id="summernote" name="content" class="col-12">{{ $post->content }}</textarea>
                                 @error('content')
                                 <div class="text-danger">{{ $message }}</div>
