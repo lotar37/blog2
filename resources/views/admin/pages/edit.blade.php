@@ -39,17 +39,10 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group col-12">
-                                <label>Краткое описание:</label>
-                                <textarea id="summernote" name="content" class="col-12">{{ $page->content }}</textarea>
-                                @error('content')
-                                <div class="text-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group w-50">
+                            <div class="form-group w-100">
                                 <label for="exampleInputFile">Главное изображение</label>
                                 <div class="">
-                                    <img src="{{ asset("storage/" . $page->main_image) }}" alt="main_image" class="w-25 mb-2">
+                                    <img src="{{ asset("storage/" . $page->main_image) }}" alt="main_image" class="w-75 mb-2">
                                 </div>
                                 <div class="input-group">
                                     <div class="custom-file">
@@ -64,6 +57,17 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+
+                            <div class="form-group col-12">
+                                <label>Краткое описание:</label>
+                                <textarea id="summernote" name="long_content" class="col-12">{{ $page->long_content }}</textarea>
+                                @error('long_content')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+
+
 
                             <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Route name</label>

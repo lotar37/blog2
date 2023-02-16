@@ -27,7 +27,8 @@ class StoreRequest extends FormRequest
             "title" => 'required|string',
             "subtitle" => 'string',
             "route_name" => 'string',
-            "content" => 'required|string',
+            "content" => 'string',
+            "long_content" => 'required',
             "main_image" => 'required|file',
 
 
@@ -38,8 +39,8 @@ class StoreRequest extends FormRequest
         return [
             'title.required' => 'Это поле необходимо для заполнения',
             'title.string' => 'Данные должны соответствовать строчному типу',
-            'content.required' => 'Это поле необходимо для заполнения',
-            'content.string' => 'Данные должны соответствовать строчному типу',
+            'long_content.required' => 'Это поле необходимо для заполнения',
+            'long_content.string' => 'Данные должны соответствовать строчному типу',
             'main_image.required' => 'Это поле необходимо для заполнения',
             'main_image.file' => 'Нужно выбрать файл',
          ];

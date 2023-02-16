@@ -10,8 +10,8 @@ class PagesController extends BaseController
 {
     public function museum()
     {
-        $role = $this->role;
-        $user = $this->user;
+        $role = $this->service->getRole();
+        $user = $this->service->getUser();;
         $page = Page::all()->where('route_name','museum');
         return view("main.page",compact('role', 'user','page'));
     }

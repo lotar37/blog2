@@ -31,7 +31,7 @@ class PageService
         try {
             DB::beginTransaction();
 
-            if(isset($data['main_image'])) {
+            if (isset($data['main_image'])) {
                 $data['main_image'] = Storage::disk("public")->put("/images", $data['main_image']);
             }
             $page->update($data);
@@ -42,5 +42,15 @@ class PageService
         }
         return $page;
 
+    }
+
+    public function getUser()
+    {
+        return is_null(auth()->user()) ? "" : auth()->user()->name;
+    }
+
+    public function getRole()
+    {
+        return is_null(auth()->user()) ? $role = 2 :  auth()->user()->role;
     }
 }

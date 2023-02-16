@@ -37,17 +37,7 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-
-
-                            <div class="form-group col-12">
-                                <label>Текст страницы:</label>
-                                <textarea id="summernote" name="content" class="col-12">{{ old('content') }}</textarea>
-                                @error('content')
-                                <div class="text-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            <div class="form-group w-50">
+                            <div class="form-group w-100">
                                 <label for="exampleInputFile">Добавить картинку</label>
                                 <div class="input-group">
                                     <div class="custom-file">
@@ -59,6 +49,14 @@
                                     </div>
                                 </div>
                                 @error('main_image')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group col-12">
+                                <label>Текст страницы:</label>
+                                <textarea id="summernote" name="long_content" class="col-12">{{ old('long_content') }}</textarea>
+                                @error('long_content')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>

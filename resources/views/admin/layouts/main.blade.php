@@ -107,12 +107,27 @@
         $('#summernote').summernote({
             toolbar: [
                 // [groupName, [list of button]]
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['font', ['strikethrough', 'superscript', 'subscript']],
-                ['fontsize', ['fontsize']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']]
+                ['style', ['style']], // style
+                ['fontsize', ['fontsize']], // размер шрифта
+                ['para', ['ul', 'ol', 'абзац', 'высота']], // неупорядоченный список, упорядоченный список, выравнивание абзаца
+                // шрифт
+                ['style', ['bold', 'italic', 'underline', 'clear']], // жирный шрифт, курсив, подчеркнутый шрифт, формат шрифта clear
+                ['font', ['strikethrough', 'superscript', 'subscript']], // подчеркивание шрифта, верхний индекс шрифта, нижний индекс шрифта
+                ['color', ['color']], // цвет шрифта
+
+                // Вставить инструмент
+                ['table', ['table']], // Вставить таблицу
+                ['hr', ['hr']], // Вставить горизонтальные линии
+                ['link', ['link']], // Вставить ссылку
+                ['picture', ['picture']], // Вставить картинку
+                ['video', ['video']], // Вставить видео
+
+                // Другое
+                ['fullscreen', ['fullscreen']], // полный экран
+                ['отменить', ['отменить']], // отменить
+                ['codeview', ['codeview']], // Просмотреть HTML-код
+                ['redo', ['redo']], // Отмена отмены
+
             ]
         });
         $('#summernote2').summernote({

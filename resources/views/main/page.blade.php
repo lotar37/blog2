@@ -1,6 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
+    <style>
+        .row img{
+            padding:10px;
+        }
+    </style>
     <main class="blog-post">
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">{{ $page[0]->title }}</h1>
@@ -12,8 +17,8 @@
             <section class="post-content">
                 <div class="row">
 
-                   {!! $page[0]->content !!}
-                   {{ $page[0]->content }}
+                   {!! $page[0]->long_content !!}
+
 
                 </div>
             </section>
