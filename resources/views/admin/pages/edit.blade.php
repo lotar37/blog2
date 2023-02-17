@@ -9,7 +9,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 mb-3">Редактирование мероприятия</h1>
+                        <h1 class="m-0 mb-3">Редактирование страницы</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -25,7 +25,7 @@
                             <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Название в меню</label>
                                 <input type="text" name="content" class="form-control"
-                                       placeholder="Введите заголовок стариницы" value="{{ old('content') }}">
+                                       placeholder="Введите заголовок стариницы" value="{{ $page->content }}">
                                 @error('content')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
