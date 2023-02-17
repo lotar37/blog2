@@ -58,10 +58,10 @@
     @yield('content')
 
     <footer class="main-footer">
-        <strong>Blog</strong>
+        <strong>Radonezh</strong>
 
         <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 0.0.5
+            <b>Version</b> 0.5.1
         </div>
     </footer>
 

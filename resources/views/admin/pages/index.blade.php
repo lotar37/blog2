@@ -18,7 +18,7 @@
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-2">
-                    <a class="btn btn-block btn-primary" href="{{route("admin.page.create")}}">
+                    <a class="btn btn-block btn-outline-secondary" href="{{route("admin.page.create")}}">
                                 Добавить
                     </a>
                 </div>
@@ -32,26 +32,18 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Название</th>
-                                    <th>Действия</th>
+{{--                                    <th>ID</th>--}}
+                                    <th>Название страницы</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($pages as $page)
                                 <tr>
-                                    <td>{{ $page->id }}</td>
+{{--                                    <td>{{ $page->id }}</td>--}}
                                     <td>{{ $page->title }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route("admin.page.show", $page->id) }}"><i class="fa-eye far"></i></a>
-                                        <a href="{{ route("admin.page.edit", $page->id) }} " class="text-success    "><i class="ml-2 fa-pencil-alt fas"></i></a>
-                                        <form action="{{route('admin.page.delete', $page->id)}}" method="post" >
-                                        @csrf
-                                        @method('delete')
-                                        <button type="submit" class="border-0 bg-white">
-                                            <i class="ml-2 fa-trash fas text-danger" role="button"></i>
-                                        </button>
-                                        </form>
+                                        <a href="{{ route("admin.page.edit", $page->id) }}" class="btn btn-outline-secondary">Изменить</a>
                                     </td>
                                 </tr>
                                 @endforeach

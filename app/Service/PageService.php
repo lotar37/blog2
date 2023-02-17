@@ -14,7 +14,8 @@ class PageService
         try {
 
             DB::beginTransaction();
-
+            ///заплатка. нужно удалить поле content из таблицы pages
+            $data['content'] = "";
             $data['main_image'] = Storage::disk("public")->put("/images", $data['main_image']);
             $page = Page::firstOrCreate($data);
             DB::commit();

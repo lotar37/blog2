@@ -23,7 +23,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/preschool", "PreschoolController")->name('main.preschool');
     Route::get("/extcurr", "ExtcurrController")->name('main.extcurr');
     Route::get("/studyplan", "StudyplanController")->name('main.studyplan');
-    Route::get("/regim", "RegimController")->name('main.regim');
+    Route::get("/regim", [PagesController::class,"regim"])->name('main.regim');
     Route::get("/teachers", "TeachersController")->name('main.teachers');
     Route::get("/patriarh", "PatriarhController")->name('main.patriarh');
     Route::get("/advice", "AdviceController")->name('main.advice');
