@@ -79,7 +79,7 @@
 
                             <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Route name</label>
-                                <input type="text" name="route_name" class="form-control "
+                                <input type="text" name="route_name" class="form-control " disabled
                                        placeholder="route name" value="{{ $page->route_name }}">
                                 @error('route_name')
                                 <div class="text-danger">{{ $message }}</div>
