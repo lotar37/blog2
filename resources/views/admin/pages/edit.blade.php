@@ -24,8 +24,8 @@
                             @method('PATCH')
                             <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Название в меню</label>
-                                <input type="text" name="content" class="form-control"
-                                       placeholder="Введите заголовок стариницы" value="{{ $page->content }}">
+                                <input type="text" name="content" class="form-control" disabled
+                                       placeholder="Название страницы в главном меню" value="{{ $page->content }}">
                                 @error('content')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -79,7 +79,7 @@
 
                             <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Route name</label>
-                                <input type="text" name="route_name" class="form-control"
+                                <input type="text" name="route_name" class="form-control " disabled
                                        placeholder="route name" value="{{ $page->route_name }}">
                                 @error('route_name')
                                 <div class="text-danger">{{ $message }}</div>

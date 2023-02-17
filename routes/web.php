@@ -20,15 +20,15 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/contacts", "ContactsController")->name('main.contacts');
     Route::get("/reports", "ReportsController")->name('main.reports');
     Route::get("/about", "AboutController")->name('main.about');
-    Route::get("/preschool", "PreschoolController")->name('main.preschool');
-    Route::get("/extcurr", "ExtcurrController")->name('main.extcurr');
+    Route::get("/preschool", [PagesController::class,"extcurr"])->name('main.preschool');
+    Route::get("/extcurr", [PagesController::class,"extcurr"])->name('main.extcurr');
     Route::get("/studyplan", "StudyplanController")->name('main.studyplan');
     Route::get("/regim", [PagesController::class,"regim"])->name('main.regim');
-    Route::get("/teachers", "TeachersController")->name('main.teachers');
-    Route::get("/patriarh", "PatriarhController")->name('main.patriarh');
-    Route::get("/advice", "AdviceController")->name('main.advice');
+    Route::get("/teachers", [PagesController::class,"teachers"])->name('main.teachers');
+    Route::get("/patriarh", [PagesController::class,"patriarh"])->name('main.patriarh');
+    Route::get("/advice", [PagesController::class,"advice"])->name('main.advice');
     Route::get("/museum", [PagesController::class,"museum"])->name('main.museum');
-    Route::get("/theaters", "TheatersController")->name('main.theaters');
+    Route::get("/theaters", [PagesController::class,"theaters"])->name('main.theaters');
     Route::get("/post/{post}", "PostShowController")->name('main.post_show');
 });
 

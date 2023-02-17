@@ -24,7 +24,7 @@
                             <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Название в меню</label>
                                 <input type="text" name="content" class="form-control"
-                                       placeholder="Введите заголовок стариницы" value="{{ old('content') }}">
+                                       placeholder="Название страницы в главном меню" value="{{ old('content') }}">
                                 @error('content')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
