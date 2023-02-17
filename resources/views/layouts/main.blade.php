@@ -56,19 +56,19 @@
                             <a class="dropdown-item" href="{{ route("main.studyplan") }}">Учебный план</a>
                         </div>
                     </li>
-                    @if($role == 0)
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="{{ route("admin.main.index") }}"  aria-haspopup="true" >Admin</a>
-                    </li>
-                    @endif
-                    <li class="nav-item">
+{{--                    @if($role == 0)--}}
+{{--                    <li class="nav-item dropdown">--}}
+{{--                        <a class="nav-link " href="{{ route("admin.main.index") }}"  aria-haspopup="true" >Admin</a>--}}
+{{--                    </li>--}}
+{{--                    @endif--}}
+{{--                    <li class="nav-item">--}}
                         <a class="nav-link" href="{{ route("main.contacts") }}">Контакты</a>
                     </li>
 {{--                </ul>--}}
 {{--                <ul class="navbar-nav mt-2 mt-lg-0">--}}
-                    @if($role != 2)
+                    @if($role == 0)
                         <li class="nav-item  text-danger">
-                            <a class="nav-link text-danger" href="{{ route("admin.main.index") }} " alt="Личный кабинет">{{ $user }}</a>
+                            <a class="nav-link text-danger" href="{{ route("admin.main.index") }} " alt="Личный кабинет">Admin({{ $user }})</a>
                         </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="post">
