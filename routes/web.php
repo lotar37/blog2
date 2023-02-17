@@ -20,7 +20,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/contacts", "ContactsController")->name('main.contacts');
     Route::get("/reports", "ReportsController")->name('main.reports');
     Route::get("/about", "AboutController")->name('main.about');
-    Route::get("/preschool", [PagesController::class,"extcurr"])->name('main.preschool');
+    Route::get("/preschool", [PagesController::class,"preschool"])->name('main.preschool');
     Route::get("/extcurr", [PagesController::class,"extcurr"])->name('main.extcurr');
     Route::get("/studyplan", "StudyplanController")->name('main.studyplan');
     Route::get("/regim", [PagesController::class,"regim"])->name('main.regim');
