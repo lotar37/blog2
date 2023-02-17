@@ -27,7 +27,7 @@ class UpdateRequest extends FormRequest
             "title" => 'required|string',
             "subtitle" => 'string',
             "route_name" => 'string',
-            "content" => 'required|string',
+            "content" => 'string',
             "long_content" => 'required',
             "main_image" => 'nullable|file',
          ];
