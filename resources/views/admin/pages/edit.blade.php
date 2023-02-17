@@ -23,6 +23,14 @@
                             @csrf
                             @method('PATCH')
                             <div class="form-group w-50">
+                                <label for="exampleInputEmail1">Название в меню</label>
+                                <input type="text" name="content" class="form-control"
+                                       placeholder="Введите заголовок стариницы" value="{{ old('content') }}">
+                                @error('content')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Заголовок</label>
                                 <input type="text" name="title" class="form-control"
                                        placeholder="Введите заголовок" value="{{ $page->title }}">
@@ -59,7 +67,7 @@
                             </div>
 
                             <div class="form-group col-12">
-                                <label>Краткое описание:</label>
+                                <label>Текст страницы:</label>
                                 <textarea id="summernote" name="long_content" class="col-12">{{ $page->long_content }}</textarea>
                                 @error('long_content')
                                 <div class="text-danger">{{ $message }}</div>

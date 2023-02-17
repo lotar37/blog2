@@ -22,6 +22,14 @@
                         <form action="{{ route("admin.page.store") }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group w-50">
+                                <label for="exampleInputEmail1">Название в меню</label>
+                                <input type="text" name="content" class="form-control"
+                                       placeholder="Введите заголовок стариницы" value="{{ old('content') }}">
+                                @error('content')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50">
                                 <label for="exampleInputEmail1">Заголовок</label>
                                 <input type="text" name="title" class="form-control"
                                        placeholder="Введите заголовок стариницы" value="{{ old('title') }}">

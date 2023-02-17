@@ -33,6 +33,7 @@
                                 <thead>
                                 <tr>
 {{--                                    <th>ID</th>--}}
+                                    <th>В меню</th>
                                     <th>Название страницы</th>
                                     <th></th>
                                 </tr>
@@ -41,6 +42,7 @@
                                 @foreach($pages as $page)
                                 <tr>
 {{--                                    <td>{{ $page->id }}</td>--}}
+                                    <td>{{ $page->content }}</td>
                                     <td>{{ $page->title }}</td>
                                     <td class="d-flex">
                                         <a href="{{ route("admin.page.edit", $page->id) }}" class="btn btn-outline-secondary">Изменить</a>
