@@ -13,23 +13,17 @@
                     <p>Главная</p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="" class="nav-link">
-                    <i class="nav-icon fas fa-home"></i>
-                    <p>{{ $data['postsCount'] }}</p>
-                </a>
-            </li>
             @foreach($data['workload'] as $s_key=>$subject)
                 <li class="nav-item">
                     <a href="" class="nav-link">
-                        <i class="nav-icon fas fa-home"></i>
+                        <i class="nav-icon fas fa-user-graduate"></i>
                         <p>{{ $data['subjects'][$s_key]["name"]}}</p>
                     </a>
                 </li>
                 @foreach($subject as $c_key=>$classes)
                     <li class="nav-item">
                         <a href="" class="nav-link">
-                            <i class="nav-icon fas fa-home"></i>
+                            <i class="nav-icon fas fa-arrow-right"></i>
                             <p>{{ $data['classes'][$c_key]["name"]}}</p>
                         </a>
                     </li>
