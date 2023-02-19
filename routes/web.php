@@ -48,6 +48,11 @@ Route::group(['namespace' => 'Personal', 'prefix' => 'personal', 'middleware' =>
         Route::delete("/{comment}", "DeleteController")->name('personal.comment.delete');
     });
 });
+Route::group(['namespace' => 'Teacher', 'prefix' => 'teacher', 'middleware' => [ 'auth', 'teacher']], function () {
+    Route::group(['namespace' => "Main"], function () {
+        Route::get("/", "IndexController")->name('teacher.main.index');
+    });
+});
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'auth', 'admin']], function () {
     Route::group(['namespace' => "Main"], function () {
         Route::get("/", "IndexController")->name('admin.main.index');

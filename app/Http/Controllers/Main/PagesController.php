@@ -62,7 +62,6 @@ class PagesController extends BaseController
         $user = $this->service->getUser();;
         $page = Page::all()->where('route_name',$name)->first();
 
-//        dd($page);
         return view("main.page",compact('role', 'user','page'));
     }
 

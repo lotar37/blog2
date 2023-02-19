@@ -41,6 +41,9 @@
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button">{{ $data['user'] }}</a>
+            </li>
+            <li class="nav-item">
                 <form action="{{ route('logout') }}" method="post">
                     @csrf
                     <input  type="submit" value="Выйти" class="btn btn-outline-primary">
@@ -54,7 +57,7 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    @include('admin.includes.sidebar')
+    @include('teacher.includes.sidebar')
     @yield('content')
 
     <footer class="main-footer">

@@ -76,7 +76,19 @@
                             <input type="submit" value="Выйти" class="btn btn-outline-secondary">
                         </form>
                     </li>
-                    @else
+                    @endif
+                    @if($role == 1)
+                        <li class="nav-item  text-danger">
+                            <a class="nav-link text-danger" href="{{ route("teacher.main.index") }} " alt="Личный кабинет">Учитель({{ $user }})</a>
+                        </li>
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+                            <input type="submit" value="Выйти" class="btn btn-outline-secondary">
+                        </form>
+                    </li>
+                    @endif
+                    @if($role > 1)
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">Войти </a>
                         </li>
