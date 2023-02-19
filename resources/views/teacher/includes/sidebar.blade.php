@@ -17,14 +17,15 @@
                 <li class="nav-item">
                     <a href="" class="nav-link">
                         <i class="nav-icon fas fa-user-graduate"></i>
-                        <p>{{ $data['subjects'][$s_key]["name"]}}</p>
+                        <p>{{ $data['subjects']->find($s_key)->name}}</p>
                     </a>
                 </li>
-                @foreach($subject as $c_key=>$classes)
+
+                @foreach($subject as $c_key=>$class)
                     <li class="nav-item">
                         <a href="" class="nav-link">
                             <i class="nav-icon fas fa-arrow-right"></i>
-                            <p>{{ $data['classes'][$c_key]["name"]}}</p>
+                            <p>{{ $data['classes']->find($class["class_id"])->name}}</p>
                         </a>
                     </li>
 

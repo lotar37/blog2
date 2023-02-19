@@ -24,8 +24,8 @@ class IndexController extends BaseTeacherController
         $data['classes'] = SchoolClass::all();
 
 
-        $data['workload'] = UserSubjectClass::all()->where('user_id', auth()->id())->groupBy('subject_id');
-        //dd($data['workload']);
+        $data['workload'] = UserSubjectClass::all()->where('user_id', auth()->id())->sortBy("class_id")->groupBy('subject_id');
+        //dd($data['workload'],$data['subjects']);
 
         return view('teacher.main.index', compact('data'));
     }
