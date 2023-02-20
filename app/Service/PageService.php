@@ -7,7 +7,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
-class PageService
+class PageService extends BaseService
 {
     public function store($data)
     {
@@ -45,13 +45,13 @@ class PageService
 
     }
 
-    public function getUser()
-    {
-        return is_null(auth()->user()) ? "" : auth()->user()->name;
-    }
-
-    public function getRole()
-    {
-        return is_null(auth()->user()) ? $role = 2 :  auth()->user()->role;
-    }
+//    public function getUser()
+//    {
+//        return is_null(auth()->user()) ? "" : auth()->user()->name;
+//    }
+//
+//    public function getRole()
+//    {
+//        return is_null(auth()->user()) ? 2 :  auth()->user()->role;
+//    }
 }
