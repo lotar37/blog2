@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Teacher\Homework;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\Post\StoreRequest;
-use App\Models\Post;
+use App\Http\Requests\Teacher\Homework\StoreRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -12,10 +11,11 @@ class StoreController extends BaseController
 {
     public function __invoke(StoreRequest $request)
     {
-        // TODO: Implement __invoke() method.
+//        dd($request);
         $data = $request->validated();
+//        dd($data);
 
         $this->service->store($data);
-        return redirect()->route("admin.post.index");
+        return redirect()->route("teacher.homework.index",[$data['subject_id'], $data['class_id']]);
     }
 }

@@ -14,8 +14,13 @@ class BaseService
         return is_null(auth()->user()) ? "" : auth()->user()->name;
     }
 
+    public function getUserId()
+    {
+        return is_null(auth()->user()) ? "" : auth()->user()->id;
+    }
+
     public function getRole()
     {
-        return is_null(auth()->user()) ? 2 :  auth()->user()->role;
+        return is_null(auth()->user()) ? 2 : auth()->user()->role;
     }
 }

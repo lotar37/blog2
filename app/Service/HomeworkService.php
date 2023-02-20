@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use App\Models\Homework;
+use App\Models\UserSubjectClass;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -14,9 +15,7 @@ class HomeworkService extends BaseService
         try {
 
             DB::beginTransaction();
-            ///заплатка. нужно удалить поле content из таблицы pages
-
-      //      $data['main_image'] = Storage::disk("public")->put("/images", $data['main_image']);
+            $data["set_for_date"] = Carbon::parse($data["set_for_date"])->format('Y-m-d');
             Homework::firstOrCreate($data);
             DB::commit();
         } catch (\Exception $exception) {
@@ -33,12 +32,20 @@ class HomeworkService extends BaseService
             DB::beginTransaction();
 
             $homework->update($data);
+            $data["set_for_date"] = Carbon::parse($data["set_for_date"])->format('Y-m-d');
             DB::commit();
         } catch (\Exception $exception) {
             DB::rollBack();
             abort(500);
         }
         return $homework;
+
+    }
+
+    public function getWorkload()
+    {
+
+        return UserSubjectClass::all()->where('user_id', auth()->id())->sortBy("class_id")->groupBy('subject_id');
 
     }
 

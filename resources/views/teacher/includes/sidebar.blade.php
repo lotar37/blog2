@@ -23,7 +23,7 @@
 
                 @foreach($subject as $c_key=>$class)
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="{{ route("teacher.homework.index", [$data['subjects']->find($s_key)->id, $data['classes']->find($class["class_id"])->id]) }}" class="nav-link">
                             <i class="nav-icon fas fa-arrow-right"></i>
                             <p>{{ $data['classes']->find($class["class_id"])->name}}</p>
                         </a>

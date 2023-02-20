@@ -19,12 +19,11 @@ class IndexController extends BaseTeacherController
         $data = [];
         $data['postsCount'] = Post::all()->count();
         $data['role'] = $this->service->getRole();
-        $data['user'] = $this->service->getUser();
         $data['subjects'] = Subject::all();
         $data['classes'] = SchoolClass::all();
 
-
-        $data['workload'] = UserSubjectClass::all()->where('user_id', auth()->id())->sortBy("class_id")->groupBy('subject_id');
+        $data['user'] = $this->service->getUser();
+        $data['workload'] = $this->service->getWorkload();
         //dd($data['workload'],$data['subjects']);
 
         return view('teacher.main.index', compact('data'));

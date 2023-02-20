@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Teacher\Homework;
+namespace App\Http\Controllers\Teacher\Homework;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
