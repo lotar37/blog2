@@ -49,9 +49,9 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                                <input type="text" name="subject_id" value="{{ $data['subject']->id }}">
-                            <input type="text" name="class_id" value="{{ $data['school_class']->id }}">
-                            <input type="text" name="user_id" value="{{ $data['user_id'] }}">
+                                <input type="hidden" name="subject_id" value="{{ $data['subject']->id }}">
+                            <input type="hidden" name="class_id" value="{{ $data['school_class']->id }}">
+                            <input type="hidden" name="user_id" value="{{ $data['user_id'] }}">
                             @error('subject_id')
                             <div class="text-danger">{{ $message }}</div>
                             @enderror

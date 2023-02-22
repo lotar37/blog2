@@ -41,7 +41,7 @@
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button">{{ $data['user'] }}</a>
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button">Личный кабинет учителя: {{ $data['user'] }}</a>
             </li>
             <li class="nav-item">
                 <form action="{{ route('logout') }}" method="post">

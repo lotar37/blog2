@@ -21,6 +21,8 @@ class IndexController extends BaseTeacherController
         $data['role'] = $this->service->getRole();
         $data['subjects'] = Subject::all();
         $data['classes'] = SchoolClass::all();
+        $data['subject'] = ["id" => "-1"];
+        $data['school_class']=["id" => "-1"];
 
         $data['user'] = $this->service->getUser();
         $data['workload'] = $this->service->getWorkload();

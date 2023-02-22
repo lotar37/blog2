@@ -31,14 +31,14 @@ class HomeworkService extends BaseService
         try {
             DB::beginTransaction();
 
-            $homework->update($data);
             $data["set_for_date"] = Carbon::parse($data["set_for_date"])->format('Y-m-d');
+            $homework->update($data);
             DB::commit();
         } catch (\Exception $exception) {
             DB::rollBack();
             abort(500);
         }
-        return $homework;
+        //return $homework;
 
     }
 

@@ -55,10 +55,10 @@ Route::group(['namespace' => 'Teacher', 'prefix' => 'teacher', 'middleware' => [
         Route::get("/", "IndexController")->name('teacher.main.index');
     });
     Route::group(['namespace' => "Homework", 'prefix' => 'homeworks'], function () {
+        Route::get("/{homework}/edit", "EditController")->name('teacher.homework.edit');
         Route::get("/{subject}/{school_class}", "IndexController")->name('teacher.homework.index');
         Route::get("/{subject}/{school_class}/create", "CreateController")->name('teacher.homework.create');
         Route::post("/", "StoreController")->name("teacher.homework.store");
-        Route::get("/{homework}/edit", "EditController")->name('teacher.homework.edit');
         Route::patch("/{homework}", "UpdateController")->name("teacher.homework.update");
         Route::delete("/{homework}", "DeleteController")->name("teacher.homework.delete");
     });
