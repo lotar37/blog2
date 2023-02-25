@@ -54,6 +54,7 @@
                             <a class="dropdown-item" href="{{ route("main.preschool") }}">Дошкольное отделение</a>
                             <a class="dropdown-item" href="{{ route("main.extcurr") }}">Внеурочная образовательная деятельность</a>
                             <a class="dropdown-item" href="{{ route("main.studyplan") }}">Учебный план</a>
+                            <a class="dropdown-item" href="{{ route("main.homework.index") }}">Разное</a>
                         </div>
                     </li>
 {{--                    @if($role == 0)--}}

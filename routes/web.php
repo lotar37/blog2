@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Main\HomeworksController;
 use App\Http\Controllers\Main\PagesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/advice", [PagesController::class,"advice"])->name('main.advice');
     Route::get("/museum", [PagesController::class,"museum"])->name('main.museum');
     Route::get("/theaters", [PagesController::class,"theaters"])->name('main.theaters');
+    Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
     Route::get("/post/{post}", "PostShowController")->name('main.post_show');
 });
 
