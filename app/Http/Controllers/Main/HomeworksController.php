@@ -16,6 +16,24 @@ use Illuminate\Http\Request;
 class HomeworksController extends BaseController
 {
     public $home_service = HomeworkService::class;
+
+    private function sortHomeworksForSubjects($homeworks){
+        $HW = [];
+        foreach($homeworks as $homework){
+            if(!isset($HW[$homework->subject_id])){
+                $HW[$homework->subject_id] = [];
+            }
+            $HW[$homework->subject_id][$homework->class_id][] = $homework;
+        }
+        return $HW;
+    }
+    private function sortWorkload($workload){
+        $WL = [];
+        foreach($workload as $a){
+            $WL[$a['subject_id']][$a['class_id']] = [];
+        }
+        return $WL;
+    }
     public function index(HomeworkService $service)
     {
         $role = $this->service->getRole();
@@ -23,14 +41,15 @@ class HomeworksController extends BaseController
         $data = [];
         $data['subjects'] = Subject::all();
         $data['classes'] = SchoolClass::all();
-        $workload =  UserSubjectClass::all()->sortBy("class_id")->groupBy('subject_id');
+        $workload =  UserSubjectClass::all()->sortBy("class_id");
+        $workload =  $this->sortWorkload($workload);
 
-        $homeworks = Homework::all()->sortByDesc('set_for_date')->sortBy('class_id');
+        $homeworks = Homework::all()->sortByDesc('set_for_date');
         $homeworks = $homeworks->map(function ($item,$key){ $item['set_for_date'] = Carbon::parse($item['set_for_date'])->format('d/m/Y');return $item;});
 
+        $homeworks = $this->sortHomeworksForSubjects($homeworks);
 
-
-        dd($homeworks);
+       // dd($homeworks);
         return view("main.homeworks.index",compact('role', 'user','workload','homeworks','data'));
     }
 }

@@ -7730,7 +7730,7 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 67px; }
 
 .blog-post .blog-post-featured-img {
-  margin-bottom: 44px; }
+  margin-bottom: 24px; }
 
 .blog-post .post-content p {
   font-size: 18px;
@@ -7935,8 +7935,8 @@ label {
   font-weight: 700;
   line-height: 0.98;
   color: #000000;
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

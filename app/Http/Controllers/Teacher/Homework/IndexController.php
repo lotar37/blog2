@@ -24,7 +24,7 @@ class IndexController extends BaseController
         $data['classes'] = SchoolClass::all();
         $data['user'] = $this->service->getUser();
         $data['workload'] = $this->service->getWorkload();
-        $homeworks = Homework::all()->where('subject_id',$subject->id)->where('class_id',$schoolClass->id);
+        $homeworks = Homework::all()->where('subject_id',$subject->id)->where('class_id',$schoolClass->id)->sortByDesc('set_for_date');
         $homeworks = $homeworks->map(function ($item,$key){ $item['set_for_date'] = Carbon::parse($item['set_for_date'])->format('d/m/Y');return $item;});
         //dd($homeworks);
         return view('teacher.homeworks.index',compact('homeworks','data'));
