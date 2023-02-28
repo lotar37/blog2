@@ -31,8 +31,9 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/museum", [PagesController::class,"museum"])->name('main.museum');
     Route::get("/theaters", [PagesController::class,"theaters"])->name('main.theaters');
     Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
+    Route::get("/homework/{subject}/{schoolClass}", [HomeworksController::class,"show"])->name('main.homework.show');
     Route::get("/post/{post}", "PostShowController")->name('main.post_show');
-});
+});+
 
 
 Route::group(['namespace' => 'Personal', 'prefix' => 'personal', 'middleware' => [ 'auth', 'verified']], function () {

@@ -34,7 +34,7 @@ class HomeworksController extends BaseController
         }
         return $WL;
     }
-    public function index(HomeworkService $service)
+    public function index()
     {
         $role = $this->service->getRole();
         $user = $this->service->getUser();
@@ -51,5 +51,24 @@ class HomeworksController extends BaseController
 
        // dd($homeworks);
         return view("main.homeworks.index",compact('role', 'user','workload','homeworks','data'));
+    }
+    public function show(Subject $subject, SchoolClass $schoolClass)
+    {
+        $role = $this->service->getRole();
+        $user = $this->service->getUser();
+        $data = [];
+        $data['subjects'] = Subject::all();
+        $data['classes'] = SchoolClass::all();
+        $data['subject'] = $subject;
+        $data['class'] = $schoolClass;
+//        $workload =  UserSubjectClass::all()->sortBy("class_id");
+//        $workload =  $this->sortWorkload($workload);
+
+        $homeworks = Homework::all()->where("subject_id",$subject->id)->where("class_id",$schoolClass->id)->sortByDesc('set_for_date');
+        $homeworks = $homeworks->map(function ($item,$key){ $item['set_for_date'] = Carbon::parse($item['set_for_date'])->format('d/m/Y');return $item;});
+
+       // $homeworks = $this->sortHomeworksForSubjects($homeworks);
+
+        return view("main.homeworks.show",compact('role', 'user','homeworks','data'));
     }
 }
