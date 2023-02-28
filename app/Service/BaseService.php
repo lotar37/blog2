@@ -23,4 +23,17 @@ class BaseService
     {
         return is_null(auth()->user()) ? 2 : auth()->user()->role;
     }
+    public function getClassesColors(){
+        $data = [];
+        $data[1] = "success";
+        $data[2] = "warning";
+        $data[3] = "success";
+        $data[4] = "danger" ;
+        $data[5] = "secondary";
+        $data[6] = "warning";
+        $data[7] = "primary";
+
+        return $data;
+
+    }
 }

@@ -12,15 +12,9 @@
 
             <section class="edica-about-faq py-2 mb-2">
                 <div class="btn-group  btn-group-lg btn-group-justified col-12">
-
-                <a class="btn btn-outline-primary">5a</a>
-                <a class="btn btn-outline-success ">6a</a>
-                <a class="btn btn-outline-warning ">7a</a>
-                <a class="btn btn-outline-success ">8a</a>
-                <a class="btn btn-outline-danger ">9a</a>
-                <a class="btn btn-outline-secondary ">10a</a>
-                <a class="btn btn-outline-warning ">11a</a>
-
+                @foreach($data['classes'] as $class)
+                <a class="btn btn-outline-{{$data['colors'][$class->id]}}" href="{{ route('main.homework.showClass',$class->id) }}">{{$class->name}}</a>
+                    @endforeach
                 </div>
                 </section>
             <section class="edica-about-faq py-2 mb-5">

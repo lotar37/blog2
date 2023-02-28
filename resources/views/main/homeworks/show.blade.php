@@ -17,13 +17,18 @@
 
 
                         </div>
-                            @if(count($homeworks))
-                                    @foreach($homeworks as $k=>$homework)
-                                        <div class="pl-3  mb-1 bg-info intro-content text-white"  data-aos="fade-up" data-aos-delay="200" id="">{!! $homework->set_for_date  !!} | {!! $homework->title  !!}  </div>
-                                        <div class=" pl-3 " style="border: #0c84ff 1px solid"  data-aos="fade-up" data-aos-delay="200" >{!! $homework->content !!}  </div>
-                                    @endforeach
+                    @if(count($homeworks))
+                        @foreach($homeworks as $k=>$homework)
+                            <div class="pl-3 bg-info intro-content " data-aos="fade-up" data-aos-delay="200"
+                                 id="">{!! $homework->set_for_date  !!} | {!! $homework->title  !!}  </div>
+                            <div class=" pl-3   mb-3" style="border: #0c84ff 1px solid" data-aos="fade-up"
+                                 data-aos-delay="200">{!! $homework->content !!}  </div>
+                        @endforeach
                     @else
-                        <div class="bg-opacity-50 pl-3  my-3 bg-warning"  data-aos="fade-up" data-aos-delay="200" id="">Нет информации о домашних заданиях для  {{ $data['class']->name }}({{ $data['subject']->name }}) </div>
+                        <div class="bg-opacity-50 pl-3  my-3 bg-warning" data-aos="fade-up" data-aos-delay="200" id="">
+                            Нет информации о домашних заданиях для {{ $data['class']->name }}
+                            ({{ $data['subject']->name }})
+                        </div>
 
                     @endif
 
