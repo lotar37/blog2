@@ -31,12 +31,12 @@
                         <div class="card-body table-responsive p-0">
                             <table class="table table-hover text-nowrap">
                                 <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Название</th>
-                                    <th>email</th>
-                                    <th>Роль</th>
-                                    <th></th>
+                                <tr class="bg-gradient-gray">
+                                    <td>ID</td>
+                                    <td>Название</td>
+                                    <td>email</td>
+                                    <td>Роль</td>
+                                    <td>Действия</td>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -46,14 +46,14 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $roles[$user->role] }}</td>
-                                    <td class="d-flex">
-                                        <a href="{{ route("admin.user.show", $user->id) }}"><i class="fa-eye far"></i></a>
-                                        <a href="{{ route("admin.user.edit", $user->id) }} " class="text-success"><i class="ml-2 fa-pencil-alt fas"></i></a>
+                                    <td class="d-flex float-lg-center">
+                                        <a href="{{ route("admin.user.show", $user->id) }}" class="btn btn-outline-secondary mr-1">Просмотр</i></a>
+                                        <a href="{{ route("admin.user.edit", $user->id) }} " class="btn btn-outline-secondary mr-1">Изменить</i></a>
                                         <form action="{{route('admin.user.delete', $user->id)}}" method="post" >
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="border-0 bg-white">
-                                            <i class="ml-2 fa-trash fas text-danger" role="button"></i>
+                                        <button type="submit" class="btn btn-outline-secondary ">
+                                           Удалить</i>
                                         </button>
                                         </form>
                                     </td>
