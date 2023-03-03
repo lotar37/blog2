@@ -7719,7 +7719,8 @@ a.text-dark:hover, a.text-dark:focus {
         margin-bottom: 0; }
 
 .blog-post .edica-page-title {
-  padding-bottom: 33px; }
+  padding-bottom: 33px;
+}
 
 .blog-post .edica-blog-post-meta {
   text-align: center;
@@ -7727,7 +7728,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 700;
   line-height: 1;
   color: #7d848b;
-  margin-bottom: 67px; }
+  margin-bottom: 27px; }
 
 .blog-post .blog-post-featured-img {
   margin-bottom: 24px; }

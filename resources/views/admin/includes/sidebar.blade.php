@@ -50,8 +50,15 @@
             <li class="nav-item">
                 <a href="{{ route("admin.page.index") }}" class="nav-link">
                     <i class="nav-icon fas far fa-sitemap"></i>
-{{--                    <i class="nav-icon fas fa-user-plus"></i>--}}
+
                     <p>Страницы сайта</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route("admin.userSubjectClass.index") }}" class="nav-link">
+                    <i class="nav-icon fas far fa-briefcase"></i>
+
+                    <p>Нагрузка учителей</p>
                 </a>
             </li>
         </ul>

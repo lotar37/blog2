@@ -4,22 +4,14 @@
     <main class="blog">
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">Домашние задания</h1>
-{{--            <section class="blog-post-featured-img" data-aos="fade-up" data-aos-delay="300">--}}
-{{--                <img src="{{ asset('assets/images/homeworks.jpg')}}" alt="featured image" class="w-100">--}}
-{{--            </section>--}}
             <section class="edica-about-faq py-2 mb-5">
                 <div class="accordion" id="reportCollapse" role="tablist" aria-multiselectable="false">
                     <div class="card" data-aos="fade-up" data-aos-delay="200">
-
-
-
                         <h2 class="mb-1  "><a class="btn btn-outline-danger mr-2" href="{{ route("main.homework.index") }}">Назад</a> {{ $data['subject']->name }} - {{ $data['class']->name }}</h2>
-
-
-                        </div>
+                    </div>
                     @if(count($homeworks))
                         @foreach($homeworks as $k=>$homework)
-                            <div class="pl-3 bg-info intro-content " data-aos="fade-up" data-aos-delay="200"
+                            <div class="pl-3 bg-danger bg-opacity-50 text-white" data-aos="fade-up" data-aos-delay="200"
                                  id="">{!! $homework->set_for_date  !!} | {!! $homework->title  !!}  </div>
                             <div class=" pl-3   mb-3" style="border: #0c84ff 1px solid" data-aos="fade-up"
                                  data-aos-delay="200">{!! $homework->content !!}  </div>

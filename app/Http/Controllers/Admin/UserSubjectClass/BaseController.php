@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Post;
+namespace App\Http\Controllers\Admin\UserSubjectClass;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;

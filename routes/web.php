@@ -111,6 +111,15 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::patch("/{post}", "UpdateController")->name("admin.post.update");
         Route::delete("/{post}", "DeleteController")->name("admin.post.delete");
     });
+    Route::group(['namespace' => 'UserSubjectClass', 'prefix' => 'usc'], function(){
+        Route::get("/", "IndexController")->name("admin.userSubjectClass.index");
+        Route::get("/create", "CreateController")->name("admin.userSubjectClass.create");
+        Route::post("/", "StoreController")->name("admin.userSubjectClass.store");
+        Route::get("/{post}", "ShowController")->name("admin.userSubjectClass.show");
+        Route::get("/{user}/{subject}", "EditController")->name("admin.userSubjectClass.edit");
+        Route::patch("/", "UpdateController")->name("admin.userSubjectClass.update");
+        Route::delete("/{user}/{subject}", "DeleteController")->name("admin.userSubjectClass.delete");
+    });
     Route::group(['namespace' => 'Page', 'prefix' => 'pages'], function(){
         Route::get("/", "IndexController")->name("admin.page.index");
         Route::get("/create", "CreateController")->name("admin.page.create");

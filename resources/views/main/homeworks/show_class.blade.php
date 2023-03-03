@@ -1,15 +1,13 @@
 @extends('layouts.main')
 
 @section('content')
-    <main class="blog">
+    <main class="blog-post">
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">Домашние задания</h1>
-            <section class="blog-post-featured-img" data-aos="fade-up" data-aos-delay="300">
-                <img src="{{ asset('assets/images/homeworks.jpg')}}" alt="featured image" class="w-100">
-            </section>
+            <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">задания на предстоящие дни</p>
 
 
-            <section class="edica-about-faq py-2 mb-2">
+            <section class="edica-about-faq py-1 mb-2"   data-aos="fade-right">
                 <div class="btn-group  btn-group-lg btn-group-justified col-12">
                     <a class="btn btn-outline-primary" {{ $data['class']->name == "5a" ? " active" : "" }} href="{{ route('main.homework.index') }}">ВСЕ</a>
                     @foreach($data['classes'] as $class)
@@ -19,7 +17,7 @@
 
                 </div>
             </section>
-            <section class="edica-about-faq py-2 mb-5">
+            <section class="edica-about-faq py-0 mb-5">
                 <div class="row">
                     <div class="col-12">
 
@@ -29,8 +27,8 @@
                                     <div class="card-header" role="tab" id="edicaAboutFaq{{ $s_key }}">
                                         <h5 class="mb-0">
                                             <a data-toggle="collapse" data-parent="#edicaAboutFaqCollapse"
-                                               href="#edicaAboutFaqContent{{ $s_key }}" aria-expanded="false"
-                                               aria-controls="edicaAboutFaqContent{{ $s_key }}" class="collapsed">
+                                               href="#edicaAboutFaqContent{{ $s_key }}" aria-expanded="true"
+                                               aria-controls="edicaAboutFaqContent{{ $s_key }}" class="collapsed" style="">
                                                 {{ $data['subjects']->find($s_key)->name }} ({{isset($homeworks[$s_key]) ? count($homeworks[$s_key][$data['class']->id]) : "0"}})
                                             </a>
                                         </h5>
@@ -42,7 +40,7 @@
                                                 @if(isset($homeworks[$s_key]))
 
                                                 @foreach($homeworks[$s_key][$data['class']->id] as $c_key=>$homework)
-                                                    <div class="pl-3 bg-info intro-content " data-aos="fade-up" data-aos-delay="200"
+                                                    <div class="pl-3 bg-secondary intro-content " data-aos="fade-up" data-aos-delay="200"
                                                          id="">{!! $homework->set_for_date  !!} | {!! $homework->title  !!}  </div>
                                                     <div class=" pl-3   mb-3" style="border: #0c84ff 1px solid" data-aos="fade-up"
                                                          data-aos-delay="200">{!! $homework->content !!}  </div>
