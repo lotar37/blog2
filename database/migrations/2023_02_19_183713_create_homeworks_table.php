@@ -23,12 +23,12 @@ class CreateHomeworksTable extends Migration
             $table->mediumText('content');
 
 
-            $table->index('subject_id', 'pul_subject_idx');
-            $table->index('class_id', 'pul_class_idx');
-            $table->index('user_id', 'pul_user_idx');
-            $table->foreign('subject_id', 'pul_subject_fk')->on('subjects')->references('id');
-            $table->foreign('class_id', 'pul_class_fk')->on('classes')->references('id');
-            $table->foreign('user_id', 'pul_user_fk')->on('users')->references('id');
+            $table->index('subject_id', 'hw_subject_idx');
+            $table->index('class_id', 'hw_class_idx');
+            $table->index('user_id', 'hw_user_idx');
+            $table->foreign('subject_id', 'hw_subject_fk')->on('subjects')->references('id');
+            $table->foreign('class_id', 'hw_class_fk')->on('classes')->references('id');
+            $table->foreign('user_id', 'hw_user_fk')->on('users')->references('id');
 
             $table->timestamps();
         });

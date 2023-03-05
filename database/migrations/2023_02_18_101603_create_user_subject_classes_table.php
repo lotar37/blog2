@@ -19,13 +19,13 @@ class CreateUserSubjectClassesTable extends Migration
             $table->unsignedBigInteger('class_id');
             $table->unsignedBigInteger('user_id');
 
-            $table->index('subject_id', 'pul_subject_idx');
-            $table->index('class_id', 'pul_class_idx');
-            $table->index('user_id', 'pul_user_idx');
+            $table->index('subject_id', 'usc_subject_idx');
+            $table->index('class_id', 'usc_class_idx');
+            $table->index('user_id', 'usc_user_idx');
 
-            $table->foreign('subject_id', 'pul_subject_fk')->on('subjects')->references('id');
-            $table->foreign('class_id', 'pul_class_fk')->on('classes')->references('id');
-            $table->foreign('user_id', 'pul_user_fk')->on('users')->references('id');
+            $table->foreign('subject_id', 'usc_subject_fk')->on('subjects')->references('id');
+            $table->foreign('class_id', 'usc_class_fk')->on('classes')->references('id');
+            $table->foreign('user_id', 'usc_user_fk')->on('users')->references('id');
 
 
             $table->timestamps();
