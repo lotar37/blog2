@@ -25,7 +25,7 @@
 
             </div><!-- /.row -->
             <div class="row">
-                <div class="w-75">
+                <div class="w-100">
                     <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
