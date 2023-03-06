@@ -24,7 +24,7 @@
                             @csrf
 
                             <div class="form-group  w-50">
-                                <label>Выбирите Учителя</label>
+                                <label>Выберите Учителя</label>
                                 <select class="form-control" name="user_id">
                                     @foreach($teachers as $teacher)
                                         <option value="{{ $teacher->id  }}"
@@ -37,7 +37,7 @@
                                 @enderror
                             </div>
                             <div class="form-group  w-50">
-                                <label>Выбирите Предмет</label>
+                                <label>Выберите Предмет</label>
                                 <select class="form-control" name="subject_id">
                                     @foreach($subjects as $subject)
                                         <option value="{{ $subject->id  }}"
