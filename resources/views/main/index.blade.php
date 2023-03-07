@@ -1,14 +1,96 @@
 @extends('layouts.main')
-
+@section('landing_header')
+    edica-landing-header
+@endsection
+@section('carousel')
+    <div class="edica-landing-header-content">
+        <div id="edicaLandingHeaderCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="0" class="active">.01</li>
+                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="1">.02</li>
+                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="2">.03</li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-6 carousel-content-wrapper">
+                            <h1 >WOW WOW WOW</h1>
+                            <p>He has led a remarkable campaign, defying the traditional mainstream parties courtesy of his En Marche! movement.</p>
+                            <div class="carousel-content-btns">
+                                <a href="#!" class="btn btn-success"> <i class="fab fa-apple mr-2"></i> App Store</a>
+                                <a href="#!" class="btn btn-secondary"> <i class="fab fa-android mr-2"></i>  Google Play</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 carousel-img-wrapper">
+                            <img src="assets/images/about.jpg" alt="carousel-img" class="img-fluid" width="350px">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6 carousel-content-wrapper">
+                            <h1>Get Started Power social proof for your brands.</h1>
+                            <p>He has led a remarkable campaign, defying the traditional mainstream parties courtesy of his En Marche! movement.</p>
+                            <div class="carousel-content-btns">
+                                <a href="#!" class="btn btn-success"> <i class="fab fa-apple mr-2"></i> App Store</a>
+                                <a href="#!" class="btn btn-secondary"> <i class="fab fa-android mr-2"></i> Google Play</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 carousel-img-wrapper">
+                            <img src="assets/images/about3.jpg" alt="carousel-img" class="img-fluid" width="350px">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6 carousel-content-wrapper">
+                            <h1>Get Started Power social proof for your brands.</h1>
+                            <p>He has led a remarkable campaign, defying the traditional mainstream parties courtesy of his En Marche! movement.</p>
+                            <div class="carousel-content-btns">
+                                <a href="#!" class="btn btn-success"> <i class="fab fa-apple mr-2"></i> App Store</a>
+                                <a href="#!" class="btn btn-secondary"> <i class="fab fa-android mr-2"></i> Google Play</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 carousel-img-wrapper">
+                            <img src="assets/images/about.jpg" alt="carousel-img" class="img-fluid" width="350px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
 @section('content')
-    <main class="blog">
-        <div class="container">
-            <h1 class="edica-page-title" data-aos="fade-up">Гимназия Радонеж</h1>
-            <p class="align-content-center" data-aos="fade-up" data-aos-delay="200">основана в 1990 году</p>
-            <section class="blog-post-featured-img mb-4" data-aos="fade-up" data-aos-delay="300">
-                <img src="{{ asset('assets/images/main.jpg')}}" alt="featured image" class="w-100">
-            </section>
+    <main class="blog ">
+        <div class="mx-4  container">
 
+{{--            <h1 class="edica-page-title" data-aos="fade-up">Гимназия Радонеж</h1>--}}
+{{--            <p class="align-content-center" data-aos="fade-up" data-aos-delay="200">основана в 1990 году</p>--}}
+{{--            <section class="blog-post-featured-img mb-4" data-aos="fade-up" data-aos-delay="300">--}}
+{{--                <img src="{{ asset('assets/images/main.jpg')}}" alt="featured image" class="w-100">--}}
+{{--            </section>--}}
+
+            <section class="edica-landing-section edica-landing-blog">
+                <div class="container">
+                    <h4 class="edica-landing-section-subtitle" data-aos="fade-up">Что происходит в школе</h4>
+                    <h2 class="edica-landing-section-title" data-aos="fade-up">Последние мероприятия и <br> новости школы.</h2>
+                    <div class="row">
+                        @php
+                            $a = ["right","up","left"];
+                            $i = 0;
+                        @endphp
+                        @foreach($posts3 as $post)
+                        <div class="col-md-4 landing-blog-post" data-aos="fade-{{ $a[$i]}}">
+                            @php $i++ @endphp
+                            <img src="{{ asset("storage/" . $post->main_image) }}" alt="blog post" class="blog-post-thumbnail">
+                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>
+                            <h4 class="blog-post-title">{{ $post->title }}</h4>
+                            <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-link">Подробнее</a>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </section>
 
             <div class="row">
                 <div class="col-md-3 sidebar" >

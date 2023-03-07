@@ -32,7 +32,6 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                 <tr>
-{{--                                    <th>ID</th>--}}
                                     <th>В меню</th>
                                     <th>Название страницы</th>
                                     <th></th>

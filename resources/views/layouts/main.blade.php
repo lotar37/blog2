@@ -9,86 +9,118 @@
     <link rel="stylesheet" href="{{ asset("assets/vendors/font-awesome/css/all.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/vendors/aos/aos.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
-{{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">--}}
+    {{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">--}}
     <script src="{{ asset("assets/vendors/jquery/jquery.min.js") }}"></script>
     <script src="{{ asset("assets/js/loader.js") }}"></script>
 </head>
 
 <body>
 <div class="edica-loader"></div>
-<header class="edica-header">
+<header class="edica-header
+ @yield("landing_header")
+ ">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="{{ route("main.index") }}"><img src="{{ asset('assets/images/logo.png ') }}" alt="Edica" width="250px"></a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                {{--                 <a class="navbar-brand" href="{{ route("main.index") }}"><img src="{{ asset('assets/images/logo3.png ') }}" alt="Edica" width="24px"></a>--}}
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="edicaMainNav">
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ route("main.index") }}">Главная <span class="sr-only">(current)</span></a>
+                    <li class="nav-item dropdown">
+                        {{--                        <div class="row pr-0 mr-0 d-flex">--}}
+                        <div class="col-1 py-0 pl-0 d-flex"><a class="mr-0 pt-0 navbar-brand"
+                                                               href="{{ route("main.index") }}"><img
+                                    src="{{ asset('assets/images/logo3.png ') }}" alt="Edica" width="24px"></a>
+                            <a class="pr-0 pl-2  m-0  nav-link dropdown-toggle" href="{{ route("main.index") }}" id="aboutDropdown"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Гимназия Радонеж</a></div>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="{{ route("main.about") }}">О нас</a>
+                            <a class="dropdown-item" href="{{ route("main.teachers") }}">Учителя/Администрация</a>
+                            <a class="dropdown-item" href="#">Поступление</a>
+                            <a class="dropdown-item" href="{{ route("main.regim") }}">Режим работы</a>
+                            <a class="dropdown-item" href="#">Новости</a>
+                            <a class="dropdown-item" href="#">Объявления</a>
+                            <a class="dropdown-item" href="#">Летопись/История</a>
+                            <a class="dropdown-item" href="{{ route("main.patriarh") }}">Приветствие от Патриарха</a>
+                            <a class="dropdown-item" href="https://nouradonezh.mskobr.ru/">Раздел на сайте Департамента
+                                образования</a>
+                            <a class="dropdown-item" href="{{ route("main.reports") }}">Отзывы</a>
+                            <a class="dropdown-item" href="{{ route("main.contacts") }}">Контакты</a>
+                            <a class="dropdown-item" href="#">Реквизиты</a>
+                            <a class="dropdown-item" href="#">Документы</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="schoolDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Школа</a>
-                        <div class="dropdown-menu" aria-labelledby="schoolDropdown" >
-                            <a class="dropdown-item" href="{{ route("main.regim") }}">Режим работы</a>
-                            <a class="dropdown-item" href="{{ route("main.teachers") }}">Наши учителя</a>
-                            <a class="dropdown-item" href="{{ route("main.advice") }}" id="schoolDropdownDown">Гимназия рекомендует</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="schoolDropdown" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Обучение</a>
+                        <div class="dropdown-menu" aria-labelledby="schoolDropdown">
+                            <a class="dropdown-item" href="{{ route("main.advice") }}" id="schoolDropdownDown">Гимназия
+                                рекомендует</a>
+                            <a class="dropdown-item" href="{{ route("main.preschool") }}">Дошкольное отделение</a>
                             <hr class="dropdown-divider">
                             <a class="dropdown-item" href="{{ route("main.museum") }}">&nbsp;&nbsp;Музеи</a>
                             <a class="dropdown-item" href="{{ route("main.theaters") }}">&nbsp;&nbsp;Театры</a>
                             <hr class="dropdown-divider">
-                            <a class="dropdown-item" href="https://nouradonezh.mskobr.ru/">Раздел на сайте Департамента образования</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О нас</a>
-                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <a class="dropdown-item" href="{{ route("main.about") }}">О гимназии</a>
-                            <a class="dropdown-item" href="{{ route("main.reports") }}">Отзывы</a>
-                            <a class="dropdown-item" href="{{ route("main.patriarh") }}">Приветствие от Патриарха</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Образование</a>
-                        <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                            <a class="dropdown-item" href="{{ route("main.preschool") }}">Дошкольное отделение</a>
-                            <a class="dropdown-item" href="{{ route("main.extcurr") }}">Внеурочная образовательная деятельность</a>
-                            <a class="dropdown-item" href="{{ route("main.studyplan") }}">Учебный план</a>
+                            <a class="dropdown-item" href="{{ route("main.extcurr") }}">Внеурочная образовательная
+                                деятельность</a>
                             <a class="dropdown-item" href="{{ route("main.homework.index") }}">Разное</a>
+                            <a class="dropdown-item" href="{{ route("main.studyplan") }}">Учебный план</a>
                         </div>
                     </li>
-{{--                    @if($role == 0)--}}
-{{--                    <li class="nav-item dropdown">--}}
-{{--                        <a class="nav-link " href="{{ route("admin.main.index") }}"  aria-haspopup="true" >Admin</a>--}}
-{{--                    </li>--}}
-{{--                    @endif--}}
-{{--                    <li class="nav-item">--}}
-                        <a class="nav-link" href="{{ route("main.contacts") }}">Контакты</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Храм</a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="#">История храма</a>
+                            <a class="dropdown-item" href="#">Расписание богослужений</a>
+                            <a class="dropdown-item" href="#">Чтение утреннего правила</a>
+                            <a class="dropdown-item" href="#">Новости</a>
+                            <a class="dropdown-item" href="#">Документы</a>
+                        </div>
                     </li>
-{{--                </ul>--}}
-{{--                <ul class="navbar-nav mt-2 mt-lg-0">--}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Лагерь в Оптиной</a>
+                        <div class="dropdown-menu" aria-labelledby="blogDropdown">
+                            <a class="dropdown-item" href="#">Новости 2023</a>
+                            <a class="dropdown-item" href="#">История</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Родителям</a>
+                        <div class="dropdown-menu" aria-labelledby="blogDropdown">
+                            <a class="dropdown-item" href="#">Поступление</a>
+                            <a class="dropdown-item" href="#">Детям</a>
+                        </div>
+                    </li>
                     @if($role == 0)
                         <li class="nav-item  text-danger">
-                            <a class="nav-link text-danger" href="{{ route("admin.main.index") }} " alt="Личный кабинет">Admin({{ $user }})</a>
+                            <a class="nav-link text-danger" href="{{ route("admin.main.index") }} "
+                               alt="Личный кабинет">Admin({{ $user }})</a>
                         </li>
-                    <li class="nav-item">
-                        <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            <input type="submit" value="Выйти" class="btn btn-outline-secondary">
-                        </form>
-                    </li>
+                        <li class="nav-item">
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <input type="submit" value="Выйти" class="btn btn-outline-secondary">
+                            </form>
+                        </li>
                     @endif
                     @if($role == 1)
                         <li class="nav-item  text-danger">
-                            <a class="nav-link text-danger" href="{{ route("teacher.main.index") }} " alt="Личный кабинет">Учитель({{ $user }})</a>
+                            <a class="nav-link text-danger" href="{{ route("teacher.main.index") }} "
+                               alt="Личный кабинет">Учитель({{ $user }})</a>
                         </li>
-                    <li class="nav-item">
-                        <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            <input type="submit" value="Выйти" class="btn btn-outline-secondary">
-                        </form>
-                    </li>
+                        <li class="nav-item">
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <input type="submit" value="Выйти" class="btn btn-outline-secondary">
+                            </form>
+                        </li>
                     @endif
                     @if($role > 1)
                         <li class="nav-item">
@@ -98,6 +130,7 @@
                 </ul>
             </div>
         </nav>
+        @yield("carousel")
         <hr class="container">
     </div>
 
@@ -110,8 +143,8 @@
     <div class="container">
         <div class="row footer-widget-area">
             <div class="col-md-3">
-                <a href="index.html" class="footer-brand-wrapper" >
-                    <img src="{{ asset('assets/images/logo.png') }}" alt=" logo">
+                <a href="index.html" class="footer-brand-wrapper">
+                    <img src="{{ asset('assets/images/logo2.png') }}" alt=" logo">
                 </a>
                 <p class="contact-details">hello@radonezh.ru</p>
                 <p class="contact-details">+7 495 423 5122</p>
@@ -147,7 +180,7 @@
         <div class="footer-bottom-content">
             <nav class="nav footer-bottom-nav">
             </nav>
-            <p class="mb-0">© RADONEZH. 2023.  All rights reserved.</p>
+            <p class="mb-0">© RADONEZH. 2023. All rights reserved.</p>
         </div>
     </div>
 </footer>
