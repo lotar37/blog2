@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/about.jpg" alt="carousel-img" class="img-fluid" width="350px">
+                            <img src="assets/images/about.jpg" alt="carousel-img" class="img-fluid" width="350px" height="525px">
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/about3.jpg" alt="carousel-img" class="img-fluid" width="350px">
+                            <img src="assets/images/about3.jpg" alt="carousel-img" class="img-fluid" width="350px" height="525px">
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/about.jpg" alt="carousel-img" class="img-fluid" width="350px">
+                            <img src="assets/images/about.jpg" alt="carousel-img" class="img-fluid" width="350px" height="525px">
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
 @endsection
 @section('content')
     <main class="blog ">
-        <div class="mx-4  container">
+        <div class="container">
 
 {{--            <h1 class="edica-page-title" data-aos="fade-up">Гимназия Радонеж</h1>--}}
 {{--            <p class="align-content-center" data-aos="fade-up" data-aos-delay="200">основана в 1990 году</p>--}}
@@ -72,8 +72,8 @@
 
             <section class="edica-landing-section edica-landing-blog">
                 <div class="container">
-                    <h4 class="edica-landing-section-subtitle" data-aos="fade-up">Что происходит в школе</h4>
-                    <h2 class="edica-landing-section-title" data-aos="fade-up">Последние мероприятия и <br> новости школы.</h2>
+{{--                    <h4 class="edica-landing-section-subtitle" data-aos="fade-up">Что происходит в школе</h4>--}}
+                    <h2 class="edica-landing-section-title" data-aos="fade-up">События </h2>
                     <div class="row">
                         @php
                             $a = ["right","up","left"];
@@ -83,8 +83,9 @@
                         <div class="col-md-4 landing-blog-post" data-aos="fade-{{ $a[$i]}}">
                             @php $i++ @endphp
                             <img src="{{ asset("storage/" . $post->main_image) }}" alt="blog post" class="blog-post-thumbnail">
-                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>
+{{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                             <h4 class="blog-post-title">{{ $post->title }}</h4>
+                            <p class="blog-post-category">{{ $post->date }}</p>
                             <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-link">Подробнее</a>
                         </div>
                         @endforeach

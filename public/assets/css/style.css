@@ -391,7 +391,11 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto; }
+    border-radius:10px;
+  /*!height: auto; */
+
+
+}
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -7163,7 +7167,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 500; }
 
 .edica-header.edica-landing-header {
-  background-image: linear-gradient(90deg, #ffffff 0%, #ffffff 55%, #fff0e8 55%, #fff0e8 100%); }
+  background-image: linear-gradient(90deg, #ffffff 0%, #ffffff 55%, #eee7c3 55%, #eee7c3 100%); }
   .edica-header.edica-landing-header .carousel-indicators {
     top: 0;
     left: auto;
