@@ -12,6 +12,18 @@ class PagesController extends BaseController
     {
          return $this->pager("museum");
     }
+    public function khram_history()
+    {
+         return $this->pager("khram_history");
+    }
+    public function khram_chtenie()
+    {
+         return $this->pager("khram_chtenie");
+    }
+    public function khram_docs()
+    {
+         return $this->pager("khram_docs");
+    }
     public function teachers()
     {
          return $this->pager("teachers");

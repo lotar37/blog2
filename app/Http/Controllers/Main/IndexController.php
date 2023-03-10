@@ -25,6 +25,9 @@ class IndexController extends Controller
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         }
         $posts3 = Post::all()->sortByDesc('date')->take(3);
+        foreach($posts3 as $post){
+            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
+        }
         $categories = Category::all();
 //        dd($categories);
 //dd($posts3);

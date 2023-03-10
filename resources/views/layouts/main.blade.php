@@ -23,12 +23,11 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav"
                     aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                {{--                 <a class="navbar-brand" href="{{ route("main.index") }}"><img src="{{ asset('assets/images/logo3.png ') }}" alt="Edica" width="24px"></a>--}}
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="edicaMainNav">
-                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                <ul class="navbar-nav mx-0 mt-2 mt-lg-0">
                     <li class="nav-item dropdown">
                         {{--                        <div class="row pr-0 mr-0 d-flex">--}}
                         <div class="col-1 py-0 pl-0 d-flex"><a class="mr-0 pt-0 navbar-brand"
@@ -75,14 +74,14 @@
                         <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">Храм</a>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <a class="dropdown-item" href="#">История храма</a>
+                            <a class="dropdown-item" href="{{ route("main.khram_history") }}">История храма</a>
                             <a class="dropdown-item" href="#">Расписание богослужений</a>
-                            <a class="dropdown-item" href="#">Чтение утреннего правила</a>
+                            <a class="dropdown-item" href="{{ route("main.khram_chtenie") }}">Чтение утреннего правила</a>
                             <a class="dropdown-item" href="#">Новости</a>
-                            <a class="dropdown-item" href="#">Документы</a>
+                            <a class="dropdown-item" href="{{ route("main.khram_docs") }}">Документы</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" id="ulll2">
                         <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">Лагерь в Оптиной</a>
                         <div class="dropdown-menu" aria-labelledby="blogDropdown">
@@ -98,6 +97,9 @@
                             <a class="dropdown-item" href="#">Детям</a>
                         </div>
                     </li>
+
+                </ul>
+                <ul style='justify-content: flex-end' class=" navbar-nav mx-auto mt-2 mt-lg-0">
                     @if($role == 0)
                         <li class="nav-item  text-danger">
                             <a class="nav-link text-danger" href="{{ route("admin.main.index") }} "
@@ -121,9 +123,8 @@
                                 <input type="submit" value="Выйти" class="btn btn-outline-secondary">
                             </form>
                         </li>
-                    @endif
-                    @if($role > 1)
-                        <li class="nav-item">
+                    @endif                    @if($role > 1)
+                        <li class="nav-item pl-4">
                             <a class="nav-link" href="{{ route('login') }}">Войти </a>
                         </li>
                     @endif
@@ -131,7 +132,7 @@
             </div>
         </nav>
         @yield("carousel")
-        <hr class="container">
+{{--        <hr class="container">--}}
     </div>
 
 </header>

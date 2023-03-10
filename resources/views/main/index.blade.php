@@ -9,50 +9,99 @@
                 <li data-target="#edicaLandingHeaderCarousel" data-slide-to="0" class="active">.01</li>
                 <li data-target="#edicaLandingHeaderCarousel" data-slide-to="1">.02</li>
                 <li data-target="#edicaLandingHeaderCarousel" data-slide-to="2">.03</li>
+                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="3">.04</li>
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-md-6 carousel-content-wrapper">
-                            <h1 >WOW WOW WOW</h1>
-                            <p>He has led a remarkable campaign, defying the traditional mainstream parties courtesy of his En Marche! movement.</p>
+                            <h1>Прощание с Масленицей в детском саду "Огоньки"</h1>
+                            <p>Шумно, весело прошел праздник Масленицы в детском саду "Огоньки".<br/>
+
+                                А какими словами мы звали масленицу?<br/>
+
+                                Масленица, приходи<br/>
+
+                                К нам весну встречать,<br/>
+
+                                Чтоб зиму студеную<br/>
+
+                                Из дому прогнать!</p>
                             <div class="carousel-content-btns">
-                                <a href="#!" class="btn btn-success"> <i class="fab fa-apple mr-2"></i> App Store</a>
-                                <a href="#!" class="btn btn-secondary"> <i class="fab fa-android mr-2"></i>  Google Play</a>
+                                <a href="#!" class="btn btn-success">Подробнее</a>
                             </div>
                         </div>
                         <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/about.jpg" alt="carousel-img" class="img-fluid" width="350px" height="525px">
+                            <img src="assets/images/carousel0.jpg" alt="carousel-img" class="img-fluid img-shadow" style="" width="350px"
+                                 height="525px">
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-md-6 carousel-content-wrapper">
-                            <h1>Get Started Power social proof for your brands.</h1>
-                            <p>He has led a remarkable campaign, defying the traditional mainstream parties courtesy of his En Marche! movement.</p>
+                            <h1>Лагерь в Оптиной</h1>
+                            <p>В 2023 году мы планируем следующие сроки отдыха:
+
+                                <li> 1 cмена с 26 июня по 8 июля
+
+                            <li> 2 смена с 8 июля по 20 июля</li>
+
+                            <li> Установка - с 22 по 26 июня.</li>
+
+                            <li> Сбор лагеря 21 июля.</li>
+
+                            Собрание пройдет в гимназии в среду 17 мая.</p>
                             <div class="carousel-content-btns">
-                                <a href="#!" class="btn btn-success"> <i class="fab fa-apple mr-2"></i> App Store</a>
-                                <a href="#!" class="btn btn-secondary"> <i class="fab fa-android mr-2"></i> Google Play</a>
+                                <a href="#!" class="btn btn-success">Подробнее</a>
                             </div>
                         </div>
                         <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/about3.jpg" alt="carousel-img" class="img-fluid" width="350px" height="525px">
+                            <img src="assets/images/carousel2.jpg" alt="carousel-img" class="img-fluid" width="350px"
+                                 height="525px">
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-md-6 carousel-content-wrapper">
-                            <h1>Get Started Power social proof for your brands.</h1>
-                            <p>He has led a remarkable campaign, defying the traditional mainstream parties courtesy of his En Marche! movement.</p>
+                            <h1>Поздравление от патриарха</h1>
+                            <p>Святейший Патриарх Московский и всея Руси Кирилл поздравил преподавателей, сотрудников и
+                                учащихся Православной классической гимназии «Радонеж» с 30-летием учебного заведения.
+
+                            </p>
                             <div class="carousel-content-btns">
-                                <a href="#!" class="btn btn-success"> <i class="fab fa-apple mr-2"></i> App Store</a>
-                                <a href="#!" class="btn btn-secondary"> <i class="fab fa-android mr-2"></i> Google Play</a>
+                                <a href="#!" class="btn btn-success">Подробнее</a>
                             </div>
                         </div>
                         <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/about.jpg" alt="carousel-img" class="img-fluid" width="350px" height="525px">
+                            <img src="assets/images/carousel3.jpg" alt="carousel-img" class="img-fluid" width="350px"
+                                 height="525px">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6 carousel-content-wrapper">
+                            <h1>В каком музее можно увидеть египетские мумии?</h1>
+                            <p>Наши пятиклассники выяснили, что в Египет для этого ехать не надо!<br/>
+
+                                В Москве уже 110 лет существует Пушкинский музей изобразительных искусств имени
+                                А.С.Пушкина.<br/>
+
+
+                                И мы отправились туда, чтобы своими глазами увидеть не только мумий, но и Шеду,
+                                крылатого льва с человеческой головой, и знаменитые статуэтки фиванского жреца и его
+                                жены, и множество других уникальных предметов искусства Древнего Египта.
+
+                            </p>
+                            <div class="carousel-content-btns">
+                                <a href="#!" class="btn btn-success">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 carousel-img-wrapper">
+                            <img src="assets/images/carousel4.jpg" alt="carousel-img" class="img-fluid" width="350px"
+                                 height="525px">
                         </div>
                     </div>
                 </div>
@@ -64,38 +113,113 @@
     <main class="blog ">
         <div class="container">
 
-{{--            <h1 class="edica-page-title" data-aos="fade-up">Гимназия Радонеж</h1>--}}
-{{--            <p class="align-content-center" data-aos="fade-up" data-aos-delay="200">основана в 1990 году</p>--}}
-{{--            <section class="blog-post-featured-img mb-4" data-aos="fade-up" data-aos-delay="300">--}}
-{{--                <img src="{{ asset('assets/images/main.jpg')}}" alt="featured image" class="w-100">--}}
-{{--            </section>--}}
+            {{--            <h1 class="edica-page-title" data-aos="fade-up">Гимназия Радонеж</h1>--}}
+            {{--            <p class="align-content-center" data-aos="fade-up" data-aos-delay="200">основана в 1990 году</p>--}}
+            {{--            <section class="blog-post-featured-img mb-4" data-aos="fade-up" data-aos-delay="300">--}}
+            {{--                <img src="{{ asset('assets/images/main.jpg')}}" alt="featured image" class="w-100">--}}
+            {{--            </section>--}}
 
             <section class="edica-landing-section edica-landing-blog">
                 <div class="container">
-{{--                    <h4 class="edica-landing-section-subtitle" data-aos="fade-up">Что происходит в школе</h4>--}}
-                    <h2 class="edica-landing-section-title" data-aos="fade-up">События </h2>
+                    <h4 class="edica-landing-section-subtitle-alt">СОБЫТИЯ</h4>
+                    {{--                    <h4 class="edica-landing-section-subtitle" data-aos="fade-up">События</h4>--}}
+                    {{--                    <h2 class="edica-landing-section-title" data-aos="fade-up">События </h2>--}}
                     <div class="row">
                         @php
                             $a = ["right","up","left"];
                             $i = 0;
                         @endphp
                         @foreach($posts3 as $post)
-                        <div class="col-md-4 landing-blog-post" data-aos="fade-{{ $a[$i]}}">
-                            @php $i++ @endphp
-                            <img src="{{ asset("storage/" . $post->main_image) }}" alt="blog post" class="blog-post-thumbnail">
-{{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
-                            <h4 class="blog-post-title">{{ $post->title }}</h4>
-                            <p class="blog-post-category">{{ $post->date }}</p>
-                            <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-link">Подробнее</a>
-                        </div>
+                            <div class="col-md-4 landing-blog-post" data-aos="fade-{{ $a[$i]}}">
+                                @php $i++ @endphp
+                                <img src="{{ asset("storage/" . $post->main_image) }}" alt="blog post"
+                                     class="blog-post-thumbnail">
+                                {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
+                                <h4 class="blog-post-title">{{ $post->title }}</h4>
+                                <p class="blog-post-category">{{ $post->date }}</p>
+                                <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-link">Подробнее</a>
+                            </div>
                         @endforeach
+                    </div>
+                    <div class="col-lg-12 justify-content-lg-around flex-column"
+                         style="display: flex; justify-content: space-around">
+                        <a href="#" class="btn btn-secondary btn-lg my-4">ВСЕ СОБЫТИЯ</a>
+                    </div>
+                </div>
+            </section>
+            <section class="edica-landing-section edica-landing-blog my-0 py-0">
+                <h4 class="edica-landing-section-subtitle-alt">ПОСТУПЛЕНИЕ В ГИМНАЗИЮ</h4>
+            </section>
+
+            <section class="edica-footer-banner-section">
+
+                <div class="container">
+                    <div class="footer-banner" data-aos="fade-up">
+                        <h1 class="banner-title">Запись на собеседование</h1>
+                        <h1 class="banner-title text-danger">8(495)423-51-22</h1>
+                        <div class="banner-btns-wrapper">
+                            {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/apple@1x.svg') }}" alt="ios" class="mr-2"> App Store</button>--}}
+                            {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/android@1x.svg') }}" alt="android" class="mr-2"> Google Play</button>--}}
+                        </div>
+                        <p class="banner-text">Add some helper text here to explain the finer details of your <br>
+                            product or service.</p>
                     </div>
                 </div>
             </section>
 
-            <div class="row">
-                <div class="col-md-3 sidebar" >
-                    <section>
+            <section class="edica-landing-section edica-landing-blog">
+                <div class="container">
+                    <h4 class="edica-landing-section-subtitle-alt">ДОПОЛНИТЕЛЬНЫЕ ЗАНЯТИЯ</h4>
+                    {{--                    <h4 class="edica-landing-section-subtitle" data-aos="fade-up">События</h4>--}}
+                    {{--                    <h2 class="edica-landing-section-title" data-aos="fade-up">События </h2>--}}
+                    <div class="row">
+                            <div class="col-md-1 landing-blog-post" data-aos="fade-right"></div>
+                            <div class="col-md-2 landing-blog-post" data-aos="fade-right">
+                                <img src="assets/images/chor.jpg" alt="blog post"  class="blog-post-thumbnail">
+                                {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
+                                <h4 class="blog-post-title">Хор</h4>
+                                <a href="#" class="blog-post-link">Подробнее</a>
+                            </div>
+                            <div class="col-md-2 landing-blog-post" data-aos="fade-down">
+                                <img src="assets/images/math.jpg" alt="blog post"  class="blog-post-thumbnail">
+                                {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
+                                <h4 class="blog-post-title">Математика</h4>
+                                <a href="#" class="blog-post-link">Подробнее</a>
+                            </div>
+                            <div class="col-md-2 landing-blog-post" data-aos="fade-up">
+                                <img src="assets/images/valyanie.png" alt="blog post"  class="blog-post-thumbnail">
+                                {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
+                                <h4 class="blog-post-title">Валяние</h4>
+                                <a href="#" class="blog-post-link">Подробнее</a>
+                            </div>
+                            <div class="col-md-2 landing-blog-post" data-aos="fade-down">
+                                <img src="assets/images/vishivka.jpg" alt="blog post"  class="blog-post-thumbnail">
+                                {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
+                                <h4 class="blog-post-title">Вышивка</h4>
+                                <a href="#" class="blog-post-link">Подробнее</a>
+                            </div>
+                            <div class="col-md-2 landing-blog-post" data-aos="fade-left">
+                                <img src="assets/images/footbal.jpg" alt="blog post"  class="blog-post-thumbnail">
+                                {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
+                                <h4 class="blog-post-title">Футбол</h4>
+                                <a href="#" class="blog-post-link">Подробнее</a>
+                            </div>
+                            <div class="col-md-1 landing-blog-post" data-aos="fade-right"></div>
+                    </div>
+                    <div class="col-lg-12 justify-content-lg-around flex-column"
+                         style="display: flex; justify-content: space-around">
+                        <a href="#" class="btn btn-info btn-lg my-4">ВСЕ ЗАНЯТИЯ</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="edica-landing-section edica-landing-blog">
+                <h4 class="edica-landing-section-subtitle-alt">МЕРОПРИЯТИЯ</h4>
+                <div class="row">
+                    <div class="col-md-3 sidebar">
+
+
                         <div class="row blog-post-row">
                             <div class="col-md-12 blog-post" data-aos="fade-up">
                                 <div class="blog-post-thumbnail-wrapper">
@@ -118,24 +242,25 @@
                                 </a>
                             </div>
                         </div>
-                    </section>
-                </div>
-{{--                Post lists--}}
-                <div class="col-md-9" >
-                    <div class="widget widget-post-list" data-aos="fade-up">
-                        <h5 class="widget-title">Ближайшие мероприятия</h5>
-                        <ul class="post-list">
-                            @foreach($posts as $post)
-                            <li class="post">
-                                <a href=" {{ route("main.post_show", $post->id) }}" class="post-permalink media">
 
-                                    <img src="{{ asset("storage/" . $post->preview_image) }}" alt="blog post">
-                                    <div class="media-body">
-                                        <h6 class="post-title">{{ $post->date." ".$post->title}}</h6>
-                                    </div>
-                                </a>
-                            </li>
-                            @endforeach
+                    </div>
+                    {{--                Post lists--}}
+                    <div class="col-md-9">
+                        <div class="widget widget-post-list" data-aos="fade-up">
+                            <h5 class="widget-title">Ближайшие мероприятия</h5>
+                            <ul class="post-list">
+                                @foreach($posts as $post)
+                                    <li class="post">
+                                        <a href=" {{ route("main.post_show", $post->id) }}"
+                                           class="post-permalink media">
+
+                                            <img src="{{ asset("storage/" . $post->preview_image) }}" alt="blog post">
+                                            <div class="media-body">
+                                                <h6 class="post-title">{{ $post->date." ".$post->title}}</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                @endforeach
                                 <li class="post">
                                     <a href="#!" class="post-permalink media">
                                         <img src="{{ asset('assets/images/about5.jpg') }}" alt="blog post">
@@ -152,14 +277,15 @@
                                         </div>
                                     </a>
                                 </li>
-                        </ul>
-                    </div>
-                    <div class="widget">
-                        <h5 class="widget-title">Категории</h5>
-                        <img src="{{ asset('assets/images/about6.jpg') }}" alt="categories" class="w-100">
+                            </ul>
+                        </div>
+                        <div class="widget">
+                            <h5 class="widget-title">Категории</h5>
+                            <img src="{{ asset('assets/images/about6.jpg') }}" alt="categories" class="w-100">
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <div class="widget widget-post-carousel">
 
                 <div class="post-carousel">
@@ -196,17 +322,4 @@
         </div>
 
     </main>
-    <section class="edica-footer-banner-section">
-        <div class="container">
-            <div class="footer-banner" data-aos="fade-up">
-                <h1 class="banner-title">Запись на собеседование</h1>
-                <h1 class="banner-title text-danger">8(495)423-51-22</h1>
-                <div class="banner-btns-wrapper">
-                    {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/apple@1x.svg') }}" alt="ios" class="mr-2"> App Store</button>--}}
-                    {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/android@1x.svg') }}" alt="android" class="mr-2"> Google Play</button>--}}
-                </div>
-                <p class="banner-text">Add some helper text here to explain the finer details of your <br> product or service.</p>
-            </div>
-        </div>
-    </section>
 @endsection

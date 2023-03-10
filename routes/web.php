@@ -30,6 +30,9 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/advice", [PagesController::class,"advice"])->name('main.advice');
     Route::get("/museum", [PagesController::class,"museum"])->name('main.museum');
     Route::get("/theaters", [PagesController::class,"theaters"])->name('main.theaters');
+    Route::get("/khram_chtenie", [PagesController::class,"khram_chtenie"])->name('main.khram_chtenie');
+    Route::get("/khram_history", [PagesController::class,"khram_history"])->name('main.khram_history');
+    Route::get("/khram_docs", [PagesController::class,"khram_docs"])->name('main.khram_docs');
     Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
     Route::get("/homework/{subject}/{schoolClass}", [HomeworksController::class,"show"])->name('main.homework.show');
     Route::get("/homework/{schoolClass}", [HomeworksController::class,"showClassHomeworks"])->name('main.homework.showClass');

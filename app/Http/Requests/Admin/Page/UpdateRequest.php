@@ -25,7 +25,7 @@ class UpdateRequest extends FormRequest
     {
         return [
             "title" => 'required|string',
-            "subtitle" => 'string',
+            "subtitle" => '',
             "route_name" => 'string',
             "content" => 'string',
             "long_content" => 'required',
