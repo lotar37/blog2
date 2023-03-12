@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Main;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Report;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -29,8 +30,11 @@ class IndexController extends Controller
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         }
         $categories = Category::all();
-//        dd($categories);
-//dd($posts3);
-        return view("main.index",compact('role', 'user','posts','posts3','categories'));
+        $reports = Report::all()->sortByDesc('date');
+        foreach($reports as $report){
+            $report->date = Carbon::parse($report->date)->format('d.m.Y');
+        }
+
+        return view("main.index",compact('role', 'user','posts','posts3','categories','reports'));
     }
 }

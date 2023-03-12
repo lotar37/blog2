@@ -148,7 +148,7 @@
                     <section class="edica-about-faq py-5 mb-5">
                         <h2 class="faq-title" data-aos="fade-up">Часто задаваемые вопросы</h2>
                         <p class="faq-section-text" data-aos="fade-up" data-aos-delay="100">
-                            На Ваши вопросы отвечает Иван Иванович Иванов, заведующий учебной частью Гимназии.
+                            На Ваши вопросы отвечает заведующий учебной частью Гимназии.
                         </p>
                         <div class="accordion" id="edicaAboutFaqCollapse" role="tablist" aria-multiselectable="true">
                             <div class="card" data-aos="fade-up" data-aos-delay="200">

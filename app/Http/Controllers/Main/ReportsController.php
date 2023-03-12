@@ -16,7 +16,7 @@ class ReportsController extends BaseController
         $user = $this->service->getUser();
 
 
-        $reports = Report::all();
+        $reports = Report::all()->sortByDesc('date');
         foreach($reports as $report){
             $report->date = Carbon::parse($report->date)->format('d.m.Y');
         }
