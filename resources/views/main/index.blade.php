@@ -468,30 +468,19 @@
                         </section>
                     </div>
                     <div class="col-md-3 sidebar pt-3"  style="background:#dddddd;">
-
+                        @foreach($randPosts as $post)
                         <div class="row blog-post-row">
                             <div class="col-md-12 blog-post" data-aos="fade-up">
                                 <div class="blog-post-thumbnail-wrapper">
-                                    <img src="{{ asset('assets/images/about.jpg') }}" alt="blog post">
+                                    <img src="{{ asset("storage/" . $post->preview_image) }}" alt="blog post">
                                 </div>
                                 <p class="blog-post-category">Новость</p>
-                                <a href="#!" class="blog-post-permalink">
-                                    <h6 class="blog-post-title">1 сентября - День знаний. Здравствуй любимая школа!</h6>
+                                <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-permalink">
+                                    <h6 class="blog-post-title">{{ $post->title }}</h6>
                                 </a>
                             </div>
                         </div>
-                        <div class="row blog-post-row">
-                            <div class="col-md-12 blog-post" data-aos="fade-up">
-                                <div class="blog-post-thumbnail-wrapper">
-                                    <img src="{{ asset('assets/images/about3.jpg') }}" alt="blog post">
-                                </div>
-                                <p class="blog-post-category">Новость</p>
-                                <a href="#!" class="blog-post-permalink">
-                                    <h6 class="blog-post-title">Посещение школы святейшим патриархом Алексием</h6>
-                                </a>
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
             </section>

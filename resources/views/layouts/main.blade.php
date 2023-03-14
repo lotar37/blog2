@@ -141,21 +141,15 @@
 @yield("content")
 
 
-<footer class="edica-footer mt-4" data-aos="fade-up">
+<footer class="edica-footer mt-1" data-aos="fade-up">
     <div class="container">
         <div class="row footer-widget-area">
             <div class="col-md-3">
-                <a href="index.html" class="footer-brand-wrapper">
-                    <img src="{{ asset('assets/images/logo2.png') }}" alt=" logo">
+                <a href="index.html" class="px-0 mb-2">
+                    <img src="{{ asset('assets/images/logo2.png') }}" alt="logo" class="col-md-9 px-0 pb-2">
                 </a>
                 <p class="contact-details">hello@radonezh.ru</p>
                 <p class="contact-details">+7 495 423 5122</p>
-                <nav class="footer-social-links">
-                    <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#!"><i class="fab fa-twitter"></i></a>
-                    <a href="#!"><i class="fab fa-behance"></i></a>
-                    <a href="#!"><i class="fab fa-dribbble"></i></a>
-                </nav>
             </div>
             <div class="col-md-3">
                 <nav class="footer-nav">

@@ -48,14 +48,12 @@
                                     <td>{{ substr($report->date,0,10) }}</td>
                                     <td>{{ substr(strip_tags($report->content),0,89) }}...</td>
                                     <td class="d-flex">
-                                        <a href="{{ route("admin.report.show", $report->id) }}"><i class="fa-eye far"></i></a>
-                                        <a href="{{ route("admin.report.edit", $report->id) }} " class="text-success    "><i class="ml-2 fa-pencil-alt fas"></i></a>
+
+                                        <a href="{{ route("admin.report.edit", $report->id) }} " class="btn btn-outline-secondary mr-2">Изменить</a>
                                         <form action="{{route('admin.report.delete', $report->id)}}" method="post" >
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="border-0 bg-white">
-                                            <i class="ml-2 fa-trash fas text-danger" role="button"></i>
-                                        </button>
+                                        <button type="submit" class="btn btn-outline-secondary" >Удалить</button>
                                         </form>
                                     </td>
                                 </tr>

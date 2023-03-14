@@ -20,7 +20,7 @@
                     </ol>
                 </div><!-- /.col -->
 
-                <div class="col-12">
+                <div class="col-lg-12">
                     <form action="{{ route('admin.report.update', $report->id) }}" method="POST" class="col-12">
                         @csrf
                         @method('PATCH')
@@ -31,7 +31,7 @@
                             <div class="text-danger">Это поле необходимо для заполнения</div>
                             @enderror
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-lg-4">
                             <label>Дата отзыва:</label>
                             <div class="input-group date" id="reservationdate" data-target-input="nearest">
                                 <input type="text" name='date' class="form-control datetimepicker-input w-25"
@@ -44,8 +44,10 @@
                             <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
+                        </div>
                         <div class="form-group col-12">
-                            <textarea id="summernote" name="content" class="col-12">{{ $report->content }}</textarea>
+                            <label>Отзыв:</label>
+                            <textarea name="content" id='summernote' class="col-12">{{ $report->content }}</textarea>
                             @error('content')
                             <div class="text-danger">{{ $message }}</div>
                             @enderror

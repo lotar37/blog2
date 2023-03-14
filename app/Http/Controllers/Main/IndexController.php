@@ -34,7 +34,8 @@ class IndexController extends Controller
         foreach($reports as $report){
             $report->date = Carbon::parse($report->date)->format('d.m.Y');
         }
+        $randPosts = Post::randomPosts(2);
 
-        return view("main.index",compact('role', 'user','posts','posts3','categories','reports'));
+        return view("main.index",compact('role', 'user','posts','posts3','categories','reports','randPosts'));
     }
 }
