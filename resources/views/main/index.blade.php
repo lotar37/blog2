@@ -134,7 +134,7 @@
                             <div class="col-md-4 landing-blog-post" data-aos="fade-{{ $a[$i]}}">
                                 @php $i++ @endphp
                                 <img src="{{ asset("storage/" . $post->main_image) }}" alt="blog post"
-                                     class="blog-post-thumbnail">
+                                     class="blog-post-thumbnail" style="object-fit: cover;height: 150pt;">
                                 {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                                 <h4 class="blog-post-title">{{ $post->title }}</h4>
                                 <p class="blog-post-category">{{ $post->date }}</p>

@@ -145,7 +145,7 @@
     <div class="container">
         <div class="row footer-widget-area">
             <div class="col-md-3">
-                <a href="index.html" class="px-0 mb-2">
+                <a href="/" class="px-0 mb-2">
                     <img src="{{ asset('assets/images/logo2.png') }}" alt="logo" class="col-md-9 px-0 pb-2">
                 </a>
                 <p class="contact-details">hello@radonezh.ru</p>
