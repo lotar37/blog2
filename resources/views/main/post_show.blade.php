@@ -25,7 +25,7 @@
                         <div class="row">
 
 
-                            <div class="col-md-10 ml-auto" data-aos="fade-up">
+                            <div class="col-md-10 mx-auto" data-aos="fade-up">
 
                                 @if($post->report)
                                 {!! $post->report  !!}
