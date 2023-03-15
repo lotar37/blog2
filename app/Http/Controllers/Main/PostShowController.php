@@ -20,6 +20,7 @@ class PostShowController extends Controller
             $user = auth()->user()->name;
         }
         $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
-        return view('main.post_show',compact("post",'role', 'user'));
+        $randomPosts = Post::randomPosts(3);
+        return view('main.post_show',compact("post",'role', 'user','randomPosts'));
     }
 }

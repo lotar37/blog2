@@ -133,7 +133,7 @@
                         @foreach($posts3 as $post)
                             <div class="col-md-4 landing-blog-post" data-aos="fade-{{ $a[$i]}}">
                                 @php $i++ @endphp
-                                <img src="{{ asset("storage/" . $post->main_image) }}" alt="blog post"
+                                <img src="{{ asset("storage/" . $post->preview_image) }}" alt="blog post"
                                      class="blog-post-thumbnail" style="object-fit: cover;height: 150pt;">
                                 {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                                 <h4 class="blog-post-title">{{ $post->title }}</h4>
@@ -468,19 +468,7 @@
                         </section>
                     </div>
                     <div class="col-md-3 sidebar pt-3"  style="background:#dddddd;">
-                        @foreach($randPosts as $post)
-                        <div class="row blog-post-row">
-                            <div class="col-md-12 blog-post" data-aos="fade-up">
-                                <div class="blog-post-thumbnail-wrapper">
-                                    <img src="{{ asset("storage/" . $post->preview_image) }}" alt="blog post">
-                                </div>
-                                <p class="blog-post-category">Новость</p>
-                                <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-permalink">
-                                    <h6 class="blog-post-title">{{ $post->title }}</h6>
-                                </a>
-                            </div>
-                        </div>
-                        @endforeach
+                        @include('main.includes.random_post')
                     </div>
                 </div>
             </section>

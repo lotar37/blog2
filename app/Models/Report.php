@@ -12,4 +12,9 @@ class Report extends Model
     protected $table = "reports";
     protected $guarded = false;
 
+    public function getShortAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
 }
