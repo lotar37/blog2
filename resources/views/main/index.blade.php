@@ -216,10 +216,7 @@
                 </div>
             </section>
 
-            @php
-            echo substr(strip_tags("<div>sadsdfsdf sdf sd asdf asdf sdf asdf sad f</div><i>sdfsdfsfsd</i><b>sdfasdfasdfasdfsadf sdfasdfasdfasdf asdf asd fsadf sfsadf</b>"),0,100);
-            @endphp
-            <section class="edica-landing-section edica-landing-blog" data-aos="fade-up" data-aos-delay="300">
+             <section class="edica-landing-section edica-landing-blog" data-aos="fade-up" data-aos-delay="300">
                 <h4 class="edica-landing-section-subtitle-alt">ОТЗЫВЫ О НАС</h4>
                 <section class="edica-about-faq">
                     <div class="accordion" id="reportCollapse" role="tablist" aria-multiselectable="true">
