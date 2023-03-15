@@ -133,7 +133,7 @@
                         @foreach($posts3 as $post)
                             <div class="col-md-4 landing-blog-post" data-aos="fade-{{ $a[$i]}}">
                                 @php $i++ @endphp
-                                <img src="{{ asset("storage/" . $post->preview_image) }}" alt="blog post"
+                                <img src="{{ asset("storage/" . $post->main_image) }}" alt="blog post"
                                      class="blog-post-thumbnail" style="object-fit: cover;height: 150pt;">
                                 {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                                 <h4 class="blog-post-title">{{ $post->title }}</h4>
@@ -216,7 +216,9 @@
                 </div>
             </section>
 
-
+            @php
+            echo substr(strip_tags("<div>sadsdfsdf sdf sd asdf asdf sdf asdf sad f</div><i>sdfsdfsfsd</i><b>sdfasdfasdfasdfsadf sdfasdfasdfasdf asdf asd fsadf sfsadf</b>"),0,100);
+            @endphp
             <section class="edica-landing-section edica-landing-blog" data-aos="fade-up" data-aos-delay="300">
                 <h4 class="edica-landing-section-subtitle-alt">ОТЗЫВЫ О НАС</h4>
                 <section class="edica-about-faq">
@@ -228,7 +230,7 @@
                                         <a data-toggle="collapse" data-parent="#reportCollapse"
                                            href="#reportContent{{ $report->id }}" aria-expanded="true"
                                            aria-controls="reportContent{{ $report->id }}">
-                                            {{$report->person}}, {{$report->date}}
+                                            {{$report->person}}, {{$report->date}},<br> <i>{!! $report->short !!}</i>...
                                         </a>
                                     </h5>
                                 </div>

@@ -31,6 +31,7 @@ class IndexController extends Controller
         }
         $categories = Category::all();
         $reports = Report::all()->sortByDesc('date');
+        //dd($reports[0]->short." ".$reports[0]->date);
         foreach($reports as $report){
             $report->date = Carbon::parse($report->date)->format('d.m.Y');
         }

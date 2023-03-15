@@ -43,14 +43,11 @@
                                     <td>{{ $tag->id }}</td>
                                     <td>{{ $tag->title }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route("admin.tag.show", $tag->id) }}"><i class="fa-eye far"></i></a>
-                                        <a href="{{ route("admin.tag.edit", $tag->id) }} " class="text-success    "><i class="ml-2 fa-pencil-alt fas"></i></a>
+                                        <a href="{{ route("admin.tag.edit", $tag->id) }} " class="btn btn-outline-secondary mr-1">Изменить</a>
                                         <form action="{{route('admin.tag.delete', $tag->id)}}" method="post" >
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="border-0 bg-white">
-                                            <i class="ml-2 fa-trash fas text-danger" role="button"></i>
-                                        </button>
+                                        <button type="submit" class="btn btn-outline-secondary">Удалить</button>
                                         </form>
                                     </td>
                                 </tr>
