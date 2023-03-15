@@ -14,7 +14,8 @@ class Report extends Model
 
     public function getShortAttribute()
     {
-        return substr(strip_tags($this->content),0,100);
+        $a = explode(" ", strip_tags($this->content));
+        return implode(" ",array_slice($a,0,20));
     }
 
 }

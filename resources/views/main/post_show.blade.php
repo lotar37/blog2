@@ -12,7 +12,7 @@
                         <div class="row">
 
                             <div class="col-md-10 mx-auto" data-aos="fade-up">
-                        <img src="{{  asset("storage/" . $post->main_image) }}" alt="{{$post->main_image}}" class="w-100">
+                        <img src="{{  asset("storage/" . $post->main_image) }}" alt="{{$post->main_image}}" class="w-100 mb-md-4">
                             </div>
                         </div>
 
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 sidebar mr-auto" data-aos="fade-up" >
-                        <h4 class="mx-auto">Ещё мероприятия</h4>
+                        <h6 class="mx-auto">Ещё мероприятия</h6>
                         @include('main.includes.random_post')
                     </div>
                 </div>

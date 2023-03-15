@@ -230,7 +230,7 @@
                                         <a data-toggle="collapse" data-parent="#reportCollapse"
                                            href="#reportContent{{ $report->id }}" aria-expanded="true"
                                            aria-controls="reportContent{{ $report->id }}">
-                                            {{$report->person}}, {{$report->date}},<br> <i>{!! $report->short !!}</i>...
+                                            {{$report->person}}, {{$report->date}},<br> <i style="color:#8fd19e">{!! $report->short !!}</i>...
                                         </a>
                                     </h5>
                                 </div>
