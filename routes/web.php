@@ -86,6 +86,15 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::delete("/{category}", "DeleteController")->name("admin.category.delete");
     });
 
+    Route::group(['namespace' => 'Subject', 'prefix' => 'subjects'], function(){
+        Route::get("/", "IndexController")->name("admin.subject.index");
+        Route::get("/create", "CreateController")->name("admin.subject.create");
+        Route::post("/", "StoreController")->name("admin.subject.store");
+        Route::get("/{subject}/edit", "EditController")->name("admin.subject.edit");
+        Route::patch("/{subject}", "UpdateController")->name("admin.subject.update");
+        Route::delete("/{subject}", "DeleteController")->name("admin.subject.delete");
+    });
+
     Route::group(['namespace' => 'Tag', 'prefix' => 'tags'], function(){
         Route::get("/", "IndexController")->name("admin.tag.index");
         Route::get("/create", "CreateController")->name("admin.tag.create");

@@ -144,7 +144,7 @@
                     </div>
                     <div class="col-lg-12 justify-content-lg-around flex-column"
                          style="display: flex; justify-content: space-around">
-                        <a href="#" class="btn btn-secondary btn-lg my-4">ВСЕ СОБЫТИЯ</a>
+                        <a href="#" class="btn btn-success btn-lg my-4">ВСЕ СОБЫТИЯ</a>
                     </div>
                 </div>
             </section>
@@ -211,7 +211,7 @@
                     </div>
                     <div class="col-lg-12 justify-content-lg-around flex-column"
                          style="display: flex; justify-content: space-around">
-                        <a href="#" class="btn btn-info btn-lg my-4">ВСЕ ЗАНЯТИЯ</a>
+                        <a href="#" class="btn btn-success btn-lg my-4">ВСЕ ЗАНЯТИЯ</a>
                     </div>
                 </div>
             </section>
@@ -227,14 +227,15 @@
                                         <a data-toggle="collapse" data-parent="#reportCollapse"
                                            href="#reportContent{{ $report->id }}" aria-expanded="true"
                                            aria-controls="reportContent{{ $report->id }}">
-                                            {{$report->person}}, {{$report->date}},<br> <i style="color:#8fd19e">{!! $report->short !!}</i>...
+                                            {{$report->person}}, {{$report->date}},<br>
+                                            <i style="color:#056562">{!! $report->short !!}...</i>
                                         </a>
                                     </h5>
                                 </div>
                                 <div id="reportContent{{ $report->id }}" class="collapse in" role="tabpanel"
                                      aria-labelledby="report{{ $report->id }}">
                                     <div class="card-body">
-                                        {!! $report->content !!}
+                                        <i style="color:#056562">{!! $report->long !!}</i>
                                     </div>
                                 </div>
                             @endforeach

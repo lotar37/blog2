@@ -15,7 +15,12 @@ class Report extends Model
     public function getShortAttribute()
     {
         $a = explode(" ", strip_tags($this->content));
-        return implode(" ",array_slice($a,0,20));
+        return implode(" ",array_slice($a,0,40));
+    }
+    public function getLongAttribute()
+    {
+        $a = explode(" ", strip_tags($this->content));
+        return implode(" ",array_slice($a,40));
     }
 
 }
