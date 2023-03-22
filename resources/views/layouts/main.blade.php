@@ -34,9 +34,9 @@
                         <div class="col-1 py-0 pl-0 d-flex"><a class="mr-0 pt-0 navbar-brand"
                                                                href="{{ route("main.index") }}"><img
                                     src="{{ asset('assets/images/logo3.png ') }}" alt="Edica" width="24px"></a>
-                            <a class="pr-0 pl-2  m-0  nav-link dropdown-toggle" href="{{ route("main.index") }}" id="aboutDropdown"
+                            <a class="pr-0 pl-2  m-0  nav-link dropdown-toggle" href="/" id="aboutDropdown"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Гимназия Радонеж</a></div>
+                                <a class="pr-0 pl-2  m-0  nav-link dropdown-toggle"  href="/">Гимназия Радонеж</a></a></div>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <a class="dropdown-item" href="{{ route("main.about") }}">О нас</a>
                             <a class="dropdown-item" href="{{ route("main.teachers") }}">Учителя/Администрация</a>
@@ -62,12 +62,9 @@
                                 рекомендует</a>
                             <a class="dropdown-item" href="{{ route("main.preschool") }}">Дошкольное отделение</a>
                             <hr class="dropdown-divider">
-                            <a class="dropdown-item" href="{{ route("main.museum") }}">&nbsp;&nbsp;Музеи</a>
-                            <a class="dropdown-item" href="{{ route("main.theaters") }}">&nbsp;&nbsp;Театры</a>
-                            <hr class="dropdown-divider">
                             <a class="dropdown-item" href="{{ route("main.extcurr") }}">Внеурочная образовательная
                                 деятельность</a>
-                            <a class="dropdown-item" href="{{ route("main.homework.index") }}">Разное</a>
+                            <a class="dropdown-item" href="{{ route("main.homework.index") }}">Дневник</a>
                             <a class="dropdown-item" href="{{ route("main.studyplan") }}">Учебный план</a>
                         </div>
                     </li>
@@ -96,6 +93,8 @@
                         <div class="dropdown-menu" aria-labelledby="blogDropdown">
                             <a class="dropdown-item" href="#">Поступление</a>
                             <a class="dropdown-item" href="#">Детям</a>
+                            <a class="dropdown-item" href="{{ route("main.museum") }}">&nbsp;&nbsp;Музеи</a>
+                            <a class="dropdown-item" href="{{ route("main.theaters") }}">&nbsp;&nbsp;Театры</a>
                         </div>
                     </li>
 
