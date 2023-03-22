@@ -7,44 +7,25 @@
                 <div class="col-lg-11 mx-auto">
                     <h1 class="edica-page-title"  data-aos="fade-up">О гимназии</h1>
 
-                    <section class="edica-about-intro py-5">
+                    <section class="edica-about-intro pt-lg-5">
                         <div class="row">
-                            <div class="col-md-3 intro-content" data-aos="fade-right" data-aos-delay="150">
-                                <div class="widget widget-post-carousel">
-
-                                    <div class="post-carousel">
-                                        <div id="carouselId" class="carousel slide" data-ride="carousel">
-                                            <div class="carousel-inner" role="listbox">
-                                                <figure class="carousel-item active">
-                                                    <img src="{{ asset('assets/images/about3.jpg') }}" alt="First slide">
-                                                </figure>
-                                                <figure class="carousel-item">
-                                                    <img src="{{ asset('assets/images/about4.jpg') }}" alt="First slide">
-                                                </figure>
-                                                <div class="carousel-item">
-                                                    <img src="{{ asset('assets/images/about5.jpg') }}" alt="First slide">
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <img src="{{ asset('assets/images/about6.jpg') }}" alt="First slide">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                                <h2 class="intro-title pb-3 pb-md-0 mb-4 mb-md-0">Знакомьтесь, гимназия «Радонеж»! <span></span></h2>
                             </div>
-                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-                                <h2 class="intro-title pb-3 pb-md-0 mb-4 mb-md-0">Православная классическая гимназия «Радонеж» <span></span></h2>
-                            </div>
-                            <div class="col-md-5 intro-content" data-aos="fade-left" data-aos-delay="150">
+                            <div class="col-md-6 intro-content" data-aos="fade-left" data-aos-delay="150">
 
-                                <p><span class="first-letter">П</span>ервая православная общеобразовательная школа в постсоветской России. Основана в 1990 году Православным братством «Радонеж» по благословению святейшего Патриарха Московского и всея Руси Алексия II.</p>
+                                <p><span class="first-letter">П</span>ервая православная общеобразовательная школа в постсоветской России.
+                                    Основана в 1990 году Православным братством «Радонеж» по благословению святейшего
+                                    Патриарха Московского и всея Руси Алексия II. Со дня своего основания была ориентирована на детей из
+                                    православных семей, родители которых хотели бы дать им классическое образование и православное
+                                    воспитание. </p>
                             </div>
                         </div>
                     </section>
                     <section class="edica-about-vision py-5">
                         <div class="row">
                             <div class="col-md-6 d-flex flex-column justify-content-center">
-                                <h5 class="vision-title" data-aos="fade-right">Наше видение</h5>
+                                <h5 class="vision-title" data-aos="fade-right">Наша миссия</h5>
                                 <p class="vision-text" data-aos="fade-right">В своей работе и образовательной программе Гимназия «Радонеж» соединяет лучшие традиции Российского образования с высшими достижениями современной педагогики, проверенные временем образовательные методики с разумным индивидуальным подходом, ориентирована на присвоение детьми высоких образцов отечественной и мировой культуры. </p>
                             </div>
                             <div class="col-md-6 pb-3 pb-md-0 mb-4 mb-md-0" data-aos="fade-left" data-aos-delay="200">
@@ -88,14 +69,14 @@
                             <h3 class="counter-count">85%</h3>
                             <p class="count-label">Поступление в ВУЗ</p>
                         </div>
-                        <div class="counter-card mb-3 pb-1 pb-md-0 mb-md-0">
-                            <h3 class="counter-count"><span class="count" data-count="15">0</span>K+</h3>
-                            <p class="count-label">Pro User</p>
-                        </div>
-                        <div class="counter-card mb-3 pb-1 pb-md-0 mb-md-0">
-                            <h3 class="counter-count"><span class="count" data-count="8">0</span>K+</h3>
-                            <p class="count-label">Reviews</p>
-                        </div>
+{{--                        <div class="counter-card mb-3 pb-1 pb-md-0 mb-md-0">--}}
+{{--                            <h3 class="counter-count"><span class="count" data-count="15">0</span>K+</h3>--}}
+{{--                            <p class="count-label">Pro User</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="counter-card mb-3 pb-1 pb-md-0 mb-md-0">--}}
+{{--                            <h3 class="counter-count"><span class="count" data-count="8">0</span>K+</h3>--}}
+{{--                            <p class="count-label">Reviews</p>--}}
+{{--                        </div>--}}
                     </section>
                     <section class="edica-about-goal py-5 mb-5">
                         <div class="row">
