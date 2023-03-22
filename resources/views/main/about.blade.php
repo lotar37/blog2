@@ -4,11 +4,11 @@
     <main class="mb-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-11 mx-auto">
-                    <h1 class="edica-page-title"  data-aos="fade-up">О гимназии</h1>
+                <div class="col-lg-11 mx-auto pt-5">
+                    <h1 class="edica-page-title"  data-aos="fade-up">О нас</h1>
 
                     <section class="edica-about-intro pt-lg-5">
-                        <div class="row">
+                        <div class="row pt-lg-5">
                             <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
                                 <h2 class="intro-title pb-3 pb-md-0 mb-4 mb-md-0">Знакомьтесь, гимназия «Радонеж»! <span></span></h2>
                             </div>
