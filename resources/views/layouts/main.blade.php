@@ -126,11 +126,12 @@
                             </form>
                         </li>
                     @endif
-                    @if($role == 2 or $role ==3)
+                    @if($role == 2 or $role == 3)
                             <li class="nav-item pl-4">
                                 {{ $user }}
                             </li>
                     @endif
+
                     @if($role>3)
                         <li class="nav-item pl-4">
                             <a class="nav-link" href="{{ route('login') }}">Войти </a>

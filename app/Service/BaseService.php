@@ -21,7 +21,7 @@ class BaseService
 
     public function getRole()
     {
-        return is_null(auth()->user()) ? 2 : auth()->user()->role;
+        return is_null(auth()->user()) ? 4 : auth()->user()->role;
     }
     public function getClassesColors(){
         $data = [];
