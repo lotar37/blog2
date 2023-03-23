@@ -29,14 +29,14 @@
                                 <p class="vision-text" data-aos="fade-right">В своей работе и образовательной программе Гимназия «Радонеж» соединяет лучшие традиции Российского образования с высшими достижениями современной педагогики, проверенные временем образовательные методики с разумным индивидуальным подходом, ориентирована на присвоение детьми высоких образцов отечественной и мировой культуры. </p>
                             </div>
                             <div class="col-md-6 pb-3 pb-md-0 mb-4 mb-md-0" data-aos="fade-left" data-aos-delay="200">
-                                <img src="{{ asset('assets/images/about.jpg')}} " alt="vision" class="img-fluid2" style="width:100%">
+                                <img src="{{ asset('assets/images/about.jpg?v=1')}} " alt="vision" class="img-fluid2" style="width:100%">
                             </div>
                         </div>
                     </section>
                     <section class="edica-about-vision py-5">
                         <div class="row">
                             <div class="col-md-6 pb-3 pb-md-0 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
-                                <img src="{{ asset('assets/images/about2.jpg')}}" alt="vision" class="img-fluid2"  style="width:100%">
+                                <img src="{{ asset('assets/images/about2.jpg?v=1')}}" alt="vision" class="img-fluid2"  style="width:100%">
                             </div>
                             <div class="col-md-6 d-flex flex-column justify-content-center">
                                 <h5 class="vision-title" data-aos="fade-left">Углублённо </h5>
@@ -97,7 +97,7 @@
                                 </p>
                             </div>
                             <div class="col-md-6" data-aos="fade-left">
-                                <img src="{{ asset('assets/images/about9.jpg')}}" alt="goal" class="img-fluid2"  style="width:100%">
+                                <img src="{{ asset('assets/images/about9.jpg?v=1')}}" alt="goal" class="img-fluid2"  style="width:100%">
                             </div>
                         </div>
                     </section>
