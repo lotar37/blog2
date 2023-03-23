@@ -32,7 +32,7 @@ class PostIndexController extends BaseController
         return view("main.post_index",compact('role', 'user','categories','posts','randomPosts4','randomPosts3'));
     }
     private function getPostsArray(){
-        $arr = Post::all()->sortDesc()->take(9);
+        $arr = Post::all()->sortByDesc('date')->take(9);
         $a1 = $arr->slice(0,3);
         $a2 = $arr->slice(3)->chunk(2);
         return array($a1,$a2);
