@@ -9,28 +9,17 @@ use App\Models\Report;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class IndexController extends BaseController
+class LagerThisYearController extends BaseController
 {
     public function __invoke()
     {
         // TODO: Implement __invoke() method.
         $role = $this->service->getRole();
         $user = $this->service->getUser();;
-        $posts = Post::all()->sortDesc();
+        $posts = Post::all()->where('category_id',2)->sortDesc();
         foreach($posts as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         }
-        $posts3 = Post::all()->sortByDesc('date')->take(3);
-        foreach($posts3 as $post){
-            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
-        }
-        $categories = Category::all();
-        $reports = Report::all()->sortByDesc('date');
-        //dd($reports[0]->short." ".$reports[0]->date);
-        foreach($reports as $report){
-            $report->date = Carbon::parse($report->date)->format('d.m.Y');
-        }
-        $randomPosts = Post::randomPosts(2);
 
         return view("main.index",compact('role', 'user','posts','posts3','categories','reports','randomPosts'));
     }

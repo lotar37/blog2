@@ -43,7 +43,7 @@
                             <a class="dropdown-item" href="{{ route("main.teachers") }}">Учителя/Администрация</a>
                             <a class="dropdown-item" href="#">Поступление</a>
                             <a class="dropdown-item" href="{{ route("main.regim") }}">Режим работы</a>
-                            <a class="dropdown-item" href="#">Новости</a>
+                            <a class="dropdown-item" href="{{ route("main.post") }}">Новости</a>
                             <a class="dropdown-item" href="#">Объявления</a>
                             <a class="dropdown-item" href="#">Летопись/История</a>
                             <a class="dropdown-item" href="{{ route("main.patriarh") }}">Приветствие от Патриарха</a>
@@ -110,7 +110,7 @@
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <input type="submit" value="Выйти" class="btn btn-outline-secondary">
+                                <input type="submit" value="Выйти" class="btn btn-outline-danger">
                             </form>
                         </li>
                     @endif
@@ -122,7 +122,7 @@
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <input type="submit" value="Выйти" class="btn btn-outline-secondary">
+                                <input type="submit" value="Выйти" class="btn btn-outline-danger">
                             </form>
                         </li>
                     @endif

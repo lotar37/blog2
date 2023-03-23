@@ -20,6 +20,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/", "IndexController")->name('main.index');
     Route::get("/contacts", "ContactsController")->name('main.contacts');
     Route::get("/reports", "ReportsController")->name('main.reports');
+    Route::get("/post", "PostIndexController")->name('main.post');
     Route::get("/about", "AboutController")->name('main.about');
     Route::get("/preschool", [PagesController::class,"preschool"])->name('main.preschool');
     Route::get("/extcurr", [PagesController::class,"extcurr"])->name('main.extcurr');
