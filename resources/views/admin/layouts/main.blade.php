@@ -22,7 +22,7 @@
     <!-- Daterange picker -->
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css') }}">
-    <link rel="icon" type="image/png" href='{{ asset("assets/images/favicon_admin.png") }}'>
+    <link rel="icon" type="image/png" href='{{ asset("assets/images/favicon_admin.png?vers=3") }}'>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">

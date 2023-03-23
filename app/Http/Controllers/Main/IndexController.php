@@ -9,18 +9,20 @@ use App\Models\Report;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
     public function __invoke()
     {
         // TODO: Implement __invoke() method.
-        if(is_null(auth()->user())){
-            $role = 2;
-            $user = "";
-        }else{
-            $role = auth()->user()->role;
-            $user = auth()->user()->name;
-        }
+//        if(is_null(auth()->user())){
+//            $role = 2;
+//            $user = "";
+//        }else{
+//            $role = auth()->user()->role;
+//            $user = auth()->user()->name;
+//        }
+        $role = $this->service->getRole();
+        $user = $this->service->getUser();;
         $posts = Post::all()->sortDesc();
         foreach($posts as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');

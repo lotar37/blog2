@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset("assets/vendors/font-awesome/css/all.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/vendors/aos/aos.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/style.css?version=0.51") }}">
-    <link rel="icon" type="image/png" href='{{ asset("assets/images/favicon.png?vers=2") }}'>
+    <link rel="icon" type="image/png" href='{{ asset("assets/images/favicon.png?vers=3") }}'>
     {{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">--}}
     <script src="{{ asset("assets/vendors/jquery/jquery.min.js") }}"></script>
     <script src="{{ asset("assets/js/loader.js") }}"></script>
@@ -36,7 +36,8 @@
                                     src="{{ asset('assets/images/logo3.png ') }}" alt="Edica" width="24px"></a>
                             <a class="pr-0 pl-2  m-0  nav-link dropdown-toggle" href="/" id="aboutDropdown"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <a class="pr-0 pl-2  m-0  nav-link dropdown-toggle"  href="/">Гимназия Радонеж</a></a></div>
+                                <a class="pr-0 pl-2  m-0  nav-link dropdown-toggle" href="/">Гимназия Радонеж</a></a>
+                        </div>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <a class="dropdown-item" href="{{ route("main.about") }}">О нас</a>
                             <a class="dropdown-item" href="{{ route("main.teachers") }}">Учителя/Администрация</a>
@@ -74,7 +75,8 @@
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <a class="dropdown-item" href="{{ route("main.khram_history") }}">История храма</a>
                             <a class="dropdown-item" href="#">Расписание богослужений</a>
-                            <a class="dropdown-item" href="{{ route("main.khram_chtenie") }}">Чтение утреннего правила</a>
+                            <a class="dropdown-item" href="{{ route("main.khram_chtenie") }}">Чтение утреннего
+                                правила</a>
                             <a class="dropdown-item" href="#">Новости</a>
                             <a class="dropdown-item" href="{{ route("main.khram_docs") }}">Документы</a>
                         </div>
@@ -102,8 +104,8 @@
                 <ul style='justify-content: flex-end' class=" navbar-nav mx-auto mt-2 mt-lg-0">
                     @if($role == 0)
                         <li class="nav-item  text-danger">
-                            <a class="nav-link text-danger" href="{{ route("admin.main.index") }} "
-                               alt="Личный кабинет">Admin({{ $user }})</a>
+                            <a class="nav-link text-success" href="{{ route("admin.main.index") }} "
+                               alt="Личный кабинет">ЛК({{ $user }})</a>
                         </li>
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="post">
@@ -114,8 +116,8 @@
                     @endif
                     @if($role == 1)
                         <li class="nav-item  text-danger">
-                            <a class="nav-link text-danger" href="{{ route("teacher.main.index") }} "
-                               alt="Личный кабинет">Учитель({{ $user }})</a>
+                            <a class="nav-link text-info" href="{{ route("teacher.main.index") }} "
+                               alt="Личный кабинет">{{ $user }}(ЛК)</a>
                         </li>
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="post">
@@ -123,7 +125,13 @@
                                 <input type="submit" value="Выйти" class="btn btn-outline-secondary">
                             </form>
                         </li>
-                    @endif                    @if($role > 1)
+                    @endif
+                    @if($role == 2 or $role ==3)
+                            <li class="nav-item pl-4">
+                                {{ $user }}
+                            </li>
+                    @endif
+                    @if($role>3)
                         <li class="nav-item pl-4">
                             <a class="nav-link" href="{{ route('login') }}">Войти </a>
                         </li>
@@ -132,7 +140,7 @@
             </div>
         </nav>
         @yield("carousel")
-{{--        <hr class="container">--}}
+        {{--        <hr class="container">--}}
     </div>
 
 </header>
