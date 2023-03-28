@@ -5,12 +5,12 @@
 @section('carousel')
     <div class="edica-landing-header-content">
         <div id="edicaLandingHeaderCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="0" class="active">.01</li>
-                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="1">.02</li>
-                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="2">.03</li>
-                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="3">.04</li>
-            </ol>
+{{--            <ol class="carousel-indicators">--}}
+{{--                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="0" class="active">.01</li>--}}
+{{--                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="1">.02</li>--}}
+{{--                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="2">.03</li>--}}
+{{--                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="3">.04</li>--}}
+{{--            </ol>--}}
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="row">

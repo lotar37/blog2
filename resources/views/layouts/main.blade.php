@@ -101,7 +101,7 @@
                     </li>
 
                 </ul>
-                <ul style='justify-content: flex-end' class=" navbar-nav mx-auto mt-2 mt-lg-0">
+                <ul style='justify-content: flex-end' class=" navbar-nav ml-auto mr-2 mt-2 mt-lg-0">
                     @if($role == 0)
                         <li class="nav-item  text-danger">
                             <a class="nav-link text-success" href="{{ route("admin.main.index") }} "
@@ -134,7 +134,7 @@
 
                     @if($role>3)
                         <li class="nav-item pl-4">
-                            <a class="nav-link" href="{{ route('login') }}">Войти </a>
+                            <a class="nav-link" href="{{ route('login') }}" style="text-align: right; padding-right: 0px;">Войти </a>
                         </li>
                     @endif
                 </ul>
