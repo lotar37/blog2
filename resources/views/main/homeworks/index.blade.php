@@ -25,11 +25,11 @@
                         <div class="col-6 mb-1">
                                 <div class="card aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                                     <div class="card-header" role="tab" id="edicaAboutFaq{{ $s_key }}">
-                                        <h5 class="mb-0">
+                                        <h4 class="mb-0">
 
                                                 {{ $data['subjects']->find($s_key)->name }}
 
-                                        </h5>
+                                        </h4>
                                     </div>
                                         <div class="card-body">
                                             <div class="btn-group  btn-group-md btn-group-justified col-6">
