@@ -17,6 +17,10 @@
 {{--                <img src="{{ asset('assets/images/museum.jpg')}}" alt="featured image" class="w-100">--}}
             </section>
             @endif
+            <div class="breadcrumb">
+                <a href="/" class="breadcrumb-item">Главная</a>
+                <a href="#" class="breadcrumb-item  active">{{ $page->title }}</a>
+            </div>
             <section class="post-content" class="" style="display:flex; justify-content: space-around">
                 <div class="col-md-10">
 
