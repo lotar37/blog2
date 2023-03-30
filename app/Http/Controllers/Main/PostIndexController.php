@@ -23,7 +23,7 @@ class PostIndexController extends BaseController
         foreach($randomPosts4 as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         }
-        $randomPosts3 = Post::randomPosts(3);
+        $randomPosts3 = Post::maxViewPosts(3);
         $categories = Category::all();
         foreach($randomPosts3 as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');

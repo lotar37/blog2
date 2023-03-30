@@ -23,6 +23,9 @@ class Post extends Model
     public static function randomPosts($number){
         return Post::inRandomOrder()->limit($number)->get();
     }
+    public static function maxViewPosts($number){
+        return Post::all()->sortByDesc('count_views')->slice(0,$number);
+    }
     public function getCountViewsAttribute(){
         return View::all()->where('table', 'posts')->where('forign_id', $this->id)->count();
     }
