@@ -46,9 +46,9 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>{{ $data['postsCount'] }}</h3>
+                            <h3>{{ $data['postsCount'] }}/{{ $data['viewCount'] }}</h3>
 
-                            <p>Посты</p>
+                            <p>Посты/Просмотры</p>
                         </div>
                         <div class="icon">
                             <i class="far  fa-clipboard"></i>
@@ -94,7 +94,41 @@
             <!-- /.row (main row) -->
         </div><!-- /.container-fluid -->
     </section>
+    <div class="card-header border-0 ui-sortable-handle" style="cursor: move;">
+
+        <h3 class="card-title">
+            <i class="far fa-calendar-alt"></i>
+            Calendar
+        </h3>
+        <!-- tools card -->
+        <div class="card-tools">
+            <!-- button with a dropdown -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" style="">
+                    <a href="#" class="dropdown-item">Add new event</a>
+                    <a href="#" class="dropdown-item">Clear events</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">View calendar</a>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="card-body pt-0">
+            <!--The calendar -->
+            <div id="calendar" style="width: 100%"></div>
+        </div>
+
+        <!-- /. tools -->
+    </div>
     <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
+ <!-- /.content-wrapper -->
 @endsection

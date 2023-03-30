@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\User;
+use App\Models\View;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -19,6 +20,7 @@ class IndexController extends Controller
         $data['postsCount'] = Post::all()->count();
         $data['categoriesCount'] = Category::all()->count();
         $data['tagsCount'] = Tag::all()->count();
+        $data['viewCount'] = View::all()->count();
         return view('admin.main.index', compact('data'));
     }
 }

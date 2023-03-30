@@ -152,6 +152,11 @@
         $('.select2bs4').select2({
             theme: 'bootstrap4'
         })
+        $('#calendar').datetimepicker({
+            format: 'L',
+            language: "ru-ru",
+            inline: true
+        })
     });
     $('#reservationdate').datetimepicker({
         format: 'DD.MM.YYYY'
@@ -162,5 +167,8 @@
         content: "...";
     }
 </style>
+    <script>
+    </script>
+
 </body>
 </html>

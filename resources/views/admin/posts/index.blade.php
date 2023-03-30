@@ -34,6 +34,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Название</th>
+                                    <th><i class="fa-regular far fa-eye"></i></th>
                                     <th>Действия</th>
                                 </tr>
                                 </thead>
@@ -42,6 +43,7 @@
                                 <tr>
                                     <td>{{ $post->id }}</td>
                                     <td>{{ $post->title }}</td>
+                                    <td>{{ $post->count_views }}</td>
                                     <td class="d-flex">
                                         <a href="{{ route("admin.post.edit", $post->id) }} " class="btn btn-outline-secondary mr-1">Изменить</a>
                                         <form action="{{route('admin.post.delete', $post->id)}}" method="post" >
