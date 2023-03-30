@@ -10,7 +10,7 @@
                         <h2 class="mb-1  font-weight-light"><a class="btn btn-outline-success mr-2" href="{{ route("main.homework.index") }}">Назад</a>{{ $data['class']->name }}: {{ $data['subject']->name }} </h2>
                     </div>
                     @if(count($homeworks))
-                        @php $c = 1; @endphp
+                        @php $c = 0; @endphp
                         @foreach($homeworks as $k=>$homework)
                             <div class="mb-2 pt-2" style="border:1px solid #89c7a4; border-radius: 16px 0  16px 0   ;">
                             <div class="px-3 pt-2 pb-1 bg-opacity-50 border-1 bg-gradient-gray" data-aos="fade-left" data-aos-delay="{{ $c*300 }}"
@@ -38,3 +38,9 @@
 
     </main>
 @endsection
+print('4')
+print('8')
+print('15')
+print('16')
+print('23')
+print('42')

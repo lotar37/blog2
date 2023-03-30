@@ -5,6 +5,11 @@
         <div class="container">
             <h2 class="edica-page-title" data-aos="fade-up">{{ $post->title }}</h2>
             <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">{{ $post->date." ".$post->time }}</p>
+            <div class="breadcrumb">
+                <a href="/" class="breadcrumb-item">Главная</a>
+                <a href="{{ route("main.post") }}" class="breadcrumb-item">События</a>
+                <a href="#" class="breadcrumb-item active">{{ $post->title }}</a>
+            </div>
 
             <section class="blog-post-featured-img edica-landing-section edica-landing-blog" data-aos="fade-up" data-aos-delay="300">
                 <div class="row">

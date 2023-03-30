@@ -11,7 +11,11 @@
                         <div class="blog-post-thumbnail-wrapper">
                             <img src="{{  asset("storage/" . $post->preview_image) }}" alt="blog post">
                         </div>
-                        <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>
+                        <div class="blog-post-category"  style="display:flex;justify-content: space-between">
+                            <div>{{ $categories->find($post->category_id)->title }}</div>
+                            <div><i class="fa-regular far fa-eye"></i> {{ $post->count_views }}</div>
+
+                        </div>
                         <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-permalink">
                             <h6 class="blog-post-title">{{ $post->title }}</h6>
                         </a>
@@ -29,7 +33,10 @@
                                 <div class="blog-post-thumbnail-wrapper">
                                     <img src="{{  asset("storage/" . $post->preview_image) }}" alt="blog post">
                                 </div>
-                                <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>
+                                <div class="blog-post-category"   style="display:flex;justify-content: space-between">
+                                    <div>{{ $categories->find($post->category_id)->title }}</div>
+                                    <div><i class="fa-regular far fa-eye"></i> {{ $post->count_views }}</div>
+                                </div>
                                 <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-permalink">
                                     <h6 class="blog-post-title">{{ $post->title }}</h6>
                                 </a>
@@ -57,8 +64,9 @@
                                     @foreach($randomPosts3 as $post)
                                     <figure class="carousel-item {{ $count == 0 ? ' active' : ''}}">
                                         <img src="{{ asset("storage/" . $post->main_image) }}" alt="First slide">
-                                        <figcaption class="post-title">
-                                            <a href="{{ route("main.post_show", $post->id) }}">{{ $post->title }}</a>
+                                        <figcaption class="post-title"    style="display:flex;justify-content: space-between">
+                                            <div><a href="{{ route("main.post_show", $post->id) }}">{{ $post->title }}</a></div>
+                                            <div style="white-space: nowrap"><i class="fa-regular fas fa-eye"></i> {{ $post->count_views }}</div>
                                         </figcaption>
                                     </figure>
                                         @php $count++ @endphp
