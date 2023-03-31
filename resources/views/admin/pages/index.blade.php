@@ -42,8 +42,9 @@
                                 <tr>
 {{--                                    <td>{{ $page->id }}</td>--}}
                                     <td>{{ $page->content }}</td>
-                                    <td>{{ $page->title }}</td>
+                                    <td><a href="{{ route("main.".$page->route_name) }}">{{ $page->title }}</a></td>
                                     <td class="d-flex">
+                                        <a href="{{ route("main.".$page->route_name) }}" class="btn btn-outline-secondary mr-1">Перейти</a>
                                         <a href="{{ route("admin.page.edit", $page->id) }}" class="btn btn-outline-secondary">Изменить</a>
                                     </td>
                                 </tr>
