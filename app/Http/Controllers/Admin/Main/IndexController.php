@@ -19,8 +19,18 @@ class IndexController extends Controller
         $data['usersCount'] = User::all()->count();
         $data['postsCount'] = Post::all()->count();
         $data['categoriesCount'] = Category::all()->count();
+        $data['tags'] = $this->getTagCountsArray();
         $data['tagsCount'] = Tag::all()->count();
         $data['viewCount'] = View::all()->count();
+//        dd($data['tags']);
         return view('admin.main.index', compact('data'));
+    }
+    private function getTagCountsArray(){
+        $tags = Tag::all();
+        $a = [];
+        foreach($tags as $tag){
+            $a[$tag->title] = $tag->post_at_tag;
+        }
+        return $a;
     }
 }
