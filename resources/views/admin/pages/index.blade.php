@@ -13,9 +13,9 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}"><i class="nav-icon fas fa-home"></i></a></li>
                         <li class="breadcrumb-item active">Посты</li>
-                    </ol>
+
                 </div><!-- /.col -->
                 <div class="col-2">
                     <a class="btn btn-block btn-outline-secondary disabled" href="{{route("admin.page.create")}}">
