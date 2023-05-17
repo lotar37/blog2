@@ -3,10 +3,10 @@
 @section('content')
     <main class="blog">
         <div class="container">
-            <h1 class="edica-page-title" data-aos="fade-up">События</h1>
+            <h1 class="edica-page-title" data-aos="fade-up">Новости</h1>
             <div class="breadcrumb">
                 <a href="/" class="breadcrumb-item">Главная</a>
-                <a href="{{ route("main.post") }}" class="breadcrumb-item  active">События</a>
+                <a href="{{ route("main.post") }}" class="breadcrumb-item  active">Новости</a>
             </div>
             <section class="featured-posts-section">
                 <div class="row">

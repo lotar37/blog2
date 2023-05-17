@@ -122,7 +122,7 @@
 
             <section class="edica-landing-section edica-landing-blog">
                 <div class="container">
-                    <h4 class="edica-landing-section-subtitle-alt">СОБЫТИЯ</h4>
+                    <h4 class="edica-landing-section-subtitle-alt">НОВОСТИ</h4>
                     {{--                    <h4 class="edica-landing-section-subtitle" data-aos="fade-up">События</h4>--}}
                     {{--                    <h2 class="edica-landing-section-title" data-aos="fade-up">События </h2>--}}
                     <div class="row">
@@ -144,7 +144,7 @@
                     </div>
                     <div class="col-lg-12 justify-content-lg-around flex-column"
                          style="display: flex; justify-content: space-around">
-                        <a href="{{ route("main.post") }}" class="btn btn-success btn-lg my-4">ВСЕ СОБЫТИЯ</a>
+                        <a href="{{ route("main.post") }}" class="btn btn-success btn-lg my-4">ВСЕ НОВОСТИ</a>
                     </div>
                 </div>
             </section>

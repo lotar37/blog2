@@ -18,7 +18,7 @@
 
                 </div><!-- /.col -->
                 <div class="col-2">
-                    <a class="btn btn-block btn-outline-secondary disabled" href="{{route("admin.page.create")}}">
+                    <a class="btn btn-block btn-outline-secondary" href="{{route("admin.page.create")}}">
                                 Добавить
                     </a>
                 </div>

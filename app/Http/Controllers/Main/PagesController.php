@@ -68,6 +68,14 @@ class PagesController extends BaseController
     {
          return $this->pager("theaters");
     }
+   public function admission()
+    {
+         return $this->pager("admission");
+    }
+   public function management()
+    {
+         return $this->pager("management");
+    }
 
     protected function pager($name){
         $role = $this->service->getRole();

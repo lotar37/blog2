@@ -40,8 +40,9 @@
                         </div>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <a class="dropdown-item" href="{{ route("main.about") }}">О нас</a>
-                            <a class="dropdown-item" href="{{ route("main.teachers") }}">Учителя/Администрация</a>
-                            <a class="dropdown-item" href="#">Поступление</a>
+                            <a class="dropdown-item" href="{{ route("main.teachers") }}">Учителя</a>
+                            <a class="dropdown-item" href="{{ route("main.management") }}">Администрация</a>
+                            <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
                             <a class="dropdown-item" href="{{ route("main.regim") }}">Режим работы</a>
                             <a class="dropdown-item" href="{{ route("main.post") }}">Новости</a>
                             <a class="dropdown-item" href="#">Объявления</a>
@@ -93,10 +94,23 @@
                         <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">Родителям</a>
                         <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                            <a class="dropdown-item" href="#">Поступление</a>
-                            <a class="dropdown-item" href="#">Детям</a>
+                            <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
+                            <a class="dropdown-item" href="{{ route("main.homework.index") }}">Журнал</a>
+                            <a class="dropdown-item" href="#">Экскурсия по школе</a>
                             <a class="dropdown-item" href="{{ route("main.museum") }}">&nbsp;&nbsp;Музеи</a>
                             <a class="dropdown-item" href="{{ route("main.theaters") }}">&nbsp;&nbsp;Театры</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Детям</a>
+                        <div class="dropdown-menu" aria-labelledby="blogDropdown">
+                            <a class="dropdown-item" href="{{ route("main.homework.index") }}">Дневник</a>
+                            <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
+                            <a class="dropdown-item" href="#">Кружки</a>
+                            <a class="dropdown-item" href="#">Доп.занятия</a>
+                            <a class="dropdown-item" href="#">Курсы</a>
+                            <a class="dropdown-item" href="#">Что читать летом?</a>
                         </div>
                     </li>
 
@@ -158,6 +172,10 @@
                 </a>
                 <p class="contact-details">hello@radonezh.ru</p>
                 <p class="contact-details">+7 495 423 5122</p>
+                <nav class="footer-social-links">
+                    <a href="#!"><i class="fab fa-telegram fa-2x"></i></i></a>
+                    <a href="#!"><i class="fab fa-vk  fa-2x"></i></a>
+                </nav>
             </div>
             <div class="col-md-3">
                 <nav class="footer-nav">
@@ -181,6 +199,7 @@
             </div>
 
         </div>
+
         <div class="footer-bottom-content">
             <nav class="nav footer-bottom-nav">
             </nav>

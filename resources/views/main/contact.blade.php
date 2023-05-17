@@ -8,8 +8,16 @@
                     <h1 class="edica-page-title" data-aos="fade-up">Контакты</h1>
                     <section class="edica-contact py-5 mb-5">
                         <div class="row">
+                            <div class="col-md-4 contact-sidebar" data-aos="fade-right">
+                                <h5>Свяжитесь с нами</h5>
+                                <p>117574, Москва, пр-д Одоевского, 13 </p>
+                                <p>Тел./факс: (495) 423-51-22</p>
+                                <div class="embed-responsive embed-responsive-1by1 contact-map">
+                                    <iframe src="https://yandex.ru/map-widget/v1/-/CCUZQIwqTD" width="560" height="400" frameborder="1" allowfullscreen="true" ></iframe>
+                                </div>
+                            </div>
                             <div class="col-md-8 contact-form-wrapper">
-                                <h5 data-aos="fade-up">Контактная форма</h5>
+                                <h5 data-aos="fade-up" class="mb-4">Контактная форма</h5>
                                 <div class="row">
                                     <div class="form-group col-md-6" data-aos="fade-up">
                                         <label for="name">Имя</label>
@@ -36,16 +44,11 @@
                                         <textarea name="message" id="message" rows="9" class="form-control">Текстовое поле</textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-warning btn-lg" data-aos="fade-up" data-aos-delay="300">Отправить сообщение</button>
-                            </div>
-                            <div class="col-md-4 contact-sidebar" data-aos="fade-left">
-                                <h5>Свяжитесь с нами</h5>
-                                <p>117574, Москва, пр-д Одоевского, 13 </p>
-                                <p>Тел./факс: (495) 423-51-22</p>
-                                <div class="embed-responsive embed-responsive-1by1 contact-map">
-                                    <iframe src="https://yandex.ru/map-widget/v1/-/CCUZQIwqTD" width="560" height="400" frameborder="1" allowfullscreen="true" ></iframe>
+                                <div  class='d-flex justify-content-end'>
+                                    <button type="submit" class="btn btn-warning btn-lg" data-aos="fade-up" data-aos-delay="300">Отправить сообщение</button>
                                 </div>
                             </div>
+
                         </div>
                     </section>
                 </div>
