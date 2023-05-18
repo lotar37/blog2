@@ -72,6 +72,10 @@ class PagesController extends BaseController
     {
          return $this->pager("admission");
     }
+   public function requisites()
+    {
+         return $this->pager("requisites");
+    }
    public function management()
     {
          return $this->pager("management");
