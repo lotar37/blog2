@@ -52,7 +52,7 @@
                                 образования</a>
                             <a class="dropdown-item" href="{{ route("main.reports") }}">Отзывы</a>
                             <a class="dropdown-item" href="{{ route("main.contacts") }}">Контакты</a>
-                            <a class="dropdown-item" href="{{ route("main.requisites") }}">Реквизиты</a>requisites
+                            <a class="dropdown-item" href="{{ route("main.requisites") }}">Реквизиты</a>
                             <a class="dropdown-item" href="#">Документы</a>
                         </div>
                     </li>
