@@ -4,29 +4,37 @@
     <main class="blog">
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">Отзывы</h1>
+            <div class="breadcrumb"  data-aos="fade-up" >
+                <a href="/" class="breadcrumb-item">Главная</a>
+                <a href="#" class="breadcrumb-item  active">Отзывы наших учеников и их родителей</a>
+            </div>
             <section class="blog-post-featured-img" data-aos="fade-up" data-aos-delay="300">
                 <img src="{{ asset('assets/images/otz.jpg')}}" alt="featured image" class="w-100">
             </section>
             <section class="edica-about-faq py-5 mb-5">
-                <h2 class="faq-title" data-aos="fade-up">Отзывы наших учеников и их родителей</h2>
-                <div class="accordion" id="reportCollapse" role="tablist" aria-multiselectable="true">
-                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+{{--                <h2 class="faq-title" data-aos="fade-up">Отзывы наших учеников и их родителей</h2>--}}
+
+                    <div class="" data-aos="fade-up">
                         @foreach($reports as $report)
-                        <div class="card-header" role="tab" id="report{{ $report->id }}">
-                            <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#reportCollapse" href="#reportContent{{ $report->id }}" aria-expanded="true" aria-controls="reportContent{{ $report->id }}">
-                                    {{$report->person}}, {{$report->date}}
-                                </a>
-                            </h5>
+                        <div class="d-flex justify-content-between mb-4 align-items-center">
+
+
+                            <div class="h4">
+                                <img style="width:100px;border-radius: 50%;" src="{{ asset("storage/".$report->avatar)}}">
+                                {{$report->person}}
+                            </div>
+                            <div class="h4">{{$report->date}}</div>
+
+
                         </div>
-                        <div id="reportContent{{ $report->id }}" class="collapse in" role="tabpanel" aria-labelledby="report{{ $report->id }}">
-                            <div class="card-body">
+                        <div  >
+                            <div class="mb-4">
                                 {!! $report->content !!}
                             </div>
                         </div>
                         @endforeach
                     </div>
-                </div>
+
             </section>
 
         </div>

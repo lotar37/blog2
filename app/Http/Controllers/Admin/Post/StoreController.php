@@ -12,7 +12,7 @@ class StoreController extends BaseController
 {
     public function __invoke(StoreRequest $request)
     {
-        // TODO: Implement __invoke() method.
+        // TODO: Implement __invoke() method
         $data = $request->validated();
 
         $this->service->store($data);

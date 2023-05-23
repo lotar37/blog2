@@ -21,11 +21,29 @@
                 </div><!-- /.col -->
 
                 <div class="col-lg-12">
-                    <form action="{{ route('admin.report.update', $report->id) }}" method="POST" class="col-12">
+                    <form action="{{ route('admin.report.update', $report->id) }}" method="POST" class="col-12"  enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
+                        <div class="form-group w-50">
+                            <label for="exampleInputFile">Аватар</label>
+                            <div class="">
+                                <img src="{{ asset("storage/" . $report->avatar) }}" alt="avatar" class="w-25 mb-2">
+                            </div>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="avatar">
+                                    <label class="custom-file-label" for="exampleInputFile">Выберите изображение</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Загрузка</span>
+                                </div>
+                            </div>
+                            @error('avatar')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Название</label>
+                            <label for="exampleInputEmail1">Автор</label>
                             <input type="text" name="person" value="{{ $report->person }}" class="form-control" placeholder="Введите название категории">
                             @error('title')
                             <div class="text-danger">Это поле необходимо для заполнения</div>

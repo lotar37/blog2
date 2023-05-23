@@ -10,7 +10,7 @@
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">{{ $page->title }}</h1>
             <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">{{ $page->subtitle }}</p>
-            <div class="breadcrumb">
+            <div class="breadcrumb"  data-aos="fade-up" >
                 <a href="/" class="breadcrumb-item">Главная</a>
                 <a href="#" class="breadcrumb-item  active">{{ $page->title }}</a>
             </div>

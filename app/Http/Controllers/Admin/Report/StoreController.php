@@ -8,14 +8,14 @@ use App\Models\Report;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class StoreController extends Controller
+class StoreController extends BaseController
 {
     public function __invoke(StoreRequest $request)
     {
-        $data = $request->validated();
-        $data["date"] = Carbon::parse($request->date)->format('Y-m-d');
 
-        Report::firstOrCreate($data);
+        $data = $request->validated();
+
+        $this->service->store($data);
         return redirect()->route("admin.report.index");
     }
 }

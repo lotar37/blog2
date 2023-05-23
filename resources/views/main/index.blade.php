@@ -217,31 +217,34 @@
             </section>
 
              <section class="edica-landing-section edica-landing-blog" data-aos="fade-up" data-aos-delay="300">
+                 <div class="container">
                 <h4 class="edica-landing-section-subtitle-alt">ОТЗЫВЫ О НАС</h4>
-                <section class="edica-about-faq">
-                    <div class="accordion" id="reportCollapse" role="tablist" aria-multiselectable="true">
-                        <div class="card" data-aos="fade-up" data-aos-delay="200">
-                            @foreach($reports as $report)
-                                <div class="card-header" role="tab" id="report{{ $report->id }}">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#reportCollapse"
-                                           href="#reportContent{{ $report->id }}" aria-expanded="true"
-                                           aria-controls="reportContent{{ $report->id }}">
-                                            {{$report->person}}, {{$report->date}},<br>
-                                            <i style="color:#056562">{!! $report->short !!}...</i>
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="reportContent{{ $report->id }}" class="collapse in" role="tabpanel"
-                                     aria-labelledby="report{{ $report->id }}">
-                                    <div class="card-body">
-                                        <i style="color:#056562">{!! $report->long !!}</i>
-                                    </div>
-                                </div>
-                            @endforeach
+
+
+                    @foreach($reports as $report)
+                    <div class="d-flex justify-content-between mb-4 align-items-center">
+
+
+                        <div class="h5">
+                            <img style="width:100px;border-radius: 50%;" class="mr-4" src="{{ asset("storage/".$report->avatar)}}">
+                            {{$report->person}}
+                        </div>
+                        <div class="h5">{{$report->date}}</div>
+
+
+                    </div>
+                    <div  >
+                        <div class="mb-4">
+                            {!! $report->short !!}
                         </div>
                     </div>
-                </section>
+                    @endforeach
+                </div>
+                 <div class="col-lg-12 justify-content-lg-around flex-column"
+                      style="display: flex; justify-content: space-around">
+                     <a href="{{ route("main.reports") }}" class="btn btn-success btn-lg my-4">ВСЕ ОТЗЫВЫ</a>
+                 </div>
+
 
             </section>
             <div class="widget widget-post-carousel">

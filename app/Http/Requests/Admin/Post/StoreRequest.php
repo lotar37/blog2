@@ -34,6 +34,9 @@ class StoreRequest extends FormRequest
             "date" => 'nullable|date',
             "time" => 'nullable|string',
             "report" => 'nullable|string',
+            "mainpage_image" => 'file',
+            "mainpage" => 'required|boolean',
+            "mainpage_text" => 'string',
 
 
         ];

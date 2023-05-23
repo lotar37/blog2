@@ -8,14 +8,15 @@ use App\Models\Report;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class UpdateController extends Controller
+class UpdateController extends BaseController
 {
     public function __invoke(UpdateRequest $request, Report $report)
     {
         // TODO: Implement __invoke() method.
+
         $data = $request->validated();
-        $data["date"] = Carbon::parse($request->date)->format('Y-m-d');
-        $report->update($data);
+        $report = $this->service->update($data, $report);
+
         return view('admin.reports.show', compact('report'));
     }
 }

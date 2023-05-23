@@ -20,8 +20,23 @@
                     </div><!-- /.col -->
 
                     <div class="col-12">
-                        <form action="{{ route("admin.report.store") }}" method="post" >
+                        <form action="{{ route("admin.report.store") }}" method="post"  enctype="multipart/form-data">
                             @csrf
+                            <div class="form-group w-50">
+                                <label for="exampleInputFile">Аватар</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="avatar">
+                                        <label class="custom-file-label" >Выберите изображение</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Загрузка</span>
+                                    </div>
+                                </div>
+                                @error('avatar')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <div class="form-group col-4">
                                 <label for="exampleInputEmail1">Автор</label>
                                 <input type="text" name="person" class="form-control"
