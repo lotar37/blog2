@@ -24,25 +24,29 @@ class PostService
             if(isset($data['preview_image'])) {
                 $data['preview_image'] = Storage::disk("public")->put("/images", $data['preview_image']);
             }
-//            dd($data);
+
             if(isset($data['mainpage_image'])){
                 $data['mainpage_image'] = Storage::disk("public")->put("/images", $data['mainpage_image']);
             }
+
             if(isset($data['mainpage'])){
                 $data['mainpage'] = '1';
             }else{
                 $data['mainpage'] = '0';
             }
+
             if(isset($data['main_image'])) {
                 $data['main_image'] = Storage::disk("public")->put("/images", $data['main_image']);
             }
+//            dd($data);
             $post = Post::firstOrCreate($data);
+
             if($tagg) {
                 $post->tags()->attach($tags_data);
             }
             DB::commit();
         } catch (\Exception $exception) {
-            //dd($exception);
+            dd($exception);
             DB::rollBack();
             abort(500);
         }

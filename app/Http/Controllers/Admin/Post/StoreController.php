@@ -14,7 +14,7 @@ class StoreController extends BaseController
     {
         // TODO: Implement __invoke() method
         $data = $request->validated();
-//        dd($data);
+//       dd($data);
         $this->service->store($data);
         return redirect()->route("admin.post.index");
     }

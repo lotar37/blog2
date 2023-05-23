@@ -22,7 +22,7 @@
                         <div class="col-md-6 carousel-content-wrapper">
                             <h1>{{ $carouselPost->title }}</h1>
                             <p>
-                                {{ $carouselPost->mainpage_text }}
+                                {!! $carouselPost->mainpage_text !!}
                             </p>
                             <div class="carousel-content-btns">
                                 <a href="{{ $carouselPost->inside_link ? route("main.". $carouselPost->inside_link) : route("main.post_show", $carouselPost->id) }}" class="btn btn-success">Подробнее</a>
