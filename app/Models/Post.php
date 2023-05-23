@@ -21,10 +21,13 @@ class Post extends Model
         return $this->belongsTo(Category::class, 'category_id','id');
     }
     public static function randomPosts($number){
-        return Post::inRandomOrder()->limit($number)->get();
+        return Post::inRandomOrder()->where('inside_link',null)->limit($number)->get();
     }
     public static function maxViewPosts($number){
-        return Post::all()->sortByDesc('count_views')->slice(0,$number);
+        return Post::all()->where('inside_link',null)->sortByDesc('count_views')->slice(0,$number);
+    }
+    public static function mainPageCarouselPosts($number){
+        return Post::all()->sortByDesc('date')->where('mainpage','1')->slice(0,$number);
     }
     public function getCountViewsAttribute(){
         return View::all()->where('table', 'posts')->where('forign_id', $this->id)->count();

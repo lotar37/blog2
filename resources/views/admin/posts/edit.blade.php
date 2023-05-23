@@ -125,9 +125,54 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+
+                            <div class="form-group">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name='mainpage' class="custom-control-input" id="mainpage" {{ $post->mainpage ? ' checked' : '' }}>
+                                    <label class="custom-control-label" for="mainpage">На главную карусель</label>
+                                </div>
+                            </div>
+                            <div class="form-group w-50" id="mainpage_image">
+                                <label for="exampleInputFile">Изображение главной карусели (высота-ширина: 6х4)</label>
+                                @if(isset($post->mainpage_image))
+                                <div class="">
+                                    <img src="{{ asset("storage/" . $post->mainpage_image) }}" alt="mainpage_image" class="w-25 mb-2">
+                                </div>
+                                @endif
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="mainpage_image">
+                                        <label class="custom-file-label" for="exampleInputFile">Выберите изображение</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Загрузка</span>
+                                    </div>
+                                </div>
+                                @error('main_image')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50"  id="mainpage_text" >
+                                <label>Текст для карусели:</label>
+                                <textarea name="mainpage_text" class="col-6">{{ $post->mainpage_text }}</textarea>
+                                @error('mainpage_text')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50"   id="inside_link">
+                                <label for="inside_link">Внутренняя ссылка</label>
+                                <input type="text" name="inside_link" class="form-control"
+                                       placeholder="Введите Route name" value="{{ $post->inside_link }}">
+                                @error('inside_link')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary" value="Сохранить">
                             </div>
+
                         </form>
                     </div>
                 </div><!-- /.row -->

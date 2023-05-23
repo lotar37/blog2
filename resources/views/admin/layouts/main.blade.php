@@ -142,7 +142,29 @@
                 ['height', ['height']]
             ]
         });
+        if ($('#mainpage').is(':checked')){
+            $('#mainpage_image').show();
+            $('#mainpage_text').show();
+            $('#inside_link').show();
+        } else {
+            $('#mainpage_image').hide();
+            $('#mainpage_text').hide();
+            $('#inside_link').hide();
+        }
 
+    });
+    $(function (){
+        $('#mainpage').change(function(){
+            if ($('#mainpage').is(':checked')){
+                $('#mainpage_image').show();
+                $('#mainpage_text').show();
+                $('#inside_link').show();
+            } else {
+                $('#mainpage_image').hide();
+                $('#mainpage_text').hide();
+                $('#inside_link').hide();
+            }
+        });
     });
     $(function (){
         bsCustomFileInput.init();

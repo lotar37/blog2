@@ -117,10 +117,48 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name='mainpage' class="custom-control-input" id="mainpage">
+                                    <label class="custom-control-label" for="mainpage">На главную карусель</label>
+                                </div>
+                            </div>
+                            <div class="form-group w-50" id="mainpage_image">
+                                <label for="exampleInputFile">Изображение главной карусели (высота-ширина: 6х4)</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="mainpage_image">
+                                        <label class="custom-file-label" for="exampleInputFile">Выберите изображение</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Загрузка</span>
+                                    </div>
+                                </div>
+                                @error('main_image')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50"  id="mainpage_text" >
+                                <label for="mainpage_text">Текст для карусели:</label>
+                                <textarea name="mainpage_text" class="form-control" placeholder="Введите текст сообщения на карусели">
+                                    {{ old('mainpage_text') }}</textarea>
+                                @error('mainpage_text')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50"   id="inside_link">
+                                <label for="inside_link">Внутренняя ссылка</label>
+                                <input type="text" name="inside_link" class="form-control" class="col-6"
+                                       placeholder="Введите Route name" value="{{ old('inside_link') }}">
+                                @error('inside_link')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
 
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary" value="Добавить">
                             </div>
+
                         </form>
                     </div>
                 </div><!-- /.row -->

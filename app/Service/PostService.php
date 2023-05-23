@@ -21,8 +21,21 @@ class PostService
                 unset($data["tag_ids"]);
             }
             $data["date"] = Carbon::parse($data["date"])->format('Y-m-d');
-            $data['preview_image'] = Storage::disk("public")->put("/images", $data['preview_image']);
-            $data['main_image'] = Storage::disk("public")->put("/images", $data['main_image']);
+            if(isset($data['preview_image'])) {
+                $data['preview_image'] = Storage::disk("public")->put("/images", $data['preview_image']);
+            }
+//            dd($data);
+            if(isset($data['mainpage_image'])){
+                $data['mainpage_image'] = Storage::disk("public")->put("/images", $data['mainpage_image']);
+            }
+            if(isset($data['mainpage'])){
+                $data['mainpage'] = '1';
+            }else{
+                $data['mainpage'] = '0';
+            }
+            if(isset($data['main_image'])) {
+                $data['main_image'] = Storage::disk("public")->put("/images", $data['main_image']);
+            }
             $post = Post::firstOrCreate($data);
             if($tagg) {
                 $post->tags()->attach($tags_data);
@@ -44,6 +57,9 @@ class PostService
                 $tags_data = $data["tag_ids"];
                 unset($data["tag_ids"]);
             }
+            if(isset($data['mainpage_image'])){
+                $data['mainpage_image'] = Storage::disk("public")->put("/images", $data['mainpage_image']);
+            }
             if(isset($data['preview_image'])){
                 $data['preview_image'] = Storage::disk("public")->put("/images", $data['preview_image']);
             }
@@ -51,6 +67,12 @@ class PostService
                 $data['main_image'] = Storage::disk("public")->put("/images", $data['main_image']);
             }
             $data["date"] = Carbon::parse($data["date"])->format('Y-m-d');
+
+            if(isset($data['mainpage'])){
+                $data['mainpage'] = '1';
+            }else{
+                $data['mainpage'] = '0';
+            }
             $post->update($data);
             if(isset($tags_data)) {
                 $post->tags()->sync($tags_data);

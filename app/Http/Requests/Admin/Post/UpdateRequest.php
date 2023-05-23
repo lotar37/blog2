@@ -25,15 +25,20 @@ class UpdateRequest extends FormRequest
     {
         return [
             "title" => 'required|string',
-            "content" => 'required|string',
+            "content" => 'nullable|string',
             "preview_image" => 'nullable|file',
             "main_image" => 'nullable|file',
-            "category_id" => 'required|integer|exists:categories,id',
+            "category_id" => 'nullable|integer|exists:categories,id',
             "tag_ids" => 'nullable|array',
             "tag_ids.*" => 'nullable|integer|exists:tags,id',
             "date" => 'nullable|date',
             "time" => 'nullable|string',
             "report" => 'nullable|string',
+            "mainpage_image" => 'nullable|file',
+            "mainpage" => 'string',
+            "mainpage_text" => 'nullable|string',
+            "inside_link" => 'nullable|string',
+
         ];
     }
     public function messages()

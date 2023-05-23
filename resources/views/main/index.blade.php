@@ -5,107 +5,38 @@
 @section('carousel')
     <div class="edica-landing-header-content">
         <div id="edicaLandingHeaderCarousel" class="carousel slide" data-ride="carousel">
-{{--            <ol class="carousel-indicators">--}}
-{{--                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="0" class="active">.01</li>--}}
-{{--                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="1">.02</li>--}}
-{{--                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="2">.03</li>--}}
-{{--                <li data-target="#edicaLandingHeaderCarousel" data-slide-to="3">.04</li>--}}
-{{--            </ol>--}}
+            <ol class="carousel-indicators ml-3">
+                @php $act = 1; @endphp
+                @foreach($carouselPosts as $carouselPost)
+                <li data-target="#edicaLandingHeaderCarousel" style="font-weight: bold; font-size: 24px; color:brown;" data-slide-to="{{ $act - 1 }}" class="{{ $act == 1 ? 'active' : ''}}"> &nbsp;&nbsp;&nbsp;&nbsp;<</li>
+                    @php $act++; @endphp
+                @endforeach
+        </ol>
+
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
+                @php $act = 1; @endphp
+                @foreach($carouselPosts as $carouselPost)
+
+                <div class="carousel-item {{ $act ? " active" : ""}}">
                     <div class="row">
                         <div class="col-md-6 carousel-content-wrapper">
-                            <h1>Прощание с Масленицей в детском саду "Огоньки"</h1>
-                            <p>Шумно, весело прошел праздник Масленицы в детском саду "Огоньки".<br/>
-
-                                А какими словами мы звали масленицу?<br/>
-
-                                Масленица, приходи<br/>
-
-                                К нам весну встречать,<br/>
-
-                                Чтоб зиму студеную<br/>
-
-                                Из дому прогнать!</p>
-                            <div class="carousel-content-btns">
-                                <a href="#!" class="btn btn-success">Подробнее</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/carousel0.jpg" alt="carousel-img" class="img-fluid img-shadow"
-                                 style="" width="350px"
-                                 height="525px">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-6 carousel-content-wrapper">
-                            <h1>Лагерь в Оптиной</h1>
-                            <p>В 2023 году мы планируем следующие сроки отдыха:
-
-                                <li> 1 cмена с 26 июня по 8 июля
-
-                            <li> 2 смена с 8 июля по 20 июля</li>
-
-                            <li> Установка - с 22 по 26 июня.</li>
-
-                            <li> Сбор лагеря 21 июля.</li>
-
-                            Собрание пройдет в гимназии в среду 17 мая.</p>
-                            <div class="carousel-content-btns">
-                                <a href="#!" class="btn btn-success">Подробнее</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/carousel2.jpg" alt="carousel-img" class="img-fluid" width="350px"
-                                 height="525px">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-6 carousel-content-wrapper">
-                            <h1>Поздравление от патриарха</h1>
-                            <p>Святейший Патриарх Московский и всея Руси Кирилл поздравил преподавателей, сотрудников и
-                                учащихся Православной классической гимназии «Радонеж» с 30-летием учебного заведения.
-
+                            <h1>{{ $carouselPost->title }}</h1>
+                            <p>
+                                {{ $carouselPost->mainpage_text }}
                             </p>
                             <div class="carousel-content-btns">
-                                <a href="#!" class="btn btn-success">Подробнее</a>
+                                <a href="{{ $carouselPost->inside_link ? route("main.". $carouselPost->inside_link) : route("main.post_show", $carouselPost->id) }}" class="btn btn-success">Подробнее</a>
                             </div>
                         </div>
                         <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/carousel3.jpg" alt="carousel-img" class="img-fluid" width="350px"
+                            <img src="{{ asset("storage/" . $carouselPost->mainpage_image) }}" alt="carousel-img" class="img-fluid img-shadow"
+                                 style="" height="525px"
                                  height="525px">
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-6 carousel-content-wrapper">
-                            <h1>В каком музее можно увидеть египетские мумии?</h1>
-                            <p>Наши пятиклассники выяснили, что в Египет для этого ехать не надо!<br/>
-
-                                В Москве уже 110 лет существует Пушкинский музей изобразительных искусств имени
-                                А.С.Пушкина.<br/>
-
-
-                                И мы отправились туда, чтобы своими глазами увидеть не только мумий, но и Шеду,
-                                крылатого льва с человеческой головой, и знаменитые статуэтки фиванского жреца и его
-                                жены, и множество других уникальных предметов искусства Древнего Египта.
-
-                            </p>
-                            <div class="carousel-content-btns">
-                                <a href="#!" class="btn btn-success">Подробнее</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 carousel-img-wrapper">
-                            <img src="assets/images/carousel4.jpg" alt="carousel-img" class="img-fluid" width="350px"
-                                 height="525px">
-                        </div>
-                    </div>
-                </div>
+                    @php $act = 0; @endphp
+                @endforeach
             </div>
         </div>
     </div>
@@ -475,78 +406,6 @@
                     </div>
                 </div>
             </section>
-            {{--            <section class="edica-landing-section edica-landing-blog">--}}
-            {{--                <h4 class="edica-landing-section-subtitle-alt">МЕРОПРИЯТИЯ</h4>--}}
-            {{--                <div class="row">--}}
-            {{--                    <div class="col-md-3 sidebar">--}}
-
-
-            {{--                        <div class="row blog-post-row">--}}
-            {{--                            <div class="col-md-12 blog-post" data-aos="fade-up">--}}
-            {{--                                <div class="blog-post-thumbnail-wrapper">--}}
-            {{--                                    <img src="{{ asset('assets/images/about.jpg') }}" alt="blog post">--}}
-            {{--                                </div>--}}
-            {{--                                <p class="blog-post-category">Новость</p>--}}
-            {{--                                <a href="#!" class="blog-post-permalink">--}}
-            {{--                                    <h6 class="blog-post-title">1 сентября - День знаний. Здравствуй любимая школа!</h6>--}}
-            {{--                                </a>--}}
-            {{--                            </div>--}}
-            {{--                        </div>--}}
-            {{--                        <div class="row blog-post-row">--}}
-            {{--                            <div class="col-md-12 blog-post" data-aos="fade-up">--}}
-            {{--                                <div class="blog-post-thumbnail-wrapper">--}}
-            {{--                                    <img src="{{ asset('assets/images/about3.jpg') }}" alt="blog post">--}}
-            {{--                                </div>--}}
-            {{--                                <p class="blog-post-category">Новость</p>--}}
-            {{--                                <a href="#!" class="blog-post-permalink">--}}
-            {{--                                    <h6 class="blog-post-title">Посещение школы святейшим патриархом Алексием</h6>--}}
-            {{--                                </a>--}}
-            {{--                            </div>--}}
-            {{--                        </div>--}}
-
-            {{--                    </div>--}}
-            {{--                    --}}{{--                Post lists--}}
-            {{--                    <div class="col-md-9">--}}
-            {{--                        <div class="widget widget-post-list" data-aos="fade-up">--}}
-            {{--                            <h5 class="widget-title">Ближайшие мероприятия</h5>--}}
-            {{--                            <ul class="post-list">--}}
-            {{--                                @foreach($posts as $post)--}}
-            {{--                                    <li class="post">--}}
-            {{--                                        <a href=" {{ route("main.post_show", $post->id) }}"--}}
-            {{--                                           class="post-permalink media">--}}
-
-            {{--                                            <img src="{{ asset("storage/" . $post->preview_image) }}" alt="blog post">--}}
-            {{--                                            <div class="media-body">--}}
-            {{--                                                <h6 class="post-title">{{ $post->date." ".$post->title}}</h6>--}}
-            {{--                                            </div>--}}
-            {{--                                        </a>--}}
-            {{--                                    </li>--}}
-            {{--                                @endforeach--}}
-            {{--                                <li class="post">--}}
-            {{--                                    <a href="#!" class="post-permalink media">--}}
-            {{--                                        <img src="{{ asset('assets/images/about5.jpg') }}" alt="blog post">--}}
-            {{--                                        <div class="media-body">--}}
-            {{--                                            <h6 class="post-title">День учителя</h6>--}}
-            {{--                                        </div>--}}
-            {{--                                    </a>--}}
-            {{--                                </li>--}}
-            {{--                                <li class="post">--}}
-            {{--                                    <a href="#!" class="post-permalink media">--}}
-            {{--                                        <img src="{{ asset('assets/images/about6.jpg') }}" alt="blog post">--}}
-            {{--                                        <div class="media-body">--}}
-            {{--                                            <h6 class="post-title">1 - сентября: День знаний</h6>--}}
-            {{--                                        </div>--}}
-            {{--                                    </a>--}}
-            {{--                                </li>--}}
-            {{--                            </ul>--}}
-            {{--                        </div>--}}
-            {{--                        <div class="widget">--}}
-            {{--                            <h5 class="widget-title">Категории</h5>--}}
-            {{--                            <img src="{{ asset('assets/images/about6.jpg') }}" alt="categories" class="w-100">--}}
-            {{--                        </div>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
-            {{--            </section>--}}
 
 
         </div>

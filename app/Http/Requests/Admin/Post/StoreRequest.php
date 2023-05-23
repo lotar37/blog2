@@ -25,18 +25,19 @@ class StoreRequest extends FormRequest
     {
         return [
             "title" => 'required|string',
-            "content" => 'required|string',
-            "preview_image" => 'required|file',
-            "main_image" => 'required|file',
+            "content" => 'nullable|string',
+            "preview_image" => 'nullable|file',
+            "main_image" => 'nullable|file',
             "category_id" => 'required|integer|exists:categories,id',
             "tag_ids" => 'nullable|array',
             "tag_ids.*" => 'nullable|integer|exists:tags,id',
             "date" => 'nullable|date',
             "time" => 'nullable|string',
             "report" => 'nullable|string',
-            "mainpage_image" => 'file',
-            "mainpage" => 'required|boolean',
-            "mainpage_text" => 'string',
+            "mainpage_image" => 'nullable|file',
+            "mainpage" => 'nullable|string',
+            "mainpage_text" => 'nullable|string',
+            "inside_link" => 'nullable|string',
 
 
         ];
