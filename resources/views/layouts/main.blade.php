@@ -75,7 +75,7 @@
                            aria-haspopup="true" aria-expanded="false">Храм</a>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <a class="dropdown-item" href="{{ route("main.khram_history") }}">История храма</a>
-                            <a class="dropdown-item" href="#">Расписание богослужений</a>
+                            <a class="dropdown-item" href="{{ route("main.temple_schedule") }}">Расписание богослужений</a>
                             <a class="dropdown-item" href="{{ route("main.khram_chtenie") }}">Чтение утреннего
                                 правила</a>
                             <a class="dropdown-item" href="#">Новости</a>

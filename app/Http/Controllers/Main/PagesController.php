@@ -80,6 +80,10 @@ class PagesController extends BaseController
     {
          return $this->pager("management");
     }
+   public function temple_schedule()
+    {
+         return $this->pager("temple_schedule");
+    }
 
     protected function pager($name){
         $role = $this->service->getRole();
