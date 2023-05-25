@@ -45,8 +45,8 @@
                             <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
                             <a class="dropdown-item" href="{{ route("main.regim") }}">Режим работы</a>
                             <a class="dropdown-item" href="{{ route("main.post") }}">Новости</a>
-                            <a class="dropdown-item" href="#">Объявления</a>
-                            <a class="dropdown-item" href="#">Летопись/История</a>
+                            <a class="dropdown-item" href="{{ route("main.announcement") }}">Объявления</a>
+                            <a class="dropdown-item" href="{{ route("main.letopis") }}">Летопись/История</a>
                             <a class="dropdown-item" href="{{ route("main.patriarh") }}">Приветствие от Патриарха</a>
                             <a class="dropdown-item" href="https://nouradonezh.mskobr.ru/">Раздел на сайте Департамента
                                 образования</a>

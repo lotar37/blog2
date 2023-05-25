@@ -96,6 +96,14 @@ class PagesController extends BaseController
     {
          return $this->pager("gia");
     }
+   public function letopis()
+    {
+         return $this->pager("letopis");
+    }
+  public function announcement()
+    {
+         return $this->pager("announcement");
+    }
 
     protected function pager($name){
         $role = $this->service->getRole();

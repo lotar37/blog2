@@ -26,6 +26,8 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/gia", [PagesController::class,"gia"])->name('main.gia');
     Route::get("/projects", [PagesController::class,"projects"])->name('main.projects');
     Route::get("/innovations", [PagesController::class,"innovations"])->name('main.innovations');
+    Route::get("/letopis", [PagesController::class,"letopis"])->name('main.letopis');
+    Route::get("/announcement", [PagesController::class,"announcement"])->name('main.announcement');
     Route::get("/extcurr", [PagesController::class,"extcurr"])->name('main.extcurr');
     Route::get("/studyplan", "StudyplanController")->name('main.studyplan');
     Route::get("/regim", [PagesController::class,"regim"])->name('main.regim');
