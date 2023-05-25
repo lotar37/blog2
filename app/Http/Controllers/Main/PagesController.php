@@ -84,6 +84,18 @@ class PagesController extends BaseController
     {
          return $this->pager("temple_schedule");
     }
+   public function projects()
+    {
+         return $this->pager("projects");
+    }
+   public function innovations()
+    {
+         return $this->pager("innovations");
+    }
+   public function gia()
+    {
+         return $this->pager("gia");
+    }
 
     protected function pager($name){
         $role = $this->service->getRole();
