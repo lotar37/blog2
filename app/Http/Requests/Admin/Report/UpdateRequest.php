@@ -27,7 +27,7 @@ class UpdateRequest extends FormRequest
             'person' => 'required|string',
             'content' => 'required|string',
             'date' => 'required|date',
-            'avatar' => 'required|file',
+            'avatar' => 'file',
 
         ];
     }
