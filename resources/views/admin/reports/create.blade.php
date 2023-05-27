@@ -14,8 +14,10 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('main.index') }}">На сайт</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная(Админ)</a>
-                            </li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная(ЛК)</a>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.report.index') }}">Отзывы</a></li>
+                            <li class="breadcrumb-item active">Добавить отзыв</li>
+
                         </ol>
                     </div><!-- /.col -->
 
