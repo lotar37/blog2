@@ -86,17 +86,26 @@
             <section class="edica-footer-banner-section">
 
                 <div class="container">
-                    <div class="footer-banner" data-aos="fade-up">
-
-                        <h4 class="">Идет набор в классы гимназии Радонеж.</h4>
-                        <h3 class="">Запись на собеседование</h3>
-                        <h1 class="text-danger">8(495)423-51-22</h1>
-                        <div class="banner-btns-wrapper">
+                    <div class="row" data-aos="fade-up" style="background: #efefef;padding:30px;border-radius: 20px;">
+                        <div class="col-md-5">
+                            <img src="{{ asset("assets/images/goschool.jpg") }}" alt="" style="height: 300px;border-radius: 30%;">
+                        </div>
+                        <div class="col-md-7 d-flex align-items-center justify-content-center">
+                            <div>
+                            <h4 class="text-center">Идет набор в классы гимназии Радонеж.</h4>
+                            <h3 class="text-center">Запись на собеседование</h3>
+                            <h1 class="text-center text-danger">8(495)423-51-22</h1>
+                            <div class="banner-btns-wrapper">
+                            </div>
+                            <p class="banner-text text-center">Позвоните и мы ответим на все Ваши вопросы. <br/>Оставьте заявку и мы Вам
+                                перезвоним</p>
+                                <div class="text-center">
+                                <a href="{{ route("main.admission") }}" class="btn btn-secondary btn-lg text-white">ПОДРОБНЕЕ</a></div>
                             {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/apple@1x.svg') }}" alt="ios" class="mr-2"> App Store</button>--}}
                             {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/android@1x.svg') }}" alt="android" class="mr-2"> Google Play</button>--}}
+                            </div>
                         </div>
-                        <p class="banner-text">Позвоните и мы ответим на все Ваши вопросы. <br/>Оставьте заявку и мы Вам
-                            перезвоним</p>
+
                     </div>
                 </div>
             </section>
