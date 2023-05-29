@@ -8,7 +8,7 @@
             <ol class="carousel-indicators ml-3">
                 @php $act = 1; @endphp
                 @foreach($carouselPosts as $carouselPost)
-                <li data-target="#edicaLandingHeaderCarousel" style="font-weight: bold; font-size: 24px; color:brown;" data-slide-to="{{ $act - 1 }}" class="{{ $act == 1 ? 'active' : ''}}"> &nbsp;&nbsp;&nbsp;&nbsp;<</li>
+                <li data-target="#edicaLandingHeaderCarousel" style="font-weight: bold; font-size: 24px; color:#36c59e;" data-slide-to="{{ $act - 1 }}" class="{{ $act == 1 ? 'active' : ''}}"> &nbsp;&nbsp;&nbsp;&nbsp;<></li>
                     @php $act++; @endphp
                 @endforeach
         </ol>
