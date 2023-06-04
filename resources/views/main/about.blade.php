@@ -6,6 +6,10 @@
             <div class="row">
                 <div class="col-lg-11 mx-auto pt-5">
                     <h1 class="edica-page-title"  data-aos="fade-up">О нас</h1>
+                    <div class="breadcrumb"  data-aos="fade-up" >
+                        <a href="/" class="breadcrumb-item">Главная</a>
+                        <a href="#" class="breadcrumb-item  active">О нас</a>
+                    </div>
 
                     <section class="edica-about-intro pt-lg-5">
                         <div class="row pt-lg-5">

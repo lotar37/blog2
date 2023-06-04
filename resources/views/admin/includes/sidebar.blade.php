@@ -61,6 +61,13 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{ route("admin.circle.index") }}" class="nav-link">
+                    <i class="nav-icon fas far fa-record-vinyl"></i>
+
+                    <p>Кружки</p>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ route("admin.userSubjectClass.index") }}" class="nav-link">
                     <i class="nav-icon fas far fa-briefcase"></i>
 

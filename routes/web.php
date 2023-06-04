@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Main\HomeworksController;
+use App\Http\Controllers\Main\CirclesController;
 use App\Http\Controllers\Main\PagesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -43,6 +44,8 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/temple_schedule", [PagesController::class,"temple_schedule"])->name('main.temple_schedule');
     Route::get("/khram_history", [PagesController::class,"khram_history"])->name('main.khram_history');
     Route::get("/khram_docs", [PagesController::class,"khram_docs"])->name('main.khram_docs');
+    Route::get("/circles", [CirclesController::class,"index"])->name('main.circles');
+    Route::get("/circles/{circle}", [CirclesController::class,"show"])->name('main.circles.show');
     Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
     Route::get("/homework/{subject}/{schoolClass}", [HomeworksController::class,"show"])->name('main.homework.show');
     Route::get("/homework/{schoolClass}", [HomeworksController::class,"showClassHomeworks"])->name('main.homework.showClass');
@@ -122,6 +125,15 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::get("/{report}/edit", "EditController")->name("admin.report.edit");
         Route::patch("/{report}", "UpdateController")->name("admin.report.update");
         Route::delete("/{report}", "DeleteController")->name("admin.report.delete");
+    });
+    Route::group(['namespace' => 'Circle', 'prefix' => 'circles'], function(){
+        Route::get("/", "IndexController")->name("admin.circle.index");
+        Route::get("/create", "CreateController")->name("admin.circle.create");
+        Route::post("/", "StoreController")->name("admin.circle.store");
+        Route::get("/{circle}", "ShowController")->name("admin.circle.show");
+        Route::get("/{circle}/edit", "EditController")->name("admin.circle.edit");
+        Route::patch("/{circle}", "UpdateController")->name("admin.circle.update");
+        Route::delete("/{circle}", "DeleteController")->name("admin.circle.delete");
     });
 
     Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function(){

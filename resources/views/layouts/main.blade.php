@@ -115,7 +115,7 @@
                         <div class="dropdown-menu" aria-labelledby="blogDropdown">
                             <a class="dropdown-item" href="{{ route("main.homework.index") }}">Дневник</a>
                             <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
-                            <a class="dropdown-item" href="#">Кружки</a>
+                            <a class="dropdown-item" href="{{ route("main.circles") }}">Кружки</a>
                             <a class="dropdown-item" href="#">Курсы</a>
                             <a class="dropdown-item" href="#">Доп.занятия</a>
                             <a class="dropdown-item" href="#">Что читать летом?</a>
@@ -225,6 +225,17 @@
     AOS.init({
         duration: 1000
     });
+</script>
+<script>
+    function init() {
+        var vidDefer = document.getElementsByTagName('iframe');
+        for (var i=0; i<vidDefer.length; i++) {
+            if(vidDefer[i].getAttribute('data-src')) {
+                vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+            }
+        }
+    }
+    window.onload = init;
 </script>
 </body>
 
