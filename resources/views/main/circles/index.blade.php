@@ -19,7 +19,7 @@
 
                             <div class="col-sm-4">
                                 <div class="card">
-                                    <img src="{{ asset("storage/".$circle->avatar)}}" class="card-img-top" alt="..."  style="height:16rem">
+                                    <img src="{{ asset("storage/".$circle->avatar)}}" class="card-img-top" alt="..."  >
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $circle->name }}</h5>
                                         <p class="card-text">{{ $circle->short_description }}</p>
