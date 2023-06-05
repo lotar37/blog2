@@ -14,6 +14,6 @@ class Circle extends Model
     function getShortDescriptionAttribute(){
 
         $a = explode(" ", strip_tags($this->description));
-        return implode(" ",array_slice($a,0,40));
+        return implode(" ",array_slice($a,0,30));
     }
 }

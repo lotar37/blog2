@@ -13,7 +13,7 @@
             </section>
             <div class="row breadcrumb m-0 mb-2" style="border-radius: 1rem;">
 
-                <div class="col-sm-4"><img src="{{ asset("storage/".$circle->avatar)}}" alt="" style="max-width: 100%"></div>
+                <div class="col-sm-4 p-0"><img src="{{ asset("storage/".$circle->avatar)}}" alt="" style="border-radius: 1rem 0 0  1rem;max-width: 100%"></div>
                 <div class="col-sm-8"><h1 class="edica-page-title" data-aos="fade-up">{{ $circle->name }}</h1></div>
             </div>
             <div class="row">
