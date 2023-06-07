@@ -11,9 +11,9 @@
                 <a href="{{ route('main.circles') }}" class="breadcrumb-item">Кружки</a>
                 <a href="#" class="breadcrumb-item  active">{{ $circle->name }}</a>
             </div>
-            <div class="row breadcrumb m-0 mb-2" style="border-radius: 0rem; border:1px solid lightgrey;background: #f8f8f8">
+            <div class="row breadcrumb m-0 mb-2" style="border-radius: 0.3rem; border:1px solid lightgrey;background: #f8f8f8">
 
-                <div class="col-sm-4 p-0"><img src="{{ asset("storage/".$circle->avatar)}}" alt="" style="border-radius: 1rem 0 0  1rem;max-width: 100%"></div>
+                <div class="col-sm-4 p-0"><img src="{{ asset("storage/".$circle->avatar)}}" alt="" style="border-radius: 0rem 0 0  0rem;max-width: 100%"></div>
                 <div class="col-sm-8"><h1 class="edica-page-title" data-aos="fade-up">{{ $circle->name }}</h1></div>
             </div>
             <div class="row">

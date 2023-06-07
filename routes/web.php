@@ -44,6 +44,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/temple_schedule", [PagesController::class,"temple_schedule"])->name('main.temple_schedule');
     Route::get("/khram_history", [PagesController::class,"khram_history"])->name('main.khram_history');
     Route::get("/khram_docs", [PagesController::class,"khram_docs"])->name('main.khram_docs');
+//    Route::get("/khram_docs", [PagesController::class,'pager',["name" => "khram_docs"]])->name('main.khram_docs');
     Route::get("/circles", [CirclesController::class,"index"])->name('main.circles');
     Route::get("/circles/{circle}", [CirclesController::class,"show"])->name('main.circles.show');
     Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');

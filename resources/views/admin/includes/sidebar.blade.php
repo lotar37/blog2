@@ -1,3 +1,7 @@
+@php
+$classes = ["5А","6А","7А","8А","9А","10А","11А"];
+@endphp
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
 
@@ -6,6 +10,25 @@
         <ul class="pt-3 nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fas fa-book-open text-warning"></i>
+                    <p class="text-warning">
+                        Читать летом
+                        <i class="fas fa-angle-left right text-warning"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                    @foreach($classes as $class)
+                    <li class="nav-item">
+                        <a href="pages/UI/general.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Класс {{ $class }}</p>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
             <li class="nav-item">
                 <a href="{{ route("admin.main.index") }}" class="nav-link">
                     <i class="nav-icon fas fa-home"></i>
@@ -74,6 +97,7 @@
                     <p>Нагрузка учителей</p>
                 </a>
             </li>
+
         </ul>
     </div>
     <!-- /.sidebar -->

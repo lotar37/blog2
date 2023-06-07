@@ -42,7 +42,7 @@
     </div>
 @endsection
 @section('content')
-    <section class="blog ">
+{{--    <section class="blog ">--}}
         <div class="container">
 
             {{--            <h1 class="edica-page-title" data-aos="fade-up">Гимназия Радонеж</h1>--}}
