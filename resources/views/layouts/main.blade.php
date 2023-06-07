@@ -182,7 +182,7 @@
                 <p class="contact-details">+7 495 423 5122</p>
                 <nav class="footer-social-links">
                     <a href="#!"><i class="fab fa-telegram fa-2x"></i></i></a>
-                    <a href="#!"><i class="fab fa-vk  fa-2x"></i></a>
+                    <a href="https://vk.com/gymnasiaradonezh"><i class="fab fa-vk  fa-2x"></i></a>
                 </nav>
             </div>
             <div class="col-md-3">

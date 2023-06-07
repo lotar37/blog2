@@ -410,7 +410,8 @@
                             </section>
                         </section>
                     </div>
-                    <div class="col-md-3 sidebar pt-3"  style="background:#dddddd;">
+                    <div class="col-md-3 sidebar pt-3 align-content-center"  style="border:1px solid lightgrey;background:#eeeeee;border-radius: 1rem;">
+                        <h5 class="">Новости</h5>
                         @include('main.includes.random_post')
                     </div>
                 </div>
