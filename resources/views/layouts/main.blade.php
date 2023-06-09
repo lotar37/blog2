@@ -84,7 +84,7 @@
                     </li>
                     <li class="nav-item dropdown" id="ulll2">
                         <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">Лагерь в Оптиной</a>
+                           aria-haspopup="true" aria-expanded="false">Лето в Оптиной</a>
                         <div class="dropdown-menu" aria-labelledby="blogDropdown">
                             <a class="dropdown-item" href="#">Новости 2023</a>
                             <a class="dropdown-item" href="#">История</a>
