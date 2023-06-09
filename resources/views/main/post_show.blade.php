@@ -7,7 +7,7 @@
             <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">{{ $post->date." ".$post->time }}</p>
             <div class="breadcrumb">
                 <a href="/" class="breadcrumb-item">Главная</a>
-                <a href="{{ route("main.post") }}" class="breadcrumb-item">События</a>
+                <a href="{{ route("main.post") }}" class="breadcrumb-item">Новости</a>
                 <a href="#" class="breadcrumb-item active">{{ $post->title }}</a>
             </div>
 

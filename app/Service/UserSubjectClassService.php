@@ -35,7 +35,7 @@ class UserSubjectClassService
             $this->refreshAllClassesFromTeachersSubject($data);
             DB::commit();
         } catch (\Exception $exception) {
-            dd($exception);
+            //dd($exception);
             DB::rollBack();
             abort(500);
         }
@@ -49,7 +49,7 @@ class UserSubjectClassService
             $this->refreshAllClassesFromTeachersSubject($data);
             DB::commit();
         } catch (\Exception $exception) {
-            dd($exception);
+            //dd($exception);
             DB::rollBack();
             abort(500);
         }

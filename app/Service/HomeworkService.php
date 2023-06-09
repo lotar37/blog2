@@ -19,7 +19,7 @@ class HomeworkService extends BaseService
             Homework::firstOrCreate($data);
             DB::commit();
         } catch (\Exception $exception) {
-            dd($exception);
+            //dd($exception);
             DB::rollBack();
             abort(500);
         }

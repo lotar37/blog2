@@ -9,6 +9,7 @@ use App\Models\Tag;
 use App\Models\User;
 use App\Models\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class IndexController extends Controller
 {
@@ -22,6 +23,7 @@ class IndexController extends Controller
         $data['tags'] = $this->getTagCountsArray();
         $data['tagsCount'] = Tag::all()->count();
         $data['viewCount'] = View::all()->count();
+        $data['current_route'] =  Route::getCurrentRoute()->getName();
 //        dd($data['tags']);
         return view('admin.main.index', compact('data'));
     }

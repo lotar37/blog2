@@ -9,7 +9,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Select2 -->
-    <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
@@ -88,6 +88,8 @@
 <script src="{{ asset('plugins/chart.js/Chart.min.js') }}"></script>
 {{--< Sparkline >--}}
 <script src="{{ asset('plugins/sparklines/sparkline.js') }}"></script>
+<script src="{{ asset('plugins/adminlte/adminlte.min.js') }}"></script>
+<script src="{{ asset('plugins/adminlte/demo.js') }}"></script>
 
 <script src="{{ asset('plugins/moment/moment.min.js')}}"></script>
 <script src="{{ asset('plugins/daterangepicker/daterangepicker.js')}}"></script>

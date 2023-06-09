@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\SummerReading\SummerReadingController;
 use App\Http\Controllers\Main\HomeworksController;
 use App\Http\Controllers\Main\CirclesController;
 use App\Http\Controllers\Main\PagesController;
@@ -98,6 +99,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::get("/{category}/edit", "EditController")->name("admin.category.edit");
         Route::patch("/{category}", "UpdateController")->name("admin.category.update");
         Route::delete("/{category}", "DeleteController")->name("admin.category.delete");
+    });
+    Route::group(['namespace' => 'SummerReading', 'prefix' => 'summer_reading'], function(){
+        Route::get("/{schoolClass}", [SummerReadingController::class,"edit"])->name('admin.summer_reading.edit');
+        Route::patch("/{schoolClass}", [SummerReadingController::class,"update"])->name('admin.summer_reading.update');
     });
 
     Route::group(['namespace' => 'Subject', 'prefix' => 'subjects'], function(){

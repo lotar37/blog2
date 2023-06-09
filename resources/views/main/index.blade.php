@@ -86,9 +86,9 @@
             <section class="edica-footer-banner-section">
 
                 <div class="container">
-                    <div class="row" data-aos="fade-up" style="background: #efefef;padding:30px;border-radius: 20px;">
+                    <div class="row" data-aos="fade-up" style="background: #fafafa;padding:30px;border-radius: 1rem; border:1px solid lightgrey">
                         <div class="col-md-5">
-                            <img src="{{ asset("assets/images/goschool.jpg") }}" alt="" style="height: 300px;border-radius: 30%;">
+                            <img src="{{ asset("assets/images/goschool.jpg") }}" alt="" style="height: 300px;border-radius: 2rem;">
                         </div>
                         <div class="col-md-7 d-flex align-items-center justify-content-center">
                             <div>
@@ -121,31 +121,31 @@
                             <img src="assets/images/chor.jpg" alt="blog post" class="blog-post-thumbnail">
                             {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                             <h4 class="blog-post-title">Хор</h4>
-                            <a href="#" class="blog-post-link">Подробнее</a>
+                            <a href="#" class="blog-post-link text-success">Подробнее</a>
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-down">
                             <img src="assets/images/math.jpg" alt="blog post" class="blog-post-thumbnail">
                             {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                             <h4 class="blog-post-title">Математика</h4>
-                            <a href="#" class="blog-post-link">Подробнее</a>
+                            <a href="#" class="blog-post-link  text-success">Подробнее</a>
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-up">
                             <img src="assets/images/valyanie.png" alt="blog post" class="blog-post-thumbnail">
                             {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                             <h4 class="blog-post-title">Валяние</h4>
-                            <a href="#" class="blog-post-link">Подробнее</a>
+                            <a href="#" class="blog-post-link text-success">Подробнее</a>
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-down">
                             <img src="assets/images/vishivka.jpg" alt="blog post" class="blog-post-thumbnail">
                             {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                             <h4 class="blog-post-title">Вышивка</h4>
-                            <a href="#" class="blog-post-link">Подробнее</a>
+                            <a href="#" class="blog-post-link text-success">Подробнее</a>
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-left">
                             <img src="assets/images/footbal.jpg" alt="blog post" class="blog-post-thumbnail">
                             {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                             <h4 class="blog-post-title">Футбол</h4>
-                            <a href="#" class="blog-post-link">Подробнее</a>
+                            <a href="#" class="blog-post-link text-success">Подробнее</a>
                         </div>
                         <div class="col-md-1 landing-blog-post" data-aos="fade-right"></div>
                     </div>
