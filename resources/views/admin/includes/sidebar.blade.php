@@ -14,7 +14,7 @@
                 <a href="#" class="nav-link">
                     <i class="nav-icon far fas fa-book-open text-warning"></i>
                     <p class="text-warning">
-                        Читать летом
+                        Читать летом<span class="left badge badge-danger">New</span>
                         <i class="fas fa-angle-left right text-warning"></i>
                     </p>
                 </a>
@@ -80,7 +80,7 @@
                 <a href="{{ route("admin.page.index") }}" class="nav-link">
                     <i class="nav-icon fas far fa-sitemap"></i>
 
-                    <p>Страницы сайта</p>
+                    <p>Страницы сайта</p><span class="right badge badge-danger">New</span>
                 </a>
             </li>
             <li class="nav-item">
