@@ -118,7 +118,7 @@
                             <a class="dropdown-item" href="{{ route("main.circles") }}">Кружки</a>
                             <a class="dropdown-item" href="#">Курсы</a>
                             <a class="dropdown-item" href="#">Доп.занятия</a>
-                            <a class="dropdown-item" href="#">Что читать летом?</a>
+                            <a class="dropdown-item" href="{{ route("main.summer_reading.index") }}">Что читать летом?</a>
                         </div>
                     </li>
 

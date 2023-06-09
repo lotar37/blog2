@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Main\SummerReadingController as SummerReading;
 use App\Http\Controllers\Admin\SummerReading\SummerReadingController;
 use App\Http\Controllers\Main\HomeworksController;
 use App\Http\Controllers\Main\CirclesController;
@@ -48,6 +49,8 @@ Route::group(['namespace' => "Main"], function () {
 //    Route::get("/khram_docs", [PagesController::class,'pager',["name" => "khram_docs"]])->name('main.khram_docs');
     Route::get("/circles", [CirclesController::class,"index"])->name('main.circles');
     Route::get("/circles/{circle}", [CirclesController::class,"show"])->name('main.circles.show');
+    Route::get("/summer_reading", [SummerReading::class,"index"])->name('main.summer_reading.index');
+    Route::get("/summer_reading/{schoolClass}", [SummerReading::class,"show"])->name('main.summer_reading.show');
     Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
     Route::get("/homework/{subject}/{schoolClass}", [HomeworksController::class,"show"])->name('main.homework.show');
     Route::get("/homework/{schoolClass}", [HomeworksController::class,"showClassHomeworks"])->name('main.homework.showClass');

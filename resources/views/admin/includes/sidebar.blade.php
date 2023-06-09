@@ -14,7 +14,7 @@
                 <a href="#" class="nav-link">
                     <i class="nav-icon far fas fa-book-open text-warning"></i>
                     <p class="text-warning">
-                        Читать летом<span class="left badge badge-danger">New</span>
+                        Читать летом<span class="left badge badge-danger ml-1">New</span>
                         <i class="fas fa-angle-left right text-warning"></i>
                     </p>
                 </a>

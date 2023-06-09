@@ -38,10 +38,10 @@
                                     <div class="col">
 
                                         <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                            <input type="text" name="set_for_date"  value="{{ isset($homework) ? $homework->set_for_date : $data['date'] }}" class="form-control datetimepicker-input" data-target="#reservationdate">
-                                            <div class="input-group-append"   data-target="#reservationdate" data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                            </div>
+                                            <input type="hidden" name="set_for_date"  value="{{ isset($homework) ? $homework->set_for_date : $data['date'] }}" class="form-control datetimepicker-input" data-target="#reservationdate">
+{{--                                            <div class="input-group-append"   data-target="#reservationdate" data-toggle="datetimepicker">--}}
+{{--                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>--}}
+{{--                                            </div>--}}
 
                                         </div>
                                     </div>
@@ -66,7 +66,7 @@
 
                             <div class="form-group col-12">
                                 <label>Список литературы:</label>
-                                <textarea id="summernote" name="content" class="col-12">{{ isset($homework) ? $homework->content : "" }}</textarea>
+                                <textarea id="summernote" name="content" class="col-12" style="height: 100px">{{ isset($homework) ? $homework->content : "" }}</textarea>
                                 @error('content')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
