@@ -13,8 +13,7 @@
                  <div class="col-1">
                      <div class="row  col-md-12">
                      @foreach($class_db as $class)
-                             <a href="{{ route("main.summer_reading.show", $class->id) }}"><div class="col-1"><h3>{{ $class->name }}</h3></div></a>
-                     @endforeach
+                             <a href="{{ route("main.summer_reading.show", $class->id) }}"><div class="col-1  mx-auto"><h3 class="btn btn-secondary mx-auto">{{ $class->name }}</h3></div></a>                     @endforeach
                      </div>
                  </div>
                  <div class="col-9 p-2" style="border-radius: 1rem; border:1px solid lightgrey;background: #f0f0f0">
