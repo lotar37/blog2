@@ -9,7 +9,6 @@
                 @php $act = 1; @endphp
                 @foreach($carouselPosts as $carouselPost)
                 <li data-target="#edicaLandingHeaderCarousel" style="font-weight: bold; font-size: 24px; color:#36c59e;" data-slide-to="{{ $act - 1 }}" class="{{ $act == 1 ? 'active' : ''}}"> &nbsp;&nbsp;&nbsp;&nbsp;<></li>
-                <li data-target="#edicaLandingHeaderCarousel" style="font-weight: bold; font-size: 24px; color:#36c59e;" data-slide-to="{{ $act - 1 }}" class="{{ $act == 1 ? 'active' : ''}}"> &nbsp;&nbsp;&nbsp;&nbsp;<></li>
                     @php $act++; @endphp
                 @endforeach
         </ol>
@@ -152,7 +151,7 @@
                     </div>
                     <div class="col-lg-12 justify-content-lg-around flex-column"
                          style="display: flex; justify-content: space-around">
-                        <a href="{{ route("main.circles") }}" class="btn btn-success btn-lg my-4">ВСЕ ЗАНЯТИЯ</a>
+{{--                        <a href="{{ route("main.circles") }}" class="btn btn-success btn-lg my-4">ВСЕ ЗАНЯТИЯ</a>--}}
                     </div>
                 </div>
             </section>

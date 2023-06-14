@@ -11,19 +11,19 @@
 {{--            </div>--}}
             <section class="post-content">
              <div class="row col-md-12 d-flex justify-content-center">
-                 <div class="col-1 ">
-                     <div class="row  col-md-12">
+                 <div class="col-md-12 ">
+                     <div class="row  col-md-12 align-items-end" >
                      @foreach($class_db as $class)
                          @if($class->id === $data['class']->id)
-                             <a href="{{ route("main.summer_reading.show", $class->id) }}"><div class="col-1"><h2  class="btn btn-info">{{ $class->name }}</h2></div></a>
+                             <a href="{{ route("main.summer_reading.show", $class->id) }}"><div class=""><h2  class="btn btn-info">{{ $class->name }}</h2></div></a>
                              @else
-                                 <a href="{{ route("main.summer_reading.show", $class->id) }}"><div class="col-1  mx-auto"><h3 class="btn btn-secondary mx-auto">{{ $class->name }}</h3></div></a>
+                                 <a href="{{ route("main.summer_reading.show", $class->id) }}"><div class="  mx-auto"><h3 class="btn btn-secondary mx-auto">{{ $class->name }}</h3></div></a>
                              @endif
 
                                  @endforeach
                      </div>
                  </div>
-                 <div class="row">
+                 <div class="row col-md-12">
                      <div class="col-12 p-4" style="border-radius: 1rem; border:1px solid lightgrey;background: #f0f0f0">
                          <h4 class="m-4">Чтение на лето для перешедших в {{ $data['class']->name }} класс</h4>
     {!! isset($data['homework']) ? $data['homework']->content : "Нет информации, но скоро будет" !!}
