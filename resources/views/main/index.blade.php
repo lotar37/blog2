@@ -169,7 +169,7 @@
                             @foreach($reports as $report)
                             <div class="carousel-item {{ $n == 1 ? "active" : "" }}">
                                 <blockquote class="testimonial">
-                                    <p style="font-size: larger">“{!! $report->short !!}...” </p>
+                                    <p style="font-size: x-large">“{!! $report->short !!}...” </p>
                                 </blockquote>
                             </div>
                                 @php $n++; @endphp
