@@ -101,8 +101,6 @@
                                 перезвоним</p>
                                 <div class="text-center">
                                 <a href="{{ route("main.admission") }}" class="btn btn-secondary btn-lg text-white">ПОДРОБНЕЕ</a></div>
-                            {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/apple@1x.svg') }}" alt="ios" class="mr-2"> App Store</button>--}}
-                            {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/android@1x.svg') }}" alt="android" class="mr-2"> Google Play</button>--}}
                             </div>
                         </div>
 
@@ -113,8 +111,6 @@
             <section class="edica-landing-section edica-landing-blog">
                 <div class="container">
                     <h4 class="edica-landing-section-subtitle-alt">ДОПОЛНИТЕЛЬНЫЕ ЗАНЯТИЯ</h4>
-                    {{--                    <h4 class="edica-landing-section-subtitle" data-aos="fade-up">События</h4>--}}
-                    {{--                    <h2 class="edica-landing-section-title" data-aos="fade-up">События </h2>--}}
                     <div class="row">
                         <div class="col-md-1 landing-blog-post" data-aos="fade-right"></div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-right">
@@ -151,74 +147,120 @@
                     </div>
                     <div class="col-lg-12 justify-content-lg-around flex-column"
                          style="display: flex; justify-content: space-around">
-{{--                        <a href="{{ route("main.circles") }}" class="btn btn-success btn-lg my-4">ВСЕ ЗАНЯТИЯ</a>--}}
                     </div>
                 </div>
-            </section>
-
-             <section class="edica-landing-section edica-landing-blog" data-aos="fade-up" data-aos-delay="300">
-                 <div class="container">
-                <h4 class="edica-landing-section-subtitle-alt">ОТЗЫВЫ О НАС</h4>
-
-
-                    @foreach($reports as $report)
-                    <div class="d-flex justify-content-between mb-4 align-items-center">
-
-
-                        <div class="h5">
-                            <img style="width:100px;border-radius: 50%;" class="mr-4" src="{{ asset("storage/".$report->avatar)}}">
-                            {{$report->person}}
-                        </div>
-                        <div class="h5">{{$report->date}}</div>
-
-
-                    </div>
-                    <div  >
-                        <div class="mb-4">
-                            {!! $report->short !!}
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-                 <div class="col-lg-12 justify-content-lg-around flex-column"
-                      style="display: flex; justify-content: space-around">
-                     <a href="{{ route("main.reports") }}" class="btn btn-success btn-lg my-4">ВСЕ ОТЗЫВЫ</a>
-                 </div>
-
 
             </section>
-            <div class="widget widget-post-carousel">
 
-                <div class="post-carousel">
-                    <div id="carouselId" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselId" data-slide-to="1"></li>
-                            <li data-target="#carouselId" data-slide-to="2"></li>
-                        </ol>
+
+        <section  class="edica-landing-section pb-0">
+            <h4 class="edica-landing-section-subtitle-alt ">ОТЗЫВЫ О НАС</h4>
+        </section>
+        </div>
+        <section class="edica-landing-section edica-landing-testimonials aos-init aos-animate mt-0 mb-4" data-aos="fade-up">
+                <div class="container">
+
+                    <div id="edicaLandingTestimonialCarousel" class="carousel slide landing-testimonial-carousel" data-ride="carousel">
+                        <div class="text-center py-4">
+                            <img src="assets/images/quote.svg" alt="quote">
+                        </div>
                         <div class="carousel-inner" role="listbox">
-                            <figure class="carousel-item active">
-                                <img src="{{ asset('assets/images/about3.jpg') }}" alt="slide 1">
-                                <figcaption class="post-title">
-                                    <a href="#!"></a>
-                                </figcaption>
-                            </figure>
-                            <figure class="carousel-item">
-                                <img src="{{ asset('assets/images/about4.jpg') }}" alt="slide 2">
-                                <figcaption class="post-title">
-                                    <a href="#!"></a>
-                                </figcaption>
-                            </figure>
-                            <div class="carousel-item">
-                                <img src="{{ asset('assets/images/about5.jpg') }}" alt="slide 3">
-                                <figcaption class="post-title">
-                                    <a href="#!"></a>
-                                </figcaption>
+                            @php $n = 0; @endphp
+                            @foreach($reports as $report)
+                            <div class="carousel-item {{ $n == 1 ? "active" : "" }}">
+                                <blockquote class="testimonial">
+                                    <p style="font-size: larger">“{!! $report->short !!}...” </p>
+                                </blockquote>
                             </div>
+                                @php $n++; @endphp
+                            @endforeach
+
                         </div>
+                        <ol class="carousel-indicators">
+                            @php $n = 0; @endphp
+                            @foreach($reports as $report)
+                            <li data-target="#edicaLandingTestimonialCarousel" data-slide-to="{{ $n }}" class="{{ $n == 1 ? "active" : "" }}">
+                                <img src="{{ asset("storage/".$report->avatar)}}" alt="avatar">
+                                <div class="user-details">
+                                    <h6>{{$report->person}}</h6>
+                                    <p>{{$report->date}}</p>
+                                </div>
+                            </li>
+                                @php $n++; @endphp
+                            @endforeach
+                          </ol>
                     </div>
                 </div>
-            </div>
+            </section>
+        <div class="container">
+                             <div class="col-lg-12 justify-content-lg-around flex-column"
+                                  style="display: flex; justify-content: space-around">
+                                 <a href="{{ route("main.reports") }}" class="btn btn-success btn-lg my-4">ВСЕ ОТЗЫВЫ</a>
+                             </div>
+
+            {{--             <section class="edica-landing-section edica-landing-blog" data-aos="fade-up" data-aos-delay="300">--}}
+{{--                 <div class="container">--}}
+{{--                <h4 class="edica-landing-section-subtitle-alt">ОТЗЫВЫ О НАС</h4>--}}
+
+
+{{--                    @foreach($reports as $report)--}}
+{{--                    <div class="d-flex justify-content-between mb-4 align-items-center">--}}
+
+
+{{--                        <div class="h5">--}}
+{{--                            <img style="width:100px;border-radius: 50%;" class="mr-4" src="{{ asset("storage/".$report->avatar)}}">--}}
+{{--                            {{$report->person}}--}}
+{{--                        </div>--}}
+{{--                        <div class="h5">{{$report->date}}</div>--}}
+
+
+{{--                    </div>--}}
+{{--                    <div  >--}}
+{{--                        <div class="mb-4">--}}
+{{--                            {!! $report->short !!}--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+{{--                 <div class="col-lg-12 justify-content-lg-around flex-column"--}}
+{{--                      style="display: flex; justify-content: space-around">--}}
+{{--                     <a href="{{ route("main.reports") }}" class="btn btn-success btn-lg my-4">ВСЕ ОТЗЫВЫ</a>--}}
+{{--                 </div>--}}
+
+
+{{--            </section>--}}
+{{--            <div class="widget widget-post-carousel">--}}
+
+{{--                <div class="post-carousel">--}}
+{{--                    <div id="carouselId" class="carousel slide" data-ride="carousel">--}}
+{{--                        <ol class="carousel-indicators">--}}
+{{--                            <li data-target="#carouselId" data-slide-to="0" class="active"></li>--}}
+{{--                            <li data-target="#carouselId" data-slide-to="1"></li>--}}
+{{--                            <li data-target="#carouselId" data-slide-to="2"></li>--}}
+{{--                        </ol>--}}
+{{--                        <div class="carousel-inner" role="listbox">--}}
+{{--                            <figure class="carousel-item active">--}}
+{{--                                <img src="{{ asset('assets/images/about3.jpg') }}" alt="slide 1">--}}
+{{--                                <figcaption class="post-title">--}}
+{{--                                    <a href="#!"></a>--}}
+{{--                                </figcaption>--}}
+{{--                            </figure>--}}
+{{--                            <figure class="carousel-item">--}}
+{{--                                <img src="{{ asset('assets/images/about4.jpg') }}" alt="slide 2">--}}
+{{--                                <figcaption class="post-title">--}}
+{{--                                    <a href="#!"></a>--}}
+{{--                                </figcaption>--}}
+{{--                            </figure>--}}
+{{--                            <div class="carousel-item">--}}
+{{--                                <img src="{{ asset('assets/images/about5.jpg') }}" alt="slide 3">--}}
+{{--                                <figcaption class="post-title">--}}
+{{--                                    <a href="#!"></a>--}}
+{{--                                </figcaption>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <section class="edica-landing-section edica-landing-blog">
                 <h4 class="edica-landing-section-subtitle-alt">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h4>
                 <div class="row">
