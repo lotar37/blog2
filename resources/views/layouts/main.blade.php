@@ -97,16 +97,15 @@
                             <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
                             <a class="dropdown-item" href="{{ route("main.homework.index") }}">Журнал</a>
                             <a class="dropdown-item" href="#">Экскурсия по школе</a>
-                            <div class="dropdown-menu" aria-labelledby="schoolDropdown">
-                                <a class="dropdown-item" href="{{ route("main.advice") }}" id="schoolDropdownDown">Гимназия
+{{--                            <div class="dropdown-menu" aria-labelledby="schoolDropdown">--}}
+                                <a class="dropdown-item" href="{{ route("main.advice") }}" id="schoolDropdown">Гимназия
                                     рекомендует</a>
-                                <hr class="dropdown-divider">
-                                <a class="dropdown-item" href="{{ route("main.museum") }}">&nbsp;&nbsp;Музеи</a>
-                                <a class="dropdown-item" href="{{ route("main.theaters") }}">&nbsp;&nbsp;Театры</a>
+{{--                                <hr class="dropdown-divider">--}}
+                                <a class="dropdown-item" href="{{ route("main.museum") }}"> <i class="fas fa-landmark  nav-icon"></i></i>&nbsp;Музеи</a>
+                                <a class="dropdown-item" href="{{ route("main.theaters") }}"><i class="fas fa-mask nav-icon"></i>Театры</a>
 
-                            </div>
-                            <a class="dropdown-item" href="{{ route("main.advice") }}" id="schoolDropdownDown">Гимназия
-                                рекомендует</a>
+{{--                            </div>--}}
+
                         </div>
                     </li>
                     <li class="nav-item dropdown">
