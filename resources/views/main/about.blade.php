@@ -105,28 +105,31 @@
                             </div>
                         </div>
                     </section>
-                    <section class="edica-about-clients pb-5 mb-5">
+                    <section class="edica-about-clients mb-5">
                         <h2 class="clients-title mb-5" data-aos="fade-up">Наши выпускники</h2>
-                        <div class="row py-4" data-aos="fade-up">
-                            <div class="col-6 col-md-2 mb-4 mb-md-0">
-                                <img src="assets/images/Partner_1@2x.png" alt="client logo" class="img-fluid" width="140px">
+                        <div class="row py-4 d-flex" data-aos="fade-up">
+                            <div class="col-2 mb-4 mb-md-0">
+                                <img src="assets/images/out.jpg" alt="client logo" style="border-radius:0.5rem;height: 160px;max-width: 100%">
                             </div>
-                            <div class="col-6 col-md-2 mb-4 mb-md-0">
-                                <img src="assets/images/Partner_2@2x.png" alt="client logo" width="140px" class="img-fluid">
+                            <div class="col-4  mb-4 mb-md-0">
+                                <img src="assets/images/out21.jpg" alt="client logo" style="border-radius:0.5rem;height: 160px;max-width: 100%">
                             </div>
-                            <div class="col-6 col-md-2 mb-4 mb-md-0">
-                                <img src="assets/images/Partner_3@2x.png" alt="client logo" width="140px" class="img-fluid">
+                            <div class="col-4 mb-4 mb-md-0">
+                                <img src="assets/images/out20.jpg" alt="client logo"  style="border-radius:0.5rem;height: 160px;max-width: 100%">
                             </div>
-                            <div class="col-6 col-md-2 mb-4 mb-md-0">
-                                <img src="assets/images/Partner_4@2x.png" alt="client logo" width="140px" class="img-fluid">
+                         <div class="col-2 mb-4 mb-md-0">
+                                <img src="assets/images/out19.jpg" alt="client logo"  style="border-radius:0.5rem;height: 160px;max-width: 100%">
                             </div>
-                            <div class="col-6 col-md-2 mb-4 mb-md-0">
-                                <img src="assets/images/Partner_5@2x.png" alt="client logo" width="140px" class="img-fluid">
-                            </div>
-                            <div class="col-6 col-md-2 mb-4 mb-md-0">
-                                <img src="assets/images/Partner_6@2x.png" alt="client logo" width="140px" class="img-fluid">
-                            </div>
-                        </div>
+{{--                            <div class="col-6 col-md-2 mb-4 mb-md-0">--}}
+{{--                                <img src="assets/images/out.jpg" alt="client logo" width="140px" class="img-fluid">--}}
+{{--                            </div>--}}
+{{--                            <div class="col-6 col-md-2 mb-4 mb-md-0">--}}
+{{--                                <img src="assets/images/out.jpg" alt="client logo" width="140px" class="img-fluid">--}}
+{{--                            </div>--}}
+{{--                            <div class="col-6 col-md-2 mb-4 mb-md-0">--}}
+{{--                                <img src="assets/images/out.jpg" alt="client logo" width="140px" class="img-fluid">--}}
+{{--                            </div>--}}
+                         </div>
                     </section>
                     <section class="edica-about-faq py-5 mb-5">
                         <h2 class="faq-title" data-aos="fade-up">Часто задаваемые вопросы</h2>
