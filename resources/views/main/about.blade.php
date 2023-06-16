@@ -231,10 +231,10 @@
                                 <div class="col-4">
                                     @foreach ($chunk as $post)
                                         <div>
-                                            <img style="max-width: 100%"   class="mb-4" src="{{  asset("storage/" . $post->preview_image) }}" alt="blog post">
+                                            <img style="max-width: 100%;border-radius:0.5rem;"   class="mb-4" src="{{  asset("storage/" . $post->preview_image) }}" alt="blog post">
                                         </div>
                                         <div>
-                                            <img style="max-width: 100%"   class="mb-4" src="{{  asset("storage/" . $post->main_image) }}" alt="blog post">
+                                            <img style="max-width: 100%;border-radius:0.5rem;"   class="mb-4" src="{{  asset("storage/" . $post->main_image) }}" alt="blog post">
                                         </div>
                                     @endforeach
                                 </div>
