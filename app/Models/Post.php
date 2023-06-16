@@ -32,4 +32,8 @@ class Post extends Model
     public function getCountViewsAttribute(){
         return View::all()->where('table', 'posts')->where('forign_id', $this->id)->count();
     }
+
+    public static function getAllImages(){
+
+    }
 }

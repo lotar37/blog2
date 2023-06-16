@@ -193,7 +193,7 @@
                 </div>
             <div class="justify-content-lg-around m-2"
                  style="display: flex; justify-content: space-around">
-                <a href="{{ route("main.reports") }}" class="btn btn-success btn-lg my-4 col-md-4">ВСЕ ОТЗЫВЫ</a>
+                <a href="{{ route("main.reports") }}" class="btn btn-success btn-lg my-4">ВСЕ ОТЗЫВЫ</a>
             </div>
         </section>
         <div class="container">

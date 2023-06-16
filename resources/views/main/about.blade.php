@@ -225,6 +225,23 @@
                             </div>
                         </div>
                     </section>
+                    <section  class="edica-about-clients">
+                        <div class="row d-flex">
+                            @foreach ($posts->chunk(3) as $chunk)
+                                <div class="col-4">
+                                    @foreach ($chunk as $post)
+                                        <div>
+                                            <img style="max-width: 100%"   class="mb-4" src="{{  asset("storage/" . $post->preview_image) }}" alt="blog post">
+                                        </div>
+                                        <div>
+                                            <img style="max-width: 100%"   class="mb-4" src="{{  asset("storage/" . $post->main_image) }}" alt="blog post">
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endforeach
+
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
