@@ -225,7 +225,8 @@
                             </div>
                         </div>
                     </section>
-                    <section  class="edica-about-clients">
+                    <section  class="edica-about-faq py-5 mb-5">
+                        <h2 class="faq-title" data-aos="fade-right">Галерея картинок</h2>
                         <div class="row d-flex">
                             @foreach ($posts->chunk($chunkPosts) as $chunk)
                                 <div class="col-4">
