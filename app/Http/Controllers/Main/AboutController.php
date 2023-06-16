@@ -19,7 +19,7 @@ class AboutController extends BaseController
 //        }
         $role = $this->service->getRole();
         $user = $this->service->getUser();
-        $posts = Post::all()->where('inside_link',null);
+        $posts = Post::inRandomOrder()->where('inside_link',null);
         $chunkPosts = round($posts->count()/3);
 
         return view("main.about",compact('role', 'user','posts','chunkPosts'));
