@@ -227,7 +227,7 @@
                     </section>
                     <section  class="edica-about-clients">
                         <div class="row d-flex">
-                            @foreach ($posts->chunk(3) as $chunk)
+                            @foreach ($posts->chunk($chunkPosts) as $chunk)
                                 <div class="col-4">
                                     @foreach ($chunk as $post)
                                         <div>
