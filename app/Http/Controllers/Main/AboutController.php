@@ -10,16 +10,9 @@ class AboutController extends BaseController
 {
     public function __invoke()
     {
-//        if(is_null(auth()->user())){
-//            $role = 2;
-//            $user = "";
-//        }else{
-//            $role = auth()->user()->role;
-//            $user = auth()->user()->name;
-//        }
         $role = $this->service->getRole();
         $user = $this->service->getUser();
-        $posts = Post::inRandomOrder()->where('inside_link',null);
+        $posts = Post::all()->where('inside_link',null)->shuffle();
         $chunkPosts = round($posts->count()/3);
 
         return view("main.about",compact('role', 'user','posts','chunkPosts'));
