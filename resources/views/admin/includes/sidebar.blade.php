@@ -14,7 +14,8 @@
                 <a href="#" class="nav-link">
                     <i class="nav-icon far fas fa-book-open text-warning"></i>
                     <p class="text-warning">
-                        Читать летом<span class="left badge badge-danger ml-1">New</span>
+                        Читать летом
+{{--                        <span class="left badge badge-danger ml-1">New</span>--}}
                         <i class="fas fa-angle-left right text-warning"></i>
                     </p>
                 </a>
@@ -79,8 +80,15 @@
             <li class="nav-item">
                 <a href="{{ route("admin.page.index") }}" class="nav-link">
                     <i class="nav-icon fas far fa-sitemap"></i>
+                    <p>Страницы сайта</p>
+{{--                   <span class="right badge badge-danger">New</span>--}}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route("admin.answer.index") }}" class="nav-link">
+                    <i class="nav-icon fas far fa-question"></i>
 
-                    <p>Страницы сайта</p><span class="right badge badge-danger">New</span>
+                    <p>ЧАВО</p><span class="right badge badge-danger">New</span>
                 </a>
             </li>
             <li class="nav-item">

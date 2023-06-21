@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Image extends Model
+class Answer extends Model
 {
     use HasFactory;
+    protected $table = "answers";
+    protected $guarded = false;
 }

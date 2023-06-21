@@ -144,6 +144,15 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::patch("/{circle}", "UpdateController")->name("admin.circle.update");
         Route::delete("/{circle}", "DeleteController")->name("admin.circle.delete");
     });
+    Route::group(['namespace' => 'Answer', 'prefix' => 'answers'], function(){
+        Route::get("/", "IndexController")->name("admin.answer.index");
+        Route::get("/create", "CreateController")->name("admin.answer.create");
+        Route::post("/", "StoreController")->name("admin.answer.store");
+        Route::get("/{answer}", "ShowController")->name("admin.answer.show");
+        Route::get("/{answer}/edit", "EditController")->name("admin.answer.edit");
+        Route::patch("/{answer}", "UpdateController")->name("admin.answer.update");
+        Route::delete("/{answer}", "DeleteController")->name("admin.answer.delete");
+    });
 
     Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function(){
         Route::get("/", "IndexController")->name("admin.post.index");
