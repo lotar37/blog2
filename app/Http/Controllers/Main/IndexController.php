@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
+use App\Models\Answer;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Report;
@@ -25,6 +26,8 @@ class IndexController extends BaseController
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         }
         $categories = Category::all();
+        $answers = Answer::all();
+//        dd($answers);
         $reports = Report::all()->sortByDesc('date');
         //dd($reports[0]->short." ".$reports[0]->date);
         foreach($reports as $report){
@@ -33,6 +36,6 @@ class IndexController extends BaseController
         $randomPosts = Post::randomPosts(2);
         $carouselPosts = Post::mainPageCarouselPosts(5);
 //        dd($carouselPosts);
-        return view("main.index",compact('role', 'user','posts3','categories','reports','randomPosts','carouselPosts'));
+        return view("main.index",compact('role', 'user','posts3','categories','reports','randomPosts','carouselPosts','answers'));
     }
 }

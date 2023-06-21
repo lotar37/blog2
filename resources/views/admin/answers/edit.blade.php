@@ -36,7 +36,7 @@
 
                         <div class="form-group col-12">
                             <label for="exampleInputEmail1">Ответ</label>
-                            <textarea  name="answer" class="col-12">{{ $answer->answer }}</textarea>
+                            <textarea  name="answer" class="col-12" id="summernote">{{ $answer->answer }}</textarea>
                             @error('answer')
                             <div class="text-danger">{{ $message }}</div>
                             @enderror
