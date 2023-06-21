@@ -139,96 +139,29 @@
                         <p class="faq-section-text" data-aos="fade-up" data-aos-delay="100">
                             На Ваши вопросы отвечает заведующий учебной частью Гимназии.
                         </p>
-                        <div class="accordion" id="edicaAboutFaqCollapse" role="tablist" aria-multiselectable="true">
-                            <div class="card" data-aos="fade-up" data-aos-delay="200">
-                                <div class="card-header" role="tab" id="edicaAboutFaq1">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#edicaAboutFaqCollapse" href="#edicaAboutFaqContent1" aria-expanded="true" aria-controls="edicaAboutFaqContent1">
-                                            Какие документы необходимо представить для перехода в Вашу школу из другой образовательной организации?
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="edicaAboutFaqContent1" class="collapse in" role="tabpanel" aria-labelledby="edicaAboutFaq1">
-                                    <div class="card-body">
-                                        При переводе обучающегося из другой образовательной организации родители (законные представители) должны предоставить следующие документы:
-                                        <ul>
-                                            <li> личное дело обучающегося,</li>
-                                            <li>академическую справку по результатам текущей и промежуточной аттестации за период обучения в другой образовательной организации;</li>
-                                            <li>заявление на имя директора школы;</li>
-                                            <li>копию паспорта заявителя;</li>
-                                            <li>медицинские документы (медицинскую карту, прививочный сертификат, прививочную карту Ф-63, ксерокопию медицинского полиса);</li>
-                                            <li>копию свидетельства о рождении ребёнка.</li>
-                                        </ul>
+                        <div class="accordion" id="edicaAboutFaqCollapse" role="tablist"
+                             aria-multiselectable="true">
+                            @php $n = 1; @endphp
+                            @foreach($answers as $answer)
+                                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="card-header" role="tab" id="edicaAboutFaq{{ $n }}">
+                                        <h5 class="mb-0">
+                                            <a data-toggle="collapse" data-parent="#edicaAboutFaqCollapse"
+                                               href="#edicaAboutFaqContent{{ $n }}" aria-expanded="true"
+                                               aria-controls="edicaAboutFaqContent{{ $n }}">
+                                                {{ $answer->question }}
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="edicaAboutFaqContent{{ $n }}" class="collapse in" role="tabpanel"
+                                         aria-labelledby="edicaAboutFaq{{ $n }}">
+                                        <div class="card-body ml-2 font-italic text-gray my-1" style="border-radius: 1rem;border:1px solid lightgray;">
+                                            {!! $answer->answer  !!}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" data-aos="fade-up" data-aos-delay="300">
-                                <div class="card-header" role="tab" id="edicaAboutFaq2">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#edicaAboutFaqCollapse" href="#edicaAboutFaqContent2" aria-expanded="false" aria-controls="edicaAboutFaqContent1">
-                                            Имеет ли право ученик, закончивший 9 классов, продолжить обучение в 10 классе в вашей школы?
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="edicaAboutFaqContent2" class="collapse" role="tabpanel" aria-labelledby="edicaAboutFaq2">
-                                    <div class="card-body">
-                                        Учащийся, успешно освоивший программу основного общего образования, имеет право получить среднее общее образование. Не только выпускник, но и его родители (поскольку право выбора образовательного учреждения ФЗ «Об образовании» (п.2 ст. 50) закреплено за совершеннолетними гражданами) могут написать заявление о приеме в 10 класс. Отказ в приеме в нашу школу  допустим по причине отсутствии свободных (вакантных) мест в сформированных классах. Иные мотивы отказа являются незаконными, нарушают право ученика на общедоступность образования. Родители имеют право обжаловать действия директора лицея в вышестоящих инстанциях, в том числе и в судебном порядке. При приеме в общеобразовательную организацию для получения среднего общего образования представляется аттестат об основном общем образовании установленного образца.                   </div>
-                                </div>
-                            </div>
-                            <div class="card" data-aos="fade-up" data-aos-delay="400">
-                                <div class="card-header" role="tab" id="edicaAboutFaq3">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#edicaAboutFaqCollapse" href="#edicaAboutFaqContent3" aria-expanded="false" aria-controls="edicaAboutFaqContent1">
-                                            Как узнать, правильно ли учитель учит и объективно ли он оценивает уровень знаний моего ребенка?
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="edicaAboutFaqContent3" class="collapse" role="tabpanel" aria-labelledby="edicaAboutFaq3">
-                                    <div class="card-body">
-                                        Если вас что-то тревожит, обратитесь к администрации школы.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" data-aos="fade-up" data-aos-delay="500">
-                                <div class="card-header" role="tab" id="edicaAboutFaq4">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#edicaAboutFaqCollapse" href="#edicaAboutFaqContent4" aria-expanded="false" aria-controls="edicaAboutFaqContent1">
-                                            Как организовано питание в школе? Почему учащимся необходимо питаться в школьной столовой?
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="edicaAboutFaqContent4" class="collapse" role="tabpanel" aria-labelledby="edicaAboutFaq4">
-                                    <div class="card-body">
-                                        Школа предоставляет учащимся ежедневное горячее питание: завтраки и обеды. Имеется столовая на 80 посадочных мест. В работе по организации питания учащихся администрация школы руководствуется основными нормативнo-правовыми актами и документами, которые можно найти на нашем сайте.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" data-aos="fade-up" data-aos-delay="500">
-                                <div class="card-header" role="tab" id="edicaAboutFaq5">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#edicaAboutFaqCollapse" href="#edicaAboutFaqContent5" aria-expanded="false" aria-controls="edicaAboutFaqContent1">
-                                            Как заставить ребенка учиться?                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="edicaAboutFaqContent5" class="collapse" role="tabpanel" aria-labelledby="edicaAboutFaq5">
-                                    <div class="card-body">
-                                        Заставлять ребенка учиться ни в коем случае нельзя,  а вот сделать так, чтобы у него появилось такое желание просто необходимо. Для того, чтобы у ребенка возник интерес к школе, надо, чтобы она не казалась ему страшной. Рассказывайте больше хорошего о своей школьной жизни, исключив негативные ситуации, настраивайте себя и своего ребенка на положительные эмоции в отношении учебы, учите общаться со сверстниками, развивайте любознательность и не высказывайте своих переживаний по поводу его будущей школьной жизни.                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" data-aos="fade-up" data-aos-delay="500">
-                                <div class="card-header" role="tab" id="edicaAboutFaq6">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#edicaAboutFaqCollapse" href="#edicaAboutFaqContent6" aria-expanded="false" aria-controls="edicaAboutFaqContent1">
-                                            Надо ли родителям помогать выполнять домашнее задание своему ребенку?
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="edicaAboutFaqContent6" class="collapse" role="tabpanel" aria-labelledby="edicaAboutFaq6">
-                                    <div class="card-body">
-                                        Некоторые дети изначально рождаются самостоятельными, но это не значит, что помощь в выполнении заданий им не требуется. А другие дети постоянно требуют внимания и поддержки от взрослых. Независимо от того, какой у вас ребенок, Ваша поддержка никогда не будет лишней. Задача родителей – проконтролировать выполнение домашних заданий и, возможно, дать полезный совет.
-                                    </div>
-                                </div>
-                            </div>
+                                @php $n++; @endphp
+                            @endforeach
                         </div>
                     </section>
                     <section  class="edica-about-faq py-5 mb-5">
