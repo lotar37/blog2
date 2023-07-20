@@ -41,6 +41,10 @@
     </div>
 @endsection
 @section('content')
+    1111111111111111111111111111111
+     <component-users  :users="{{ \App\Models\User::all() }}"></component-users>
+    {{ \Request::ip() }}
+    2222222222222222222222222222
 {{--    <section class="blog ">--}}
         <div class="container">
 

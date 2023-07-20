@@ -109,19 +109,19 @@
                         <h2 class="clients-title mb-5" data-aos="fade-up">Наши выпускники</h2>
                         <div class="row py-4 d-flex justify-content-sm-around" data-aos="fade-up">
                             <div class="mb-4 mb-md-0">
-                                <img src="assets/images/out23.jpg" alt="client logo" style="border-radius:0.5rem;height: 150px;max-width: 100%">
+                                <img src="assets/images/out23.jpg" style="border-radius:0.5rem;height: 150px;max-width: 100%" data-aos="flip-right" data-aos-delay="250" class="aos-init aos-animate">
                             </div>
                             <div class="mb-4 mb-md-0">
-                                <img src="assets/images/out.jpg" alt="client logo" style="border-radius:0.5rem;height: 150px;max-width: 100%">
+                                <img src="assets/images/out.jpg" style="border-radius:0.5rem;height: 150px;max-width: 100%" data-aos="flip-right" data-aos-delay="500" class="aos-init aos-animate">
                             </div>
                             <div class="mb-4 mb-md-0">
-                                <img src="assets/images/out21.jpg" alt="client logo" style="border-radius:0.5rem;height: 150px;max-width: 100%">
+                                <img src="assets/images/out21.jpg" style="border-radius:0.5rem;height: 150px;max-width: 100%" data-aos="flip-right" data-aos-delay="750" class="aos-init aos-animate">
                             </div>
                             <div class="mb-4 mb-md-0">
-                                <img src="assets/images/out20.jpg" alt="client logo"  style="border-radius:0.5rem;height: 150px;max-width: 100%">
+                                <img src="assets/images/out20.jpg"  style="border-radius:0.5rem;height: 150px;max-width: 100%" data-aos="flip-right" data-aos-delay="1000" class="aos-init aos-animate">
                             </div>
                          <div class="mb-4 mb-md-0">
-                                <img src="assets/images/out19.jpg" alt="client logo"  style="border-radius:0.5rem;height: 150px;max-width: 100%">
+                                <img src="assets/images/out19.jpg"  style="border-radius:0.5rem;height: 150px;max-width: 100%" data-aos="flip-right" data-aos-delay="1250" class="aos-init aos-animate">
                             </div>
 {{--                            <div class="col-6 col-md-2 mb-4 mb-md-0">--}}
 {{--                                <img src="assets/images/out.jpg" alt="client logo" width="140px" class="img-fluid">--}}

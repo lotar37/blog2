@@ -27,9 +27,8 @@ class IndexController extends BaseController
         }
         $categories = Category::all();
         $answers = Answer::all();
-//        dd($answers);
+        //dd(\Request::ip());
         $reports = Report::all()->sortByDesc('date');
-        //dd($reports[0]->short." ".$reports[0]->date);
         foreach($reports as $report){
             $report->date = Carbon::parse($report->date)->format('d.m.Y');
         }
