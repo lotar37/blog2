@@ -16,7 +16,8 @@ class IndexController extends BaseController
     {
         // TODO: Implement __invoke() method.
         $role = $this->service->getRole();
-        $user = $this->service->getUser();;
+        $user = $this->service->getUser();
+       // dd(substr(exec('getmac'),0,17));
 //        $posts = Post::all()->sortDesc();
 //        foreach($posts as $post){
 //            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
@@ -28,6 +29,9 @@ class IndexController extends BaseController
         $categories = Category::all();
         $answers = Answer::all();
         //dd(\Request::ip());
+//        $mac = exec('getmac');
+//        $mac = explode(" ",$mac);
+//        dd($mac[0]);
         $reports = Report::all()->sortByDesc('date');
         foreach($reports as $report){
             $report->date = Carbon::parse($report->date)->format('d.m.Y');

@@ -41,10 +41,11 @@
     </div>
 @endsection
 @section('content')
-    1111111111111111111111111111111
-     <component-users  :users="{{ \App\Models\User::all() }}"></component-users>
-    {{ \Request::ip() }}
-    2222222222222222222222222222
+
+{{--     <component-users  :users="{{ \App\Models\User::all() }}" macs="{{ substr(exec('getmac'),0,17) }}"></component-users>--}}
+{{--    {{ \Request::ip() }} - {{ substr(exec('getmac'),0,17) }} ---}}
+
+{{--    <list></list>--}}
 {{--    <section class="blog ">--}}
         <div class="container">
 
