@@ -22,5 +22,8 @@ class Report extends Model
         $a = explode(" ", strip_tags($this->content));
         return implode(" ",array_slice($a,40));
     }
+    public static function randomReports($number){
+        return Post::inRandomOrder()->where('inside_link',null)->limit($number)->get();
+    }
 
 }
