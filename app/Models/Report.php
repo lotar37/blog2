@@ -23,7 +23,7 @@ class Report extends Model
         return implode(" ",array_slice($a,40));
     }
     public static function randomReports($number){
-        return Post::inRandomOrder()->where('inside_link',null)->limit($number)->get();
+        return Report::inRandomOrder()->limit($number)->get();
     }
 
 }
