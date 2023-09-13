@@ -15,6 +15,7 @@ class PostIndexController extends BaseController
         $role = $this->service->getRole();
         $user = $this->service->getUser();;
         $posts = $this->getPostsArray();
+
         //dd($posts);
 //        foreach($posts as $post){
 //            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
@@ -33,7 +34,12 @@ class PostIndexController extends BaseController
     }
     private function getPostsArray(){
         $arr = Post::all()->where('inside_link',null)->sortByDesc('date')->take(9);
-        $a1 = $arr->slice(0,3);
+        foreach($arr as $post){
+//            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
+            if(is_null($post['preview_image'])){
+                $post['preview_image'] = $post['main_image'];
+            }
+        }        $a1 = $arr->slice(0,3);
         $a2 = $arr->slice(3)->chunk(2);
         return array($a1,$a2);
     }

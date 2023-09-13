@@ -25,6 +25,9 @@ class IndexController extends BaseController
         $posts3 = Post::all()->where('inside_link',null)->where('category_id','!=','2')->sortByDesc('date')->take(3);
         foreach($posts3 as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
+            if(is_null($post['main_image'])){
+                $post['main_image'] = $post['preview_image'];
+            }
         }
         $categories = Category::all();
         $answers = Answer::all();

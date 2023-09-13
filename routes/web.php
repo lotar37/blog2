@@ -55,7 +55,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/homework/{subject}/{schoolClass}", [HomeworksController::class,"show"])->name('main.homework.show');
     Route::get("/homework/{schoolClass}", [HomeworksController::class,"showClassHomeworks"])->name('main.homework.showClass');
     Route::get("/post/{post}", "PostShowController")->name('main.post_show');
-});+
+});
 
 
 Route::group(['namespace' => 'Personal', 'prefix' => 'personal', 'middleware' => [ 'auth', 'verified']], function () {

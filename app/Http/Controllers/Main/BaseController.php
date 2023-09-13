@@ -17,4 +17,8 @@ class BaseController extends Controller
       $this->service = $service;
       $this->home_service = $home_service;
    }
+
+   public function addImageLinkInPostsIfNull($posts){
+
+   }
 }
