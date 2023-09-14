@@ -139,7 +139,7 @@
                             <img src="assets/images/vishivka.jpg" alt="blog post" class="blog-post-thumbnail">
                             {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                             <h4 class="blog-post-title">Вышивка</h4>
-                            <a href="#" class="blog-post-link text-success">Подробнее</a>
+                            <a href="{{ route('main.circles.show', 4 )}}" class="blog-post-link text-success">Подробнее</a>
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-left">
                             <img src="assets/images/footbal.jpg" alt="blog post" class="blog-post-thumbnail">
