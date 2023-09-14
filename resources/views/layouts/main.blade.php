@@ -41,6 +41,8 @@
                         </div>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <a class="dropdown-item" href="{{ route("main.about") }}">О нас</a>
+                            <a class="dropdown-item" href="{{ route("main.preschool") }}">Детский сад "Огоньки"</a>
+
                             <a class="dropdown-item" href="{{ route("main.teachers") }}">Учителя</a>
                             <a class="dropdown-item" href="{{ route("main.management") }}">Администрация</a>
                             <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
@@ -98,6 +100,7 @@
                             <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
                             <a class="dropdown-item" href="{{ route("main.homework.index") }}">Журнал</a>
                             <a class="dropdown-item" href="#">Экскурсия по школе</a>
+                            <a class="dropdown-item" href="{{ route("main.preschool") }}">Детский сад "Огоньки"</a>
 {{--                            <div class="dropdown-menu" aria-labelledby="schoolDropdown">--}}
                                 <a class="dropdown-item" href="{{ route("main.advice") }}" id="schoolDropdown">Гимназия
                                     рекомендует</a>

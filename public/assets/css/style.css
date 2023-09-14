@@ -7169,6 +7169,8 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 500; }
 
 .edica-header.edica-landing-header {
+    /* поздняя осень/начало зимы */
+    /*background-image: linear-gradient(284deg, #ffbea6 0%, #ffffff 20%, #e3cfa9 35%, #94c1f9 65%, #ffffff 80%, #85e0ff 100%)*/
     /* ранняя осень*/
     background-image: linear-gradient(90deg, #fff0a6 0%, #ffffff 20%, #e5f6c2 35%, #afd296 65%, #ffffff 80%,
 #f6ff85 100%)
