@@ -16,8 +16,8 @@ class CreateProjectPostsTable extends Migration
         Schema::create('project_posts', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger("post_id");
-            $table->unsignedBigInteger("project_id");
+            $table->unsignedBigInteger("post_id")->nullable();
+            $table->unsignedBigInteger("project_id")->nullable();
 
             $table->index("project_id","project_post_project_idx");
             $table->index("post_id","project_post_post_idx");
