@@ -24,7 +24,7 @@ class CreateProjectPostsTable extends Migration
 //            $table->index("post_id","post_project_post_idx");
 //            $table->index("project_id","post_project_project_idx");
 
-            $table->foreign("project_id","project_post_project_fk")->on("project")->references("id");
+            $table->foreign("project_id","project_post_project_fk")->on("projects")->references("id");
             $table->foreign("post_id","project_post_post_fk")->on("posts")->references("id");
 
             $table->timestamps();
