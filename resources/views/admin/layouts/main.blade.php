@@ -60,7 +60,10 @@
 
     <!-- Main Sidebar Container -->
     @include('admin.includes.sidebar')
-    @yield('content')
+    <div id="app">
+        @yield('content')
+    </div>
+
 
     <footer class="main-footer">
         <strong>Radonezh</strong>

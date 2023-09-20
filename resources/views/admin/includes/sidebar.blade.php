@@ -88,7 +88,7 @@
                 <a href="{{ route("admin.answer.index") }}" class="nav-link">
                     <i class="nav-icon fas far fa-question"></i>
 
-                    <p>ЧАВО</p><span class="right badge badge-danger">New</span>
+                    <p>ЧАВО</p>
                 </a>
             </li>
             <li class="nav-item">
@@ -96,6 +96,13 @@
                     <i class="nav-icon fas far fa-record-vinyl"></i>
 
                     <p>Кружки</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route("admin.project.index") }}" class="nav-link">
+                    <i class="nav-icon fas far fa-record-vinyl"></i>
+
+                    <p>Проекты</p><span class="right badge badge-danger">New</span>
                 </a>
             </li>
             <li class="nav-item">

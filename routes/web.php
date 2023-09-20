@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Main\ProjectsController;
 use App\Http\Controllers\Main\SummerReadingController as SummerReading;
 use App\Http\Controllers\Admin\SummerReading\SummerReadingController;
 use App\Http\Controllers\Main\HomeworksController;
@@ -49,6 +50,8 @@ Route::group(['namespace' => "Main"], function () {
 //    Route::get("/khram_docs", [PagesController::class,'pager',["name" => "khram_docs"]])->name('main.khram_docs');
     Route::get("/circles", [CirclesController::class,"index"])->name('main.circles');
     Route::get("/circles/{circle}", [CirclesController::class,"show"])->name('main.circles.show');
+    Route::get("/projects", [ProjectsController::class,"index"])->name('main.projects');
+    Route::get("/projects/{project}", [ProjectsController::class,"show"])->name('main.projects.show');
     Route::get("/summer_reading", [SummerReading::class,"index"])->name('main.summer_reading.index');
     Route::get("/summer_reading/{schoolClass}", [SummerReading::class,"show"])->name('main.summer_reading.show');
     Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
@@ -143,6 +146,15 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::get("/{circle}/edit", "EditController")->name("admin.circle.edit");
         Route::patch("/{circle}", "UpdateController")->name("admin.circle.update");
         Route::delete("/{circle}", "DeleteController")->name("admin.circle.delete");
+    });
+    Route::group(['namespace' => 'Project', 'prefix' => 'projects'], function(){
+        Route::get("/", "IndexController")->name("admin.project.index");
+        Route::get("/create", "CreateController")->name("admin.project.create");
+        Route::post("/", "StoreController")->name("admin.project.store");
+        Route::get("/{project}", "ShowController")->name("admin.project.show");
+        Route::get("/{project}/edit", "EditController")->name("admin.project.edit");
+        Route::patch("/{project}", "UpdateController")->name("admin.project.update");
+        Route::delete("/{project}", "DeleteController")->name("admin.project.delete");
     });
     Route::group(['namespace' => 'Answer', 'prefix' => 'answers'], function(){
         Route::get("/", "IndexController")->name("admin.answer.index");
