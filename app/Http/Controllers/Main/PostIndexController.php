@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Main;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Project;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -26,11 +27,12 @@ class PostIndexController extends BaseController
         }
         $randomPosts3 = Post::maxViewPosts(5);
         $categories = Category::all();
+        $projects = Project::all();
         foreach($randomPosts3 as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         }
 
-        return view("main.post_index",compact('role', 'user','categories','posts','randomPosts4','randomPosts3'));
+        return view("main.post_index",compact('role', 'user','categories','posts','projects','randomPosts4','randomPosts3'));
     }
     private function getPostsArray(){
         $arr = Post::all()->where('inside_link',null)->sortByDesc('date')->take(9);

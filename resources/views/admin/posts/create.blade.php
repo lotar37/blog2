@@ -13,8 +13,8 @@
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v1</li>
+                            <li class="breadcrumb-item"><a href="/">Главная ЛК</a></li>
+                            <li class="breadcrumb-item active">Добавление мероприятия</li>
                         </ol>
                     </div><!-- /.col -->
 
@@ -86,9 +86,11 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="form-group  w-50">
+                            <div class="form-group row w-50">
+                                <div class="col w-50">
                                 <label>Выбирите категорию</label>
                                 <select class="form-control" name="category_id">
+
                                     @foreach($categories as $category)
                                         <option value="{{ $category->id  }}"
                                         {{ $category->id == old('category_id') ? ' selected' : '' }}
@@ -98,6 +100,22 @@
                                 @error('category_id')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
+                                </div>
+                                <div class="col w-50">
+                                    <label>Привязать к проекту</label>
+                                    <select class="form-control" name="project_id">
+                                        <option value="0"></option>
+                                        @foreach($projects as $project)
+                                            <option value="{{ $project->id  }}"
+                                                {{ $project->id == old('project_id') ? ' selected' : '' }}
+                                            >{{ $project->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('project_id')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+
+                                </div>
                             </div>
                             <div class="form-group w-50" data-select2-id="95">
                                 <label>Тэги</label>
