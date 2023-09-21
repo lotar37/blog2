@@ -12,4 +12,9 @@ class Project extends Model
     protected $table = "projects";
     protected $guarded = false;
 
+    function getShortDescriptionAttribute(){
+        $a = explode(" ", strip_tags($this->description));
+        return implode(" ",array_slice($a,0,30));
+    }
+
 }
