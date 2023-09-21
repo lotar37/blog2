@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Admin\Circle;
+namespace App\Http\Requests\Admin\Project;
 
 use Illuminate\Foundation\Http\FormRequest;
 
