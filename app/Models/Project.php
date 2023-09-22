@@ -16,5 +16,8 @@ class Project extends Model
         $a = explode(" ", strip_tags($this->description));
         return implode(" ",array_slice($a,0,30));
     }
+    public function posts(){
+        return $this->hasMany(Post::class, 'project_id','id');
+    }
 
 }

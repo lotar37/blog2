@@ -26,6 +26,7 @@ class ProjectsController extends BaseController
     {
         $role = $this->service->getRole();
         $user = $this->service->getUser();
+//        dd($project->posts);
         $project->video_link = str_replace('youtu.be','youtube.com/embed',$project->video_link);
         return view("main.projects.show",compact('role', 'user','project'));
     }
