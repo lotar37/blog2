@@ -14,7 +14,6 @@
             </section>
             <section class="post-content">
                 <div class="row">
-{{--                    <div class="col-lg-10 mx-auto" data-aos="fade-up">--}}
                         @foreach($projects as $project)
 
                             <div class="col-sm-4">
@@ -22,22 +21,16 @@
                                     <img src="{{ asset("storage/".$project->avatar)}}" class="card-img-top" alt="..."  >
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $project->name }}</h5>
-                                        <p class="card-text">{{ $project->short_description }}</p>
-                                        <a href="{{ route('main.projects.show', $project->id )}} " class="btn btn-primary text-white">Подробнее</a>
+                                        <p class="card-text">{{ $project->short_description }} ...</p>
+                                        <div class="d-flex justify-content-end">
+                                            <a href="{{ route('main.projects.show', $project->id )}} " class="btn btn-warning text-white" >Подробнее</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-
-{{--                            <a href="{{ route('main.projects.show', $project->id) }}">--}}
-{{--                            <div class="row mb-5">--}}
-{{--                                <div class="col col-3"><img src="{{ asset("storage/".$project->avatar)}}" style="height: 100px;border-radius: 30%" alt=""></div>--}}
-{{--                                <div class="col"><h1>{{ $project->name }}</h1></div>--}}
-{{--                            </div>--}}
-{{--                            </a>--}}
                         @endforeach
 
-{{--                    </div>--}}
                 </div>
             </section>
         </div>
