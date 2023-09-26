@@ -16,9 +16,9 @@
                 <div class="col-sm-4 p-0"><img src="{{ asset("storage/".$project->avatar)}}" alt="" style="border-radius: 0rem 0 0  0rem;max-width: 100%"></div>
                 <div class="col-sm-8"><h1 class="edica-page-title" data-aos="fade-up">{{ $project->name }}</h1></div>
             </div>
-            <section class="edica-landing-section edica-landing-blog">
+            <section class="edica-landing-section edica-landing-blog" style="{{ count($project->posts) == 0 ? "display:none" : "" }}">
                 <div class="container">
-                    <h4 class="edica-landing-section-subtitle-alt">НОВОСТИ ПРОЕКТА</h4>
+                    <h4 class="edica-landing-section-subtitle-alt" >ПОСЛЕДНИЕ НОВОСТИ ПРОЕКТА</h4>
                     {{--                    <h4 class="edica-landing-section-subtitle" data-aos="fade-up">События</h4>--}}
                     {{--                    <h2 class="edica-landing-section-title" data-aos="fade-up">События </h2>--}}
                     <div class="row">

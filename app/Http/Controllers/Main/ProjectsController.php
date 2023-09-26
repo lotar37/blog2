@@ -27,7 +27,7 @@ class ProjectsController extends BaseController
     {
         $role = $this->service->getRole();
         $user = $this->service->getUser();
-//        dd($project->posts);
+//        $project->posts = $project->posts()->orderByDesc('id');
         foreach($project->posts as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         }
