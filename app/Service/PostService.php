@@ -11,7 +11,6 @@ class PostService
 {
     public function store($data)
     {
-        dd($data);
         try {
             $tagg = false;
             DB::beginTransaction();
