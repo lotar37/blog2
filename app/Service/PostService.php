@@ -15,6 +15,10 @@ class PostService
             $tagg = false;
             DB::beginTransaction();
 
+            if($data["project_id"] == 0){
+                $data["project_id"] =  null;
+            }
+
             if(isset($data["tag_ids"])){
                 $tags_data = $data["tag_ids"];
                 $tagg = true;
@@ -58,10 +62,16 @@ class PostService
     {
         try {
             DB::beginTransaction();
+
+            if($data["project_id"] == 0){
+                $data["project_id"] =  null;
+            }
+
             if(isset($data["tag_ids"])) {
                 $tags_data = $data["tag_ids"];
                 unset($data["tag_ids"]);
             }
+
             if(isset($data['mainpage_image'])){
                 $data['mainpage_image'] = Storage::disk("public")->put("/images", $data['mainpage_image']);
             }
