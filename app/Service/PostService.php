@@ -52,7 +52,7 @@ class PostService
         } catch (\Exception $exception) {
 
             DB::rollBack();
-            dd($exception);
+            //dd($exception);
             abort(500);
         }
 
