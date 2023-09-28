@@ -46,8 +46,9 @@ class PostService
             }
             DB::commit();
         } catch (\Exception $exception) {
-            //dd($exception);
+
             DB::rollBack();
+            dd($exception);
             abort(500);
         }
 
