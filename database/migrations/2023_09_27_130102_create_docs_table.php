@@ -15,7 +15,7 @@ class CreateDocsTable extends Migration
     {
         Schema::create('docs', function (Blueprint $table) {
             $table->id();
-            $table->string("doc")->nullable();
+            $table->string("doc");
             $table->text("description");
             $table->timestamps();
         });

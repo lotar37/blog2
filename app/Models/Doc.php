@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Doc extends Model
 {
     use HasFactory;
+
+    protected $table = "docs";
+    protected $guarded = false;
 }

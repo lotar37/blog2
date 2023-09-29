@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Main\DocsController;
 use App\Http\Controllers\Main\ProjectsController;
 use App\Http\Controllers\Main\SummerReadingController as SummerReading;
 use App\Http\Controllers\Admin\SummerReading\SummerReadingController;
@@ -25,10 +26,12 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/contacts", "ContactsController")->name('main.contacts');
     Route::get("/reports", "ReportsController")->name('main.reports');
     Route::get("/post", "PostIndexController")->name('main.post');
+    Route::get("/post/{post}", "PostShowController")->name('main.post_show');
     Route::get("/about", "AboutController")->name('main.about');
     Route::get("/preschool", [PagesController::class,"preschool"])->name('main.preschool');
     Route::get("/gia", [PagesController::class,"gia"])->name('main.gia');
     Route::get("/projects", [PagesController::class,"projects"])->name('main.projects');
+    Route::get("/docs", [DocsController::class,"index"])->name('main.docs');
     Route::get("/innovations", [PagesController::class,"innovations"])->name('main.innovations');
     Route::get("/letopis", [PagesController::class,"letopis"])->name('main.letopis');
     Route::get("/announcement", [PagesController::class,"announcement"])->name('main.announcement');
@@ -47,7 +50,6 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/temple_schedule", [PagesController::class,"temple_schedule"])->name('main.temple_schedule');
     Route::get("/khram_history", [PagesController::class,"khram_history"])->name('main.khram_history');
     Route::get("/khram_docs", [PagesController::class,"khram_docs"])->name('main.khram_docs');
-//    Route::get("/khram_docs", [PagesController::class,'pager',["name" => "khram_docs"]])->name('main.khram_docs');
     Route::get("/circles", [CirclesController::class,"index"])->name('main.circles');
     Route::get("/circles/{circle}", [CirclesController::class,"show"])->name('main.circles.show');
     Route::get("/projects", [ProjectsController::class,"index"])->name('main.projects');
@@ -57,7 +59,6 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
     Route::get("/homework/{subject}/{schoolClass}", [HomeworksController::class,"show"])->name('main.homework.show');
     Route::get("/homework/{schoolClass}", [HomeworksController::class,"showClassHomeworks"])->name('main.homework.showClass');
-    Route::get("/post/{post}", "PostShowController")->name('main.post_show');
 });
 
 
@@ -129,6 +130,17 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::patch("/{tag}", "UpdateController")->name("admin.tag.update");
         Route::delete("/{tag}", "DeleteController")->name("admin.tag.delete");
     });
+
+    Route::group(['namespace' => 'Doc', 'prefix' => 'docs'], function(){
+        Route::get("/", "IndexController")->name("admin.doc.index");
+        Route::get("/create", "CreateController")->name("admin.doc.create");
+        Route::post("/", "StoreController")->name("admin.doc.store");
+        Route::get("/{doc}/edit", "EditController")->name("admin.doc.edit");
+        Route::patch("/{doc}", "UpdateController")->name("admin.doc.update");
+        Route::delete("/{doc}", "DeleteController")->name("admin.doc.delete");
+    });
+
+
     Route::group(['namespace' => 'Report', 'prefix' => 'reports'], function(){
         Route::get("/", "IndexController")->name("admin.report.index");
         Route::get("/create", "CreateController")->name("admin.report.create");

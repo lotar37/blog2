@@ -131,7 +131,7 @@
                             <div class="form-group col-12">
                                 <label>Отчет о мероприятии:</label>
                                 <textarea id="summernote2" name="report" class="col-12">{{ old('report') }}</textarea>
-                                @error('content')
+                                @error('report')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>

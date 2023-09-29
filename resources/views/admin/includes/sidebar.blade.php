@@ -100,9 +100,16 @@
             </li>
             <li class="nav-item">
                 <a href="{{ route("admin.project.index") }}" class="nav-link">
-                    <i class="nav-icon fas far fa-record-vinyl"></i>
+                    <i class="nav-icon fas far fa-project-diagram"></i>
 
                     <p>Проекты</p><span class="right badge badge-danger">New</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route("admin.doc.index") }}" class="nav-link">
+                    <i class="nav-icon fas far fa-file"></i>
+
+                    <p>Документы</p><span class="right badge badge-danger">New</span>
                 </a>
             </li>
             <li class="nav-item">

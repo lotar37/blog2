@@ -56,7 +56,7 @@
                             <a class="dropdown-item" href="{{ route("main.reports") }}">Отзывы</a>
                             <a class="dropdown-item" href="{{ route("main.contacts") }}">Контакты</a>
                             <a class="dropdown-item" href="{{ route("main.requisites") }}">Реквизиты</a>
-                            <a class="dropdown-item" href="#">Документы</a>
+                            <a class="dropdown-item" href="{{ route("main.docs") }}">Документы</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
