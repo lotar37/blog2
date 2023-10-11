@@ -30,6 +30,9 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/news/{path}", function ($path){
         return redirect('http://gymnasia-radonezh.ru/news/'.$path);
     });
+    Route::get("/church/{path}", function ($path){
+        return redirect('http://gymnasia-radonezh.ru/church/'.$path);
+    });
 
     Route::get("/news", "PostIndexController")->name('main.post');
 
@@ -62,10 +65,13 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/management", [PagesController::class,"management"])->name('main.management');
     Route::get("/patriarh", [PagesController::class,"patriarh"])->name('main.patriarh');
     Route::get("/advice", [PagesController::class,"advice"])->name('main.advice');
+    Route::get("/recommendations", [PagesController::class,"advice"])->name('main.advice');
     Route::get("/admission", [PagesController::class,"admission"])->name('main.admission');
     Route::get("/requisites", [PagesController::class,"requisites"])->name('main.requisites');
     Route::get("/museum", [PagesController::class,"museum"])->name('main.museum');
+    Route::get("/recommendations/r-exhibitions/", [PagesController::class,"museum"])->name('main.museum');
     Route::get("/theaters", [PagesController::class,"theaters"])->name('main.theaters');
+    Route::get("/recommendations/r-theatres/", [PagesController::class,"theaters"])->name('main.theaters');
     Route::get("/khram_chtenie", [PagesController::class,"khram_chtenie"])->name('main.khram_chtenie');
     Route::get("/temple_schedule", [PagesController::class,"temple_schedule"])->name('main.temple_schedule');
     Route::get("/khram_history", [PagesController::class,"khram_history"])->name('main.khram_history');
