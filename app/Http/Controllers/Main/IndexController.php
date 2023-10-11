@@ -9,6 +9,7 @@ use App\Models\Post;
 use App\Models\Report;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class IndexController extends BaseController
 {
@@ -17,6 +18,7 @@ class IndexController extends BaseController
         // TODO: Implement __invoke() method.
         $role = $this->service->getRole();
         $user = $this->service->getUser();
+//        dd(Hash::make('123456'));
        // dd(substr(exec('getmac'),0,17));
 //        $posts = Post::all()->sortDesc();
 //        foreach($posts as $post){

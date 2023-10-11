@@ -27,6 +27,13 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/reports", "ReportsController")->name('main.reports');
     Route::get("/post", "PostIndexController")->name('main.post');
     Route::get("/post/{post}", "PostShowController")->name('main.post_show');
+
+
+    Route::get("/about/{path}", function ($path){
+        return redirect('http://gymnasia-radonezh.ru/about/'.$path);
+    });
+
+
     Route::get("/about", "AboutController")->name('main.about');
     Route::get("/preschool", [PagesController::class,"preschool"])->name('main.preschool');
     Route::get("/gia", [PagesController::class,"gia"])->name('main.gia');
@@ -37,7 +44,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/announcement", [PagesController::class,"announcement"])->name('main.announcement');
     Route::get("/extcurr", [PagesController::class,"extcurr"])->name('main.extcurr');
     Route::get("/studyplan", "StudyplanController")->name('main.studyplan');
-    Route::get("/regim", [PagesController::class,"regim"])->name('main.regim');
+    Route::get("/regime", [PagesController::class,"regim"])->name('main.regim');
     Route::get("/teachers", [PagesController::class,"teachers"])->name('main.teachers');
     Route::get("/management", [PagesController::class,"management"])->name('main.management');
     Route::get("/patriarh", [PagesController::class,"patriarh"])->name('main.patriarh');
@@ -59,6 +66,10 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
     Route::get("/homework/{subject}/{schoolClass}", [HomeworksController::class,"show"])->name('main.homework.show');
     Route::get("/homework/{schoolClass}", [HomeworksController::class,"showClassHomeworks"])->name('main.homework.showClass');
+    Route::get("/{path}", function ($path){
+        return redirect('http://gymnasia-radonezh.ru/'.$path);
+    });
+
 });
 
 
