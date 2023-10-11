@@ -21,108 +21,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['namespace' => "Main"], function () {
-    Route::get("/", "IndexController")->name('main.index');
-    Route::get("/contacts", "ContactsController")->name('main.contacts');
-    Route::get("/reports", "ReportsController")->name('main.reports');
-    Route::get("/post", "PostIndexController")->name('main.post');
-
-    Route::get("/news/{path}", function ($path){
-        return redirect('http://gymnasia-radonezh.ru/news/'.$path);
-    });
-    Route::get("/church/{path}", function ($path){
-        return redirect('http://gymnasia-radonezh.ru/church/'.$path);
-    });
-
-    Route::get("/news", "PostIndexController")->name('main.post');
-
-
-    Route::get("/post/{post}", "PostShowController")->name('main.post_show');
-
-
-    Route::get("/about/{path}", function ($path){
-        return redirect('http://gymnasia-radonezh.ru/about/'.$path);
-    });
-    Route::get("/about/{path1}/{path2}", function ($path1, $path2){
-        return redirect('http://gymnasia-radonezh.ru/about/'.$path1."/".$path2);
-    });
-
-
-    Route::get("/about", "AboutController")->name('main.about');
-    Route::get("/preschool", [PagesController::class,"preschool"])->name('main.preschool');
-    Route::get("/gia", [PagesController::class,"gia"])->name('main.gia');
-    Route::get("/projects", [PagesController::class,"projects"])->name('main.projects');
-    Route::get("/docs", [DocsController::class,"index"])->name('main.docs');
-    Route::get("/innovations", [PagesController::class,"innovations"])->name('main.innovations');
-    Route::get("/letopis", [PagesController::class,"letopis"])->name('main.letopis');
-    Route::get("/announcement", [PagesController::class,"announcement"])->name('main.announcement');
-    Route::get("/extcurr", [PagesController::class,"extcurr"])->name('main.extcurr');
-    Route::get("/studyplan", "StudyplanController")->name('main.studyplan');
-    Route::get("/programs", "StudyplanController")->name('main.studyplan');
-    Route::get("/regime", [PagesController::class,"regim"])->name('main.regim');
-    Route::get("/persons", [PagesController::class,"teachers"])->name('main.teachers');
-    Route::get("/teachers", [PagesController::class,"teachers"])->name('main.teachers');
-    Route::get("/management", [PagesController::class,"management"])->name('main.management');
-    Route::get("/patriarh", [PagesController::class,"patriarh"])->name('main.patriarh');
-    Route::get("/advice", [PagesController::class,"advice"])->name('main.advice');
-    Route::get("/recommendations", [PagesController::class,"advice"])->name('main.advice');
-    Route::get("/admission", [PagesController::class,"admission"])->name('main.admission');
-    Route::get("/requisites", [PagesController::class,"requisites"])->name('main.requisites');
-    Route::get("/museum", [PagesController::class,"museum"])->name('main.museum');
-    Route::get("/recommendations/r-exhibitions/", [PagesController::class,"museum"])->name('main.museum');
-    Route::get("/theaters", [PagesController::class,"theaters"])->name('main.theaters');
-    Route::get("/recommendations/r-theatres/", [PagesController::class,"theaters"])->name('main.theaters');
-    Route::get("/khram_chtenie", [PagesController::class,"khram_chtenie"])->name('main.khram_chtenie');
-    Route::get("/temple_schedule", [PagesController::class,"temple_schedule"])->name('main.temple_schedule');
-    Route::get("/khram_history", [PagesController::class,"khram_history"])->name('main.khram_history');
-    Route::get("/khram_docs", [PagesController::class,"khram_docs"])->name('main.khram_docs');
-    Route::get("/circles", [CirclesController::class,"index"])->name('main.circles');
-    Route::get("/circles/{circle}", [CirclesController::class,"show"])->name('main.circles.show');
-    Route::get("/projects", [ProjectsController::class,"index"])->name('main.projects');
-    Route::get("/projects/{project}", [ProjectsController::class,"show"])->name('main.projects.show');
-    Route::get("/summer_reading", [SummerReading::class,"index"])->name('main.summer_reading.index');
-    Route::get("/summer_reading/{schoolClass}", [SummerReading::class,"show"])->name('main.summer_reading.show');
-    Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
-    Route::get("/homework/{subject}/{schoolClass}", [HomeworksController::class,"show"])->name('main.homework.show');
-    Route::get("/homework/{schoolClass}", [HomeworksController::class,"showClassHomeworks"])->name('main.homework.showClass');
-    Route::get("/{path}", function ($path){
-        return redirect('http://gymnasia-radonezh.ru/'.$path);
-    });
-
-});
-
-
-Route::group(['namespace' => 'Personal', 'prefix' => 'personal', 'middleware' => [ 'auth', 'verified']], function () {
-    Route::group(['namespace' => "Main", 'prefix' => 'main'], function () {
-        Route::get("/", "IndexController")->name('personal.main.index');
-    });
-    Route::group(['namespace' => "Liked", 'prefix' => 'liked'], function () {
-        Route::get("/", "IndexController")->name('personal.liked.index');
-        Route::delete("/{post}", "DeleteController")->name('personal.liked.delete');
-    });
-    Route::group(['namespace' => "Comment", 'prefix' => 'comment'], function () {
-        Route::get("/", "IndexController")->name('personal.comment.index');
-        Route::get("/{comment}/edit", "EditController")->name('personal.comment.edit');
-        Route::patch("/{comment}", "UpdateController")->name('personal.comment.update');
-        Route::delete("/{comment}", "DeleteController")->name('personal.comment.delete');
-    });
-});
-
-
-Route::group(['namespace' => 'Teacher', 'prefix' => 'teacher', 'middleware' => [ 'auth', 'teacher']], function () {
-    Route::group(['namespace' => "Main"], function () {
-        Route::get("/", "IndexController")->name('teacher.main.index');
-    });
-    Route::group(['namespace' => "Homework", 'prefix' => 'homeworks'], function () {
-        Route::get("/{homework}/edit", "EditController")->name('teacher.homework.edit');
-        Route::get("/{subject}/{school_class}", "IndexController")->name('teacher.homework.index');
-        Route::get("/{subject}/{school_class}/create", "CreateController")->name('teacher.homework.create');
-        Route::post("/", "StoreController")->name("teacher.homework.store");
-        Route::patch("/{homework}", "UpdateController")->name("teacher.homework.update");
-        Route::delete("/{homework}", "DeleteController")->name("teacher.homework.delete");
-    });
-});
-
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'auth', 'admin']], function () {
     Route::group(['namespace' => "Main"], function () {
@@ -246,5 +144,113 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::delete("/{user}", "DeleteController")->name("admin.user.delete");
     });
 });
+
+
+
+Route::group(['namespace' => "Main"], function () {
+    Route::get("/", "IndexController")->name('main.index');
+    Route::get("/contacts", "ContactsController")->name('main.contacts');
+    Route::get("/reports", "ReportsController")->name('main.reports');
+    Route::get("/post", "PostIndexController")->name('main.post');
+
+    Route::get("/news/{path}", function ($path){
+        return redirect('http://gymnasia-radonezh.ru/news/'.$path);
+    });
+    Route::get("/church/{path}", function ($path){
+        return redirect('http://gymnasia-radonezh.ru/church/'.$path);
+    });
+
+    Route::get("/news", "PostIndexController")->name('main.post');
+
+
+    Route::get("/post/{post}", "PostShowController")->name('main.post_show');
+
+
+    Route::get("/about/{path}", function ($path){
+        return redirect('http://gymnasia-radonezh.ru/about/'.$path);
+    });
+    Route::get("/about/{path1}/{path2}", function ($path1, $path2){
+        return redirect('http://gymnasia-radonezh.ru/about/'.$path1."/".$path2);
+    });
+
+
+    Route::get("/about", "AboutController")->name('main.about');
+    Route::get("/preschool", [PagesController::class,"preschool"])->name('main.preschool');
+    Route::get("/gia", [PagesController::class,"gia"])->name('main.gia');
+    Route::get("/projects", [PagesController::class,"projects"])->name('main.projects');
+    Route::get("/docs", [DocsController::class,"index"])->name('main.docs');
+    Route::get("/innovations", [PagesController::class,"innovations"])->name('main.innovations');
+    Route::get("/letopis", [PagesController::class,"letopis"])->name('main.letopis');
+    Route::get("/announcement", [PagesController::class,"announcement"])->name('main.announcement');
+    Route::get("/extcurr", [PagesController::class,"extcurr"])->name('main.extcurr');
+    Route::get("/studyplan", "StudyplanController")->name('main.studyplan');
+    Route::get("/programs", "StudyplanController")->name('main.studyplan');
+    Route::get("/regime", [PagesController::class,"regim"])->name('main.regim');
+    Route::get("/persons", [PagesController::class,"teachers"])->name('main.teachers');
+    Route::get("/teachers", [PagesController::class,"teachers"])->name('main.teachers');
+    Route::get("/management", [PagesController::class,"management"])->name('main.management');
+    Route::get("/patriarh", [PagesController::class,"patriarh"])->name('main.patriarh');
+    Route::get("/advice", [PagesController::class,"advice"])->name('main.advice');
+    Route::get("/recommendations", [PagesController::class,"advice"])->name('main.advice');
+    Route::get("/admission", [PagesController::class,"admission"])->name('main.admission');
+    Route::get("/requisites", [PagesController::class,"requisites"])->name('main.requisites');
+    Route::get("/museum", [PagesController::class,"museum"])->name('main.museum');
+    Route::get("/recommendations/r-exhibitions/", [PagesController::class,"museum"])->name('main.museum');
+    Route::get("/theaters", [PagesController::class,"theaters"])->name('main.theaters');
+    Route::get("/recommendations/r-theatres/", [PagesController::class,"theaters"])->name('main.theaters');
+    Route::get("/khram_chtenie", [PagesController::class,"khram_chtenie"])->name('main.khram_chtenie');
+    Route::get("/temple_schedule", [PagesController::class,"temple_schedule"])->name('main.temple_schedule');
+    Route::get("/khram_history", [PagesController::class,"khram_history"])->name('main.khram_history');
+    Route::get("/khram_docs", [PagesController::class,"khram_docs"])->name('main.khram_docs');
+    Route::get("/circles", [CirclesController::class,"index"])->name('main.circles');
+    Route::get("/circles/{circle}", [CirclesController::class,"show"])->name('main.circles.show');
+    Route::get("/projects", [ProjectsController::class,"index"])->name('main.projects');
+    Route::get("/projects/{project}", [ProjectsController::class,"show"])->name('main.projects.show');
+    Route::get("/summer_reading", [SummerReading::class,"index"])->name('main.summer_reading.index');
+    Route::get("/summer_reading/{schoolClass}", [SummerReading::class,"show"])->name('main.summer_reading.show');
+    Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
+    Route::get("/homework/{subject}/{schoolClass}", [HomeworksController::class,"show"])->name('main.homework.show');
+    Route::get("/homework/{schoolClass}", [HomeworksController::class,"showClassHomeworks"])->name('main.homework.showClass');
+    Route::get("/login", function (){
+        return redirect('login');
+    });
+    Route::get("/{path}", function ($path){
+        return redirect('http://gymnasia-radonezh.ru/'.$path);
+    });
+
+});
+
+
+Route::group(['namespace' => 'Personal', 'prefix' => 'personal', 'middleware' => [ 'auth', 'verified']], function () {
+    Route::group(['namespace' => "Main", 'prefix' => 'main'], function () {
+        Route::get("/", "IndexController")->name('personal.main.index');
+    });
+    Route::group(['namespace' => "Liked", 'prefix' => 'liked'], function () {
+        Route::get("/", "IndexController")->name('personal.liked.index');
+        Route::delete("/{post}", "DeleteController")->name('personal.liked.delete');
+    });
+    Route::group(['namespace' => "Comment", 'prefix' => 'comment'], function () {
+        Route::get("/", "IndexController")->name('personal.comment.index');
+        Route::get("/{comment}/edit", "EditController")->name('personal.comment.edit');
+        Route::patch("/{comment}", "UpdateController")->name('personal.comment.update');
+        Route::delete("/{comment}", "DeleteController")->name('personal.comment.delete');
+    });
+});
+
+
+Route::group(['namespace' => 'Teacher', 'prefix' => 'teacher', 'middleware' => [ 'auth', 'teacher']], function () {
+    Route::group(['namespace' => "Main"], function () {
+        Route::get("/", "IndexController")->name('teacher.main.index');
+    });
+    Route::group(['namespace' => "Homework", 'prefix' => 'homeworks'], function () {
+        Route::get("/{homework}/edit", "EditController")->name('teacher.homework.edit');
+        Route::get("/{subject}/{school_class}", "IndexController")->name('teacher.homework.index');
+        Route::get("/{subject}/{school_class}/create", "CreateController")->name('teacher.homework.create');
+        Route::post("/", "StoreController")->name("teacher.homework.store");
+        Route::patch("/{homework}", "UpdateController")->name("teacher.homework.update");
+        Route::delete("/{homework}", "DeleteController")->name("teacher.homework.delete");
+    });
+});
+
 
 Auth::routes();
