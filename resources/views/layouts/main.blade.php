@@ -57,6 +57,7 @@
                             <a class="dropdown-item" href="{{ route("main.contacts") }}">Контакты</a>
                             <a class="dropdown-item" href="{{ route("main.requisites") }}">Реквизиты</a>
                             <a class="dropdown-item" href="{{ route("main.docs") }}">Документы</a>
+                            <a class="dropdown-item" href="/old">Архив</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -182,7 +183,7 @@
                 <a href="/" class="px-0 mb-2">
                     <img src="{{ asset('assets/images/logo2.png') }}" alt="logo" class="col-md-9 px-0 pb-2">
                 </a>
-                <p class="contact-details">hello@radonezh.ru</p>
+                <p class="mt-2">info@gymnasia-radonezh.ru</p>
                 <p class="contact-details">+7 495 423 5122</p>
                 <nav class="footer-social-links">
                     <a href="#!"><i class="fab fa-telegram fa-2x"></i></i></a>

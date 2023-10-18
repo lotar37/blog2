@@ -12,6 +12,7 @@
                                 <h5>Свяжитесь с нами</h5>
                                 <p>117574, Москва, пр-д Одоевского, 13 </p>
                                 <p>Тел./факс: (495) 423-51-22</p>
+                                <p>email: info@gymnasia-radonezh.ru</p>
                                 <div class="embed-responsive embed-responsive-1by1 contact-map">
                                     <iframe src="https://yandex.ru/map-widget/v1/-/CCUZQIwqTD" width="560" height="400" frameborder="1" allowfullscreen="true" ></iframe>
                                 </div>
@@ -64,7 +65,7 @@
                     {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/apple@1x.svg') }}" alt="ios" class="mr-2"> App Store</button>--}}
                     {{--                <button class="btn btn-success"> <img src="{{ asset('assets/images/android@1x.svg') }}" alt="android" class="mr-2"> Google Play</button>--}}
                 </div>
-                <p class="banner-text">Add some helper text here to explain the finer details of your <br> product or service.</p>
+{{--                <p class="banner-text">Add some helper text here to explain the finer details of your <br> product or service.</p>--}}
             </div>
         </div>
     </section>

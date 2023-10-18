@@ -207,6 +207,9 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/login", function (){
         return redirect('login');
     });
+    Route::get("/old", function (){
+        return redirect('http://old.gymnasia-radonezh.ru/');
+    });
     Route::get("/{path}", function ($path){
         return redirect('http://old.gymnasia-radonezh.ru/'.$path);
     })->where('path','.*');
