@@ -227,6 +227,7 @@
                     <a href="{{ route("main.studyplan") }}" class="nav-link">Учебный план</a>
                     <a href="{{ route("main.preschool") }}" class="nav-link">Дошкольное отделение</a>
                     <a href="{{ route("main.contacts") }}" class="nav-link">Контакты</a>
+                    <a href="/old" class="nav-link">Архив</a>
                 </nav>
             </div>
 
