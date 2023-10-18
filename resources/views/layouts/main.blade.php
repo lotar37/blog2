@@ -210,22 +210,22 @@
             </div>
             <div class="col-md-3">
                 <nav class="footer-nav">
-                    <a href="#!" class="nav-link">Гимназия</a>
-                    <a href="#!" class="nav-link">Храм</a>
-                    <a href="#!" class="nav-link">Мероприятия</a>
-                    <a href="#!" class="nav-link">Отзывы</a>
-                    <a href="#!" class="nav-link">Фотографии</a>
-                    <a href="#!" class="nav-link">Поступающим</a>
+                    <a href="{{ route("main.about") }}" class="nav-link">Гимназия</a>
+                    <a href="{{ route("main.temple_schedule") }}" class="nav-link">Храм</a>
+                    <a href="{{ route("main.post") }}" class="nav-link">Мероприятия</a>
+                    <a href="{{ route("main.reports") }}" class="nav-link">Отзывы</a>
+{{--                    <a href="{{ route("main.preschool") }}" class="nav-link">Детский сад "Огоньки"</a>--}}
+                    <a href="{{ route("main.admission") }}" class="nav-link">Поступающим</a>
                 </nav>
             </div>
             <div class="col-md-3">
                 <nav class="footer-nav">
-                    <a href="#!" class="nav-link">ЧАВО</a>
-                    <a href="#!" class="nav-link">Режим работы</a>
-                    <a href="#!" class="nav-link">Учтителя</a>
-                    <a href="#!" class="nav-link">Учебный план</a>
-                    <a href="#!" class="nav-link">Дошкольное отделение</a>
-                    <a href="#!" class="nav-link">Контакты</a>
+{{--                    <a href="#!" class="nav-link">ЧАВО</a>--}}
+                    <a href="{{ route("main.regim") }}" class="nav-link">Режим работы</a>
+                    <a href="{{ route("main.teachers") }}" class="nav-link">Учителя</a>
+                    <a href="{{ route("main.studyplan") }}" class="nav-link">Учебный план</a>
+                    <a href="{{ route("main.preschool") }}" class="nav-link">Дошкольное отделение</a>
+                    <a href="{{ route("main.contacts") }}" class="nav-link">Контакты</a>
                 </nav>
             </div>
 
@@ -234,7 +234,7 @@
         <div class="footer-bottom-content">
             <nav class="nav footer-bottom-nav">
             </nav>
-            <p class="mb-0">© RADONEZH. 2023. All rights reserved.</p>
+            <p class="mb-0">© Гимназия "Радонеж". 2023. Все права защищены.</p>
         </div>
     </div>
 </footer>
