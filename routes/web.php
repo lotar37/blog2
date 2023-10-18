@@ -145,6 +145,19 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
     });
 });
 
+Route::group(['namespace' => 'Teacher', 'prefix' => 'teacher', 'middleware' => [ 'auth', 'teacher']], function () {
+    Route::group(['namespace' => "Main"], function () {
+        Route::get("/", "IndexController")->name('teacher.main.index');
+    });
+    Route::group(['namespace' => "Homework", 'prefix' => 'homeworks'], function () {
+        Route::get("/{homework}/edit", "EditController")->name('teacher.homework.edit');
+        Route::get("/{subject}/{school_class}", "IndexController")->name('teacher.homework.index');
+        Route::get("/{subject}/{school_class}/create", "CreateController")->name('teacher.homework.create');
+        Route::post("/", "StoreController")->name("teacher.homework.store");
+        Route::patch("/{homework}", "UpdateController")->name("teacher.homework.update");
+        Route::delete("/{homework}", "DeleteController")->name("teacher.homework.delete");
+    });
+});
 
 
 Route::group(['namespace' => "Main"], function () {
@@ -152,28 +165,8 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/contacts", "ContactsController")->name('main.contacts');
     Route::get("/reports", "ReportsController")->name('main.reports');
     Route::get("/post", "PostIndexController")->name('main.post');
-
-    Route::get("/news/{path}", function ($path){
-        return redirect('http://gymnasia-radonezh.ru/news/'.$path);
-    });
-    Route::get("/church/{path}", function ($path){
-        return redirect('http://gymnasia-radonezh.ru/church/'.$path);
-    });
-
-    Route::get("/news", "PostIndexController")->name('main.post');
-
-
     Route::get("/post/{post}", "PostShowController")->name('main.post_show');
-
-
-    Route::get("/about/{path}", function ($path){
-        return redirect('http://gymnasia-radonezh.ru/about/'.$path);
-    });
-    Route::get("/about/{path1}/{path2}", function ($path1, $path2){
-        return redirect('http://gymnasia-radonezh.ru/about/'.$path1."/".$path2);
-    });
-
-
+    Route::get("/news", "PostIndexController")->name('main.post');
     Route::get("/about", "AboutController")->name('main.about');
     Route::get("/preschool", [PagesController::class,"preschool"])->name('main.preschool');
     Route::get("/gia", [PagesController::class,"gia"])->name('main.gia');
@@ -216,7 +209,7 @@ Route::group(['namespace' => "Main"], function () {
     });
     Route::get("/{path}", function ($path){
         return redirect('http://gymnasia-radonezh.ru/'.$path);
-    });
+    })->where('path','.*');
 
 });
 
@@ -238,19 +231,6 @@ Route::group(['namespace' => 'Personal', 'prefix' => 'personal', 'middleware' =>
 });
 
 
-Route::group(['namespace' => 'Teacher', 'prefix' => 'teacher', 'middleware' => [ 'auth', 'teacher']], function () {
-    Route::group(['namespace' => "Main"], function () {
-        Route::get("/", "IndexController")->name('teacher.main.index');
-    });
-    Route::group(['namespace' => "Homework", 'prefix' => 'homeworks'], function () {
-        Route::get("/{homework}/edit", "EditController")->name('teacher.homework.edit');
-        Route::get("/{subject}/{school_class}", "IndexController")->name('teacher.homework.index');
-        Route::get("/{subject}/{school_class}/create", "CreateController")->name('teacher.homework.create');
-        Route::post("/", "StoreController")->name("teacher.homework.store");
-        Route::patch("/{homework}", "UpdateController")->name("teacher.homework.update");
-        Route::delete("/{homework}", "DeleteController")->name("teacher.homework.delete");
-    });
-});
 
 
 Auth::routes();
