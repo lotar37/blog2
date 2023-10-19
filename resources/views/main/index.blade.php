@@ -90,10 +90,11 @@
             <section class="edica-footer-banner-section">
 
                 <div class="container">
-                    <div class="row" data-aos="fade-up" style="background: #fafafa;padding:30px;border-radius: 1rem; border:1px solid lightgrey">
+                    <div class="row" data-aos="fade-up" style="background: #fafafa;padding:30px;border-radius: 1rem; border:1px solid lightgrey;max-width:110%;">
                         <div class="col-md-5">
-                            <img src="{{ asset("assets/images/goschool.jpg") }}" alt="" style="height: 300px;border-radius: 2rem;">
+                            <img src="{{ asset("assets/images/goschool.jpg") }}" alt="" style="max-height: 300px;max-width:100%;border-radius: 2rem;">
                         </div>
+{{--                        <div class="col-md-2"> &nbsp;</div>--}}
                         <div class="col-md-7 d-flex align-items-center justify-content-center">
                             <div>
                             <h4 class="text-center">Идет набор в классы гимназии Радонеж.</h4>
