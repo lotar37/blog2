@@ -17,11 +17,11 @@
                 <div class="col-sm-4">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('teacher.main.index') }}">Главная</a></li>
-                        <li class="breadcrumb-item active">Посты</li>
+                        <li class="breadcrumb-item active">Домашние задания</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-4">
-                    <a class="btn btn-block btn-outline-primary" href="{{ route("teacher.homework.create",[$data["subject"]->id, $data["school_class"]->id]) }}">
+                    <a class="btn btn-block btn-outline-success" href="{{ route("teacher.homework.create",[$data["subject"]->id, $data["school_class"]->id]) }}">
                                 Новое домашнее задание
                     </a>
                 </div>

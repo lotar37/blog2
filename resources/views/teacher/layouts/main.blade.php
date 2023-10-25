@@ -41,8 +41,8 @@
             </li>
         </ul>
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button">Личный кабинет учителя: {{ $data['user'] }}</a>
+            <li class="nav-item"  >
+                <a class="nav-link h3"  data-widget="pushmenu" href="#" role="button" >Личный кабинет учителя: {{ $data['user'] }}</a>
             </li>
             <li class="nav-item">
                 <form action="{{ route('logout') }}" method="post">
@@ -65,7 +65,7 @@
         <strong>Radonezh</strong>
 
         <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 0.5.1
+            <b>Version</b> 0.9.1
         </div>
     </footer>
 

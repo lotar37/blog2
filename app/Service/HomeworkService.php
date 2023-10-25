@@ -49,5 +49,10 @@ class HomeworkService extends BaseService
 
     }
 
+    public function getHomeworkQuantity()
+    {
+        return Homework::all()->where('user_id', auth()->id())->count();
+    }
+
 
 }

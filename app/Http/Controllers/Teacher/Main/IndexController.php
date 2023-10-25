@@ -26,6 +26,7 @@ class IndexController extends BaseTeacherController
 
         $data['user'] = $this->service->getUser();
         $data['workload'] = $this->service->getWorkload();
+        $data['homework_count'] = $this->service->getHomeworkQuantity();
         //dd($data['workload'],$data['subjects']);
 
         return view('teacher.main.index', compact('data'));

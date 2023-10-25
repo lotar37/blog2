@@ -14,6 +14,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('main.index') }}">На сайт</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('main.homework.index') }}">Дневник</a></li>
                         <li class="breadcrumb-item active">Главная</li>
                     </ol>
                 </div><!-- /.col -->
@@ -32,14 +33,14 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>{{ $data['postsCount'] }}</h3>
+                            <h3>{{ $data['homework_count'] }}</h3>
 
-                            <p>Посты</p>
+                            <p>Дано д/з</p>
                         </div>
                         <div class="icon">
                             <i class="far  fa-clipboard"></i>
                         </div>
-                        <a href="{{ route('admin.post.index') }}" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
