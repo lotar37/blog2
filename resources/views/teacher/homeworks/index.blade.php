@@ -16,7 +16,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-4">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('teacher.main.index') }}">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="/">На сайт</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('teacher.main.index') }}">Главная ЛК</a></li>
                         <li class="breadcrumb-item active">Домашние задания</li>
                     </ol>
                 </div><!-- /.col -->
