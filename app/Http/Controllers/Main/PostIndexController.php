@@ -17,10 +17,6 @@ class PostIndexController extends BaseController
         $user = $this->service->getUser();;
         $posts = $this->getPostsArray();
 
-        //dd($posts);
-//        foreach($posts as $post){
-//            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
-//        }
         $randomPosts4 = Post::randomPosts(4);
         foreach($randomPosts4 as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
@@ -41,7 +37,8 @@ class PostIndexController extends BaseController
             if(is_null($post['preview_image'])){
                 $post['preview_image'] = $post['main_image'];
             }
-        }        $a1 = $arr->slice(0,3);
+        }
+        $a1 = $arr->slice(0,3);
         $a2 = $arr->slice(3)->chunk(2);
         return array($a1,$a2);
     }

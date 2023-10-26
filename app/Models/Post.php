@@ -21,7 +21,17 @@ class Post extends Model
         return $this->belongsTo(Category::class, 'category_id','id');
     }
     public static function randomPosts($number){
-        return Post::inRandomOrder()->where('inside_link',null)->limit($number)->get();
+        $posts =  Post::inRandomOrder()->where('inside_link',null)->limit($number)->get();
+        foreach($posts as $post){
+            if(is_null($post['main_image'])){
+                $post['main_image'] = $post['preview_image'];
+            }
+            if(is_null($post['preview_image'])){
+                $post['preview_image'] = $post['main_image'];
+            }
+        }
+
+        return $posts;
     }
     public static function maxViewPosts($number){
         return Post::all()->where('inside_link',null)->sortByDesc('count_views')->slice(0,$number);
