@@ -10,7 +10,8 @@
             <li class="nav-item">
                 <a href="{{ route("teacher.main.index") }}" class="nav-link">
                     <i class="nav-icon fas fa-home"></i>
-                    <p>{{$data['user']}}</p>
+                    <p>Главная ЛК</p>
+{{--                    <p>{{$data['user']}}</p>--}}
                 </a>
             </li>
             @foreach($data['workload'] as $s_key=>$subject)

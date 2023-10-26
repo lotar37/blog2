@@ -4,7 +4,7 @@
     <main class="blog-post">
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">Домашние задания</h1>
-            <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">задания на предстоящие дни</p>
+{{--            <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">задания на предстоящие дни</p>--}}
 
 
             <section class="edica-about-faq py-1 mb-2"   data-aos="fade-right">
@@ -18,6 +18,13 @@
                 </div>
             </section>
             <section class="edica-about-faq py-0 mb-5">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <a href="{{ route('main.homework.showClassForTomorrow', $data['class']->id) }}" class="btn btn-outline-warning {{ $data['tomorrow'] ? " active" : "" }}">на завтра</a>
+                        <a href="{{ route('main.homework.showClass', $data['class']->id) }}" class="btn btn-outline-success ml-4 {{ !$data['tomorrow'] ? " active" : "" }}">на предстоящие дни</a>
+
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-12">
 

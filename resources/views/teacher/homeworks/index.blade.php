@@ -12,7 +12,7 @@
                     <h1 class="m-0 vertical-align-bottom">Домашние задания</h1>
                 </div>
                 <div class="col-sm-4">
-                    <h4 class="m-0 ">{{ $data['subjects']->find($data['subject']->id)->name }}({{ $data['classes']->find($data['school_class']->id)->name }})</h4>
+                    <h4 class="m-0 "><i style="font-size: 0.8em">Предмет: </i>{{ $data['subjects']->find($data['subject']->id)->name }}. <i style="font-size: 0.8em">Класс</i>:{{ $data['classes']->find($data['school_class']->id)->name }}.</h4>
                 </div><!-- /.col -->
                 <div class="col-sm-4">
                     <ol class="breadcrumb float-sm-right">

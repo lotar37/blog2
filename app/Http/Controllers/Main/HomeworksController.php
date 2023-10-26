@@ -63,6 +63,7 @@ class HomeworksController extends BaseController
         $data['subjects'] = Subject::all();
         $data['classes'] = SchoolClass::all();
         $data['class'] = $schoolClass;
+        $data['tomorrow'] = false;
         $workload =  UserSubjectClass::all()->where('class_id',$schoolClass->id);
         $workload =  $this->sortWorkload($workload);
 
@@ -74,6 +75,35 @@ class HomeworksController extends BaseController
 //        dd($homeworks);
         return view("main.homeworks.show_class",compact('role', 'user','workload','homeworks','data'));
     }
+    public function showClassHomeworksTomorrow(SchoolClass $schoolClass)
+    {
+//        dd(now());
+        $t1 = Carbon::today();
+
+        $t2 = Carbon::tomorrow()->addDays(1);
+        //dd($t1,$t2);
+        $role = $this->service->getRole();
+        $user = $this->service->getUser();
+        $data = [];
+
+        $data['colors'] = $this->service->getClassesColors();
+        $data['subjects'] = Subject::all();
+        $data['classes'] = SchoolClass::all();
+        $data['class'] = $schoolClass;
+        $data['tomorrow'] = true;
+        $workload =  UserSubjectClass::all()->where('class_id',$schoolClass->id);
+        $workload =  $this->sortWorkload($workload);
+
+        $homeworks = Homework::all()->where('class_id',$schoolClass->id)->where('set_for_date',">",$t1)->where('set_for_date',"<",$t2)->sortByDesc('set_for_date');
+        $homeworks = $homeworks->map(function ($item,$key){ $item['set_for_date'] = Carbon::parse($item['set_for_date'])->format('d/m/Y');return $item;});
+
+        $homeworks = $this->sortHomeworksForSubjects($homeworks);
+
+//        dd($homeworks);
+        return view("main.homeworks.show_class",compact('role', 'user','workload','homeworks','data'));
+    }
+
+
     public function show(Subject $subject, SchoolClass $schoolClass)
     {
         $role = $this->service->getRole();
