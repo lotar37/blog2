@@ -18,10 +18,10 @@ class PostShowController extends BaseController
         $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         $randomPosts = Post::randomPosts(3);
         foreach($randomPosts as $pst){
-            if(is_null($post['main_image'])){
+            if(is_null($pst['main_image'])){
                 $pst['main_image'] = $pst['preview_image'];
             }
-            if(is_null($post['preview_image'])){
+            if(is_null($pst['preview_image'])){
                 $pst['preview_image'] = $pst['main_image'];
             }
         }
