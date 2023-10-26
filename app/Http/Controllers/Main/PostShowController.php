@@ -17,7 +17,16 @@ class PostShowController extends BaseController
         $this->service->viewModel('posts',$post->id);
         $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         $randomPosts = Post::randomPosts(3);
-        //dd($post);
+        foreach($randomPosts as $pst){
+            if(is_null($post['main_image'])){
+                $pst['main_image'] = $pst['preview_image'];
+            }
+            if(is_null($post['preview_image'])){
+                $pst['preview_image'] = $pst['main_image'];
+            }
+        }
+
+
         return view('main.post_show',compact("post",'role', 'user','randomPosts'));
     }
 }
