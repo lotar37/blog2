@@ -11,11 +11,12 @@ use Illuminate\Http\Request;
 
 class PostIndexController extends BaseController
 {
-    public function __invoke()
+    public function __invoke($shift = 0)
     {
         $role = $this->service->getRole();
-        $user = $this->service->getUser();;
-        $posts = $this->getPostsArray();
+        $user = $this->service->getUser();
+        $posts = Post::all()->where('inside_link',null)->sortByDesc('date')->take(9);
+        $posts = $this->separatePosts($posts);
 
         $randomPosts4 = Post::randomPosts(4);
         foreach($randomPosts4 as $post){
@@ -30,16 +31,15 @@ class PostIndexController extends BaseController
 
         return view("main.post_index",compact('role', 'user','categories','posts','projects','randomPosts4','randomPosts3'));
     }
-    private function getPostsArray(){
-        $arr = Post::all()->where('inside_link',null)->sortByDesc('date')->take(9);
-        foreach($arr as $post){
-//            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
+    private function separatePosts($posts){
+
+        foreach($posts as $post){
             if(is_null($post['preview_image'])){
                 $post['preview_image'] = $post['main_image'];
             }
         }
-        $a1 = $arr->slice(0,3);
-        $a2 = $arr->slice(3)->chunk(2);
+        $a1 = $posts->slice(0,3);
+        $a2 = $posts->slice(3)->chunk(2);
         return array($a1,$a2);
     }
 
