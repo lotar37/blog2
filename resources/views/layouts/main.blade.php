@@ -190,23 +190,7 @@
                     <a href="https://vk.com/gymnasiaradonezh"><i class="fab fa-vk  fa-2x"></i></a>
                 </nav>
                 <p>
-                    <!-- Yandex.Metrika counter -->
-                    <script type="text/javascript" >
-                        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                            m[i].l=1*new Date();
-                            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-                            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-                        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-                        ym(95098872, "init", {
-                            clickmap:true,
-                            trackLinks:true,
-                            accurateTrackBounce:true,
-                            webvisor:true
-                        });
-                    </script>
-                    <noscript><div><img src="https://mc.yandex.ru/watch/95098872" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-                <!-- /Yandex.Metrika counter -->
                 </p>
             </div>
             <div class="col-md-3">
@@ -241,8 +225,6 @@
     </div>
 </footer>
 <script src="{{ asset('assets/vendors/popper.js/popper.min.js') }}"></script>
-{{--<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>--}}
-{{--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>--}}
 <script src="{{ asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/vendors/aos/aos.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
@@ -263,6 +245,23 @@
     }
     window.onload = init;
 </script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(95098872, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/95098872" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>
