@@ -4,7 +4,7 @@
     <main class="blog-post">
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">Кружки</h1>
-            <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">учебный год 2022-23</p>
+            <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">учебный год 2023-24</p>
             <div class="breadcrumb"  data-aos="fade-up" >
                 <a href="/" class="breadcrumb-item">Главная</a>
                 <a href="#" class="breadcrumb-item  active">Кружки</a>
