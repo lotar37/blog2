@@ -16,7 +16,7 @@
                             <img src="{{  asset("storage/" . $post->preview_image) }}" alt="blog post">
                         </div>
                         <div class="blog-post-category"  style="display:flex;justify-content: space-between">
-                            <div>{{ $categories->find($post->category_id)->title }}</div>
+                            <div>{{ $post->category_name }}</div>
                             <div><i class="fa-regular far fa-eye"></i> {{ $post->count_views }}</div>
 
                         </div>
@@ -38,7 +38,7 @@
                                     <img src="{{  asset("storage/" . $post->preview_image) }}" alt="blog post">
                                 </div>
                                 <div class="blog-post-category"   style="display:flex;justify-content: space-between">
-                                    <div>{{ $categories->find($post->category_id)->title }}</div>
+                                    <div>{{ $post->category_name }}</div>
                                     <div><i class="fa-regular far fa-eye"></i> {{ $post->count_views }}</div>
                                 </div>
                                 <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-permalink">

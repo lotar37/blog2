@@ -23,13 +23,13 @@ class PostIndexController extends BaseController
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         }
         $randomPosts3 = Post::maxViewPosts(5);
-        $categories = Category::all();
+
 //        $projects = Project::all();
         foreach($randomPosts3 as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         }
 
-        return view("main.post_index",compact('role', 'user','categories','posts','randomPosts4','randomPosts3'));
+        return view("main.post_index",compact('role', 'user','posts','randomPosts4','randomPosts3'));
     }
     private function separatePosts($posts){
 

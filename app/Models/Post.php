@@ -42,7 +42,9 @@ class Post extends Model
     public function getCountViewsAttribute(){
         return View::all()->where('table', 'posts')->where('forign_id', $this->id)->count();
     }
-
+    public function getCategoryNameAttribute(){
+        return Category::all()->where('id',$this->category_id)->first()->title;
+    }
     public static function getAllImages(){
 
     }
