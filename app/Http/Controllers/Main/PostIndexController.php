@@ -19,15 +19,8 @@ class PostIndexController extends BaseController
         $posts = $this->separatePosts($posts);
 
         $randomPosts4 = Post::randomPosts(4);
-        foreach($randomPosts4 as $post){
-            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
-        }
         $randomPosts3 = Post::maxViewPosts(5);
 
-//        $projects = Project::all();
-        foreach($randomPosts3 as $post){
-            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
-        }
 
         return view("main.post_index",compact('role', 'user','posts','randomPosts4','randomPosts3'));
     }

@@ -72,7 +72,7 @@
                                      class="blog-post-thumbnail" style="object-fit: cover;height: 150pt;">
                                 {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
                                 <h4 class="blog-post-title"><a href="{{ route("main.post_show", $post->id) }}" class="text-black-50">{{ $post->title }}</a></h4>
-                                <p class="blog-post-category">{{ $post->date }}</p>
+                                <p class="blog-post-category">{{ $post->formatedDate }}</p>
 {{--                                <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-link">Подробнее</a>--}}
                             </div>
                         @endforeach
