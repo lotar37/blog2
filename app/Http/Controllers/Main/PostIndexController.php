@@ -2,12 +2,7 @@
 
 namespace App\Http\Controllers\Main;
 
-use App\Http\Controllers\Controller;
-use App\Models\Category;
 use App\Models\Post;
-use App\Models\Project;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
 
 class PostIndexController extends BaseController
 {
