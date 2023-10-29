@@ -17,7 +17,7 @@
                 <div class="col-sm-8"><h1 class="edica-page-title" data-aos="fade-up">{{ $circle->name }}</h1></div>
             </div>
             <div class="row">
-                <div class="col-sm-12">{!! $circle->description !!}  </div>
+                <div class="col-sm-12">{!!   nl2br($circle->description) !!}   </div>
             </div>
             <section class="post-content">
                 <div class="row">

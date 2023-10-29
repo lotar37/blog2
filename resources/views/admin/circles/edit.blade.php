@@ -14,6 +14,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('main.index') }}">На сайт</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('main.circles.show', $circle->id) }}" class="breadcrumb-item">Кружок {{ $circle->name }} на сайте</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная(ЛК)</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('admin.circle.index') }}">Кружки</a></li>
                         <li class="breadcrumb-item active">Редактировать отзыв</li>
