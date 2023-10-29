@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-md-4 sidebar" data-aos="fade-left">
                     <div class="widget widget-post-carousel">
-                        <h5 class="widget-title">Популярные</h5>
+                        <h5 class="widget-title">Разное</h5>
                         <div class="post-carousel">
                             <div id="carouselId" class="carousel slide" data-ride="carousel">
                                 @php  $count = 0   @endphp
