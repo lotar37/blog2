@@ -17,7 +17,7 @@
                         <div class="row">
 
                             <div class="col-md-10 mx-auto" data-aos="fade-up">
-                        <img src="{{  asset("storage/" . $post->main_image) }}" alt="{{$post->main_image}}" class="w-100 mb-md-4">
+                        <img src="{{  asset("storage/" . $post->main_image) }}" alt="" class="w-100 mb-md-4">
                             </div>
                         </div>
 
@@ -40,9 +40,27 @@
                         </div>
                         <div class="row">
                             <div class="col-md-10 mx-auto" data-aos="fade-up">
-                                <img src="{{  asset("storage/" . $post->preview_image) }}" alt="{{$post->main_image}}" class="w-100">
+                                <img src="{{  asset("storage/" . $post->preview_image) }}" alt="" class="w-100">
                             </div>
                         </div>
+                        @if($project)
+                            <h4 class="edica-landing-section-subtitle-alt mt-5" >МЕРОПРИЯТИЕ ОТНОСИТСЯ К ПРОЕКТУ</h4>
+                            <div class="row mt-1">
+                            <div class="col-md-3">
+                                <img src="{{  asset("storage/" . $project->avatar) }}" alt="" class="w-100">
+
+                            </div>
+                            <div class="col-md-8">
+                                <div>
+                                    Проект: <span class="lead">{{ $project->name }}</span>
+                                </div>
+                                <div>
+                                    {{ $project->short_description }}
+                                    <a href="{{ route('main.projects.show', $project->id )}}">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                     <div class="col-md-3 sidebar mr-auto" data-aos="fade-up" >
                         <h6 class="mx-auto">Ещё мероприятия</h6>
