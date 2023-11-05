@@ -70,7 +70,7 @@
                                     @foreach($randomPosts3 as $post)
                                     <figure class="carousel-item {{ $count == 0 ? ' active' : ''}}">
                                         <img src="{{ asset("storage/" . $post->main_image) }}" alt="First slide">
-                                        <figcaption class="post-title"    style="display:flex;justify-content: space-between">
+                                        <figcaption class="post-title "    style="display:flex;justify-content: space-between; height:4,5rem;">
                                             <div><a href="{{ route("main.post_show", $post->id) }}">{{ $post->title }}</a></div>
                                             <div style="white-space: nowrap"><i class="fa-regular fas fa-eye"></i> {{ $post->count_views }}</div>
                                         </figcaption>
