@@ -6,18 +6,17 @@
     <div class="edica-landing-header-content">
         <div id="edicaLandingHeaderCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators ml-3">
-                @php $act = 1; @endphp
+
                 @foreach($carouselPosts as $carouselPost)
-                <li data-target="#edicaLandingHeaderCarousel" style="font-weight: bold; font-size: 24px; color:#36c59e;" data-slide-to="{{ $act - 1 }}" class="{{ $act == 1 ? 'active' : ''}}"> &nbsp;&nbsp;&nbsp;&nbsp;<></li>
-                    @php $act++; @endphp
+                <li data-target="#edicaLandingHeaderCarousel" style="font-weight: bold; font-size: 24px; color:#36c59e;" data-slide-to="{{ $loop->index }}" class="{{ $loop->index == 0 ? 'active' : ''}}"> &nbsp;&nbsp;&nbsp;&nbsp;<></li>
+
                 @endforeach
         </ol>
 
             <div class="carousel-inner" role="listbox">
-                @php $act = 1; @endphp
                 @foreach($carouselPosts as $carouselPost)
 
-                <div class="carousel-item {{ $act ? " active" : ""}}">
+                <div class="carousel-item {{ $loop->first ? " active" : ""}}">
                     <div class="row">
                         <div class="col-md-6 carousel-content-wrapper">
                             <h1>{{ $carouselPost->title }}</h1>
@@ -34,7 +33,6 @@
                         </div>
                     </div>
                 </div>
-                    @php $act = 0; @endphp
                 @endforeach
             </div>
         </div>
@@ -170,28 +168,28 @@
                             <img src="assets/images/quote.svg" alt="quote">
                         </div>
                         <div class="carousel-inner" role="listbox" style="height:10rem;">
-                            @php $n = 0; @endphp
+
                             @foreach($reports as $report)
-                            <div class="carousel-item {{ $n == 1 ? "active" : "" }}">
+                            <div class="carousel-item {{ $loop->index ? "active" : "" }}">
                                 <blockquote class="testimonial">
                                     <p style="font-size: x-large">“{!! $report->short !!}...” </p>
                                 </blockquote>
                             </div>
-                                @php $n++; @endphp
+
                             @endforeach
 
                         </div>
                         <ol class="carousel-indicators"  style="height:10rem;">
-                            @php $n = 0; @endphp
+
                             @foreach($reports as $report)
-                            <li data-target="#edicaLandingTestimonialCarousel" data-slide-to="{{ $n }}" class="{{ $n == 1 ? "active" : "" }}">
+                            <li data-target="#edicaLandingTestimonialCarousel" data-slide-to="{{ $loop->index }}" class="{{ $loop->index == 1 ? "active" : "" }}">
                                 <img src="{{ asset("storage/".$report->avatar)}}" alt="avatar">
                                 <div class="user-details">
                                     <h6>{{$report->person}}</h6>
                                     <p>{{$report->date}}</p>
                                 </div>
                             </li>
-                                @php $n++; @endphp
+
                             @endforeach
                           </ol>
                     </div>
@@ -220,26 +218,26 @@
                                 </p>
                                 <div class="accordion" id="edicaAboutFaqCollapse" role="tablist"
                                      aria-multiselectable="true">
-                                    @php $n = 1; @endphp
+
                                     @foreach($answers as $answer)
                                     <div class="card" data-aos="fade-up" data-aos-delay="200">
-                                        <div class="card-header" role="tab" id="edicaAboutFaq{{ $n }}">
+                                        <div class="card-header" role="tab" id="edicaAboutFaq{{ $loop->index }}">
                                             <h5 class="mb-0">
                                                 <a data-toggle="collapse" data-parent="#edicaAboutFaqCollapse"
-                                                   href="#edicaAboutFaqContent{{ $n }}" aria-expanded="true"
-                                                   aria-controls="edicaAboutFaqContent{{ $n }}">
+                                                   href="#edicaAboutFaqContent{{ $loop->index }}" aria-expanded="true"
+                                                   aria-controls="edicaAboutFaqContent{{ $loop->index }}">
                                                     {{ $answer->question }}
                                                 </a>
                                             </h5>
                                         </div>
-                                        <div id="edicaAboutFaqContent{{ $n }}" class="collapse in" role="tabpanel"
-                                             aria-labelledby="edicaAboutFaq{{ $n }}">
+                                        <div id="edicaAboutFaqContent{{ $loop->index }}" class="collapse in" role="tabpanel"
+                                             aria-labelledby="edicaAboutFaq{{ $loop->index }}">
                                             <div class="card-body ml-2 font-italic text-gray my-1" style="border-radius: 1rem;border:1px solid lightgray;">
                                                 {!! $answer->answer  !!}
                                             </div>
                                         </div>
                                     </div>
-                                        @php $n++; @endphp
+
                                     @endforeach
                                 </div>
                             </section>
