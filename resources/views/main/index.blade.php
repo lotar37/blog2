@@ -170,7 +170,7 @@
                         <div class="carousel-inner" role="listbox" style="height:10rem;">
 
                             @foreach($reports as $report)
-                            <div class="carousel-item {{ $loop->index ? "active" : "" }}">
+                            <div class="carousel-item {{ $loop->index == 1 ? "active" : "" }}">
                                 <blockquote class="testimonial">
                                     <p style="font-size: x-large">“{!! $report->short !!}...” </p>
                                 </blockquote>
