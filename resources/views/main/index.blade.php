@@ -169,7 +169,7 @@
                         <div class="text-center py-4">
                             <img src="assets/images/quote.svg" alt="quote">
                         </div>
-                        <div class="carousel-inner" role="listbox">
+                        <div class="carousel-inner" role="listbox" style="height:10rem;">
                             @php $n = 0; @endphp
                             @foreach($reports as $report)
                             <div class="carousel-item {{ $n == 1 ? "active" : "" }}">
@@ -181,7 +181,7 @@
                             @endforeach
 
                         </div>
-                        <ol class="carousel-indicators">
+                        <ol class="carousel-indicators"  style="height:10rem;">
                             @php $n = 0; @endphp
                             @foreach($reports as $report)
                             <li data-target="#edicaLandingTestimonialCarousel" data-slide-to="{{ $n }}" class="{{ $n == 1 ? "active" : "" }}">
