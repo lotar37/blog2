@@ -41,6 +41,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::patch("/{schoolClass}", [SummerReadingController::class,"update"])->name('admin.summer_reading.update');
     });
 
+
     Route::group(['namespace' => 'Subject', 'prefix' => 'subjects'], function(){
         Route::get("/", "IndexController")->name("admin.subject.index");
         Route::get("/create", "CreateController")->name("admin.subject.create");
