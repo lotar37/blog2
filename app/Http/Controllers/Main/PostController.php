@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Main;
 
 use App\Models\Post;
+use App\Models\Project;
+use Carbon\Carbon;
 
-class PostIndexController extends BaseController
+class PostController extends BaseController
 {
-    public function __invoke($shift = 0)
+    public function index($shift = 0)
     {
         $role = $this->service->getRole();
         $user = $this->service->getUser();
@@ -31,5 +33,22 @@ class PostIndexController extends BaseController
         $a2 = $posts->slice(3)->chunk(2);
         return array($a1,$a2);
     }
+    public function show(Post $post)
+
+    {
+        $role = $this->service->getRole();
+        $user = $this->service->getUser();
+        $this->service->viewModel('posts',$post->id);
+        $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
+        $randomPosts = Post::randomPosts(5);
+        $project = null;
+        if($post->project_id){
+            $project = Project::all()->where('id', $post->project_id)->first();
+        }
+
+
+        return view('main.post_show',compact("post",'role', 'user','randomPosts','project'));
+    }
+
 
 }

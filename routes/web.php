@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Main\DocsController;
+use App\Http\Controllers\Main\PostController;
 use App\Http\Controllers\Main\ProjectsController;
 use App\Http\Controllers\Main\SummerReadingController as SummerReading;
 use App\Http\Controllers\Admin\SummerReading\SummerReadingController;
@@ -164,9 +165,9 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/", "IndexController")->name('main.index');
     Route::get("/contacts", "ContactsController")->name('main.contacts');
     Route::get("/reports", "ReportsController")->name('main.reports');
-    Route::get("/post", "PostIndexController")->name('main.post');
-    Route::get("/post/{post}", "PostShowController")->name('main.post_show');
-    Route::get("/news", "PostIndexController")->name('main.news');
+    Route::get("/post", [PostController::class,"index"])->name('main.post');
+    Route::get("/post/{post}", [PostController::class,"show"])->name('main.post_show');
+    Route::get("/news", [PostController::class,"index"])->name('main.news');
     Route::get("/about", "AboutController")->name('main.about');
     Route::get("/preschool", [PagesController::class,"preschool"])->name('main.preschool');
     Route::get("/gia", [PagesController::class,"gia"])->name('main.gia');

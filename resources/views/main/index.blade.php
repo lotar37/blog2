@@ -11,7 +11,7 @@
                 <li data-target="#edicaLandingHeaderCarousel" style="font-weight: bold; font-size: 24px; color:#36c59e;" data-slide-to="{{ $loop->index }}" class="{{ $loop->index == 0 ? 'active' : ''}}"> &nbsp;&nbsp;&nbsp;&nbsp;<></li>
 
                 @endforeach
-        </ol>
+            </ol>
 
             <div class="carousel-inner" role="listbox">
                 @foreach($carouselPosts as $carouselPost)
@@ -77,7 +77,7 @@
                     </div>
                     <div class="col-lg-12 justify-content-lg-around flex-column"
                          style="display: flex; justify-content: space-around">
-                        <a href="{{ route("main.post") }}" class="btn btn-success btn-lg my-4">ВСЕ НОВОСТИ</a>
+                        <a href="{{ route("main.post") }}" class="btn btn-success btn-lg my-4">ЕЩЁ НОВОСТИ</a>
                     </div>
                 </div>
             </section>
