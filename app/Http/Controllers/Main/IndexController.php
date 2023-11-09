@@ -38,7 +38,7 @@ class IndexController extends BaseController
 //        $mac = explode(" ",$mac);
 //        dd($mac[0]);
 //        $reports = Report::all()->sortByDesc('date');
-        $reports = Report::randomReports(10);
+        $reports = Report::randomReports(5);
         foreach($reports as $report){
             $report->date = Carbon::parse($report->date)->format('d.m.Y');
         }
