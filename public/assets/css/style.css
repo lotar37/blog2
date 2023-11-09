@@ -490,6 +490,34 @@ pre {
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1140px; } }
+.turn_off_class{
+    display:block;
+}
+@media (max-width: 767px){
+    .turn_off_class{
+        display:none;
+    }
+}
+.turn_on_class{
+    display:none;
+}
+@media (max-width: 767px){
+    .turn_on_class{
+        display:inline-block;
+    }
+}
+.big_small_view{
+    display:block;
+}
+
+@media (max-width: 767px){
+    .big_small_view{
+        display:flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
 
 .row {
   display: flex;

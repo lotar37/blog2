@@ -3,6 +3,10 @@
     edica-landing-header
 @endsection
 @section('carousel')
+    <div class="turn_on_class">
+        <img src="{{ asset('assets/images/logo2.png') }}" alt="logo" class="pb-2" style="height: 2em">
+    </div>
+    <div class="turn_off_class">
     <div class="edica-landing-header-content">
         <div id="edicaLandingHeaderCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators ml-3">
@@ -36,6 +40,7 @@
                 @endforeach
             </div>
         </div>
+    </div>
     </div>
 @endsection
 @section('content')
