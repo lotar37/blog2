@@ -56,8 +56,8 @@ class Post extends Model
     }
     public function getShortContentAttribute()
     {
-        $a = explode(" ", strip_tags($this->content));
-        return implode(" ",array_slice($a,0,40));
+        $a = explode(" ", strip_tags($this->content).' '.strip_tags($this->report));
+        return implode(" ",array_slice($a,0,60));
     }
 
 
