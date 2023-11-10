@@ -4,7 +4,7 @@
     <main class="blog blog-post">
         <div class="container">
             <h2 class="edica-page-title" data-aos="fade-up">Все новости</h2>
-            <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">ever</p>
+            <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200"></p>
             <div class="breadcrumb">
                 <a href="/" class="breadcrumb-item">Главная</a>
                 <a href="{{ route("main.post") }}" class="breadcrumb-item">Новости</a>
@@ -22,7 +22,7 @@
                                     </div>
                                     <div>
                                         {{ str_replace("&nbsp;", " ", $post->shortContent) }}
-                                        <a href="{{ route('main.post_show', $post->id )}}">Подробнее</a>
+                                        <a href="{{ route('main.post_show', $post->id )}}">>></a>
                                     </div>
                                 </div>
 
