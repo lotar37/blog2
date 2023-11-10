@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset("assets/vendors/flag-icon-css/css/flag-icon.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/vendors/font-awesome/css/all.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/vendors/aos/aos.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/style.css?v=0.101123_2") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/style.css?v=0.101123") }}">
     <link rel="icon" type="image/png" href='{{ asset("assets/images/favicon.png?vers=3") }}'>
     {{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">--}}
     <script src="{{ asset("assets/vendors/jquery/jquery.min.js") }}"></script>
@@ -200,13 +200,11 @@
                     <a href="{{ route("main.temple_schedule") }}" class="nav-link">Храм</a>
                     <a href="{{ route("main.post") }}" class="nav-link">Мероприятия</a>
                     <a href="{{ route("main.reports") }}" class="nav-link">Отзывы</a>
-{{--                    <a href="{{ route("main.preschool") }}" class="nav-link">Детский сад "Огоньки"</a>--}}
                     <a href="{{ route("main.admission") }}" class="nav-link">Поступающим</a>
                 </nav>
             </div>
             <div class="col-md-3">
                 <nav class="footer-nav">
-{{--                    <a href="#!" class="nav-link">ЧАВО</a>--}}
                     <a href="{{ route("main.regim") }}" class="nav-link">Режим работы</a>
                     <a href="{{ route("main.teachers") }}" class="nav-link">Учителя</a>
                     <a href="{{ route("main.studyplan") }}" class="nav-link">Учебный план</a>
