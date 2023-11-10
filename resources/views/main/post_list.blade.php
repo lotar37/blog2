@@ -8,6 +8,7 @@
             <div class="breadcrumb">
                 <a href="/" class="breadcrumb-item">Главная</a>
                 <a href="{{ route("main.post") }}" class="breadcrumb-item">Новости</a>
+                <a href="#" class="breadcrumb-item active" >Все новости</a>
             </div>
 
             <section class="blog-post-featured-img edica-landing-section edica-landing-blog" data-aos="fade-up" data-aos-delay="300">
