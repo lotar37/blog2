@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Main;
 use App\Models\Post;
 use App\Models\Project;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends BaseController
 {
@@ -38,6 +39,15 @@ class PostController extends BaseController
 
 
         return view('main.post_show',compact("post",'role', 'user','randomPosts','project'));
+    }
+
+    public function listPosts()
+    {
+        $role = $this->service->getRole();
+        $user = $this->service->getUser();
+
+        $posts = Post::orderByDesc('date')->paginate(5);
+        return view('main.post_list',compact("posts",'role', 'user'));
     }
 
     private function separatePosts($posts){

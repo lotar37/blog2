@@ -44,8 +44,8 @@
                             </div>
                         </div>
                         @if($project)
-                            <h4 class="edica-landing-section-subtitle-alt mt-5" >МЕРОПРИЯТИЕ ОТНОСИТСЯ К ПРОЕКТУ</h4>
-                            <div class="row mt-1">
+                        <h4 class="edica-landing-section-subtitle-alt mt-5" >МЕРОПРИЯТИЕ ОТНОСИТСЯ К ПРОЕКТУ</h4>
+                        <div class="row mt-1">
                             <div class="col-md-3">
                                 <img src="{{  asset("storage/" . $project->avatar) }}" alt="" class="w-100">
 
