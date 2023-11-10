@@ -5,14 +5,14 @@
         <div class="container">
             <h2 class="edica-page-title" data-aos="fade-up">Все новости</h2>
             @if($collection_tag)
-            <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">тэг: {{ $collection_tag->title }}</p>
+            <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">{{ $collection_tag->title }}</p>
             @endif
             <div class="breadcrumb">
                 <a href="/" class="breadcrumb-item">Главная</a>
 {{--                <a href="{{ route("main.post") }}" class="breadcrumb-item">Новости</a>--}}
                 @if($collection_tag)
                     <a href="{{ route("main.postlist") }}" class="breadcrumb-item" >Все новости</a>
-                    <a href="#" class="breadcrumb-item active" >Все новости с тэгом: "{{ $collection_tag->title }}"</a>
+                    <a href="#" class="breadcrumb-item active" >Все новости с тегом: "{{ $collection_tag->title }}"</a>
                 @else
                     <a href="#" class="breadcrumb-item active" >Все новости</a>
                 @endif
