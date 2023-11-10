@@ -41,7 +41,7 @@
                           </div>
                             @if($post->tags->count())
                                 <div class="row ml-3">
-                                    Tэги:&nbsp;
+{{--                                    Tэги:&nbsp;--}}
                                     @foreach($post->tags as $tag)
                                         <a href="{{ route('main.postlist.tag', $tag->id )}}">{{ $tags->find($tag->id)->title }}</a>&nbsp;
 
