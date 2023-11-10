@@ -46,7 +46,7 @@ class PostController extends BaseController
         $role = $this->service->getRole();
         $user = $this->service->getUser();
 
-        $posts = Post::orderByDesc('date')->paginate(5);
+        $posts = Post::where('inside_link',null)->orderByDesc('date')->paginate(5);
         return view('main.post_list',compact("posts",'role', 'user'));
     }
 

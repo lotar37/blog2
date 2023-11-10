@@ -27,7 +27,7 @@
                                 </div>
 
                                 <div class="col-md-3 ">
-                                    <img src="{{  asset("storage/" . $post->main_image) }}" alt="" class="w-100 p-3" style="border-radius: 20%;">
+                                    <img src="{{  asset("storage/" . $post->main_image) }}" alt="" class="w-100 p-3" style="border-radius: 20%;object-fit:cover;width:200px;height: 200px ">
 
                                 </div>
                             </div>
