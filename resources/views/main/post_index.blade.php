@@ -6,7 +6,7 @@
             <h1 class="edica-page-title" data-aos="fade-up">Новости</h1>
             <div class="breadcrumb">
                 <a href="/" class="breadcrumb-item">Главная</a>
-                <a href="{{ route("main.post_list") }}" class="breadcrumb-item">Все новости</a>
+                <a href="{{ route("main.postlist") }}" class="breadcrumb-item">Все новости</a>
                 <a href="#" class="breadcrumb-item  active">Новости</a>
             </div>
             <section class="featured-posts-section">
