@@ -16,7 +16,7 @@
                     <div class="col-md-12 table table-striped" data-aos="fade-up">
                         @foreach($posts as $post)
 
-                            <div class="row mt-1 mb-3">
+                            <div class="row mt-1 mb-3 border-bottom">
                                <div class="col-md-9">
                                     <div>
                                         {{ $post->formatedDate }} <span class="lead">{{ $post->title }}</span>
