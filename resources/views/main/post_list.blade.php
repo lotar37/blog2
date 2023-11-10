@@ -19,7 +19,7 @@
                             <div class="row mt-1 mb-3 border-bottom">
                                <div class="col-md-9">
                                     <div>
-                                        {{ $post->formatedDate }} <span class="lead">{{ $post->title }}</span>
+                                        {{ $post->formatedDate }} <span class="lead"><a href="{{ route('main.post_show', $post->id )}}">{{ $post->title }}</a></span>
                                     </div>
                                     <div>
                                         {{ str_replace("&nbsp;", " ", $post->shortContent) }}
