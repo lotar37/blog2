@@ -14,7 +14,6 @@ class EditController extends BaseController
     public function __invoke(Homework $homework)
     {
         // TODO: Implement __invoke() method.
-//        return view('admin.posts.edit', compact('post'));
         $data = [];
         $data['subjects'] = Subject::all();
         $data['classes'] = SchoolClass::all();

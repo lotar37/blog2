@@ -38,10 +38,10 @@ class AppServiceProvider extends ServiceProvider
 
         View::share('class_db', SchoolClass::all());
         \view()->share('sys_user',function (){
-            return is_null(auth()->user()) ? " noll" : auth()->user()->name;
+            return is_null(auth()->user()) ? "" : auth()->user()->name;
         });
         \view()->share('sys_role',function (){
-            return is_null(auth()->user()) ? " noll" : auth()->user()->role;
+            return is_null(auth()->user()) ? 4 : auth()->user()->role;
         });
         Paginator::defaultView('vendor.pagination.bootstrap-4');
 

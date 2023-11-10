@@ -128,11 +128,12 @@
                         </li>
 
                     </ul>
+
                     <ul style='justify-content: flex-end' class=" navbar-nav ml-auto mr-2 mt-2 mt-lg-0">
-                        @if($role == 0)
+                        @if($sys_role() == 0)
                             <li class="nav-item  text-danger">
                                 <a class="nav-link text-success" href="{{ route("admin.main.index") }} "
-                                   alt="Личный кабинет">ЛК({{ $user }})</a>
+                                   alt="Личный кабинет">ЛК({{ $sys_user() }})</a>
                             </li>
                             <li class="nav-item">
                                 <form action="{{ route('logout') }}" method="post">
@@ -141,10 +142,10 @@
                                 </form>
                             </li>
                         @endif
-                        @if($role == 1)
+                        @if($sys_role() == 1)
                             <li class="nav-item  text-danger">
                                 <a class="nav-link text-info" href="{{ route("teacher.main.index") }} "
-                                   alt="Личный кабинет">{{ $user }}(ЛК)</a>
+                                   alt="Личный кабинет">{{ $sys_user() }}(ЛК)</a>
                             </li>
                             <li class="nav-item">
                                 <form action="{{ route('logout') }}" method="post">
@@ -153,13 +154,13 @@
                                 </form>
                             </li>
                         @endif
-                        @if($role == 2 or $role == 3)
+                        @if($sys_role() == 2 or $sys_role() == 3)
                                 <li class="nav-item pl-4">
-                                    {{ $user }}
+                                    {{ $sys_user() }}
                                 </li>
                         @endif
 
-                        @if($role>3)
+                        @if($sys_role() > 3)
                             <li class="nav-item pl-4">
                                 <a class="nav-link" href="{{ route('login') }}" style="text-align: right; padding-right: 0px;">Войти </a>
                             </li>

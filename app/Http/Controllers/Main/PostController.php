@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Main;
 
 use App\Models\Post;
 use App\Models\Project;
+use App\Models\Tag;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -43,8 +44,8 @@ class PostController extends BaseController
 
     public function listPosts()
     {
-        $role = $this->service->getRole();
-        $user = $this->service->getUser();
+//        $role = $this->service->getRole();
+//        $user = $this->service->getUser();
 
         $posts = Post::where('inside_link',null)->orderByDesc('date')->paginate(10);
         foreach($posts as $post){
@@ -52,8 +53,28 @@ class PostController extends BaseController
                 $post['main_image'] = $post['preview_image'];
             }
         }
+        $tags = Tag::all();
+        $collection_tag = null;
+        return view('main.post_list',compact("posts","tags","collection_tag"));
+    }
 
-        return view('main.post_list',compact("posts",'role', 'user'));
+    public function listPostsTag(Tag $tag)
+    {
+//        $role = $this->service->getRole();
+//        $user = $this->service->getUser();
+
+        $posts = Post::where('inside_link',null)->whereHas('tags', function($q)use($tag) {
+            $q->where('tag_id', $tag->id);
+        })->orderByDesc('date')->paginate(10);
+        foreach($posts as $post){
+            if(is_null($post['main_image'])){
+                $post['main_image'] = $post['preview_image'];
+            }
+        }
+        $tags = Tag::all();
+        $collection_tag = $tag;
+
+        return view('main.post_list',compact("posts","tags", 'collection_tag'));
     }
 
     private function separatePosts($posts){
