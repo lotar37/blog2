@@ -29,16 +29,16 @@
                                         {{ $post->formatedDate }} <span class="lead"><a href="{{ route('main.post_show', $post->id )}}">{{ $post->title }}</a></span>
                                     </div>
                                    <div>
-                                       Категория
-                                       @if($post->tags->count())
+{{--                                       Категория--}}
+{{--                                       @if($post->tags->count())--}}
 
-                                               Tеги:&nbsp;
-                                               @foreach($post->tags as $tag)
-                                                   <a href="{{ route('main.postlist.tag', $tag->id )}}">{{ $tags->find($tag->id)->title }}</a>&nbsp;
+{{--                                               Tеги:&nbsp;--}}
+{{--                                               @foreach($post->tags as $tag)--}}
+{{--                                                   <a href="{{ route('main.postlist.tag', $tag->id )}}">{{ $tags->find($tag->id)->title }}</a>&nbsp;--}}
 
-                                               @endforeach
-                                          
-                                       @endif
+{{--                                               @endforeach--}}
+{{--                                          --}}
+{{--                                       @endif--}}
 
                                    </div>
                                     <div>

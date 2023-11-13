@@ -13,6 +13,7 @@
                                 <p>117574, Москва, пр-д Одоевского, 13 </p>
                                 <p>Тел./факс: (495) 423-51-22</p>
                                 <p>email: info@gymnasia-radonezh.ru</p>
+                                <p>Время работы:<br> Пн-пт с 8:00-18:00<br> <span class="ml-0">Cб, вс: выходные.</span></p>
                                 <div class="embed-responsive embed-responsive-1by1 contact-map">
                                     <iframe src="https://yandex.ru/map-widget/v1/-/CCUZQIwqTD" width="560" height="400" frameborder="1" allowfullscreen="true" ></iframe>
                                 </div>
