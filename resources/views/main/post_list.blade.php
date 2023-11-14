@@ -28,19 +28,6 @@
                                     <div>
                                         {{ $post->formatedDate }} <span class="lead"><a href="{{ route('main.post_show', $post->id )}}">{{ $post->title }}</a></span>
                                     </div>
-                                   <div>
-{{--                                       Категория--}}
-{{--                                       @if($post->tags->count())--}}
-
-{{--                                               Tеги:&nbsp;--}}
-{{--                                               @foreach($post->tags as $tag)--}}
-{{--                                                   <a href="{{ route('main.postlist.tag', $tag->id )}}">{{ $tags->find($tag->id)->title }}</a>&nbsp;--}}
-
-                                               @endforeach
-
-                                       @endif
-
-                                   </div>
                                     <div>
                                         {{ str_replace("&nbsp;", " ", $post->shortContent) }}
                                         <a href="{{ route('main.post_show', $post->id )}}">>></a>
