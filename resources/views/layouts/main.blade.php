@@ -65,13 +65,13 @@
                             <a class="nav-link dropdown-toggle" href="#" id="schoolDropdown" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">Обучение</a>
                             <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <a class="dropdown-item" href="{{ route("main.studyplan") }}">Учебный план</a>
-                            <a class="dropdown-item" href="{{ route("main.homework.index") }}">Дневник</a>
                             <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
-                            <a class="dropdown-item" href="{{ route("main.preschool") }}">Дошкольное отделение</a>
-                            <a class="dropdown-item" href="{{ route("main.extcurr") }}">Внеурочное образование</a>
-                            <a class="dropdown-item" href="{{ route("main.projects") }}">Проекты</a>
-                            <a class="dropdown-item" href="{{ route("main.innovations") }}">Инновации</a>
+                                <a class="dropdown-item" href="{{ route("main.preschool") }}">Дошкольное отделение</a>
+                                <a class="dropdown-item" href="{{ route("main.extcurr") }}">Внеурочное образование</a>
+                                <a class="dropdown-item" href="{{ route("main.projects") }}">Проекты</a>
+                                <a class="dropdown-item" href="{{ route("main.homework.index") }}">Дневник</a>
+                                <a class="dropdown-item" href="{{ route("main.studyplan") }}">Учебный план</a>
+                                <a class="dropdown-item" href="{{ route("main.innovations") }}">Инновации</a>
                             <a class="dropdown-item" href="{{ route("main.gia") }}">Про ГИА и ЕГЭ</a>
                             </div>
                         </li>

@@ -36,9 +36,9 @@
 {{--                                               @foreach($post->tags as $tag)--}}
 {{--                                                   <a href="{{ route('main.postlist.tag', $tag->id )}}">{{ $tags->find($tag->id)->title }}</a>&nbsp;--}}
 
-{{--                                               @endforeach--}}
-{{--                                          --}}
-{{--                                       @endif--}}
+                                               @endforeach
+
+                                       @endif
 
                                    </div>
                                     <div>
