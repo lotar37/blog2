@@ -123,33 +123,29 @@
                         <div class="col-md-1 landing-blog-post" data-aos="fade-right"></div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-right">
                             <img src="assets/images/chor.jpg" alt="blog post" class="blog-post-thumbnail">
-                            {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
-                            <h4 class="blog-post-title">Хор</h4>
-                            <a href="{{ route('main.circles.show', 1 )}}" class="blog-post-link text-success">Подробнее</a>
+                            <h4 class="blog-post-title"><a href="{{ route('main.circles.show', 1 )}}" class="blog-post-link ">Хор</a></h4>
+{{--                            <a href="{{ route('main.circles.show', 1 )}}" class="blog-post-link text-success">Подробнее</a>--}}
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-down">
                             <img src="assets/images/math.jpg" alt="blog post" class="blog-post-thumbnail">
-                            {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
-                            <h4 class="blog-post-title">Математика</h4>
-                            <a href="{{ route('main.circles.show', 2 )}}" class="blog-post-link  text-success">Подробнее</a>
+                            <h4 class="blog-post-title">  <a href="{{ route('main.circles.show', 2 )}}" class="blog-post-link ">Математика</a></h4>
+{{--                            <a href="{{ route('main.circles.show', 2 )}}" class="blog-post-link  text-success">Подробнее</a>--}}
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-up">
                             <img src="assets/images/valyanie.png" alt="blog post" class="blog-post-thumbnail">
                             {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
-                            <h4 class="blog-post-title">Валяние</h4>
-                            <a href="#" class="blog-post-link text-success">Подробнее</a>
+                            <h4 class="blog-post-title"><a href="#" class="blog-post-link">Валяние</a></h4>
+{{--                            <a href="#" class="blog-post-link text-success">Подробнее</a>--}}
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-down">
                             <img src="assets/images/calligraphy.jpg" alt="blog post" class="blog-post-thumbnail">
-                            {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
-                            <h4 class="blog-post-title">Каллиграфия</h4>
-                            <a href="{{ route('main.circles.show', 4 )}}" class="blog-post-link text-success">Подробнее</a>
+                            <h4 class="blog-post-title"> <a href="{{ route('main.circles.show', 4 )}}" class="blog-post-link">Каллиграф</a></h4>
+{{--                            <a href="{{ route('main.circles.show', 4 )}}" class="blog-post-link text-success">Подробнее</a>--}}
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-left">
                             <img src="assets/images/footbal.jpg" alt="blog post" class="blog-post-thumbnail">
-                            {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
-                            <h4 class="blog-post-title">Футбол</h4>
-                            <a href="{{ route('main.circles.show', 3 )}}" class="blog-post-link text-success">Подробнее</a>
+                            <h4 class="blog-post-title"><a href="{{ route('main.circles.show', 3 )}}" class="blog-post-link ">ОФП</a></h4>
+{{--                            <a href="{{ route('main.circles.show', 3 )}}" class="blog-post-link text-success">Подробнее</a>--}}
                         </div>
                         <div class="col-md-1 landing-blog-post" data-aos="fade-right"></div>
                     </div>
