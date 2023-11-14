@@ -188,8 +188,8 @@
                 <p class="mt-2">info@gymnasia-radonezh.ru</p>
                 <p class="contact-details">+7 495 423 5122</p>
                 <nav class="footer-social-links">
-                    <a href="https://www.youtube.com/@user-qv7bk2mc7z"><i class="fab fa-youtube fa-2x"></i></i></a>
-                    <a href="https://vk.com/gymnasiaradonezh"><i class="fab fa-vk  fa-2x"></i></a>
+                    <a href="https://www.youtube.com/@user-qv7bk2mc7z" style="color:red;"><i class="fab fa-youtube fa-2x"></i></i></a>
+                    <a href="https://vk.com/gymnasiaradonezh"  style="color:#1d455b;"><i class="fab fa-vk  fa-2x"></i></a>
                 </nav>
                 <p>
 
