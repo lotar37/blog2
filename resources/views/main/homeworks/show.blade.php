@@ -13,15 +13,15 @@
                         @php $c = 0; @endphp
                         @foreach($homeworks as $k=>$homework)
                             <div class="mb-2 pt-2" style="border:1px solid #89c7a4; border-radius: 16px 0  16px 0   ;">
-                            <div class="px-3 pt-2 pb-1 bg-opacity-50 border-1 bg-gradient-gray" data-aos="fade-left" data-aos-delay="{{ $c*300 }}"
+                            <div class="px-3 pt-2 pb-1 bg-opacity-50 border-1 bg-gradient-gray" data-aos="fade-lefts" data-aos-delay="{{ $c*300 }}"
                                  id=""><h4>{!! $homework->set_for_date  !!} | {!! $homework->title  !!} </h4> </div>
-                            <div class=" pl-3   mb-3" data-aos="fade-left"
+                            <div class=" pl-3   mb-3" data-aos="fade-lefts"
                                  data-aos-delay="{{ $c*300 }}">{!! $homework->content !!}  </div>
                             </div>
                             @php $c++; @endphp
                         @endforeach
                     @else
-                        <div class="bg-opacity-50 pl-3  my-3 bg-warning" data-aos="fade-up" data-aos-delay="200" id="">
+                        <div class="bg-opacity-50 pl-3  my-3 bg-warning" data-aos="fade-ups" data-aos-delay="0" id="">
                             Нет информации о домашних заданиях для {{ $data['class']->name }}
                             ({{ $data['subject']->name }})
                         </div>
