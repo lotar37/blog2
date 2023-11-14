@@ -9,13 +9,14 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 mb-3">Мероприятия</h1>
+                    <h1 class="m-0 mb-3">Новости</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="/">На сайт</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная</a></li>
-                        <li class="breadcrumb-item active">Мероприятия</li>
+                        <li class="breadcrumb-item"><a href="{{ route('main.postlist') }}">Все новости на сайте</a></li>
+                        <li class="breadcrumb-item active">Новости</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="col-2">
