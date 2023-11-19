@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset("assets/vendors/flag-icon-css/css/flag-icon.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/vendors/font-awesome/css/all.css?v=1") }}">
     <link rel="stylesheet" href="{{ asset("assets/vendors/aos/aos.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/style.css?v=0.101123") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/style.css?v=0.191123") }}">
     <link rel="icon" type="image/png" href='{{ asset("assets/images/favicon.png?vers=3") }}'>
     {{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">--}}
     <script src="{{ asset("assets/vendors/jquery/jquery.min.js") }}"></script>
@@ -165,17 +165,40 @@
                                     /*width:1rem;*/
                                 }
                                 .img_svg path{
-                                    fill:darkslategrey;
+                                    fill:#3f4245;
                                 }
                                 .img_svg path:hover{
-                                    fill:#0b5ed7;
+                                    fill:#0d6632;
                                 }
+                                .socialnet-item{
+                                    color:#3f4245;
+                                    border:2px solid #3f4245;
+                                    border-radius:100%;
+                                    padding:3px;
+                                }
+                                .socialnet-item.red-item:hover{
+                                    border:2px solid red;
+                                    /*padding:4px;*/
+                                }
+                                .socialnet-item.red-item:hover i{
+                                    color:red;
+
+                                }
+                                .socialnet-item.blue-item:hover{
+                                    border:2px solid #0077ff;
+                                    /*padding:4px;*/
+                                }
+                                .socialnet-item.blue-item:hover i{
+                                    color:#0077ff;
+
+                                }
+
                             </style>
                         @if($sys_role() > 3)
                             <li class="nav-item">
-                                <a href="https://www.youtube.com/@user-qv7bk2mc7z" style="color:red;"><i class="fab fa-youtube"></i></a>
-                                <a href="https://vk.com/gymnasiaradonezh"  style="color:#0077ff"><i class="mx-2 fab fa-vk"></i></a>
-                                <a href="{{ route('login') }}"  alt="войти" style="color:black">
+                                <a href="https://www.youtube.com/@user-qv7bk2mc7z" class='socialnet-item red-item' ><i class="fab fa-youtube"></i></a>
+                                <a href="https://vk.com/gymnasiaradonezh"   class="socialnet-item blue-item mx-2"><i class=" fab fa-vk"></i></a>
+                                <a href="{{ route('login') }}"  alt="войти">
                                     <svg class='img_svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 96l64 0c17.7 0 32 14.3 32 32l0 256c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c53 0 96-43 96-96l0-256c0-53-43-96-96-96l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-9.4 182.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L242.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
                                 </a>
                             </li>
@@ -203,7 +226,7 @@
                 <p class="mt-2">info@gymnasia-radonezh.ru</p>
                 <p class="contact-details">+7 495 423 5122</p>
                 <nav class="footer-social-links">
-                    <a href="https://www.youtube.com/@user-qv7bk2mc7z" style="color:red;"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="https://www.youtube.com/@user-qv7bk2mc7z" style="color:red" ><i class="fab fa-youtube fa-2x"></i></a>
                     <a href="https://vk.com/gymnasiaradonezh"  style="color:#1d455b;"><i class="fab fa-vk  fa-2x"></i></a>
                 </nav>
                 <p>
