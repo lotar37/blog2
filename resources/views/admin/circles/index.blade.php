@@ -31,7 +31,7 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
-                            <table class="table table-hover text-nowrap">
+                            <table class="table table-hover w-100">
                                 <thead>
                                 <tr>
                                     <th>ID</th>
@@ -43,17 +43,17 @@
                                 </thead>
                                 <tbody>
                                 @foreach($circles as $circle)
-                                <tr>
+                                <tr >
                                     <td>{{ $circle->id }}</td>
-                                    <td><img src="{{ asset("storage/".$circle->avatar)}}" style="height: 100px;border-radius: 30%" alt=""></td>
-                                    <td><a href="{{ route("admin.circle.edit", $circle->id) }}" class='text-muted text-xl' title="Изменить">{{ $circle->name }}</a></td>
+                                    <td ><img src="{{ asset("storage/".$circle->avatar)}}" style="height: 100px;border-radius: 30%" alt=""></td>
+                                    <td class="w-50"><a href="{{ route("admin.circle.edit", $circle->id) }}" class='text-muted text-xl' title="Изменить">{{ $circle->name }}</a></td>
                                     @if($circle->video_link)
-                                    <td><a href="{{ $circle->video_link }}">Ссылка на видео</a></td>
+                                    <td class="w-25"><a href="{{ $circle->video_link }}">Ссылка на видео</a></td>
                                     @else
                                         <td class="text-danger">Видео нет</td>
 
                                     @endif
-                                    <td class="d-flex">
+                                    <td  class="d-flex w-25">
 
                                         <a href="{{ route("admin.circle.edit", $circle->id) }} " class="btn btn-outline-secondary mr-2">Изменить</a>
                                         <form action="{{route('admin.circle.delete', $circle->id)}}" method="post" >
