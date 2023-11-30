@@ -26,7 +26,7 @@ class UpdateRequest extends FormRequest
         return [
             'name' => 'required|string',
             'description' => 'required|string',
-            'video_link' => 'string',
+            'video_link' => 'nullable|string',
             'avatar' => 'file',
 
         ];

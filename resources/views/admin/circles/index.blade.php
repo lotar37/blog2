@@ -46,8 +46,13 @@
                                 <tr>
                                     <td>{{ $circle->id }}</td>
                                     <td><img src="{{ asset("storage/".$circle->avatar)}}" style="height: 100px;border-radius: 30%" alt=""></td>
-                                    <td>{{ $circle->name }}</td>
-                                    <td>{{ $circle->video_link }}</td>
+                                    <td><a href="{{ route("admin.circle.edit", $circle->id) }}" class='text-muted text-xl' title="Изменить">{{ $circle->name }}</a></td>
+                                    @if($circle->video_link)
+                                    <td><a href="{{ $circle->video_link }}">Ссылка на видео</a></td>
+                                    @else
+                                        <td class="text-danger">Видео нет</td>
+
+                                    @endif
                                     <td class="d-flex">
 
                                         <a href="{{ route("admin.circle.edit", $circle->id) }} " class="btn btn-outline-secondary mr-2">Изменить</a>
