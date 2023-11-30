@@ -134,7 +134,7 @@
                         <div class="col-md-2 landing-blog-post" data-aos="fade-up">
                             <img src="assets/images/valyanie.png" alt="blog post" class="blog-post-thumbnail">
                             {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
-                            <h4 class="blog-post-title"><a href="#" class="blog-post-link">Валяние</a></h4>
+                            <h4 class="blog-post-title"><a href="{{ route('main.circles.show', 6 )}}" class="blog-post-link">Валяние</a></h4>
 {{--                            <a href="#" class="blog-post-link text-success">Подробнее</a>--}}
                         </div>
                         <div class="col-md-2 landing-blog-post" data-aos="fade-down">
