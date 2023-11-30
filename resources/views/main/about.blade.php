@@ -170,12 +170,16 @@
                             @foreach ($posts->chunk($chunkPosts) as $chunk)
                                 <div class="col-4">
                                     @foreach ($chunk as $post)
+                                        @if($post->preview_image)
                                         <div>
                                             <img style="max-width: 100%;border-radius:0.5rem;"   class="mb-4" src="{{  asset("storage/" . $post->preview_image) }}" alt="blog post">
                                         </div>
+                                        @endif
+                                        @if($post->main_image)
                                         <div>
                                             <img style="max-width: 100%;border-radius:0.5rem;"   class="mb-4" src="{{  asset("storage/" . $post->main_image) }}" alt="blog post">
                                         </div>
+                                        @endif
                                     @endforeach
                                 </div>
                             @endforeach
