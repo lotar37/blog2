@@ -48,7 +48,7 @@
                 <div class="container">
                     <h4 class="edica-landing-section-subtitle-alt">ОПИСАНИЕ ПРОЕКТА</h4>
                 <div class="row">
-                    <div class="col-sm-12">{!! $project->description !!}  </div>
+                    <div class="col-sm-12">{!! nl2br($project->description) !!}  </div>
                 </div>
             </section>
             <section class="post-content">
