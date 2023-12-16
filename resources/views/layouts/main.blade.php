@@ -204,7 +204,7 @@
                             </style>
                         @if($sys_role() > 3)
                             <li class="nav-item">
-                                <a href="https://www.youtube.com/@user-qv7bk2mc7z" class='socialnet-item red-item' ><i class="fab fa-youtube" style=""></i></a>
+                                <a href="https://www.youtube.com/@user-gymnasia-radonezh/featured" class='socialnet-item red-item' ><i class="fab fa-youtube" style=""></i></a>
                                 <a href="https://vk.com/gymnasiaradonezh"   class="socialnet-item blue-item mx-2"><i class=" fab fa-vk"></i></a>
                                 <a href="{{ route('login') }}"  alt="войти">
                                     <svg class='img_svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 96l64 0c17.7 0 32 14.3 32 32l0 256c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c53 0 96-43 96-96l0-256c0-53-43-96-96-96l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-9.4 182.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L242.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
@@ -234,7 +234,7 @@
                 <p class="mt-2">info@gymnasia-radonezh.ru</p>
                 <p class="contact-details">+7 495 423 5122</p>
                 <nav class="footer-social-links">
-                    <a href="https://www.youtube.com/@user-qv7bk2mc7z" style="color:red" ><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="https://www.youtube.com/@user-gymnasia-radonezh/featured" style="color:red" ><i class="fab fa-youtube fa-2x"></i></a>
                     <a href="https://vk.com/gymnasiaradonezh"  style="color:#1d455b;"><i class="fab fa-vk  fa-2x"></i></a>
                 </nav>
                 <p>
