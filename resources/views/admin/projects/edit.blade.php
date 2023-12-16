@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="form-group col-12">
-                            <textarea  name="description" class="col-12">{{ $project->description }}</textarea>
+                            <textarea  name="description" class="col-12" rows="10">{{ $project->description }}</textarea>
                             @error('description')
                             <div class="text-danger">{{ $message }}</div>
                             @enderror
