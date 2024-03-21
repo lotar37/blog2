@@ -77,6 +77,21 @@ class PostController extends BaseController
         return view('main.post_list',compact("posts","tags", 'collection_tag'));
     }
 
+    public function listPostsCategoryOptina()
+
+    {
+//        $role = $this->service->getRole();
+//        $user = $this->service->getUser();
+        $posts = Post::where('inside_link',null)->where('category_id', 5)->orderByDesc('date')->paginate(10);
+        foreach($posts as $post){
+            if(is_null($post['main_image'])){
+                $post['main_image'] = $post['preview_image'];
+            }
+        }
+        $tags = Tag::all();
+        return view('main.optina.news',compact("posts", "tags"));
+    }
+
     private function separatePosts($posts){
 
         foreach($posts as $post){

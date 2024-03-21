@@ -171,6 +171,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/news", [PostController::class,"index"])->name('main.news');
     Route::get("/postlist", [PostController::class,"listPosts"])->name('main.postlist');
     Route::get("/postlist/{tag}/", [PostController::class,"listPostsTag"])->name('main.postlist.tag');
+    Route::get("/optina_news", [PostController::class,"listPostsCategoryOptina"])->name('main.optina.news');
     Route::get("/about", "AboutController")->name('main.about');
     Route::get("/preschool", [PagesController::class,"preschool"])->name('main.preschool');
     Route::get("/gia", [PagesController::class,"gia"])->name('main.gia');
