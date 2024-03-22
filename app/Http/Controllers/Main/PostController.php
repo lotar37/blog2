@@ -41,6 +41,23 @@ class PostController extends BaseController
 
         return view('main.post_show',compact("post",'role', 'user','randomPosts','project'));
     }
+    public function showNeed(Post $post)
+
+    {
+        $role = $this->service->getRole();
+        $user = $this->service->getUser();
+//        $post = Post::get(1);
+        $this->service->viewModel('posts',$post->id);
+        $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
+        $randomPosts = Post::randomPosts(5);
+        $project = null;
+        if($post->project_id){
+            $project = Project::all()->where('id', $post->project_id)->first();
+        }
+
+
+        return view('main.post_show',compact("post",'role', 'user','randomPosts','project'));
+    }
 
     public function listPosts()
     {

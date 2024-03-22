@@ -92,6 +92,7 @@
                                aria-haspopup="true" aria-expanded="false">Лето в Оптиной</a>
                             <div class="dropdown-menu" aria-labelledby="blogDropdown">
                                 <a class="dropdown-item" href="{{ route("main.optina.news") }}">Новости 2024</a>
+                                <a class="dropdown-item" href="{{ route("main.optina.need", 20) }}">Список вещей</a>
                                 <a class="dropdown-item" href="#">История</a>
                             </div>
                         </li>
