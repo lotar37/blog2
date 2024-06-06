@@ -33,7 +33,8 @@
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo" height="60" width="60">
+        <img class="animation__shake" src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo" height="60"
+             width="60">
     </div>
 
     <!-- Navbar -->
@@ -48,7 +49,7 @@
             <li class="nav-item">
                 <form action="{{ route('logout') }}" method="post">
                     @csrf
-                    <input  type="submit" value="Выйти" class="btn btn-outline-primary">
+                    <input type="submit" value="Выйти" class="btn btn-outline-primary">
                 </form>
             </li>
         </ul>
@@ -96,73 +97,61 @@
 
 <script src="{{ asset('plugins/moment/moment.min.js')}}"></script>
 <script src="{{ asset('plugins/daterangepicker/daterangepicker.js')}}"></script>
-<Tempusdominus Bootstrap 4 >
-<script src="{{ asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+<Tempusdominus Bootstrap 4>
+    <script src="{{ asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 
-<script src="{{ asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
+    <script src="{{ asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
 
-<script src="{{ asset('plugins/select2/js/select2.full.min.js')}}"></script>
-<script src="{{ asset('plugins/select2/js/select2.full.js')}}"></script>
+    <script src="{{ asset('plugins/select2/js/select2.full.min.js')}}"></script>
+    <script src="{{ asset('plugins/select2/js/select2.full.js')}}"></script>
 
 
-<script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
-<script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('dist/js/adminlte.js')}}"></script>
+    <script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+    <script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{ asset('dist/js/adminlte.js')}}"></script>
 
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-            toolbar: [
-                // [groupName, [list of button]]
-                ['style', ['style']], // style
-                ['fontsize', ['fontsize']], // размер шрифта
-             //   ['para', ['ul', 'ol', 'абзац', 'высота']], // неупорядоченный список, упорядоченный список, выравнивание абзаца
-                ['para', ['ul', 'ol', 'paragraph']],             // шрифт
-                ['style', ['bold', 'italic', 'underline', 'clear']], // жирный шрифт, курсив, подчеркнутый шрифт, формат шрифта clear
-                ['font', ['strikethrough', 'superscript', 'subscript']], // подчеркивание шрифта, верхний индекс шрифта, нижний индекс шрифта
-                ['color', ['color']], // цвет шрифта
+    <script>
+        $(document).ready(function () {
+            $('#summernote').summernote({
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['style']], // style
+                    ['fontsize', ['fontsize']], // размер шрифта
+                    //   ['para', ['ul', 'ol', 'абзац', 'высота']], // неупорядоченный список, упорядоченный список, выравнивание абзаца
+                    ['para', ['ul', 'ol', 'paragraph']],             // шрифт
+                    ['style', ['bold', 'italic', 'underline', 'clear']], // жирный шрифт, курсив, подчеркнутый шрифт, формат шрифта clear
+                    ['font', ['strikethrough', 'superscript', 'subscript']], // подчеркивание шрифта, верхний индекс шрифта, нижний индекс шрифта
+                    ['color', ['color']], // цвет шрифта
 
-                // Вставить инструмент
-                ['table', ['table']], // Вставить таблицу
-                ['hr', ['hr']], // Вставить горизонтальные линии
-                ['link', ['link']], // Вставить ссылку
-                ['picture', ['picture']], // Вставить картинку
-                ['video', ['video']], // Вставить видео
+                    // Вставить инструмент
+                    ['table', ['table']], // Вставить таблицу
+                    ['hr', ['hr']], // Вставить горизонтальные линии
+                    ['link', ['link']], // Вставить ссылку
+                    ['picture', ['picture']], // Вставить картинку
+                    ['video', ['video']], // Вставить видео
 
-                // Другое
-                ['fullscreen', ['fullscreen']], // полный экран
-                ['отменить', ['отменить']], // отменить
-                ['codeview', ['codeview']], // Просмотреть HTML-код
-                ['redo', ['redo']], // Отмена отмены
+                    // Другое
+                    ['fullscreen', ['fullscreen']], // полный экран
+                    ['отменить', ['отменить']], // отменить
+                    ['codeview', ['codeview']], // Просмотреть HTML-код
+                    ['redo', ['redo']], // Отмена отмены
 
-            ]
-        });
-        $('#summernote2').summernote({
-            toolbar: [
-                // [groupName, [list of button]]
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['font', ['strikethrough', 'superscript', 'subscript']],
-                ['fontsize', ['fontsize']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']]
-            ]
-        });
-        if ($('#mainpage').is(':checked')){
-            $('#mainpage_image').show();
-            $('#mainpage_text').show();
-            $('#inside_link').show();
-        } else {
-            $('#mainpage_image').hide();
-            $('#mainpage_text').hide();
-            $('#inside_link').hide();
-        }
-
-    });
-    $(function (){
-        $('#mainpage').change(function(){
-            if ($('#mainpage').is(':checked')){
+                ]
+            });
+            $('#summernote2').summernote({
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['picture', ['picture']], // Вставить картинку
+                ]
+            });
+            if ($('#mainpage').is(':checked')) {
                 $('#mainpage_image').show();
                 $('#mainpage_text').show();
                 $('#inside_link').show();
@@ -171,34 +160,44 @@
                 $('#mainpage_text').hide();
                 $('#inside_link').hide();
             }
+
         });
-    });
-    $(function (){
-        bsCustomFileInput.init();
-        //Initialize Select2 Elements
-        $('.select2').select2()
+        $(function () {
+            $('#mainpage').change(function () {
+                if ($('#mainpage').is(':checked')) {
+                    $('#mainpage_image').show();
+                    $('#mainpage_text').show();
+                    $('#inside_link').show();
+                } else {
+                    $('#mainpage_image').hide();
+                    $('#mainpage_text').hide();
+                    $('#inside_link').hide();
+                }
+            });
+        });
+        $(function () {
+            bsCustomFileInput.init();
+            //Initialize Select2 Elements
+            $('.select2').select2()
 
-        //Initialize Select2 Elements
-        $('.select2bs4').select2({
-            theme: 'bootstrap4'
-        })
-        $('#calendar').datetimepicker({
-            format: 'L',
-            language: "ru-ru",
-            inline: true
-        })
-    });
-    $('#reservationdate').datetimepicker({
-        format: 'DD.MM.YYYY'
-    });
-</script>
-<style>
-    .custom-file-input:lang(en)~.custom-file-label::after{
-        content: "...";
-    }
-</style>
-    <script>
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+            $('#calendar').datetimepicker({
+                format: 'L',
+                language: "ru-ru",
+                inline: true
+            })
+        });
+        $('#reservationdate').datetimepicker({
+            format: 'DD.MM.YYYY'
+        });
     </script>
-
+    <style>
+        .custom-file-input:lang(en) ~ .custom-file-label::after {
+            content: "...";
+        }
+    </style>
 </body>
 </html>
