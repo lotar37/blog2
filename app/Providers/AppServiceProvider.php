@@ -31,12 +31,12 @@ class AppServiceProvider extends ServiceProvider
     {
         $user = is_null(auth()->user()) ? " noll" : auth()->user()->name;
         View::share('user_name', $user);
-        $class_db = SchoolClass::all();
+//        $class_db = SchoolClass::all()->sortBy("name");
         Schema::defaultStringLength(191);
         View::share('version', 2.5);
 //        View::share('curent_route', Route::getCurrentRoute()->getName());
 
-        View::share('class_db', SchoolClass::all());
+        View::share('class_db', SchoolClass::all()->sortBy("name"));
         \view()->share('sys_user',function (){
             return is_null(auth()->user()) ? "" : auth()->user()->name;
         });
