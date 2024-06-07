@@ -14,7 +14,7 @@ class ChangeColumnVideoLinkToCirclesTable extends Migration
     public function up()
     {
         Schema::table('circles', function (Blueprint $table) {
-            $table->string('video_link')->nullable()->change();
+            $table->string('video_link')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class ChangeColumnVideoLinkToCirclesTable extends Migration
     public function down()
     {
         Schema::table('circles', function (Blueprint $table) {
-            $table->string('video_link')->change();
+            $table->dropColumn('video_link');
         });
     }
 }
