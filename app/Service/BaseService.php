@@ -32,6 +32,13 @@ class BaseService
         $data[5] = "secondary";
         $data[6] = "warning";
         $data[7] = "primary";
+        $data[8] = "danger" ;
+        $data[9] = "secondary";
+        $data[10] = "warning";
+        $data[11] = "primary";
+        $data[12] = "success";
+        $data[13] = "danger" ;
+        $data[14] = "secondary";
 
         return $data;
 
