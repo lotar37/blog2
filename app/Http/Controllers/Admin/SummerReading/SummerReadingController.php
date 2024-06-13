@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin\SummerReading;
 use App\Http\Controllers\Admin\Post\BaseController;
 use App\Http\Requests\Admin\SummerReading\StoreRequest;
 use App\Models\Homework;
+use App\Models\Page;
 use App\Models\SchoolClass;
 use App\Models\Subject;
 use App\Models\UserSubjectClass;
@@ -57,6 +58,7 @@ class SummerReadingController
         $data['subjects'] = Subject::all();
         $data['classes'] = SchoolClass::all();
         $data['class'] = $schoolClass;
+
         $workload =  UserSubjectClass::all()->where('class_id',$schoolClass->id);
         $workload =  $this->sortWorkload($workload);
 
@@ -65,8 +67,10 @@ class SummerReadingController
 
         $homeworks = $this->sortHomeworksForSubjects($homeworks);
 
+
+
 //        dd($homeworks);
-        return view("main.homeworks.show_class",compact('role', 'user','workload','homeworks','data'));
+        return view("main.homeworks.show_class",compact('workload','homeworks','data'));
     }
     public function edit(SchoolClass $schoolClass)
     {

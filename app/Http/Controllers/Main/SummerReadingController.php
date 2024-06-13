@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
 use App\Models\Homework;
+use App\Models\Page;
 use App\Models\Report;
 use App\Models\SchoolClass;
 use App\Models\Subject;
@@ -36,16 +37,21 @@ class SummerReadingController extends BaseController
     }
     public function index()
     {
-        $role = $this->service->getRole();
-        $user = $this->service->getUser();
+//        $role = $this->service->getRole();
+//        $user = $this->service->getUser();
         $data = [];
         $data['colors'] = $this->service->getClassesColors();
 //        $data['subjects'] = Subject::all();
         $data['subject'] = Subject::all()->where('name', 'Летнее чтение')->first();
 //        $data['classes'] = SchoolClass::all();
+        $text = Page::all()->where('title', "Летнее чтение")->first();
+        if(!is_null($text)){
+            $text = $text->long_content;
+        }
+//        dd($data['text']['long_content']);
 
-
-        return view("main.summer_reading.index",compact('role', 'user','data'));
+        return view("main.summer_reading.index",compact('data','text'));
+//        return view("main.summer_reading.index",compact('role', 'user','data'));
     }
     public function showClassHomeworks(SchoolClass $schoolClass)
     {
