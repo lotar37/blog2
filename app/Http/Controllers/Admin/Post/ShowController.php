@@ -11,6 +11,11 @@ class ShowController extends BaseController
     public function __invoke(Post $post)
     {
         // TODO: Implement __invoke() method.
-        return view('admin.post.show',compact("post"));
+        $starttime = microtime(true);
+        $posts = Post::randomPosts(4);
+        $endtime = microtime(true);
+        $timediff = $endtime - $starttime;
+        dd($posts, $timediff);
+        return view('admin.post.show',compact("post","posts"));
     }
 }
