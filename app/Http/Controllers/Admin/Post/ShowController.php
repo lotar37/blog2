@@ -13,9 +13,16 @@ class ShowController extends BaseController
         // TODO: Implement __invoke() method.
         $starttime = microtime(true);
         $posts = Post::randomPosts(4);
+        $posts2 = Post::randomPosts(10);
         $endtime = microtime(true);
-        $timediff = $endtime - $starttime;
-        dd($posts, $timediff);
+        $timediff1 = $endtime - $starttime;
+        $starttime = microtime(true);
+        $posts = Post::all()->where('inside_link',null)->sortByDesc('date')->take(9);
+        $endtime = microtime(true);
+        $timediff2 = $endtime - $starttime;
+
+
+        dd($posts, $timediff1, $timediff2,123);
         return view('admin.post.show',compact("post","posts"));
     }
 }
