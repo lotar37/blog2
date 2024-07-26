@@ -12,24 +12,36 @@ class PostController extends BaseController
 {
     public function index($shift = 0)
     {
-        $role = $this->service->getRole();
-        $user = $this->service->getUser();
+//        $role = $this->service->getRole();
+//        $user = $this->service->getUser();
+        $starttime = microtime(true);
+
         $posts = Post::all()->where('inside_link',null)->sortByDesc('date')->take(9);
+        $endtime = microtime(true);
+        $timediff = array();
+        $timediff[] = $endtime - $starttime;
+
+        $starttime = microtime(true);
+
         $posts = $this->separatePosts($posts);
+        $endtime = microtime(true);
+        $timediff[] = $endtime - $starttime;
+        $starttime = microtime(true);
 
         $randomPosts4 = Post::randomPosts(4);
 //        $randomPosts3 = Post::maxViewPosts(5);
         $randomPosts3 = Post::randomPosts(10);
+        $endtime = microtime(true);
+        $timediff[] = $endtime - $starttime;
 
-
-        return view("main.post_index",compact('role', 'user','posts','randomPosts4','randomPosts3'));
+        return view("main.post_index",compact("timediff",'posts','randomPosts4','randomPosts3'));
     }
 
     public function show(Post $post)
 
     {
-        $role = $this->service->getRole();
-        $user = $this->service->getUser();
+//        $role = $this->service->getRole();
+//        $user = $this->service->getUser();
         $this->service->viewModel('posts',$post->id);
         $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
         $randomPosts = Post::randomPosts(5);
@@ -39,7 +51,7 @@ class PostController extends BaseController
         }
 
 
-        return view('main.post_show',compact("post",'role', 'user','randomPosts','project'));
+        return view('main.post_show',compact("post",'randomPosts','project'));
     }
     public function showNeed(Post $post)
 

@@ -2,6 +2,7 @@
 
 @section('content')
     <main class="blog">
+
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">Новости</h1>
             <div class="breadcrumb">
@@ -100,6 +101,10 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            {{  implode(" ",$timediff)  }}
+        </div>
+
 
     </main>
 @endsection

@@ -22,7 +22,7 @@ class ShowController extends BaseController
         $timediff2 = $endtime - $starttime;
 
 
-        dd($posts, $timediff1, $timediff2,123);
-        return view('admin.post.show',compact("post","posts"));
+        //dd($posts, $timediff1, $timediff2,123);
+        return view('admin.posts.show',compact("post","posts"));
     }
 }
