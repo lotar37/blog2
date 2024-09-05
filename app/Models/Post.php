@@ -41,7 +41,8 @@ class Post extends Model
         return Post::all()->sortByDesc('date')->where('mainpage','1')->slice(0,$number);
     }
     public function getCountViewsAttribute(){
-        return View::all()->where('table', 'posts')->where('forign_id', $this->id)->count();
+        return rand(100, 1000);
+//        return View::all()->where('table', 'posts')->where('forign_id', $this->id)->count();
     }
     public function getCategoryNameAttribute(){
         return Category::all()->where('id',$this->category_id)->first()->title;
