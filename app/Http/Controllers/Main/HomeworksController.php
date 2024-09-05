@@ -41,7 +41,7 @@ class HomeworksController extends BaseController
         $data = [];
         $data['colors'] = $this->service->getClassesColors();
         $data['subjects'] = Subject::all();
-        $data['classes'] = SchoolClass::all();
+        $data['classes'] = SchoolClass::all()->sortBy("sort_index");
         $workload =  UserSubjectClass::all()->sortBy("class_id");
         $workload =  $this->sortWorkload($workload);
 

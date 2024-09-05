@@ -24,7 +24,9 @@ class IndexController extends BaseController
 //        foreach($posts as $post){
 //            $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
 //        }
-        $posts3 = Post::all()->where('inside_link',null)->where('category_id','!=','2')->sortByDesc('date')->take(3);
+        $posts3 = Post::all()->where('inside_link',null)->sortByDesc('date')->take(3);
+//        -------------- удаляется категория Лето в Оптиной -----------------------
+//        $posts3 = Post::all()->where('inside_link',null)->where('category_id','!=','2')->sortByDesc('date')->take(3);
         foreach($posts3 as $post){
             $post["date"] = Carbon::parse($post["date"])->format('d.m.Y');
             if(is_null($post['main_image'])){

@@ -206,6 +206,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/projects", [ProjectsController::class,"index"])->name('main.projects');
     Route::get("/projects/{project}", [ProjectsController::class,"show"])->name('main.projects.show');
     Route::get("/summer_reading", [SummerReading::class,"index"])->name('main.summer_reading.index');
+    Route::get("/summer_reading/summer", [SummerReading::class,"index"])->name('main.summer');
     Route::get("/summer_reading/{schoolClass}", [SummerReading::class,"show"])->name('main.summer_reading.show');
     Route::get("/homework", [HomeworksController::class,"index"])->name('main.homework.index');
     Route::get("/homework/{schoolClass}/tomorrow", [HomeworksController::class,"showClassHomeworksTomorrow"])->name('main.homework.showClassForTomorrow');

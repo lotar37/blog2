@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeColumnVideoLinkToCirclesTable extends Migration
+class AddColumnSortIndexToClassesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class ChangeColumnVideoLinkToCirclesTable extends Migration
      */
     public function up()
     {
-        Schema::table('circles', function (Blueprint $table) {
-            $table->string('video_link')->nullable();
+        Schema::table('classes', function (Blueprint $table) {
+            $table->unsignedInteger("sort_index")->nullable();
         });
     }
 
@@ -25,8 +25,8 @@ class ChangeColumnVideoLinkToCirclesTable extends Migration
      */
     public function down()
     {
-        Schema::table('circles', function (Blueprint $table) {
-            $table->dropColumn('video_link');
+        Schema::table('classes', function (Blueprint $table) {
+            $table->dropColumn('sort_index');
         });
     }
 }
