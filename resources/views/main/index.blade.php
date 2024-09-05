@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-lg-12 justify-content-lg-around flex-column"
                          style="display: flex; justify-content: space-around">
-                        <a href="{{ route("main.post") }}" class="btn btn-success btn-lg my-4">ЕЩЁ НОВОСТИ</a>
+                        <a href="{{ route("main.postlist") }}" class="btn btn-success btn-lg my-4">ЕЩЁ НОВОСТИ</a>
                     </div>
                 </div>
             </section>
