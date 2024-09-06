@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\View\ViewController;
 use App\Http\Controllers\Main\DocsController;
 use App\Http\Controllers\Main\PostController;
 use App\Http\Controllers\Main\ProjectsController;
 use App\Http\Controllers\Main\SummerReadingController as SummerReading;
-use App\Http\Controllers\Admin\SummerReading\SummerReadingController;
+use App\Http\Controllers\Admin\View\ViewController as ViewCounterController;
 use App\Http\Controllers\Main\HomeworksController;
 use App\Http\Controllers\Main\CirclesController;
 use App\Http\Controllers\Main\PagesController;
@@ -27,6 +28,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
     Route::group(['namespace' => "Main"], function () {
         Route::get("/", "IndexController")->name('admin.main.index');
     });
+    Route::group(['namespace' => 'View', 'prefix' => 'view'], function(){
+        Route::get("/count_views", [ViewCounterController::class,"countPostViews"])->name('admin.view.count');
+     });
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function(){
         Route::get("/", "IndexController")->name("admin.category.index");
         Route::get("/create", "CreateController")->name("admin.category.create");
@@ -37,8 +41,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::delete("/{category}", "DeleteController")->name("admin.category.delete");
     });
     Route::group(['namespace' => 'SummerReading', 'prefix' => 'summer_reading'], function(){
-        Route::get("/{schoolClass}", [SummerReadingController::class,"edit"])->name('admin.summer_reading.edit');
-        Route::patch("/{schoolClass}", [SummerReadingController::class,"update"])->name('admin.summer_reading.update');
+        Route::get("/{schoolClass}", [ViewController::class,"edit"])->name('admin.summer_reading.edit');
+        Route::patch("/{schoolClass}", [ViewController::class,"update"])->name('admin.summer_reading.update');
     });
 
 
