@@ -37,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
 //        View::share('curent_route', Route::getCurrentRoute()->getName());
 
         View::share('class_db', SchoolClass::all()->sortBy("sort_index"));
+        View::share('visit_counts', \App\Models\View::all()->count());
         View::share('school_year', '2024-25');
         \view()->share('sys_user',function (){
             return is_null(auth()->user()) ? "" : auth()->user()->name;

@@ -123,7 +123,7 @@
                 <a href="{{ route("admin.view.count") }}" class="nav-link">
                     <i class="nav-icon fas far fa-briefcase"></i>
 
-                    <p>Обновить просмотры({{ $data['viewCount'] }})</p>
+                    <p>Обновить просмотры({{ $visit_counts }})</p>
                 </a>
             </li>
 

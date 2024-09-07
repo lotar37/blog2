@@ -22,7 +22,6 @@ class IndexController extends Controller
         $data['categoriesCount'] = Category::all()->count();
         $data['tags'] = $this->getTagCountsArray();
         $data['tagsCount'] = Tag::all()->count();
-        $data['viewCount'] = View::all()->count();
         $data['current_route'] =  Route::getCurrentRoute()->getName();
 //        dd($data['tags']);
         return view('admin.main.index', compact('data'));
