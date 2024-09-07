@@ -119,6 +119,13 @@
                     <p>Нагрузка учителей</p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route("admin.view.count") }}" class="nav-link">
+                    <i class="nav-icon fas far fa-briefcase"></i>
+
+                    <p>Обновить просмотры({{ $data['viewCount'] }})</p>
+                </a>
+            </li>
 
         </ul>
     </div>
