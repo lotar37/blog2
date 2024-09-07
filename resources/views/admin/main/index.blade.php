@@ -46,7 +46,9 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>{{ $data['postsCount'] }}/{{ $data['viewCount'] }}</h3>
+                            <h3>{{ $data['postsCount'] }}/ !!!
+{{--                                {{ $data['viewCount'] }}--}}
+                            </h3>
 
                             <p>Посты/Просмотры</p>
                         </div>
