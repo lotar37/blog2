@@ -18,8 +18,8 @@ class PostController extends BaseController
         $posts = $this->separatePosts($posts);
 
         $randomPosts4 = Post::randomPosts(4);
-//        $randomPosts3 = Post::maxViewPosts(5);
-        $randomPosts3 = Post::randomPosts(10);
+        $randomPosts3 = Post::maxViewPosts(7);
+//        $randomPosts3 = Post::randomPosts(10);
 
 
         return view("main.post_index",compact('role', 'user','posts','randomPosts4','randomPosts3'));
