@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Main;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\PostVisit;
 use App\Models\Tag;
 use App\Models\User;
 use App\Models\View;
@@ -23,6 +24,8 @@ class IndexController extends Controller
         $data['tags'] = $this->getTagCountsArray();
         $data['tagsCount'] = Tag::all()->count();
         $data['current_route'] =  Route::getCurrentRoute()->getName();
+        $data['count_visits'] = PostVisit::all()->sum("number_visits");
+
 //        dd($data['tags']);
         return view('admin.main.index', compact('data'));
     }

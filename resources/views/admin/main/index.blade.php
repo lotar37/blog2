@@ -46,7 +46,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>{{ $data['postsCount'] }}/ !!!
+                            <h3>{{ $data['postsCount'] }}/ {{ $data['count_visits'] }}
 {{--                                {{ $data['viewCount'] }}--}}
                             </h3>
 
