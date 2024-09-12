@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Page;
 use App\Http\Controllers\Controller;
 use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class IndexController extends BaseController
 {
