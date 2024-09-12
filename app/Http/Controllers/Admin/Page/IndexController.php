@@ -12,6 +12,11 @@ class IndexController extends BaseController
     {
         // TODO: Implement __invoke() method.
         $pages = Page::all();
+        foreach ($pages as $page) {
+            if(!Route::has("main.".$page->route_name)) {
+                $page->route_name = 0;
+            }
+        }
         return view('admin.pages.index',compact("pages"));
     }
 }

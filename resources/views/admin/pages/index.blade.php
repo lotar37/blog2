@@ -40,21 +40,25 @@
                                     </thead>
                                     <tbody>
                                     @foreach($pages as $page)
-                                        @if($page->route_name)
-                                            <tr>
-                                                {{--                                    <td>{{ $page->id }}</td>--}}
-                                                <td>{{ $page->content }}</td>
-                                                <td>
+
+                                        <tr>
+                                            {{--                                    <td>{{ $page->id }}</td>--}}
+                                            <td>{{ $page->content }}</td>
+
+                                            <td>
+                                                @if($page->route_name)
                                                     <a href="{{ route("main.".$page->route_name) }}">{{ $page->title }}</a>
-                                                </td>
-                                                <td class="d-flex">
-                                                    <a href="{{ route("main.".$page->route_name) }}"
-                                                       class="btn btn-outline-secondary mr-1">Перейти</a>
-                                                    <a href="{{ route("admin.page.edit", $page->id) }}"
-                                                       class="btn btn-outline-secondary">Изменить</a>
-                                                </td>
-                                            </tr>
-                                        @endif
+                                                @else
+                                                    <a href="#">{{ $page->title }}</a>
+                                                @endif
+                                            </td>
+
+                                            <td class="d-flex">
+                                                <a href="{{ route("admin.page.edit", $page->id) }}"
+                                                   class="btn btn-outline-secondary">Изменить</a>
+                                            </td>
+                                        </tr>
+
                                     @endforeach
                                     </tbody>
                                 </table>
