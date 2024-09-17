@@ -103,6 +103,7 @@
                                 <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
                                 <a class="dropdown-item" href="{{ route("main.homework.index") }}">Журнал</a>
                                 <a class="dropdown-item" href="#">Экскурсия по школе</a>
+                                <a class="dropdown-item" href="{{ route("main.uniform") }}">Школьная форма</a>
                                 <a class="dropdown-item" href="{{ route("main.preschool") }}">Детский сад "Огоньки"</a>
     {{--                            <div class="dropdown-menu" aria-labelledby="schoolDropdown">--}}
                                     <a class="dropdown-item" href="{{ route("main.advice") }}" id="schoolDropdown">Гимназия
@@ -122,6 +123,7 @@
                                 <a class="dropdown-item" href="{{ route("main.homework.index") }}">Дневник</a>
                                 <a class="dropdown-item" href="{{ route("main.admission") }}">Поступление</a>
                                 <a class="dropdown-item" href="{{ route("main.circles") }}">Кружки</a>
+                                <a class="dropdown-item" href="{{ route("main.uniform") }}">Школьная форма</a>
                                 <a class="dropdown-item" href="#">Курсы</a>
                                 <a class="dropdown-item" href="#">Доп.занятия</a>
                                 <a class="dropdown-item" href="{{ route("main.summer_reading.index") }}">Что читать летом?</a>

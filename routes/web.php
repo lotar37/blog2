@@ -191,6 +191,7 @@ Route::group(['namespace' => "Main"], function () {
     Route::get("/regime", [PagesController::class,"regim"])->name('main.regim');
     Route::get("/persons", [PagesController::class,"teachers"])->name('main.persons');
     Route::get("/teachers", [PagesController::class,"teachers"])->name('main.teachers');
+    Route::get("/uniform", [PagesController::class,"uniform"])->name('main.uniform');
     Route::get("/management", [PagesController::class,"management"])->name('main.management');
     Route::get("/patriarh", [PagesController::class,"patriarh"])->name('main.patriarh');
     Route::get("/advice", [PagesController::class,"advice"])->name('main.advice');

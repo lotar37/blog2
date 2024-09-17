@@ -8,6 +8,10 @@ use App\Models\Page;
 
 class PagesController extends BaseController
 {
+    public function uniform()
+    {
+         return $this->pager("uniform");
+    }
     public function museum()
     {
          return $this->pager("museum");
