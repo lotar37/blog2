@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\main;
+namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
 use App\Service\HomeworkService;
-use Illuminate\Http\Request;
 use App\Service\MainService;
 
 class BaseController extends Controller
