@@ -111,8 +111,6 @@
                             <h4 class="text-center">Идет набор в классы гимназии Радонеж.</h4>
                             <h3 class="text-center">Запись на собеседование</h3>
                             <h1 class="text-center text-danger">8(495)423-51-22</h1>
-                            <div class="banner-btns-wrapper">
-{{--                            </div>--}}
 
                             @if($sys_role() == 0)
                                 <p class="banner-text text-center">Позвоните и мы ответим на все Ваши вопросы. <br/>Оставьте
