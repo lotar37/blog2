@@ -103,7 +103,7 @@
                                 <a class="dropdown-item" href="{{ route("main.temple_schedule") }}">Расписание богослужений</a>
                                 <a class="dropdown-item" href="{{ route("main.khram_chtenie") }}">Чтение утреннего
                                     правила</a>
-                                <a class="dropdown-item" href="#">Новости</a>
+                                <a class="dropdown-item" href="{{ route("main.postlist.tag", 7) }}">Новости</a>
                                 <a class="dropdown-item" href="{{ route("main.khram_docs") }}">Документы</a>
                             </div>
                         </li>

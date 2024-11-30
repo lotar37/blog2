@@ -97,8 +97,18 @@ class PostController extends BaseController
     public function listPostsCategoryOptina()
 
     {
-//        $role = $this->service->getRole();
-//        $user = $this->service->getUser();
+        $posts = Post::where('inside_link',null)->where('category_id', 2)->orderByDesc('date')->paginate(10);
+        foreach($posts as $post){
+            if(is_null($post['main_image'])){
+                $post['main_image'] = $post['preview_image'];
+            }
+        }
+        $tags = Tag::all();
+        return view('main.optina.news',compact("posts", "tags"));
+    }
+    public function listPostsCategoryChramNews()
+
+    {
         $posts = Post::where('inside_link',null)->where('category_id', 2)->orderByDesc('date')->paginate(10);
         foreach($posts as $post){
             if(is_null($post['main_image'])){
