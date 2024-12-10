@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use App\Models\Page;
 
@@ -47,10 +49,6 @@ class PagesController extends BaseController
    public function about()
     {
          return $this->pager("about");
-    }
-   public function preschool()
-    {
-         return $this->pager("preschool");
     }
    public function extcurr()
     {
@@ -107,6 +105,14 @@ class PagesController extends BaseController
   public function announcement()
     {
          return $this->pager("announcement");
+    }
+    public function preschool()
+    {
+        $name = 'preschool';
+        $page = Page::all()->where('route_name',$name)->first();
+        $tag = Tag::find(6);
+        $posts3 = $tag->posts->sortByDesc('date')->take(3);
+        return view("main.preschool",compact('page','posts3'));
     }
 
     protected function pager($name){

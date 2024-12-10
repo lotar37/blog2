@@ -15,4 +15,9 @@ class Tag extends Model
         return PostTag::all()->where('tag_id', $this->id)->count();
     }
 
+    public function posts(){
+        return $this->belongsToMany(Post::class, 'post_tags', 'tag_id', 'post_id');
+    }
+
+
 }
