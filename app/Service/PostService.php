@@ -6,16 +6,12 @@ use App\Models\Post;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Image;
-use Intervention\Image\ImageManager;
-use Intervention\Image\Drivers\Imagick\Driver;
 
 class PostService
 {
     public function store($data)
     {
         try {
-            $manager = new ImageManager(new Driver());
             $tagg = false;
             DB::beginTransaction();
 
@@ -29,9 +25,6 @@ class PostService
                 unset($data["tag_ids"]);
             }
             $data["date"] = Carbon::parse($data["date"])->format('Y-m-d');
-//            $image = $manager->read($data['preview_image']);
-//
-//            dd($image);
             if (isset($data['preview_image'])) {
                 $data['preview_image'] = Storage::disk("public")->put("/images", $data['preview_image']);
             }
