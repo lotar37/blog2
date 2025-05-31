@@ -41,9 +41,13 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [ 'au
         Route::delete("/{category}", "DeleteController")->name("admin.category.delete");
     });
     Route::group(['namespace' => 'SummerReading', 'prefix' => 'summer_reading'], function(){
-        Route::get("/{schoolClass}", [ViewController::class,"edit"])->name('admin.summer_reading.edit');
-        Route::patch("/{schoolClass}", [ViewController::class,"update"])->name('admin.summer_reading.update');
+        Route::get("/{schoolClass}", [\App\Http\Controllers\Admin\SummerReading\SummerReadingController::class,"edit"])->name('admin.summer_reading.edit');
+        Route::patch("/{schoolClass}", [\App\Http\Controllers\Admin\SummerReading\SummerReadingController::class,"update"])->name('admin.summer_reading.update');
     });
+//    Route::group(['namespace' => 'SummerReading', 'prefix' => 'summer_reading'], function(){
+//        Route::get("/{schoolClass}", [ViewController::class,"edit"])->name('admin.summer_reading.edit');
+//        Route::patch("/{schoolClass}", [ViewController::class,"update"])->name('admin.summer_reading.update');
+//    });
 
 
     Route::group(['namespace' => 'Subject', 'prefix' => 'subjects'], function(){
