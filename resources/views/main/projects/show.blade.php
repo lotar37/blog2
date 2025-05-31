@@ -54,8 +54,49 @@
             <section class="post-content">
                 <div class="row">
                     <div class="col col-12 p-4">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe data-src="{{ $project->video_link }}" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                        <div class="embed-responsive embed-responsive-16by9">
+                        @if($project->video_type == "vk")
+
+                            <div class="pb-4 video-container">
+                                <iframe src="{{ $project->video_link }}"
+
+                                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+                                        frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <h3></h3>
+                        @endif
+                        @if($project->video_type == "rutube")
+                            <div class="pb-4 video-container">
+
+
+                                <iframe class="w-100"
+                                        src="{{ $project->video_link }}" frameBorder="0"
+                                        allow="clipboard-write; autoplay" webkitAllowFullScreen
+                                        mozallowfullscreen allowFullScreen></iframe>
+
+                            </div>
+                            <h3></h3>
+                        @endif
+                        @if($project->video_type == "youtube")
+                            <div class="pb-4 video-container">
+
+
+                                <iframe class="w-100" src="{{ $project->video_link }}"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen></iframe>
+
+                            </div>
+                            <h3></h3>
+                        @endif
+
+
+
+{{--                    <iframe data-src="{{ $project->video_link }}" title="YouTube video player" --}}
+{{--                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"--}}
+{{--                            allowfullscreen></iframe>--}}
                 </div>
 {{--                <div class="embed-responsive embed-responsive-16by9">--}}
 {{--                    <iframe class="embed-responsive-item" src="{{ $project->video_link }}" allowfullscreen></iframe>--}}
