@@ -194,6 +194,9 @@
                                 .img_svg path:hover{
                                     fill:#0d6632;
                                 }
+                                .img_svg.img_svg2 path:hover{
+                                    fill:#ff0000;
+                                }
                                 .socialnet-item{
                                     color:#3f4245;
                                     border:2px solid #3f4245;
@@ -223,12 +226,14 @@
                                     color:#0077ff;
 
                                 }
-
                             </style>
                         @if($sys_role() > 3)
                             <li class="nav-item">
                                 <a href="https://www.youtube.com/@user-gymnasia-radonezh/featured" class='socialnet-item red-item' ><i class="fab fa-youtube" style=""></i></a>
-                                <a href="https://vk.com/gymnasiaradonezh"   class="socialnet-item blue-item mx-2"><i class=" fab fa-vk"></i></a>
+                                <a href="https://vk.com/gymnasiaradonezh"   class="socialnet-item blue-item mx-2"><i class="fab fa-vk"></i></a>
+                                <a href="https://rutube.ru/u/gymnasiaradonezh/"   class="socialnet-item red-item mr-2 px-1">
+                                    <svg class='img_svg img_svg2'  viewBox="5 25 192 192" xmlns="http://www.w3.org/2000/svg"><path d="M128.689 47.57H20.396v116.843h30.141V126.4h57.756l26.352 38.013h33.75l-29.058-38.188c9.025-1.401 15.522-4.73 19.493-9.985 3.97-5.255 5.956-13.664 5.956-24.875v-8.759c0-6.657-.721-11.912-1.985-15.941-1.264-4.029-3.43-7.533-6.498-10.686-3.249-2.978-6.858-5.08-11.19-6.481-4.332-1.226-9.747-1.927-16.424-1.927zm-4.873 53.08H50.537V73.321h73.279c4.15 0 7.038.7 8.482 1.927 1.444 1.226 2.347 3.503 2.347 6.832v9.81c0 3.503-.903 5.78-2.347 7.006s-4.331 1.752-8.482 1.752z" style="display:inline;fill:none;stroke:#000000;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" transform="translate(1.605 -1.99)"/><path fill="#F41240" d="M162.324 45.568c5.52 0 9.998-4.477 9.998-10s-4.478-10-9.998-10c-5.524 0-10.002 4.477-10.002 10s4.478 10 10.002 10z" style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:10.6667;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" transform="translate(1.605 -1.99)"/></svg>
+                                </a>
                                 <a href="{{ route('login') }}"  alt="войти">
                                     <svg class='img_svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 96l64 0c17.7 0 32 14.3 32 32l0 256c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c53 0 96-43 96-96l0-256c0-53-43-96-96-96l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-9.4 182.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L242.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
                                 </a>
@@ -259,6 +264,9 @@
                 <nav class="footer-social-links">
                     <a href="https://www.youtube.com/@user-gymnasia-radonezh/featured" style="color:red" ><i class="fab fa-youtube fa-2x"></i></a>
                     <a href="https://vk.com/gymnasiaradonezh"  style="color:#1d455b;"><i class="fab fa-vk  fa-2x"></i></a>
+                    <a href="https://rutube.ru/u/gymnasiaradonezh/"   class="socialnet-item red-item mr-2 px-1">
+                        <svg class='img_svg img_svg2'  viewBox="5 25 192 192" xmlns="http://www.w3.org/2000/svg"><path d="M128.689 47.57H20.396v116.843h30.141V126.4h57.756l26.352 38.013h33.75l-29.058-38.188c9.025-1.401 15.522-4.73 19.493-9.985 3.97-5.255 5.956-13.664 5.956-24.875v-8.759c0-6.657-.721-11.912-1.985-15.941-1.264-4.029-3.43-7.533-6.498-10.686-3.249-2.978-6.858-5.08-11.19-6.481-4.332-1.226-9.747-1.927-16.424-1.927zm-4.873 53.08H50.537V73.321h73.279c4.15 0 7.038.7 8.482 1.927 1.444 1.226 2.347 3.503 2.347 6.832v9.81c0 3.503-.903 5.78-2.347 7.006s-4.331 1.752-8.482 1.752z" style="display:inline;fill:none;stroke:#000000;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" transform="translate(1.605 -1.99)"/><path fill="#F41240" d="M162.324 45.568c5.52 0 9.998-4.477 9.998-10s-4.478-10-9.998-10c-5.524 0-10.002 4.477-10.002 10s4.478 10 10.002 10z" style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:10.6667;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" transform="translate(1.605 -1.99)"/></svg>
+                    </a>
                 </nav>
                 <p>
 
