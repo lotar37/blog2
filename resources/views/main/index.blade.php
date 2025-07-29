@@ -50,10 +50,10 @@
 @endsection
 @section('content')
 
-    {{--     <component-users  :users="{{ \App\Models\User::all() }}" macs="{{ substr(exec('getmac'),0,17) }}"></component-users>--}}
+{{--         <component-users  :users="{{ \App\Models\User::all() }}" macs="{{ substr(exec('getmac'),0,17) }}"></component-users>--}}
     {{--    {{ \Request::ip() }} - {{ substr(exec('getmac'),0,17) }} ---}}
-
-    {{--    <list></list>--}}
+{{--<test-component></test-component>--}}
+{{--        <list></list>--}}
     {{--    <section class="blog ">--}}
     <div class="container">
 
@@ -79,7 +79,7 @@
                             <img src="{{ asset("storage/" . $post->main_image) }}" alt="blog post"
                                  class="blog-post-thumbnail" style="object-fit: cover;height: 150pt;">
                             {{--                            <p class="blog-post-category">{{ $categories->find($post->category_id)->title }}</p>--}}
-                            <h4 class="blog-post-title"><a href="{{ route("main.post_show", $post->id) }}"
+                            <h4 class="blog-post-title"><a href="{{ route("main.post_show", $post->slug) }}"
                                                            class="text-black-50">{{ $post->title }}</a></h4>
                             <p class="blog-post-category">{{ $post->formatedDate }}</p>
                             {{--                                <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-link">Подробнее</a>--}}

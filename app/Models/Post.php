@@ -15,6 +15,12 @@ class Post extends Model
     protected $table = "posts";
     protected $guarded = false;
 
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
+
+
     public function tags(){
         return $this->belongsToMany(Tag::class, 'post_tags', 'post_id', 'tag_id');
     }

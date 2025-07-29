@@ -172,6 +172,7 @@ Route::group(['namespace' => 'Teacher', 'prefix' => 'teacher', 'middleware' => [
 
 Route::group(['namespace' => "Main"], function () {
     Route::get("/", "IndexController")->name('main.index');
+    Route::get('/set_slug',[\App\Http\Controllers\Main\PostController::class,'setSlug'])->name('action.setter_slug');
     Route::get("/contacts", "ContactsController")->name('main.contacts');
     Route::get("/reports", "ReportsController")->name('main.reports');
     Route::get("/post", [PostController::class,"index"])->name('main.post');

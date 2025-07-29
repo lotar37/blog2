@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\Tag;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class PostController extends BaseController
 {
@@ -130,5 +131,15 @@ class PostController extends BaseController
         $a2 = $posts->slice(3)->chunk(2);
         return array($a1,$a2);
     }
+    public function setSlug()
+    {
+        $posts = Post::all()->sortBy("date");
+        foreach ($posts as $post) {
+            $date = Carbon::parse($post["date"])->format('d-m-Y');
+            $post["slug"] = Str::slug($post["title"]."-".$date);
+            $post->save();
+        }
+    }
+
 
 }

@@ -26,11 +26,11 @@
                             <div class="row">
                                <div class="col-md-9">
                                     <div>
-                                        {{ $post->formatedDate }} <span class="lead"><a href="{{ route('main.post_show', $post->id )}}">{{ $post->title }}</a></span>
+                                        {{ $post->formatedDate }} <span class="lead"><a href="{{ route('main.post_show', $post->slug )}}">{{ $post->title }}</a></span>
                                     </div>
                                     <div>
                                         {{ str_replace("&nbsp;", " ", $post->shortContent) }}
-                                        <a href="{{ route('main.post_show', $post->id )}}">>></a>
+                                        <a href="{{ route('main.post_show', $post->slug )}}">>></a>
                                     </div>
                                 </div>
 

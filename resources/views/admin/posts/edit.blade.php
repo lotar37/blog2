@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -20,7 +20,7 @@
                     </div><!-- /.col -->
 
                     <div class="col-12">
-                        <form action="{{ route("admin.post.update", $post->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route("admin.post.update", $post->slug) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
                             <div class="form-group w-50">
@@ -76,6 +76,9 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <image-loaders></image-loaders>
+                           <test-component></test-component> qweaster
+
                             <div class="form-group w-50">
                                 <label for="exampleInputFile">Главное изображение</label>
                                 <div class="">

@@ -21,7 +21,7 @@
                             <div><i class="fa-regular far fa-eye"></i> {{ $post->count_views }}</div>
 
                         </div>
-                        <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-permalink">
+                        <a href="{{ route("main.post_show", $post->slug) }}" class="blog-post-permalink">
                             <h6 class="blog-post-title">{{ $post->title }}</h6>
                         </a>
                     </div>
@@ -42,7 +42,7 @@
                                     <div>{{ $post->category_name }}</div>
                                     <div><i class="fa-regular far fa-eye"></i> {{ $post->count_views }}</div>
                                 </div>
-                                <a href="{{ route("main.post_show", $post->id) }}" class="blog-post-permalink">
+                                <a href="{{ route("main.post_show", $post->slug) }}" class="blog-post-permalink">
                                     <h6 class="blog-post-title">{{ $post->title }}</h6>
                                 </a>
                             </div>
@@ -72,7 +72,7 @@
                                     <figure class="carousel-item {{ $count == 0 ? ' active' : ''}}">
                                         <img src="{{ asset("storage/" . $post->main_image) }}" alt="First slide">
                                         <figcaption class="post-title "    style="display:flex;justify-content: space-between; height:4.5rem;">
-                                            <div><a href="{{ route("main.post_show", $post->id) }}">{{ $post->title }}</a></div>
+                                            <div><a href="{{ route("main.post_show", $post->slug) }}">{{ $post->title }}</a></div>
                                             <div style="white-space: nowrap"><i class="fa-regular fas fa-eye"></i> {{ $post->count_views }}</div>
                                         </figcaption>
                                     </figure>
@@ -87,7 +87,7 @@
                         <ul class="post-list">
                             @foreach($randomPosts4 as $post)
                             <li class="post">
-                                <a href="{{ route("main.post_show", $post->id) }}" class="post-permalink media">
+                                <a href="{{ route("main.post_show", $post->slug) }}" class="post-permalink media">
                                     <img src="{{ asset("storage/" . $post->preview_image) }}" alt="blog post">
                                     <div class="media-body">
                                         <h6 class="post-title">{{$post->title}}</h6>

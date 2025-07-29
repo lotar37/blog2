@@ -39,6 +39,7 @@ class StoreRequest extends FormRequest
             "mainpage" => 'nullable|string',
             "mainpage_text" => 'nullable|string',
             "inside_link" => 'nullable|string',
+            "slug" => 'nullable|string|unique:posts,slug',
 
 
         ];

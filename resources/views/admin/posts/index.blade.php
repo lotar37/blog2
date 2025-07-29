@@ -47,8 +47,8 @@
                                     <td>{{ $post->title }}</td>
                                     <td>{{ $post->count_views }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route("admin.post.edit", $post->id) }} " class="btn btn-outline-secondary mr-1">Изменить</a>
-                                        <form action="{{route('admin.post.delete', $post->id)}}" method="post" >
+                                        <a href="{{ route("admin.post.edit", $post->slug) }} " class="btn btn-outline-secondary mr-1">Изменить</a>
+                                        <form action="{{route('admin.post.delete', $post->slug)}}" method="post" >
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="btn btn-outline-secondary">Удалить</button>
