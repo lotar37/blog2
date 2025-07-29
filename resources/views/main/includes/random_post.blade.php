@@ -8,7 +8,7 @@
                 <div>Новость</div>
                 <div><i class="fa-regular far fa-eye"></i> {{ $post->count_views }}</div>
             </div>
-            <a href="{{ route("main.post_show", $post->id) }}" class="">
+            <a href="{{ route("main.post_show", $post->slug) }}" class="">
                 <h6 class="blog-post-title text-dark">{{ $post->title }}</h6>
             </a>
         </div>
