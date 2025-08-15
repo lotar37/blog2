@@ -31,7 +31,7 @@
                                         {!! $carouselPost->mainpage_text !!}
                                     </p>
                                     <div class="carousel-content-btns">
-                                        <a href="{{ $carouselPost->inside_link ? route("main.". $carouselPost->inside_link) : route("main.post_show", $carouselPost->id) }}"
+                                        <a href="{{ $carouselPost->inside_link ? route("main.". $carouselPost->inside_link) : route("main.post_show", $carouselPost->slug) }}"
                                            class="btn btn-success">Подробнее</a>
                                     </div>
                                 </div>
